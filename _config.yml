@@ -12,8 +12,8 @@ paginate: 20
 baseurl: /
 domain_name: 'http://leomhl.github.io'
 google_analytics: 'UA-69514159-1'
-disqus: false
-disqus_shortname: 'your-disqus-shortname'
+disqus: true
+disqus_shortname: 'leomhlgithubio'
 
 # Details for the RSS feed generator
 url:            'https://leomhl.github.io'
