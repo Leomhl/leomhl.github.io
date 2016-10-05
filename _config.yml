@@ -18,7 +18,7 @@ disqus_shortname: 'your-disqus-shortname'
 # Details for the RSS feed generator
 url:            'https://leomhl.github.io'
 author:         'Leo Marinho'
-authorTwitter:  '@leohm10'
+authorTwitter:  'leohm10'
 
 permalink:       /:year/:title/
 
