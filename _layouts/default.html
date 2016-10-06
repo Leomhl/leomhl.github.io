@@ -4,9 +4,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Leo Marinho um blog de tecnologia e outras coisas nerds">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="Leo Marinho, Tecnology, Tecnologia, café, código, coffee, code, Systems, Sistemas, Frameworks, Comedy">
+
+  <meta content="{% if page.title %} - {{ page.title }}{% endif %}" property="og:title">
+  <meta content="article" property="og:type">
+  <meta content="pt_BR" property="og:locale">
+  <meta content="https://pt-br.facebook.com/leomhl" property="article:author">
+  <meta content="@leomhl10" name="twitter:creator">
 
   <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
-  
+
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
   <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="{{ site.baseurl }}feed.xml">
@@ -40,6 +49,3 @@
   </script>
 </body>
 </html>
-
-
-
