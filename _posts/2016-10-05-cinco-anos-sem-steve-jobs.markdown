@@ -16,10 +16,10 @@ Seus discursos inflamados e jeito próprio de apresentar novos dispositivos deix
 Somos gratos, principalmente os profissionais de tecnologia como eu, pelos serviços prestados à humanidade. De fato ele não fez história, ele é a história de toda uma geração que vive em torno de tecnologia. Só espero que nasça rápido o próximo Steve… A Apple necessita urgentemente de outra mente como a dele. 
 
 
-Nunca o vi pessoalmente e não verei, mas, deixo minha singela homenagem aqui lembrando que tudo o que ele sacrificou da vida para trabalhar não foi em vão, sem isso, eu não estaria escrevendo este texto de um MacBook =P, muito menos seria analista de sistemas. Ele sempre terá um espaço especial no coração de todos aqueles que amam tecnologia. 
+Nunca o vi pessoalmente e não verei, mas, deixo minha singela homenagem aqui lembrando que tudo o que ele sacrificou da vida para trabalhar não foi em vão, sem isso eu não estaria escrevendo este texto de um MacBook =P e muito menos seria analista de sistemas. Ele sempre terá um espaço especial no coração de todos aqueles que amam tecnologia. 
 
 
-Além de inovador e carismático, Steve criou um império! Hoje, a Apple vale U$ 611 bilhões e seu dinheiro em caixa é de U$ 215 bilhões, mais do que o governo norte americano tem disponível para uso imediato.
+Além de inovador e carismático, Steve criou um império! Hoje, a Apple vale U$ 611 bilhões e seu dinheiro em caixa é de U$ 215 bilhões (mais do que o governo norte americano tem disponível para uso imediato).
 
 
 A verdade é que Steve Jobs é um dos empreendedores mais inovadores do mundo e sua falta é sentida por todos aqueles que são apaixonados por tecnologia. Resta-nos apenas lembrar de alguns momentos marcantes da sua trajetória. Abaixo estão alguns links para “matar as saudades” da era Jobs.
