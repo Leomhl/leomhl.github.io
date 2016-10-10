@@ -1,6 +1,6 @@
 ---
 title:  "Laraconf, a viagem"
-date:   2016-10-09 23:59:10
+date:   2016-10-10 01:22:10
 description: Minha opinião sobre a viagem
 ---
 
@@ -37,7 +37,7 @@ De fato você está recebendo a sua honra por meio da humildade, meus parabéns!
 
 
 ### O cansaço ### 
-Estou aqui, 00:58 redigindo este post feliz. Cansado, mas… Feliz. De quebra, a ida em SP me rendeu um copo da Starbucks, estou realmente apegado a ele =p. Segue a foto: 
+Estou aqui, 01:22 redigindo este post feliz. Cansado, mas… Feliz. De quebra, a ida em SP me rendeu um copo da Starbucks, estou realmente apegado a ele =p. Segue a foto: 
 
 ![Starbucks copo]({{ site.baseurl }}assets/images/posts/2016-10-09-Laraconf-a-viagem/star.jpg)
 
