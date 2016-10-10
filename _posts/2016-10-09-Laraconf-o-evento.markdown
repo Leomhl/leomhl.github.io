@@ -23,8 +23,11 @@ Curti bastante os palestrantes. Alguns foram mais técnicos, outros mais prátic
 
 ### Para o futuro ###
 
-Queremos o Taylor Otwell, que por sinal aprendi a escrever o nome de tanto tweet que eu dei tentando ganhar o elefante da Zend. Fiquei em segundo lugar, não foi desta vez mas… Quem sabe em uma próxima. 
+Queremos o Taylor Otwell, que por sinal aprendi a escrever o nome de tantos tweets que eu dei tentando ganhar o elefante da Zend. Fiquei em segundo lugar, não foi desta vez mas… Quem sabe em uma próxima. 
 
 ### Sticker ###
 
-Achei muito maneiro o Sticker do evento. Eu havia prometido a mim mesmo que não colaria sticker algum no meu macbook. Mas… não resisti e colei o da Laraconf. O que posso fazer se ele é muito maneiro?  ¯\_(ツ)_/¯
+Achei muito maneiro o Sticker do evento. Eu havia prometido a mim mesmo que não colaria sticker algum no meu macbook. Mas… não resisti e colei o da Laraconf. O que posso fazer se ele é muito legal?  ¯\_(ツ)_/¯
+
+
+No mais, só tenho elogios! 
