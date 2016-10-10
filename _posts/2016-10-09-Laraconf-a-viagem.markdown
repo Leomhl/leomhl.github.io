@@ -41,7 +41,7 @@ Estou aqui, 01:22 redigindo este post feliz. Cansado, mas… Feliz. De quebra, a
 
 ![Starbucks copo]({{ site.baseurl }}assets/images/posts/2016-10-09-Laraconf-a-viagem/star.jpg)
 
-Nossa volta, apesar de turbulenta foi bem tranquila. Chegamos em Friburgo antes do previsto. Nosso pouso no Santos Dumont rendeu essa foto maravilhosa:
+Nossa volta, apesar de turbulenta foi boa. Chegamos em Friburgo antes do previsto. Nosso pouso no Santos Dumont rendeu essa foto maravilhosa:
 
 ![Pouso]({{ site.baseurl }}assets/images/posts/2016-10-09-Laraconf-a-viagem/P_20161009_171957.jpg)
 
