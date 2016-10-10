@@ -3,7 +3,7 @@ title: About
 permalink: about/
 profile: true
 ---
-I am 21 years old, systems analyst and my real name is Leonardo Marinho *~(Sheldon)~*.
+I am 21 years old, systems analyst and my real name is Leonardo Marinho *~(Sheldon)~*. Son of God and a dreamer. To learn more about me, know my social networks:
 
 
 Follow me on [Github](https://github.com/Leomhl) and [Twitter](https://twitter.com/leohm10)<br>
