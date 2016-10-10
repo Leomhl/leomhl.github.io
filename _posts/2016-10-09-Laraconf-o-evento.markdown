@@ -11,9 +11,11 @@ Para quem não sabe, neste último sábado (08/10/2016) ocorreu em São Paulo a 
 O evento pecou em algumas coisas, são elas: 
 
 
-Coffee break: Apesar de tudo estar bem gostoso, a reposição demorou bastante e tudo acabou muito rápido. Basicamente o pessoal continuou com fome. Acredito que nas próximas edições isso  será resolvido. 
-Som: Compreendo que os organizadores são “reféns" do espaço que a universidade dispôs para o evento, mas… É algo que pode ser melhorado. O som saiu com bastante embaço, foi realmente entender alguns palestrantes.
-Demora nos sorteios: A quantidade de brindes foi muito legal. Muito legal meeeeeesmo (pena que não ganhei nada =P), mas… No final todos já estavam cansados e mesmo assim ficaram “remando" lá só para ver os resultados do sorteio. A minha dica é: façam mais sorteios ao longo do dia para que não se torne algo chato.
+- Coffee break: Apesar de tudo estar bem gostoso, a reposição demorou bastante e tudo acabou muito rápido. Basicamente o pessoal continuou com fome. Acredito que nas próximas edições isso  será resolvido. 
+
+- Som: Compreendo que os organizadores são “reféns" do espaço que a universidade dispôs para o evento, mas… É algo que pode ser melhorado. O som saiu com bastante embaço, foi realmente entender alguns palestrantes.
+
+- Demora nos sorteios: A quantidade de brindes foi muito legal. Muito legal meeeeeesmo (pena que não ganhei nada =P), mas… No final todos já estavam cansados e mesmo assim ficaram “remando" lá só para ver os resultados do sorteio. A minha dica é: façam mais sorteios ao longo do dia para que não se torne algo chato.
 
 ### Os palestrantes ###
 
