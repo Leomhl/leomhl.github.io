@@ -16,7 +16,7 @@
 
   <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
 
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/all.min.css" async>
+
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
   <!-- Minifiquei todo o CSS em um único arquivo -->
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="{{ site.baseurl }}feed.xml">
@@ -46,5 +46,6 @@
     ga('create', '{{ site.google_analytics }}', 'auto');
     ga('send', 'pageview');
   </script>
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/all.min.css" async>
 </body>
 </html>
