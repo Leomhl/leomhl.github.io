@@ -16,10 +16,7 @@
 
   <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
 
-
-    <noscript id="deferred-styles">
-      <link rel="stylesheet" href="{{ site.baseurl }}assets/css/all.min.css" async>
-    </noscript>
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/all.min.css" async>
     <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
   <!-- Minifiquei todo o CSS em um único arquivo -->
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="{{ site.baseurl }}feed.xml">
@@ -49,18 +46,6 @@
     ga('create', '{{ site.google_analytics }}', 'auto');
     ga('send', 'pageview');
   </script>
-  <script>
-      var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-    </script>
+
 </body>
 </html>
