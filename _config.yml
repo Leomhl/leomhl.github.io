@@ -17,7 +17,7 @@ disqus_shortname: 'leomhlgithubio'
 
 # Details for the RSS feed generator
 url:            'http://leomarinho.com.br'
-author:         'Leo Marinho'
+author:         'Leonardo Marinho'
 authorTwitter:  'leohm10'
 
 permalink:       /:year/:title/
