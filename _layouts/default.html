@@ -17,9 +17,9 @@
   <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
 
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.min.css">
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="{{ site.baseurl }}feed.xml">
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/highlight.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/highlight.min.css">
 </head>
 <body>
 
@@ -33,8 +33,9 @@
     {{ content }}
   </section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="{{ site.baseurl }}assets/js/main.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+  <script src="{{ site.baseurl }}assets/js/jquery.2.1.1.min.js"></script>
+  <script src="{{ site.baseurl }}assets/js/main.min.js"></script>
   <script src="{{ site.baseurl }}assets/js/highlight.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
