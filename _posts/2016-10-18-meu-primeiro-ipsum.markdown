@@ -12,7 +12,7 @@ Bom... o título já resume. Criei o meu primeiro Ipsum.
 
 Para fins de brincadeira e aprendizado de algoritmos de randomização, criei o RH ipsum. Um ipsum ideal para gerar parágrafos de mensagens ou emails internos para que departamentos administrativos ou de recursos humanos de uma empresa possam utilizar. (Não aconselho, mas... quem quiser usar para brincar. Automatizaria bastante os emails gigantes que não falam nada. :joy:)
 
-Também criei um snippet baseado no ipsum para quem é programador acoplar ao sublime text ou atom (editores de código). O snippet você pode acessar [aqui](https://github.com/Leomhl/snippetRhIpsum). Para conhecer o RH Ipsum você pode entrar nele por [aqui](https://rhipsum.github.io/)
+Também criei um snippet baseado no ipsum para quem é programador acoplar ao sublime text ou atom (editores de código). O snippet você pode acessar [aqui](https://github.com/Leomhl/snippetRhIpsum). Para conhecer o RH Ipsum você pode entrar nele por [aqui](https://rhipsum.github.io/).
 
 Espero que goste, e claro, leve tudo na brincadeira. Nada disso foi feito com o intuito de denegrir ou constranger alguém mas sim, para descontrair utilizando o cotidiano empresarial.
 
