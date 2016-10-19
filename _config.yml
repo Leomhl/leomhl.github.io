@@ -7,17 +7,17 @@ aboutPage: true
 markdown: kramdown
 highlighter: rouge
 
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-sitemap]
 paginate: 20
 baseurl: /
-domain_name: 'http://leomhl.github.io'
+domain_name: 'http://leomarinho.com.br'
 google_analytics: 'UA-69514159-1'
 disqus: true
 disqus_shortname: 'leomhlgithubio'
 
 # Details for the RSS feed generator
-url:            'https://leomhl.github.io'
-author:         'Leo Marinho'
+url:            'http://leomarinho.com.br'
+author:         'Leonardo Marinho'
 authorTwitter:  'leohm10'
 
 permalink:       /:year/:title/
