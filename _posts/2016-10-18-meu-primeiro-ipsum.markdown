@@ -10,7 +10,7 @@ Bom... o título já resume. Criei o meu primeiro Ipsum.
 
 *"Em design gráfico e editoração, Lorem ipsum é um texto utilizado para preencher o espaço de texto em publicações (jornais, revistas, e websites), com a finalidade de verificar o lay-out, tipografia e formatação antes de utilizar conteúdo real."* (wikipédia)
 
-Para fins de brincadeira e aprendizado de algoritmos de randomização, criei o RH ipsum. Um ipsum ideal para gerar parágrafos de mensagens ou emails internos para que departamentos administrativos ou de recursos humanos de uma empresa possam utilizar. (Não aconselho, mas... quem quiser usar para brincar. Automatizaria bastante os emails gigantes que não falam nada. :joy:)
+Para fins de brincadeira e aprendizado de algoritmos de randomização, criei o RH ipsum. Um ipsum ideal para gerar parágrafos de mensagens ou emails internos para que departamentos administrativos ou de recursos humanos de uma empresa possam utilizar. (Não aconselho, mas... quem quiser usar para brincar. Automatizaria bastante os emails gigantes que não falam nada.)
 
 Também criei um snippet baseado no ipsum para quem é programador acoplar ao sublime text ou atom (editores de código). O snippet você pode acessar [aqui](https://github.com/Leomhl/snippetRhIpsum). Para conhecer o RH Ipsum você pode entrar nele por [aqui](https://rhipsum.github.io/).
 
