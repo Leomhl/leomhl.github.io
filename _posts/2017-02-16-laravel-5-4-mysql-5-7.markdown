@@ -1,0 +1,33 @@
+---
+title:  "Laravel 5.4: Specified key was too long error"
+date:   2017-02-16 11:16:00
+description: Um "problema" que veio com o Laravel 5.4
+---
+
+Olá caro(a) nerd! 
+
+O nosso querido Laravel em sua nova versão 5.4 trouxe uma grande novidade, a mudança da codificação de caracteres para utf8mb4. Com esta mudança, é possível lidar com emojis. 
+
+Essa maravilha gerou um problema ao rodar migrations no MariaDB e versões abaixo de 5.7.7 do MySQL. 
+
+{% highlight PHP %}
+[Illuminate\Database\QueryException]
+SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table users add unique users_email_unique(email))
+
+[PDOException]
+SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes
+{% endhighlight %}
+
+Caso você **REALMENTE** necessite **MESMO** de usar MariaDB ou MySQL inferior a 5.7.7, você pode ir até o arquivo AppServiceProvider.php e no método boot adicionar um defaultStringLength como no exemplo abaixo. Vale ressaltar que o valor máximo que eu conseguir que fosse aceito foi o de 191.
+
+{% highlight PHP %}
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+{% endhighlight %}
+
+
+Até a próxima ;)

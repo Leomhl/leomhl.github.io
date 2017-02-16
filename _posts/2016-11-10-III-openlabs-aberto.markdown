@@ -1,6 +1,6 @@
 ---
 title:  "III conferência OpenLabs - Inscrições abertas!"
-date:   2016-11-10 10:04:00
+date:   2017-02-16 11:15:00
 description: Como funciona?
 ---
 
