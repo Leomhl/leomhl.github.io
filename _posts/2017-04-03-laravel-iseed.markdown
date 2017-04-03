@@ -54,6 +54,6 @@ O primeiro comando cria o seed de duas tabelas, você pode fazer de uma apenas o
 
 O segundo comando diz para o iseed que a tabela informada está em um banco de dados secundário (caso tenha mais de um no projeto).
 
-Caso tenha alguma dúvida comente abaixo que terei o maior prazer em responder :smile: 
+Caso tenha alguma dúvida comente abaixo que terei o maior prazer em responder (:
 
 Até a próxima!
