@@ -1,0 +1,14 @@
+---
+title:  "Lançado o Ionic 3"
+date:   2017-04-07 12:50:00
+description: Versão fresquinha saindo do forno!
+---
+
+É isso mesmo meu caro amigo e amiga, há poucos meses o Ionic 2 teve a sua release confirmada e agora, acaba de ser anunciada a versão 3!
+
+Mas, keep calm! De acordo com a publicação que saiu hoje no blog do Ionic, as mudanças requeridas para migrar da versão 2.x.x para 3.x.x são mínimas. A nova versão traz diversas correções de Bugs, a remoção dos 300ms de delay por click, correções do Scroll da UIWebView dentre diversas outras mudanças. Mas, qual o motivo da troca de versão? É simples, ele saiu do Angular 2 para o Angular 4. Mas, sem desespero, as mudanças entre eles foram bem pequenas.
+
+Para saber mais sobre as novidades e ficar por dentro do changelog, basta clicar [aqui](http://blog.ionic.io/ionic-3-0-has-arrived/) e ver o post original da equipe desenvolvedora do framework!
+
+
+Um forte abraço e uma vida longa e próspera!
