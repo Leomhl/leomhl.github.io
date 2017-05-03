@@ -7,7 +7,7 @@ description: Dicas para a integração
 
 Olá Devs! Estou trazendo uma dica hoje sobre a integração com a Sparkpost para envio de emails em massa (ou não) via Laravel 5.4.
 
-Se você ainda não ouviu o [meu comentário](http://bit.ly/2pDdep2) sobre o Sparkpost no [OpenDev podcast](http://www.opendevpodcast.com.br/) dê um pulo lá e ouça.
+Se você ainda não ouviu o [meu comentário](http://www.opendevpodcast.com.br/2017/05/03/dicas-03-enviando-emails-pelo-laravel/) sobre o Sparkpost no [OpenDev podcast](http://www.opendevpodcast.com.br/) dê um pulo lá e ouça.
 
 Bom, vamos lá! Primeiro, crie a sua conta em https://www.sparkpost.com/ e verifique o Email. Esse procedimento é igual ao de qualquer outro site quando você inicia uma conta.
 
