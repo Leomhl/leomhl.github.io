@@ -15,7 +15,7 @@ Após estar logado, acesse "Account" e vá até "API KEYS" no menu lateral. Apó
 
 Vá ao arquivo .env no seu Laravel e coloque as seguintes chaves:
 
-{% highlight PHP %}
+{% highlight Text %}
 MAIL_DRIVER=sparkpost
 MAIL_HOST=smtp.sparkpostmail.com
 MAIL_PORT=587
