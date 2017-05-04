@@ -1,6 +1,6 @@
 ---
 title:  "Envio de emails com Laravel e Sparkpost"
-date:   2017-04-07 12:50:00
+date:   2017-05-02 12:50:00
 description: Dicas para a integração
 ---
 
