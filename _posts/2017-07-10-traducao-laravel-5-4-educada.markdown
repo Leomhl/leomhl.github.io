@@ -11,3 +11,7 @@ Sério, parece besteira, mas, não é. Tira o fator "máquina" das suas mensagen
 [Click aqui](https://github.com/Leomhl/laravel-5.4-pt-br-localization-polite) para acessar o repositório com a tradução "educada".
 
 Espero que seja útil para você. ;)
+
+
+
+Ah... Já viu o post sobre a promoção de servidores na DigitalOcean? Acho que pode te interessar bastaaaaante! [Clica aqui](http://leomarinho.com.br/2017/free-digitalocean/) para dar uma olhada!
