@@ -1,6 +1,6 @@
 ---
 title:  "Tradução educada para o Laravel 5.4"
-date:   2017-07-09 19:00:00
+date:   2017-07-10 19:00:00
 description: Chega de dar "coice" nos clientes!
 ---
 
