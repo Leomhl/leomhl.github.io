@@ -13,3 +13,8 @@ Agora é só ser feliz (até o laravel 5.5).
 
 
 Até!
+
+
+Ah, já ia esquecendo... Também criei uma tradução mais educada. Nossos clientes não podem levar "coice" das mensagens de erro, não concorda?
+
+[Click aqui](https://github.com/Leomhl/laravel-5.4-pt-br-localization-polite) para acessar o repositório com a tradução "educada".
