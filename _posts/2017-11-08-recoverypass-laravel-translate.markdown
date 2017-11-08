@@ -7,7 +7,7 @@ description: Melhorando a comunicação com o usuário
 Olá caro(a) Dev, neste post mostrarei algo que pesquisei por bastante tempo e que acredito que seja um grande problema para várias pessoas. Como traduzir o email de recuperação de senha do laravel?
 
 
-![Imagem da tela](/assets/images/posts/2017/11/2017-11-02-recoverypass-laravel-translate/recoverypass.png)
+![Imagem da tela](http://leomarinho.com.br/assets/images/posts/2017/11/2017-11-02-recoverypass-laravel-translate/recoverypass.png)
 
 O Laravel tem um sistema de Autenticação muito prático, afinal, é só executar o comando artisan abaixo e você tem toda a autenticação pronta.
 
