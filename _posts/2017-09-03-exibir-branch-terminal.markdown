@@ -8,7 +8,7 @@ Salve salve Dev,
 
 se você utiliza Git, com certeja já passou pelo problema de esquecer em qual branch está! Eu constantemente passo por isso, na hora de realizar o push após digitar toda a linha do comando, fico em dúvida se estou enviando para o branch certo, e... Lá vou eu limpar ela e dar o famoso "git branch" para ter certeza de onde estou trabalhando. Com tanta sofrência de fazer isso, resolvi pesquisar e descobri que há uma forma de deixar o branch de trabalho em exibição constantemente no terminal como na imagem abaixo.
 
-![Terminal exibindo o branch]({{ site.baseurl }}assets/images/posts/2017/09/2017-09-03-exibir-branch-terminal/terminal.png)
+![Terminal exibindo o branch](assets/images/posts/2017/09/2017-09-03-exibir-branch-terminal/terminal.png)
 
 No caso acima, eu estava na pasta do blog dentro do branch master. Legal né?
 Para fazer isso, é bem simples...
