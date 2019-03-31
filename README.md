@@ -1,4 +1,5 @@
-## This is my blog
-Thank you for use my personal blog. I love my blog and to publish it. (:
+# Online Curriculum Vitae
 
-You can access it [here](http://www.leomarinho.com.br/).
+## Leonardo Marinho Home Page
+
+### This theme is designed by Xiaoying Riley at 3rd Wave Media (http://themes.3rdwavemedia.com/). Visit her website for more themes [http://themes.3rdwavemedia.com/](http://themes.3rdwavemedia.com/)

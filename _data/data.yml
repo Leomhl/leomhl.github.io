@@ -1,0 +1,243 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+sidebar:
+    about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
+    education: True # set to False if you want education in main section instead of in sidebar
+
+    # Profile information
+    name: Leonardo Marinho
+    tagline: Mestrando em SI<br>(PPGI-UFRJ)
+    avatar: profile.png
+
+    # Sidebar links
+    email: leonardomarinho@ufrj.br
+    website: leomarinho.com.br
+    github: leomhl
+    linkedin: leomhl
+    instagram: leomhl
+    lattes: 0318029403738576
+
+    languages:
+      - idiom: Português
+        level: Fluente
+
+      - idiom: Inglês
+        level: Intermediário
+
+      - idiom: Espanhol
+        level: Básico
+
+      - idiom: Programação
+        level: Fluente
+
+    interests:
+      - item: OpenLabs Conf
+        link: http://openlabsconf.com.br/
+
+      - item: DartLang Brasil
+        link: http://dartlang.com.br/
+
+      - item: Café
+        link: 
+
+      - item: Inovação
+        link:
+
+      - item: Ciência
+        link:
+
+      - item: Tecnologia
+        link:
+
+career-profile:
+    title: Carreira profissional
+    summary: |
+      Leonardo é formado em Análise e desenvolvimento de sistemas e mestrando em sistemas de informação com ênfase em pesquisas 
+      científicas relacionadas a análise de redes sociais e utilizando Big Data para tal. Membro do laboratório CORES (Laboratório de computação social e análise de redes sociais). Desenvolvedor Full Stack (mobile, front, beck-end) apaixonado por criar aplicativos para dispositivos móveis (Android e IOS) com tecnologias como <i>Ionic</i> e <i>Flutter</i>.
+
+      Organizador da conferência <a href="http://openlabsconf.com.br" target="_blank">OpenLabs</a>, atualmente a maior conferência tecnológica da região serrana fluminense.
+
+      Detém vários prêmios de aluno destaque da graduação que cursou.
+
+education:
+    - degree: Mestrando em SI
+      university: UFRJ
+      time: 2019 - Em andamento
+      # details: |
+      #   Describe your study here lorem ipsum dolor sit amet, consectetuer
+      #   adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+      #   sociis natoque penatibus et magnis dis parturient montes, nascetur
+      #   ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+      #   pretium quis, sem.
+
+      #     - Bullet point
+      #     - Bullet point
+
+    - degree: Análise de sistemas
+      university: UNESA
+      time: 2014 - 2016
+      # details: |
+      #   Describe your study here lorem ipsum dolor sit amet, consectetuer
+      #   adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+      #   sociis natoque penatibus et magnis dis parturient montes, nascetur
+      #   ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+      #   pretium quis, sem.
+
+      #     - Bullet point
+      #     - Bullet point
+
+experiences:
+    - role: Analista e desenvolvedor de sistemas
+      time: 2018 - Atualmente
+      company: Vantajon, Nova Friburgo
+      details: |
+          Analista e desenvolvedor de sistemas focado em soluções para varejo. 
+
+          - Ionic 3
+          - Angular
+          - HTML, CSS, Sass, Javascript
+          - Firebase
+
+    - role: Proprietário
+      time: 2017 - 2018
+      company: Fishingmen, Nova Friburgo
+      details: |
+          Proprietário da empresa de tecnologia Fishingmen soluções digitais. Trabalhou com o desenvolvimento 
+          de aplicativos móveis para Android e IOS, desenvolvimento de sites institucionais, lojas virtuais, 
+          gestão de mídias sociais e consultoria em vendas.
+
+          - Ionic 3
+          - OpenCart
+          - HTML, CSS, Javascript
+          - Photoshop
+
+    - role: Analista e desenvolvedor de sistemas
+      time: 2015 - 2017
+      company: RG Sistemas, Nova Friburgo
+      details: |
+        Analista e desenvolvedor de  sistemas web e mobile em diversos projetos focados para a área da saúde (clínica e hospitalar).
+
+          - Laravel
+          - Php
+          - Javascript
+          - jQuery
+          - Cordova
+          - Phonegap
+          - Ionic 1, 2 e 3
+          - Angular
+          - Sass
+          - Less
+          - Bootstrap
+          - Nodejs
+          - MySql
+          - Firebase
+          - Scrum
+
+    - role: Estágio como programador
+      time: 2014 - 2015
+      company: Sitebr, Nova Friburgo
+      details: |
+        Estágio em desenvolvimento de sistema gerencial para empresas em geral e desenvolvimento de ERP para corporações provedoras de internet.
+          
+          - PHP
+          - Laravel
+          - jQuery
+          - GIT
+          - Scrum
+
+    - role: Estágio como programador
+      time: 2012 - 2013
+      company: Informat Easy, Nova Friburgo 
+      details: |
+        Estágio no desenvolvimento de softwares de controle logístico e comercial.
+          
+          - Delphi
+          - Firebird
+
+
+# projects:
+#     title: Projetos
+#     intro: >
+#       You can list your side projects or open source libraries in this
+#       section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#       Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+
+#     assignments:
+#       - title: Velocity
+#         link: "#hook"
+#         tagline: "A responsive website template designed to help startups promote, market and sell their products."
+
+#       - title: DevStudio
+#         link: "#"
+#         tagline: "A responsive website template designed to help web developers/designers market their services."
+
+#       - title: Tempo
+#         link: "#"
+#         tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+
+#       - title: Atom
+#         link: "#"
+#         tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+
+#       - title: Delta
+#         link: "#"
+#         tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+
+publications:
+    title: Prêmios
+    intro: |
+      Alguns prêmios obtidos na área acadêmica
+
+    papers:
+      - title: 1º Lugar - Alunos em destaque
+        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        conference: 2016.1
+
+      - title: 1º Lugar - Alunos em destaque
+        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        conference: 2015.2
+
+      - title: 2º Lugar - Alunos em destaque
+        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        conference: 2015.1
+
+      - title: 2º Lugar - Alunos em destaque
+        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        conference: 2014.2
+
+      - title: 1º Lugar - Alunos em destaque
+        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        conference: 2014.1
+
+skills:
+    title: Habilidades &amp; Proficiência
+
+    toolset:
+      - name: Javascript & jQuery
+        level: 100%
+
+      - name: Angular & Ionic
+        level: 100%
+
+      - name: HTML5 & CSS
+        level: 95%
+
+      - name: PHP & Laravel
+        level: 90%
+
+      - name: Dart & Flutter
+        level: 80%
+
+      - name: NodeJS
+        level: 70%
+
+      - name: MySQL & MongoDB
+        level: 65%      
+
+      - name: Wordpress & OpenCart
+        level: 60%
+
+footer: >
+    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
