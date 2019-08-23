@@ -99,6 +99,7 @@ experiences:
           - Angular
           - HTML, CSS, Sass, Javascript
           - Firebase
+          - Integração com API Django
 
     - role: Proprietário
       time: 2017 - 2018
@@ -157,33 +158,39 @@ experiences:
           - Firebird
 
 
-# projects:
-#     title: Projetos
-#     intro: >
-#       You can list your side projects or open source libraries in this
-#       section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-#       Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+projects:
+    title: Eventos
+    intro: >
+      Eventos que participo da organização
 
-#     assignments:
-#       - title: Velocity
-#         link: "#hook"
-#         tagline: "A responsive website template designed to help startups promote, market and sell their products."
+    assignments:
+      - title: VII OpenLabs (2019.2)
+        link: "http://openlabsconf.com.br"
+        tagline: "Conferência tecnológica em Teresópolis, que será realizada na UNIFESO"
 
-#       - title: DevStudio
-#         link: "#"
-#         tagline: "A responsive website template designed to help web developers/designers market their services."
+      - title: VI OpenLabs (2019.1)
+        link: "http://openlabsconf.com.br"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na CEFET com mais de 100 participantes, sendo assim, a <b>maior</b> da região serrana atualmente!"
 
-#       - title: Tempo
-#         link: "#"
-#         tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+      - title: V OpenLabs (2018)
+        link: "http://openlabsconf.com.br"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 85 participantes"
 
-#       - title: Atom
-#         link: "#"
-#         tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+      - title: IV OpenLabs (2017.2)
+        link: "http://openlabsconf.com.br"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 85 participantes"
 
-#       - title: Delta
-#         link: "#"
-#         tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+      - title: III OpenLabs (2017.1)
+        link: "http://openlabsconf.com.br"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 70 participantes"
+
+      - title: II OpenLabs (2016)
+        link: "http://openlabsconf.com.br"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 65 participantes"
+      
+      - title: I OpenLabs (2015)
+        link: "http://openlabsconf.com.br"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 40 participantes"
 
 publications:
     title: Prêmios
@@ -227,6 +234,9 @@ skills:
       - name: PHP & Laravel
         level: 90%
 
+      - name: Python
+        level: 80%
+
       - name: Dart & Flutter
         level: 80%
 
@@ -234,10 +244,13 @@ skills:
         level: 70%
 
       - name: MySQL & MongoDB
-        level: 65%      
+        level: 70%      
 
       - name: Wordpress & OpenCart
-        level: 60%
+        level: 50%
+
+      - name: Django
+        level: 30%
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
