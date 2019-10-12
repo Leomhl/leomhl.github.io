@@ -16,8 +16,8 @@ sidebar:
     website: leomarinho.com.br
     github: leomhl
     linkedin: leomhl
-    instagram: leomhl
     lattes: 0318029403738576
+    phone: +55 (22) 9.8844-7540
 
     languages:
       - idiom: Português
@@ -28,9 +28,6 @@ sidebar:
 
       - idiom: Espanhol
         level: Básico
-
-      - idiom: Programação
-        level: Fluente
 
     interests:
       - item: OpenLabs Conf
@@ -51,16 +48,20 @@ sidebar:
       - item: Tecnologia
         link:
 
+      - item: Cultura nerd
+        link:
+
 career-profile:
-    title: Carreira profissional
+    title: Sobre Leonardo
     summary: |
-      Leonardo é formado em Análise e desenvolvimento de sistemas e mestrando em sistemas de informação com ênfase em pesquisas 
-      científicas relacionadas a análise de redes sociais e utilizando Big Data para tal. Membro do laboratório CORES (Laboratório de computação social e análise de redes sociais). Desenvolvedor Full Stack (mobile, front, beck-end) apaixonado por criar aplicativos para dispositivos móveis (Android e IOS) com tecnologias como <i>Ionic</i> e <i>Flutter</i>.
-
+      Leonardo é graduado em Análise e Desenvolvimento de Sistemas pela UNESA. Atualmente é mestrando na área de sistemas de informação pela Universidade Federal do Rio de Janeiro. Realiza em seu mestrado pesquisas com ênfase em análise de redes sociais, estudo sobre comunidades empreendedoras e sistemas de recomendação. É membro do laboratório <a href="https://labcores.github.io/" target="_blank">CORES</a> (Laboratório de computação social e análise de redes sociais) coordenado pela professora Jonice Oliveira (PhD). 
+      Desenvolvedor Full Stack apaixonado por criar aplicativos para dispositivos móveis (Android e IOS) com tecnologias como <i>Ionic</i> e <i>Flutter</i>.
       Organizador da conferência <a href="http://openlabsconf.com.br" target="_blank">OpenLabs</a>, atualmente a maior conferência tecnológica da região serrana fluminense.
-
+      Nos finais de semana prepara aulas para seus cursos de programação na Udemy que contam com mais de 1100 alunos, didática e transmissão de conhecimento são suas grandes paixões.
       Detém vários prêmios de aluno destaque da graduação que cursou.
-
+      É membro fundador da comunidade <a href="http://dartlang.com.br" target="_blank">Dart Lang Brasil</a>. 
+      Gosta de <b>Star Wars</b> e <b>Café</b> (em negrito para enfatizar).
+      <br><br> Brasileiro, solteiro, nascido em: 07/09/1995.<br>Mora na Ilha do Governado, Rio de Janeiro - RJ.
 education:
     - degree: Mestrando em SI
       university: UFRJ
@@ -75,7 +76,7 @@ education:
       #     - Bullet point
       #     - Bullet point
 
-    - degree: Análise de sistemas
+    - degree: Análise e Desenvolvimento de Sistemas
       university: UNESA
       time: 2014 - 2016
       # details: |
@@ -93,13 +94,13 @@ experiences:
       time: 2018 - 2019
       company: Vantajon, Nova Friburgo
       details: |
-          Analista e desenvolvedor de sistemas focado em soluções para varejo. 
+          Analista e desenvolvedor de sistemas focados em varejo físico.
 
           - Ionic 3
           - Angular
           - HTML, CSS, Sass, Javascript
           - Firebase
-          - Integração com API Django
+          - Integrações com API Rest Django
 
     - role: Proprietário
       time: 2017 - 2018
@@ -111,14 +112,14 @@ experiences:
 
           - Ionic 3
           - OpenCart
-          - HTML, CSS, Javascript
+          - HTML, CSS, Javascript, PHP
           - Photoshop
 
     - role: Analista e desenvolvedor de sistemas
       time: 2015 - 2017
       company: RG Sistemas, Nova Friburgo
       details: |
-        Analista e desenvolvedor de  sistemas web e mobile em diversos projetos focados para a área da saúde (clínica e hospitalar).
+        Analista e desenvolvedor de sistemas web e mobile em diversos projetos focados para a área da saúde (clínica e hospitalar).
 
           - Laravel
           - Php
@@ -157,16 +158,15 @@ experiences:
           - Delphi
           - Firebird
 
-
 projects:
     title: Eventos
     intro: >
-      Eventos que participo da organização
+      Eventos que participei da organização
 
     assignments:
       - title: VII OpenLabs (2019.2)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Teresópolis, que será realizada na UNIFESO"
+        tagline: "Conferência tecnológica em Teresópolis, realizada na UNIFESO"
 
       - title: VI OpenLabs (2019.1)
         link: "http://openlabsconf.com.br"
@@ -174,23 +174,201 @@ projects:
 
       - title: V OpenLabs (2018)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 85 participantes"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 85 participantes"
 
       - title: IV OpenLabs (2017.2)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 85 participantes"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 85 participantes"
 
       - title: III OpenLabs (2017.1)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 70 participantes"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 70 participantes"
 
       - title: II OpenLabs (2016)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 65 participantes"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 65 participantes"
       
       - title: I OpenLabs (2015)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na Estácio com 40 participantes"
+        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 40 participantes"
+
+
+certifications:
+    title: Certificações
+
+    papers:
+      - title: Scrum fundamentals certified (SFC)
+        instituition: Scrum Study
+
+courses:
+    title: Cursos
+    intro: >
+      Formações complementares
+
+    papers:
+      - title: The Ultimate Hands-On Hadoop - Tame your Big Data!
+        instituition: Udemy (em andamento)
+        hours: 14,5 horas
+
+      - title: Formação Cientista de Dados com R e Python
+        instituition: Udemy (em andamento)
+        hours: 29 horas
+
+      - title: Criação de Apps Android e iOS com Flutter
+        instituition: Udemy (em andamento)
+        hours: 33 horas
+
+      - title: Fundamentos de Ethical Hacking
+        instituition: Udemy (em andamento)
+        hours: 24,5 horas
+
+      - title: Python & Mysql 
+        instituition: Udemy
+        hours: 6,5 horas
+
+      - title: Curso Completo do Desenvolvedor NodeJS e MongoDB
+        instituition: Udemy
+        hours: 15,5 horas
+
+      - title: Linux para desenvolvedores
+        instituition: School of net
+        hours: 12 horas
+
+      - title: Montagem e Manutenção de Redes
+        instituition: Bit Company
+        hours: 12 horas
+
+      - title: Montagem e Manutenção de computadores
+        instituition: Bit Company
+        hours: 18 horas
+
+      - title: Técnicas avançadas de Windows
+        instituition: Bit Company
+        hours: 16 horas
+
+      - title: Excel básico, intermediário e avançado
+        instituition: Fundação Bradesco
+        hours: 54 horas
+
+      - title: Microsoft Word
+        instituition: Fundação Bradesco
+        hours: 20 horas
+
+      - title: Power point
+        instituition: Fundação Bradesco
+        hours: 23 horas
+
+      - title: Segurança da informação
+        instituition: Intel
+        hours: 6 horas
+
+      - title: Assistente administrativo
+        instituition: SENAI
+        hours: 622 horas
+
+      - title: Inglês intensivo
+        instituition: Stanborough Secondary School (Cursado na Inglaterra)
+        hours: 60 horas      
+
+      - title: Phonegap e Apache Cordova
+        instituition: Loiane training
+        hours: 8 horas
+
+      - title: Preparatório para a Certificação Scrum SFC
+        instituition: Site Campus
+        hours: 6 horas
+
+      - title: Scrum 100 Lero Lero
+        instituition: Site Campus
+        hours: 6 horas
+
+      - title: Ionic Essencial
+        instituition: WebDevBr
+        hours: 20 horas
+
+      - title: Composer na Prática
+        instituition: WebDevBr
+        hours: 20 horas
+
+      - title: AngularJs Essencial
+        instituition: WebDevBr
+        hours: 20 horas
+
+      - title: AngularJS
+        instituition: School of net
+        hours: 12 horas
+
+      - title: Phonegap Cordova Mobile Framework Completo
+        instituition: TreinaWeb
+        hours: 32 horas
+
+      - title: Git
+        instituition: School of net
+        hours: 20 horas      
+
+      - title: Sass e Compass
+        instituition: School of net
+        hours: 4 horas
+
+      - title: Instalando o Ionic Framework no Windows e Linux
+        instituition: School of net
+        hours: 14 horas
+
+      - title: Programação C/C++
+        instituition:
+        hours: 62 horas      
+
+      - title: Lógica de Programação
+        instituition: Bit Company
+        hours: 20 horas
+
+      - title: Inglês
+        instituition: FutureWay
+        hours: 140 horas      
+
+      - title: Marketing pessoal
+        instituition: Microlins
+        hours: 3 horas
+
+      - title: Fundamentos de Gestão de TI
+        instituition: FGV
+        hours: 5 horas
+
+      - title: Inovando com CSS
+        instituition: Fundação Bradesco
+        hours: 10 horas
+
+      - title: TI na educação
+        instituition: Fundação Bradesco
+        hours: 7 horas
+
+
+
+talks:
+    title: Palestras
+    intro: |
+      Palestras realizadas em eventos e congressos
+
+    papers:
+      - title: Aplicativos móveis, ciência, mercado, dinheiro, nerds e uma pitada de mágica!
+        where: (SEnIP - IPRJ) UERJ - Nova Friburgo
+        year: 2019
+
+      - title: Obsolescência de hardware, o que a linguagem Dart melhorou nesse ecossistema?
+        where: (OpenLabs) CEFET - Nova Friburgo
+        year: 2019
+
+      - title: Carreira tecnológica
+        where: Unopar - Nova Friburgo
+        year: 2017
+
+      - title: Ionic, um mundo sem retrabalho
+        where: (Teresópolis Hacker Fest) SENAC - Teresópolis
+        year: 2017
+
+      - title: Desmistificando o mobile híbrido com Phonegap
+        where: (OpenLabs) UNESA - Nova Friburgo
+        year: 2015
 
 publications:
     title: Prêmios
@@ -199,29 +377,96 @@ publications:
 
     papers:
       - title: 1º Lugar - Alunos em destaque
-        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        authors: Coordenadoria de Análise e Desenvolvimento de Sistemas, UNESA
+        description: Todos os alunos da graduação de sistemas concorreram ao prêmio
         conference: 2016.1
 
       - title: 1º Lugar - Alunos em destaque
-        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        authors: Coordenadoria de Análise e Desenvolvimento de Sistemas, UNESA
+        description: Todos os alunos da graduação de sistemas concorreram ao prêmio
         conference: 2015.2
 
       - title: 2º Lugar - Alunos em destaque
-        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        authors: Coordenadoria de Análise e Desenvolvimento de Sistemas, UNESA
+        description: Todos os alunos da graduação de sistemas concorreram ao prêmio
         conference: 2015.1
 
       - title: 2º Lugar - Alunos em destaque
-        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        authors: Coordenadoria de Análise e Desenvolvimento de Sistemas, UNESA
+        description: Todos os alunos da graduação de sistemas concorreram ao prêmio
         conference: 2014.2
 
       - title: 1º Lugar - Alunos em destaque
-        authors: Coordenadoria de análise e desenvolvimento de sistemas, UNESA
+        authors: Coordenadoria de Análise e Desenvolvimento de Sistemas, UNESA
+        description: Todos os alunos da graduação de sistemas concorreram ao prêmio
         conference: 2014.1
 
+
+jobs:
+    title: Trabalhos realizados recentemente
+    intro: >
+      Alguns freelancers e projetos realizados recentemente
+
+    assignments:
+      - title: Site institucional Datanexo
+        link: https://datanexo.co/
+        tagline: Site institucional, empresa de consultoria de dados Datanexo
+      
+      - title: Site institucional Malagueta
+        link: http://malaguetafriburgo.com.br/
+        tagline: Site institucional, restaurante fino
+
+      - title: Site institucional Zpread
+        link: http://zpread.com.br/
+        tagline: Site institucional, agência de marketing Zpread
+
+      - title: Site DartLang Brasil
+        link: http://dartlang.com.br/
+        tagline: Blog, comunidade de programadores
+
+      - title: App Life Sobre Rodas IOS
+        link: https://apps.apple.com/us/app/life-sobre-rodas/id1363747946
+        tagline: App para interação com o blog Life Sobre Rodas
+
+      - title: App Life Sobre Rodas Android
+        link: https://play.google.com/store/apps/details?id=br.com.dartlang
+        tagline: App para interação com o blog Life Sobre Rodas
+
+teaching:
+    title: Cursos que leciono
+    intro: >
+      Minha atuação na área de ensino
+
+    assignments:
+      - title: Python e Django do básico ao infinito e além!
+        link: 
+        tagline: O curso irá ao ar em breve!
+
+      - title: Curso completo de Dart Lang, do básico ao infinito e além
+        link: https://www.udemy.com/course/dart-basico/
+        tagline: Atualmente, maior curso de Linguagem Dart em português disponível
+      
+      - title: Desenvolvimento frontend e backend com Dart, Angular Dart, Aqueduc e muito mais!
+        link: https://www.udemy.com/course/dart-lang-web/
+        tagline: Atualmente, o único curso em portugês focado em backend Dart
+
+      - title: OpenCart 3 - Crie o seu E-commerce sem saber programar!
+        link: https://www.udemy.com/course/opencart-3-crie-o-seu-e-commerce-sem-saber-programar
+        tagline: Curso focado na criação de lojas virtuais por não programadores
+
 skills:
-    title: Habilidades &amp; Proficiência
+    title: Habilidades
 
     toolset:
+      - name: macOS
+        level: 100%
+
+      - name: Linux
+        level: 100%
+
+      - name: Windows
+        level: 100%
+
       - name: Javascript & jQuery
         level: 100%
 
@@ -237,8 +482,17 @@ skills:
       - name: Python
         level: 80%
 
+      - name: Django
+        level: 80%
+
       - name: Dart & Flutter
         level: 80%
+      
+      - name: Apache e NGINX 
+        level: 70%
+
+      - name: Digital Ocean com linux 
+        level: 70%
 
       - name: NodeJS
         level: 70%
@@ -246,11 +500,13 @@ skills:
       - name: MySQL & MongoDB
         level: 70%      
 
+      - name: Scrum
+        level: 65%
+
       - name: Wordpress & OpenCart
         level: 50%
 
-      - name: Django
-        level: 30%
+
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>

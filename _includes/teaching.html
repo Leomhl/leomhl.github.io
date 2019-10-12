@@ -1,0 +1,35 @@
+{% assign teaching = site.data.data.teaching %}
+{% if teaching %}
+<section class="section projects-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-video fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ teaching.title }}
+  </h2>
+
+  {% if teaching.intro %}
+  <div class="intro">
+      <p>{{ teaching.intro }}</p>
+  </div><!--//intro-->
+  {% endif %}
+
+  {% for teach in teaching.assignments %}
+    <div class="item">
+
+      <span class="project-title">
+        <a href="{{ teach.link }}" target="_blank">{{ teach.title }}</a>
+      </span>
+
+      {% if teach.tagline %}
+      <br>
+      <span class="project-tagline">{{ teach.tagline }}</span>
+      {% endif %}
+
+    </div><!--//item-->
+  {% endfor %}
+
+</section><!--//section-->
+{% endif %}
