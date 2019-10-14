@@ -54,8 +54,8 @@ sidebar:
 career-profile:
     title: Sobre Leonardo
     summary: |
-      Leonardo é graduado em Análise e Desenvolvimento de Sistemas pela UNESA. Atualmente é mestrando na área de sistemas de informação pela Universidade Federal do Rio de Janeiro. Realiza em seu mestrado pesquisas com ênfase em análise de redes sociais, estudo sobre comunidades empreendedoras e sistemas de recomendação. É membro do laboratório <a href="https://labcores.github.io/" target="_blank">CORES</a> (Laboratório de computação social e análise de redes sociais) coordenado pela professora Jonice Oliveira (PhD). 
-      Desenvolvedor Full Stack apaixonado por criar aplicativos para dispositivos móveis (Android e IOS) com tecnologias como <i>Ionic</i> e <i>Flutter</i>.
+      Leonardo é graduado em Análise e Desenvolvimento de Sistemas pela <b>UNESA</b>. Atualmente é mestrando na área de sistemas de informação pela Universidade Federal do Rio de Janeiro <b>UFRJ</b>. Realiza em seu mestrado pesquisas com ênfase em análise de redes sociais, estudo sobre comunidades empreendedoras e sistemas de recomendação. É membro do laboratório <a href="https://labcores.github.io/" target="_blank">CORES</a> (Laboratório de computação social e análise de redes sociais) coordenado pela professora Jonice Oliveira (<b>PhD</b>). 
+      Desenvolvedor Full Stack apaixonado por criar aplicativos para dispositivos móveis (Android e IOS) com tecnologias como <i>Ionic</i> e <i>Flutter</i>. Está se aventuarndo pelo incrível universo da ciência de dados no qual tem aprendido cada dia algo novo e estimulante.
       Organizador da conferência <a href="http://openlabsconf.com.br" target="_blank">OpenLabs</a>, atualmente a maior conferência tecnológica da região serrana fluminense.
       Nos finais de semana prepara aulas para seus cursos de programação na Udemy que contam com mais de 1100 alunos, didática e transmissão de conhecimento são suas grandes paixões.
       Detém vários prêmios de aluno destaque da graduação que cursou.
@@ -166,31 +166,31 @@ projects:
     assignments:
       - title: VII OpenLabs (2019.2)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Teresópolis, realizada na UNIFESO"
+        tagline: Conferência tecnológica em Teresópolis, realizada na UNIFESO
 
       - title: VI OpenLabs (2019.1)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na CEFET com mais de 100 participantes, sendo assim, a <b>maior</b> da região serrana atualmente!"
+        tagline: Conferência tecnológica em Nova Friburgo, realizada na CEFET
 
       - title: V OpenLabs (2018)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 85 participantes"
+        tagline: Conferência tecnológica em Nova Friburgo, realizada na UNESA
 
       - title: IV OpenLabs (2017.2)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 85 participantes"
+        tagline: Conferência tecnológica em Nova Friburgo, realizada na UNESA
 
       - title: III OpenLabs (2017.1)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 70 participantes"
+        tagline: Conferência tecnológica em Nova Friburgo, realizada na UNESA
 
       - title: II OpenLabs (2016)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 65 participantes"
+        tagline: Conferência tecnológica em Nova Friburgo, realizada na UNESA
       
       - title: I OpenLabs (2015)
         link: "http://openlabsconf.com.br"
-        tagline: "Conferência tecnológica em Nova Friburgo, realizada na UNESA com 40 participantes"
+        tagline: Conferência tecnológica em Nova Friburgo, realizada na UNESA
 
 
 certifications:
@@ -206,13 +206,17 @@ courses:
       Formações complementares
 
     papers:
-      - title: The Ultimate Hands-On Hadoop - Tame your Big Data!
-        instituition: Udemy (em andamento)
-        hours: 14,5 horas
-
       - title: Formação Cientista de Dados com R e Python
         instituition: Udemy (em andamento)
         hours: 29 horas
+
+      - title: Learn Core Python, Numpy and Pandas
+        instituition: Udemy (em andamento)
+        hours: 3 horas      
+
+      - title: The Ultimate Hands-On Hadoop - Tame your Big Data!
+        instituition: Udemy (em andamento)
+        hours: 14,5 horas
 
       - title: Criação de Apps Android e iOS com Flutter
         instituition: Udemy (em andamento)
@@ -458,13 +462,7 @@ skills:
     title: Habilidades
 
     toolset:
-      - name: macOS
-        level: 100%
-
-      - name: Linux
-        level: 100%
-
-      - name: Windows
+      - name: macOS, Linux e Windows
         level: 100%
 
       - name: Javascript & jQuery
@@ -476,11 +474,11 @@ skills:
       - name: HTML5 & CSS
         level: 95%
 
-      - name: PHP & Laravel
+      - name: Python
         level: 90%
 
-      - name: Python
-        level: 80%
+      - name: PHP & Laravel
+        level: 90%
 
       - name: Django
         level: 80%
