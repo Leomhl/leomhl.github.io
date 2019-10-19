@@ -1,6 +1,13 @@
 <div class="contact-container container-block">
   <ul class="list-unstyled contact-list">
 
+
+    {% if sidebar.download %}
+    <li class="linkedin"><i class="fa fa-file-download"></i>
+      <a href="{{ sidebar.download }}" target="_blank"><b>Baixar currículo</b></a>
+    </li>
+    {% endif %}  
+
     {% if sidebar.email %}
     <li class="email"><i class="fas fa-envelope"></i>
       <a href="mailto:{{ sidebar.email }}">{{ sidebar.email }}</a>
@@ -72,6 +79,7 @@
       <a href="https://www.goodreads.com/user/show/{{ sidebar.goodreads }}" target="_blank">{{ sidebar.goodreads }}</a>
     </li>
     {% endif %}
+
 
   </ul>
 </div><!--//contact-container-->
