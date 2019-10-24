@@ -212,10 +212,6 @@ courses:
         instituition: Udemy (em andamento)
         hours: 29 horas
 
-      - title: Learn Core Python, Numpy and Pandas
-        instituition: Udemy (em andamento)
-        hours: 3 horas      
-
       - title: The Ultimate Hands-On Hadoop - Tame your Big Data!
         instituition: Udemy (em andamento)
         hours: 14,5 horas
@@ -227,6 +223,10 @@ courses:
       - title: Fundamentos de Ethical Hacking
         instituition: Udemy (em andamento)
         hours: 24,5 horas
+
+      - title: Learn Core Python, Numpy and Pandas
+        instituition: Udemy
+        hours: 3 horas      
 
       - title: Python & Mysql 
         instituition: Udemy
