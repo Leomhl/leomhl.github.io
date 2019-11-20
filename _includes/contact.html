@@ -38,9 +38,15 @@
     </li>
     {% endif %}
 
+    {% if sidebar.slideshare %}
+    <li class="slideshare"><i class="fab fa-slideshare"></i>
+      <a href="https://pt.slideshare.net/{{ sidebar.slideshare }}" target="_blank">Slideshare</a>
+    </li>
+    {% endif %}  
+
     {% if sidebar.github %}
     <li class="github"><i class="fab fa-github"></i>
-      <a href="http://github.com/{{ sidebar.github }}" target="_blank">{{ sidebar.github }}</a>
+      <a href="http://github.com/{{ sidebar.github }}" target="_blank">Github</a>
     </li>
     {% endif %}
 
