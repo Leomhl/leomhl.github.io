@@ -18,8 +18,7 @@ sidebar:
     github: leomhl
     linkedin: leomhl
     lattes: 0318029403738576
-    phone: +55 (22) 9.8844-7540
-    download: http://leomarinho.com.br/assets/curriculo.pdf
+    # download: http://leomarinho.com.br/assets/curriculo.pdf
 
     languages:
       - idiom: Português
@@ -36,7 +35,7 @@ sidebar:
         link: http://openlabsconf.com.br/
 
       - item: DartLang Brasil
-        link: http://dartlang.com.br/
+        link: https://t.me/joinchat/KszwSxTDSBIAI-d461tDEw
 
       - item: Café
         link: 
@@ -59,12 +58,14 @@ career-profile:
       Leonardo é graduado em Análise e Desenvolvimento de Sistemas pela <b>UNESA</b>. Atualmente é mestrando na área de sistemas de informação pela Universidade Federal do Rio de Janeiro <b>UFRJ</b>. Realiza em seu mestrado pesquisas com ênfase em análise de redes sociais, estudo sobre comunidades empreendedoras e sistemas de recomendação. É membro do laboratório <a href="https://labcores.github.io/" target="_blank">CORES</a> (Laboratório de computação social e análise de redes sociais) coordenado pela professora Jonice Oliveira (<b>PhD</b>). 
       Desenvolvedor Full Stack apaixonado por criar aplicativos para dispositivos móveis (Android e IOS) com tecnologias como <i>Ionic</i> e <i>Flutter</i>. Está se aventurando pelo incrível universo da ciência de dados no qual tem aprendido cada dia algo novo e estimulante.
       Organizador da conferência <a href="http://openlabsconf.com.br" target="_blank">OpenLabs</a>, atualmente a maior conferência tecnológica da região serrana fluminense.
-      Nos finais de semana prepara aulas para seus cursos de programação na Udemy que contam com mais de 1100 alunos, didática e transmissão de conhecimento são suas grandes paixões.
+      Nos finais de semana prepara aulas para seus cursos de programação na Udemy que contam com mais de 1400 alunos, didática e transmissão de conhecimento são suas grandes paixões.
       Detém vários prêmios de aluno destaque da graduação que cursou.
       É membro fundador da comunidade <a href="http://dartlang.com.br" target="_blank">Dart Lang Brasil</a>. 
       Gosta de <b>Star Wars</b> e <b>Café</b> (em negrito para enfatizar).
-      <br><br>Deseja migrar de desenvolvedor para analista de dados, assim, aplicando de forma prática os conhecimentos adquiridos no mestrado.
-      <br><br> Brasileiro, solteiro, nascido em: 07/09/1995.<br>Mora na Ilha do Governado, Rio de Janeiro - RJ.
+      
+      <br><br><b>Amo dar aula, lecionar é uma das minhas gigantes paixões. Se você faz parte de algum setor de recrutamento de curso/universidade/similar que precisa de um professor de programação apaixonado pelo o que faz, agora é a sua chance! Estou aberto a negociações! :D</b>
+
+      <br><br> Brasileiro, solteiro, nascido em: 07/09/1995.<br>Mora em Nova Friburgo (mas ama viajar e morar em outros lugares), Rio de Janeiro - RJ.
 education:
     - degree: Mestrando em SI
       university: UFRJ
@@ -93,6 +94,17 @@ education:
       #     - Bullet point
 
 experiences:
+    - role: Analista e desenvolvedor de sistemas
+      time: 2019 - Até o presente momento
+      company: Equilibri, Nova Friburgo
+      details: |
+          Analista e desenvolvedor de sistemas
+
+          - Ionic 3
+          - Angular
+          - HTML, CSS, Sass, Javascript
+          - Integrações com API C#
+
     - role: Analista e desenvolvedor de sistemas
       time: 2018 - 2019
       company: Vantajon, Nova Friburgo
@@ -415,6 +427,14 @@ jobs:
       Alguns freelancers e projetos realizados recentemente
 
     assignments:
+      - title: App Equilibri IOS
+        link: javascript:alert('Em breve!');
+        tagline: App contábil
+
+      - title: App Equilibri Android
+        link: https://play.google.com/store/apps/details?id=br.com.equilibri.alpha
+        tagline: App para interação com o blog Life Sobre Rodas
+
       - title: Site institucional Datanexo
         link: https://datanexo.co/
         tagline: Site institucional, empresa de consultoria de dados Datanexo
@@ -428,8 +448,8 @@ jobs:
         tagline: Site institucional, agência de marketing Zpread
 
       - title: Site DartLang Brasil
-        link: http://dartlang.com.br/
-        tagline: Blog, comunidade de programadores
+        link: https://t.me/joinchat/KszwSxTDSBIAI-d461tDEw
+        tagline: Comunidade de programadores
 
       - title: App Life Sobre Rodas IOS
         link: https://apps.apple.com/us/app/life-sobre-rodas/id1363747946
@@ -446,8 +466,8 @@ teaching:
 
     assignments:
       - title: Python e Django do básico ao infinito e além!
-        link: 
-        tagline: O curso irá ao ar em breve!
+        link: https://www.udemy.com/course/python-do-basico-ao-infinito-e-alem/
+        tagline: Curso focado para iniciantes na linguagem Python
 
       - title: Curso completo de Dart Lang, do básico ao infinito e além
         link: https://www.udemy.com/course/dart-basico/
@@ -478,7 +498,7 @@ skills:
         level: 95%
 
       - name: Python
-        level: 90%
+        level: 80%
 
       - name: PHP & Laravel
         level: 90%
@@ -508,6 +528,5 @@ skills:
         level: 50%
 
 
-
-# footer: >
-#     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+footer: >
+    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
