@@ -221,6 +221,10 @@ courses:
       Formações complementares
 
     papers:
+      - title: Google Data Studio
+        instituition: Udemy (em andamento)
+        hours: 6,5 horas
+
       - title: Formação Cientista de Dados com R e Python
         instituition: Udemy (em andamento)
         hours: 29 horas
@@ -369,6 +373,18 @@ talks:
       Palestras realizadas em eventos e congressos
 
     papers:
+      - title: Vale do silício EUA, China e Basil
+        where: (Semana global do empreendedorismo) SENAI - Nova Friburgo
+        year: 2019   
+
+      - title: O que é Flutter e porque estão falando tanto dele?
+        where: (OpenLabs) UNIFESO - Teresópolis
+        year: 2019  
+
+      - title: O que é Flutter e porque estão falando tanto dele?
+        where: (Semana acadêmica) CEFET - Nova Friburgo
+        year: 2019      
+
       - title: Aplicativos móveis, ciência, mercado, dinheiro, nerds e uma pitada de mágica!
         where: (SEnIP - IPRJ) UERJ - Nova Friburgo
         year: 2019
