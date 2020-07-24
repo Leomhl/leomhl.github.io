@@ -95,7 +95,7 @@ education:
 
 experiences:
     - role: Analista e desenvolvedor de sistemas
-      time: 2019 - Até o presente momento
+      time: 2019 - 2019
       company: Equilibri, Nova Friburgo
       details: |
           Analista e desenvolvedor de sistemas
@@ -240,6 +240,10 @@ courses:
       - title: Fundamentos de Ethical Hacking
         instituition: Udemy (em andamento)
         hours: 24,5 horas
+
+      - title: Inteligência artificial: Sistemas de recomendação em Python
+        instituition: Udemy
+        hours: 4 horas
 
       - title: Learn Core Python, Numpy and Pandas
         instituition: Udemy
