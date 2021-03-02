@@ -5,7 +5,7 @@
   <h2 class="section-title">
     <span class="fa-stack fa-xs">
       <i class="fas fa-circle fa-stack-2x"></i>
-      <i class="fas fa-trophy fa-stack-1x fa-inverse"></i>
+      <i class="fas fa-book fa-stack-1x fa-inverse"></i>
     </span>
     {{ publications.title }}
   </h2>
@@ -18,10 +18,9 @@
 
   {% for publication in publications.papers %}
   <div class="item">
-    <div class="publication-title">{{ publication.title }}</div>
-    <div class="publication-authors">{{ publication.authors }}</div>
+    <div class="publication-title"><a href="{{ publication.url }}">{{ publication.title }}</a></div>
+    <div>{{ publication.authors }} - {{ publication.conference }}</div>
     <div class="publication-authors">{{ publication.description }}</div>
-    <div class="publication-conference">{{ publication.conference }}</div>
   </div><!--//item-->
   {% endfor %}
 
