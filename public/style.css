@@ -1,0 +1,91 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container-custom {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#markdown-content {
+  height: 100%;
+  }
+
+  #markdown-preview {
+  height: 100%;
+  overflow-y: auto;
+  }
+
+.language-bash {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.container-github-readme-generator {
+width: 90%;
+margin: 0 auto;
+}
+
+.container-markdown-preview {
+width: 90%;
+margin: 0 auto;
+}
+.btn-floating {
+position: fixed;
+bottom: 20px;
+right: 20px;
+}
+
+.btn-dark-green {
+background-color: #66AA4F; /* Defina aqui a cor verde escura desejada */
+border-color: #66AA4F; /* Mesma cor para a borda */
+color: #FFFFFF; /* Cor do texto */
+}
+
+.nav-link {
+  color: #FFF!important;
+}
+
+.btn-dark-green:hover {
+background-color: #66AA4F; /* Cor mais escura ao passar o mouse */
+border-color: #66AA4F;
+}
+
+@media (max-width: 768px) {
+.navbar-nav {
+  flex-direction: column;
+  text-align: center;
+}
+.navbar-nav .nav-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+}

@@ -1,0 +1,23 @@
+{
+  "name": "repo-readme-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && jest tests/",
+    "build": "node esbuild.config.js",
+    "start": "node esbuild.config.js -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "marked": "^12.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "esbuild-serve": "^1.0.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  }
+}

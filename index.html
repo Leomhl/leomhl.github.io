@@ -1,31 +1,113 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub README Generator</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="public/style.css">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="./public/assets/logo.png" width="200" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="https://github.com/Leomhl/leomhl.github.io" target="_blank">Github</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Leomhl" target="_blank">About Me</a>
+        </li>
+        </ul>
+    </div>
+    </nav>
+      
 
-{% include career-profile.html %}
+<div class="container-fluid bg-secondary py-5">
+  <div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="container-custom">
+            <h3>Github readme generator</h3>
+          <hr>
+          <div class="form-group">
+            <label for="details">Details:</label>
+            <textarea id="details" class="form-control" placeholder="Enter details..." rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="gif-url">GIF URL:</label>
+            <input type="text" id="gif-url" class="form-control" placeholder="Enter GIF URL...">
+          </div>
+          <div class="form-group">
+            <label for="technologies">Technologies:</label>
+            <textarea id="technologies" class="form-control" placeholder="Enter technologies using comma to separate (eg. HTML, CSS, JavaScript)" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="dependencies">Dependencies:</label>
+            <textarea id="dependencies" class="form-control" placeholder="Enter dependencies using comma to separate (eg. node, sqlite, git)" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="local-configuration">Local Configuration:</label>
+            <textarea id="local-configuration" class="form-control" placeholder="Enter local configuration..." rows="8"></textarea>
+            <button id="add-code-quote" class="btn btn-dark-green mt-2">Add Code Quote</button>
+          </div>
+          <div class="form-group">
+            <label for="testing">Testing:</label>
+            <textarea id="testing" class="form-control" placeholder="Enter testing details..." rows="5"></textarea>
+            <button id="add-code-quote-below" class="btn btn-dark-green mt-2">Add Code Quote</button>
+          </div>
+          <div class="form-group">
+            <label for="licence">Licence</label>
+            <select class="form-control" id="licence">
+                <option value="">Select a licence</option>
+                <option value="MIT">MIT</option>
+                <option value="Apache-2.0">Apache License 2.0</option>
+                <option value="GPL-3.0">GPL-3.0 License</option>
+                <option value="BSD-3-Clause">BSD 3-Clause License</option>
+                <option value="ISC">ISC License</option>
+                <option value="Mozilla-2.0">Mozilla Public License 2.0</option>
+                <option value="AGPL-3.0">GNU Affero General Public License v3.0</option>
+                <option value="LGPL-3.0">GNU Lesser General Public License v3.0</option>
+                <option value="CC0-1.0">Creative Commons Zero v1.0 Universal</option>
+                <option value="EPL-2.0">Eclipse Public License 2.0</option>
+                <option value="Unlicense">The Unlicense</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="support">Support</label>
+            <textarea class="form-control" id="support" rows="5" placeholder="Enter support information...">If you have any queries or doubts, please, feel free to contact me by e-mail. For bugs or similar, feel free to open a pull request or issue.</textarea>
+          </div>
+          <div class="form-group">
+            <label for="markdown-output">Markdown Output:</label>
+            <textarea id="markdown-output" class="form-control" rows="10"></textarea>
+            <button id="copy-output" class="btn btn-dark-green mt-2">Copy to Clipboard</button>
+          </div>      
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="container-custom" id="markdown-content">
+          <h3>Markdown Preview</h3>
+          <hr>
+          <div id="markdown-preview"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="scroll-top" class="btn btn-dark-green btn-floating">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l7 7a.5.5 0 0 1-.708.708L8 2.707 1.354 9.354a.5.5 0 1 1-.708-.708l7-7z"/>
+    </svg>
+  </button>
 
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
-
-{% include experiences.html %}
-
-{% include publications.html %}
-
-{% include talks.html %}
-
-{% include certifications.html %}
-
-{% include awards.html %}
-
-{% include projects.html %}
-
-{% include teaching.html %}
-
-{% include courses.html %}
-
-{% include jobs.html %}
-
-{% include skills.html %}
-
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/public/main.js"></script>
+</body>
+</html>
