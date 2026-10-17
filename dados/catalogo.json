@@ -114,16 +114,14 @@
     },
     {
       "slug": "dosador-cafe",
-      "nome": "Dosador de Café — Copo + Bandeja",
+      "nome": "Dosador de Café",
       "categoria": "organizacao",
-      "resumo": "Copo medidor e bandeja com bico, pra pesar e despejar o grão sem sujar a bancada.",
-      "paraQueServe": "Antes de moer, você mede os grãos. O copo dosador segura até 26 g sem deixar grão pular fora — tem uma borda interna que trava o excesso na hora de despejar rápido. A bandeja tem bico de despejo desenhado pra escorrer liso dentro do moedor, sem respingar na bancada. Os dois resolvem a mesma etapa — pesar e transferir o grão — por isso vêm juntos.",
-      "descricao": "O copo tem uma borda em ponte logo na boca: ela trava os grãos quando você despeja rápido, então eles não pulam pra fora na pressa. Cabe até 26 g, o suficiente pra uma dose de espresso.\n\nA bandeja tem bico de despejo desenhado pra escorrer liso dentro do moedor, sem respingo pela bancada, e fundo que pode ser liso ou com textura de veio de madeira — a textura também esconde a costura de impressão.",
+      "resumo": "Copo medidor que trava o grão na hora de despejar.",
+      "paraQueServe": "Antes de moer, você mede os grãos. O copo dosador segura até 26 g sem deixar grão pular fora — tem uma borda interna que trava o excesso na hora de despejar rápido.",
+      "descricao": "O copo tem uma borda em ponte logo na boca: ela trava os grãos quando você despeja rápido, então eles não pulam pra fora na pressa. Cabe até 26 g, o suficiente pra uma dose de espresso.",
       "detalhes": [
-        "Copo trava o grão, não deixa pular na hora de despejar",
-        "Copo comporta até 26 g de grão",
-        "Bandeja com bico de despejo direto pro moedor",
-        "Acabamento da bandeja liso ou com textura de madeira"
+        "Trava o grão, não deixa pular na hora de despejar",
+        "Comporta até 26 g de grão"
       ],
       "ficha": [
         {
@@ -136,19 +134,15 @@
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Copo fosco · bandeja lisa ou com veio de madeira"
+          "valor": "Fosco"
         },
         {
           "rotulo": "Dimensões",
-          "valor": "Copo dosador: 8,0 × 6,6 × 4,1 cm · Bandeja: 7,4 × 9,1 × 4,5 cm (L × P × A)"
+          "valor": "8,0 × 6,6 × 4,1 cm (L × P × A)"
         },
         {
           "rotulo": "Peso aproximado",
-          "valor": "≈ 57 g o kit (copo + bandeja)"
-        },
-        {
-          "rotulo": "Itens inclusos",
-          "valor": "Copo dosador + bandeja de despejo"
+          "valor": ""
         },
         {
           "rotulo": "Limpeza",
@@ -161,15 +155,7 @@
       "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
-      "opcoes": [
-        {
-          "titulo": "Acabamento da bandeja",
-          "valores": [
-            "Liso",
-            "Textura de madeira"
-          ]
-        }
-      ],
+      "opcoes": [],
       "fotos": [
         "fotos/dosador-cafe/01.jpg",
         "fotos/dosador-cafe/02.jpg",
