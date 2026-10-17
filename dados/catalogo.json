@@ -335,15 +335,15 @@
     },
     {
       "slug": "kit-bandeja-porta-capsulas-3em1",
-      "nome": "Kit Bandeja com Porta-Cápsulas 3 em 1",
+      "nome": "Kit Nivelador e Bate-Borra",
       "categoria": "organizacao",
-      "resumo": "Bandeja, porta-cápsulas e apoio de xícara na mesma peça.",
-      "paraQueServe": "Resolve o cantinho do café inteiro de uma vez: uma bandeja que delimita o espaço, um porta-cápsulas de boca aberta para pegar sem olhar e um apoio de xícara. As três partes encaixam e saem, então você monta na disposição que cabe na sua bancada e desmonta tudo para lavar.",
-      "descricao": "A bandeja oval é a base; em cima dela entram o módulo porta-cápsulas, de boca aberta para pegar às cegas, e o apoio de xícara. Os três se encaixam e saem — você monta a disposição que cabe na sua bancada e desmonta inteiro para limpar. É o kit que resolve o cantinho do café de uma vez.",
+      "resumo": "Bandeja, bate-borra e porta-nivelador na mesma peça.",
+      "paraQueServe": "Resolve a etapa de nivelar e descartar a borra numa peça só: o porta-nivelador guarda a ferramenta de nivelar o café moído, com uma janela lateral que facilita pegar sem tirar tudo do lugar, e o bate-borra recebe a batida do portafiltro pra soltar a pastilha usada, com borda ondulada que absorve o impacto. A bandeja embaixo encaixa os dois e contém a sujeira.",
+      "descricao": "A bandeja oval tem dois nichos moldados que encaixam exatamente o porta-nivelador e o bate-borra, então nada escorrega na bancada. O porta-nivelador tem uma janela lateral recortada para pegar a ferramenta sem precisar tirar tudo do lugar. O bate-borra tem a borda alta e ondulada, desenhada pra receber a batida do portafiltro e soltar a pastilha de café usada sem espalhar pó. Os três módulos se encaixam e saem — você monta a disposição que cabe na sua bancada e desmonta inteiro para limpar.",
       "detalhes": [
-        "Três módulos encaixáveis",
-        "Bandeja oval com borda",
-        "Combinação de cores a escolher"
+        "Três módulos encaixáveis: bandeja, bate-borra e porta-nivelador",
+        "Bate-borra com borda ondulada que absorve o impacto",
+        "Porta-nivelador com janela lateral de acesso rápido"
       ],
       "ficha": [
         {
@@ -368,7 +368,7 @@
         },
         {
           "rotulo": "Itens inclusos",
-          "valor": "Bandeja + porta-cápsulas + apoio de xícara"
+          "valor": "Bandeja + bate-borra + porta-nivelador"
         },
         {
           "rotulo": "Limpeza",
