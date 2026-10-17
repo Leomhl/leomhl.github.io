@@ -21,6 +21,13 @@
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])
     );
 
+  // Escapa o texto e transforma URLs soltas em links clicáveis.
+  const escLink = (s) =>
+    esc(s).replace(
+      /(https?:\/\/[^\s<]+)/g,
+      (url) => `<a href="${url}" target="_blank" rel="noopener">${url}</a>`
+    );
+
   const moeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 
   const dataLonga = (iso) => {
@@ -472,7 +479,7 @@
       .join('');
 
     const detalhes = (p.detalhes || []).length
-      ? `<ul class="detalhes">${p.detalhes.map((d) => `<li>${esc(d)}</li>`).join('')}</ul>`
+      ? `<ul class="detalhes">${p.detalhes.map((d) => `<li>${escLink(d)}</li>`).join('')}</ul>`
       : '';
 
     const rotuloBotao = p.preVenda ? 'Reservar na pré-venda' : 'Comprar pelo WhatsApp';

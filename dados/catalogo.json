@@ -84,16 +84,16 @@
           "valor": "15 × 23 × 1,5 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 138 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "Grade + reservatório inferior"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 69.69,
@@ -141,12 +141,12 @@
           "valor": "8,0 × 6,6 × 4,1 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 24 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 26.8,
@@ -194,16 +194,16 @@
           "valor": "14,1 × 15,9 × 2,4 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 34 g"
-        },
-        {
           "rotulo": "Compatibilidade",
           "valor": "Serve pacotes de até 1 kg"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 31.75,
@@ -252,16 +252,16 @@
           "valor": "19 × 10,8 × 8,8 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 256 g"
-        },
-        {
           "rotulo": "Compatibilidade",
           "valor": "Serve cápsulas Nespresso Original"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 108.64,
@@ -309,12 +309,12 @@
           "valor": "10,2 × 10,4 × 8,4 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 116 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 63.91,
@@ -363,16 +363,16 @@
           "valor": "22 × 12 × 10 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 190 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "Bandeja + bate-borra + porta-nivelador"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 102.29,
@@ -421,20 +421,20 @@
           "valor": "14,8 × 14,8 × 11,5 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 168 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "Caixa + tampa"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 78.89,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -479,20 +479,20 @@
           "valor": "9,1 × 9,1 × 13 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 105 g"
-        },
-        {
           "rotulo": "Compatibilidade",
           "valor": "Comporta sachês envelopados padrão"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 56.37,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -537,12 +537,12 @@
           "valor": "7,9 × 7,9 × 9 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 96,5 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 69,
@@ -591,16 +591,16 @@
           "valor": "17 × 6 × 8 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 137 g"
-        },
-        {
           "rotulo": "Compatibilidade",
           "valor": "Serve guardanapo quadrado padrão"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 68.76,
@@ -647,12 +647,12 @@
           "valor": "10,8 × 14,6 × 0,6 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 30 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 29.37,
@@ -701,16 +701,16 @@
           "valor": "12,1 × 10,2 × 1 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 64 g"
-        },
-        {
           "rotulo": "Compatibilidade",
           "valor": "Serve guardanapo quadrado de 20 a 24 cm"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 42.62,
@@ -759,16 +759,16 @@
           "valor": "3 × 2,1 × 1,5 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 13 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "1 unidade"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 23.24,
@@ -817,16 +817,16 @@
           "valor": "4 × 9 × 6 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 35 g"
-        },
-        {
           "rotulo": "Compatibilidade",
           "valor": "Serve também na posição de uso"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 31.35,
@@ -873,12 +873,12 @@
           "valor": ""
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 21 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 25.68,
@@ -927,10 +927,6 @@
           "valor": "13 × 18 × 15 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 200 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "Suporte + apoio de base removível"
         },
@@ -941,6 +937,10 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 93.94,
@@ -989,16 +989,16 @@
           "valor": "20 × 8,8 cm (L × A), espessura 0,3 cm"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 8 g"
-        },
-        {
           "rotulo": "Fixação",
           "valor": "Fita dupla-face ou dois furos na traseira"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 21.27,
@@ -1045,20 +1045,20 @@
           "valor": "12,1 × 15,1 × 10,5 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 80 g"
-        },
-        {
           "rotulo": "Compatibilidade",
           "valor": "Serve suculenta, cacto e mudas pequenas"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 60.45,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -1101,12 +1101,12 @@
           "valor": "7,8 × 6,5 × 10 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 62 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 41.76,
@@ -1156,12 +1156,12 @@
           "valor": ""
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 19 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 28.48,
@@ -1209,16 +1209,16 @@
           "valor": ""
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 18 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 26.22,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -1262,16 +1262,16 @@
           "valor": "4,7 × 3,8 × 5,7 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 20 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 26.74,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -1315,12 +1315,12 @@
           "valor": "4,3 × 2,8 × 4 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 8 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 22.26,
@@ -1366,10 +1366,6 @@
           "valor": "19,1 × 19,1 cm (L × A), espessura 0,1 cm"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 117 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "3 quadros independentes"
         },
@@ -1380,10 +1376,14 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 60.19,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -1426,12 +1426,12 @@
           "valor": "21,9 × 20,2 × 1,8 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 42 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 32.52,
@@ -1479,16 +1479,16 @@
           "valor": "16 × 8,6 cm (L × A), espessura 0,1 cm"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 9 g"
-        },
-        {
           "rotulo": "Fixação",
           "valor": "Fita dupla-face ou dois furos na traseira"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 21.53,
@@ -1536,12 +1536,12 @@
           "valor": "11,6 × 3,7 × 2,9 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 10 g"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 22.79,
@@ -1589,16 +1589,16 @@
           "valor": "cerca de 4 a 7 cm cada peça (jogo com 4 formatos diferentes)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 35 g o jogo completo"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "4 pingentes: Espresso, Grão, Espresso Martini e Bialetti"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 40.66,
@@ -1648,16 +1648,16 @@
           "valor": "10,2 × 17,6 cm (L × A), espessura 0,1 cm"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 12 g"
-        },
-        {
           "rotulo": "Fixação",
           "valor": "Fita dupla-face ou dois furos na traseira"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 23.31,
@@ -1705,16 +1705,16 @@
           "valor": "23,5 × 22,5 cm (L × A), espessura 0,3 cm"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 44 g"
-        },
-        {
           "rotulo": "Fixação",
           "valor": "Fita dupla-face ou dois furos na traseira"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 35.7,
@@ -1761,16 +1761,16 @@
           "valor": "19,6 × 16,2 cm (L × A), espessura 0,2 cm"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 20 g"
-        },
-        {
           "rotulo": "Fixação",
           "valor": "Fita dupla-face ou dois furos na traseira"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 26.74,
@@ -1818,16 +1818,16 @@
           "valor": ""
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 27 g"
-        },
-        {
           "rotulo": "Fixação",
           "valor": "Base integrada, fica em pé sobre o móvel, sem fixação"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 29.25,
@@ -1839,8 +1839,7 @@
       "opcoes": [],
       "fotos": [
         "fotos/placa-cafe-sempre-boa-ideia/01.jpg",
-        "fotos/placa-cafe-sempre-boa-ideia/02.jpg",
-        "fotos/placa-cafe-sempre-boa-ideia/03.jpg"
+        "fotos/placa-cafe-sempre-boa-ideia/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Decoração/Café é sempre uma boa ideia"
@@ -1875,10 +1874,6 @@
           "valor": "12 × 15 cm (L × A), espessura 0,7 cm"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 80 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "2 placas (masculino e feminino)"
         },
@@ -1889,6 +1884,10 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 47.81,
@@ -1935,10 +1934,6 @@
           "valor": "7,5 × 8,9 cm (L × A), espessura 0,3 cm"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 27 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "1 peça com 3 painéis já unidos"
         },
@@ -1949,16 +1944,21 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 28.58,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
+        "fotos/cantinho-do-cafe/02.jpg",
         "fotos/cantinho-do-cafe/01.jpg"
       ],
       "video": null,
@@ -1994,10 +1994,6 @@
           "valor": "16,1 × 24 cm (L × A), espessura 0,5 cm"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 45 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "3 peças"
         },
@@ -2008,6 +2004,10 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 35.97,
@@ -2054,20 +2054,20 @@
           "valor": "15,7 × 10,8 × 2,9 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 47 g"
-        },
-        {
           "rotulo": "Alimentação",
           "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 110.35,
-      "destaque": false,
+      "destaque": true,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -2110,16 +2110,16 @@
           "valor": "9,4 × 12 × 11,2 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 130 g"
-        },
-        {
           "rotulo": "Alimentação",
           "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 63.6,
@@ -2166,16 +2166,16 @@
           "valor": "10,4 × 10,4 × 4 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 77 g"
-        },
-        {
           "rotulo": "Alimentação",
           "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 64.99,
@@ -2222,20 +2222,20 @@
           "valor": "17,5 × 4,9 × 4 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 68 g"
-        },
-        {
           "rotulo": "Alimentação",
           "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 64.99,
-      "destaque": false,
+      "destaque": true,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -2278,20 +2278,20 @@
           "valor": "9,3 × 10,4 × 7 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 131 g"
-        },
-        {
           "rotulo": "Alimentação",
           "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 65.85,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -2334,20 +2334,20 @@
           "valor": "10,8 × 10,8 × 13,2 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 124,3 g"
-        },
-        {
           "rotulo": "Alimentação",
           "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 37.5,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -2365,11 +2365,14 @@
       "nome": "Adaptador Dolce Gusto para Três Corações",
       "categoria": "preparo",
       "resumo": "Cápsula Três Corações rodando em máquina Dolce Gusto.",
-      "paraQueServe": "Se você tem uma máquina Dolce Gusto, ela só aceita as cápsulas da própria marca. Este adaptador acomoda a cápsula Três Corações no porta-cápsulas da máquina: ele tem a agulha que fura o lacre no ângulo certo e veda as laterais para a água não escapar. Na prática, amplia as marcas de café que você pode usar.",
-      "descricao": "Encaixe que acomoda a cápsula Três Corações no porta-cápsulas da Dolce Gusto. O núcleo tem agulha de perfuração integrada ao corpo, no ângulo certo para furar o lacre sem rasgar, e o corpo faz a vedação lateral para a água não escapar pelos lados. O canal de saída é liso, para o café escoar sem deixar resíduo.",
+      "paraQueServe": "Se você tem uma máquina Dolce Gusto, ela só aceita as cápsulas da própria marca. Este adaptador acomoda a cápsula Três Corações no porta-cápsulas da máquina: ele tem a agulha que fura o lacre no ângulo certo e veda as laterais para a água não escapar. Na prática, amplia as marcas de café que você pode usar. É projeto autoral nosso, desenhado do zero para corrigir as falhas que você vê nos adaptadores genéricos de marketplace: cápsula estourando sob pressão, fluxo de água irregular e agulha fina que quebra ou entope no uso.",
+      "descricao": "Encaixe que acomoda a cápsula Três Corações no porta-cápsulas da Dolce Gusto. Projeto autoral, desenhado do zero — não é cópia dos adaptadores genéricos que circulam por aí. O núcleo tem agulha de perfuração integrada ao corpo, mais espessa e resistente, no ângulo certo para furar o lacre sem rasgar e sem entupir. O corpo faz a vedação lateral com folga calculada para a cápsula não estourar sob a pressão da máquina, o defeito mais comum nos adaptadores baratos. O canal de saída é liso e calibrado para manter o fluxo constante, sem respingo e sem extração fraca.",
       "detalhes": [
+        "Projeto autoral exclusivo, desenhado para corrigir falhas dos adaptadores genéricos",
+        "Agulha reforçada, não quebra nem entope no uso",
+        "Vedação lateral calculada contra estouro de cápsula sob pressão",
+        "Canal de saída calibrado para fluxo constante, sem vazamento",
         "Duas partes: corpo + núcleo com agulha",
-        "Acabamento premium, superfície lisa",
         "Lave em água corrente após o uso"
       ],
       "ficha": [
@@ -2390,20 +2393,20 @@
           "valor": "5,2 × 5,2 × 4,1 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 10 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "Corpo + núcleo com agulha"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 22.12,
-      "destaque": true,
+      "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -2445,12 +2448,12 @@
           "valor": "V60 02: 12,8 × 6,8 × 12,6 cm · V60 03: 14,2 × 7,6 × 14,0 cm · Chemex: 17,6 × 9,4 × 17,4 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 210 g (V60 02) a ≈ 356 g (Chemex), conforme o modelo escolhido"
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 68,
@@ -2516,16 +2519,16 @@
           "valor": "5,7 × 5,7 × 12 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 32 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "1 peça (colher e tamper na mesma ferramenta)"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 33.88,
@@ -2575,16 +2578,16 @@
           "valor": "7,5 × 6,9 × 2,5 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 28 g"
-        },
-        {
           "rotulo": "Compatibilidade",
           "valor": "Serve os discos de filtro Aeropress"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 27.85,
@@ -2631,10 +2634,6 @@
           "valor": "11,5 × 6 × 3,9 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 38 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "Berço de recarga + colher dosadora"
         },
@@ -2645,6 +2644,10 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 32.47,
@@ -2672,7 +2675,8 @@
         "Mecanismo de fuso puramente mecânico, sem eletrônica nem pilha",
         "Compatível com os Stencil Cards do mesmo kit",
         "Acompanha guia de montagem em PDF",
-        "Mais de 20 peças, montagem assistida"
+        "Mais de 20 peças, montagem assistida",
+        "Não acompanha os estêncils — vendidos à parte em https://leomhl.github.io/#/p/stencil-cards-latteshot"
       ],
       "ficha": [
         {
@@ -2692,12 +2696,8 @@
           "valor": "20,3 × 9,4 × 9,6 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 300 g"
-        },
-        {
           "rotulo": "Itens inclusos",
-          "valor": "Câmera montada + guia de montagem em PDF"
+          "valor": "Câmera montada + guia de montagem em PDF (não acompanha estêncils)"
         },
         {
           "rotulo": "Compatibilidade",
@@ -2706,6 +2706,10 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 141.47,
@@ -2717,7 +2721,9 @@
       "opcoes": [],
       "fotos": [
         "fotos/latteshot/01.jpg",
-        "fotos/latteshot/02.jpg"
+        "fotos/latteshot/02.jpg",
+        "fotos/latteshot/03.jpg",
+        "fotos/latteshot/04.jpg"
       ],
       "video": null,
       "videoObservacao": "O vídeo de montagem (161 MB) não cabe no GitHub Pages. Suba no YouTube e cole o link no campo video.",
@@ -2729,11 +2735,11 @@
       "categoria": "preparo",
       "resumo": "Os discos de estêncil para usar na mão, sem a câmera.",
       "paraQueServe": "A versão simples e barata do desenho na espuma, sem a câmera. São discos vazados do tamanho da boca da xícara: você apoia o molde sobre a espuma, peneira o chocolate em pó por cima e levanta. O desenho fica. Funciona em qualquer xícara e em qualquer bebida com espuma firme ou crema.",
-      "descricao": "Discos vazados com desenho de folha, coração e grão, do tamanho da boca da xícara. Você apoia o molde sobre a espuma, peneira o chocolate por cima e levanta — o desenho fica. É a versão direta, sem mecanismo: funciona em qualquer xícara e em qualquer bebida com crema ou espuma firme.",
+      "descricao": "Discos vazados com 16 desenhos diferentes — folha, coração, xícara, carinha feliz, grãos, estrela, trevo, CAFE, lua e estrelas, bule, pata de cachorro, entre outros — do tamanho da boca da xícara. Você apoia o molde sobre a espuma, peneira o chocolate por cima e levanta — o desenho fica. É a versão direta, sem mecanismo: funciona em qualquer xícara e em qualquer bebida com crema ou espuma firme.",
       "detalhes": [
         "Discos na medida da boca da xícara",
         "Uso manual, sem a câmera",
-        "Jogo com 3 desenhos"
+        "Jogo com 16 desenhos diferentes"
       ],
       "ficha": [
         {
@@ -2753,20 +2759,20 @@
           "valor": "12,6 × 12,6 × 2,9 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 170 g"
-        },
-        {
           "rotulo": "Itens inclusos",
-          "valor": "3 discos de estêncil"
+          "valor": "16 discos de estêncil"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 80.75,
-      "destaque": false,
+      "destaque": true,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
@@ -2774,7 +2780,13 @@
       "opcoes": [],
       "fotos": [
         "fotos/molde-cafe-latteshot/01.jpg",
-        "fotos/molde-cafe-latteshot/02.jpg"
+        "fotos/molde-cafe-latteshot/02.jpg",
+        "fotos/molde-cafe-latteshot/03.jpg",
+        "fotos/molde-cafe-latteshot/04.jpg",
+        "fotos/molde-cafe-latteshot/05.jpg",
+        "fotos/molde-cafe-latteshot/06.jpg",
+        "fotos/molde-cafe-latteshot/07.jpg",
+        "fotos/molde-cafe-latteshot/08.jpg"
       ],
       "video": null,
       "pastaOrigem": "Preparo/Moldes de Estêncil Avulsos"
@@ -2809,10 +2821,6 @@
           "valor": "13,1 × 4,8 × 12,2 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 76 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "4 berços"
         },
@@ -2823,6 +2831,10 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 45.43,
@@ -2869,16 +2881,16 @@
           "valor": "18,6 × 10,3 × 0,1 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 170 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "Cartões à sua escolha, avulsos ou em jogo"
         },
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 94.05,
@@ -2925,10 +2937,6 @@
           "valor": "15,1 × 10,5 × 1,2 cm (L × P × A)"
         },
         {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 56 g"
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "2 braços destacáveis"
         },
@@ -2939,6 +2947,10 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
       "preco": 38.85,
