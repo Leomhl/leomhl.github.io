@@ -600,7 +600,7 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
   .marca { flex: none; }
   .menu {
     display: flex; position: static; flex-direction: row; align-items: center; gap: 2px;
-    flex: 1 1 auto; min-width: 0; margin-left: 10px;
+    flex: 1 1 auto; min-width: 0; margin-left: 32px;
     padding: 0; background: none; border: 0; box-shadow: none; max-height: none;
     overflow-x: auto; overflow-y: visible; scrollbar-width: none;
     scroll-snap-type: x proximity; overscroll-behavior-x: contain;
