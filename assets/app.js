@@ -175,9 +175,8 @@
   }
 
   // Ficha técnica no formato de tabela. Linha sem valor preenchido não aparece.
-  function blocoFicha(p, cores) {
+  function blocoFicha(p) {
     const linhas = (p.ficha || []).filter((l) => l.valor);
-    if (cores) linhas.splice(2, 0, { rotulo: 'Cores', valor: cores });
     if (!linhas.length) return '';
     return `<section class="ficha">
       <h2 class="ficha-titulo">Ficha técnica</h2>
@@ -523,7 +522,7 @@
 
           <div class="produto-descricao">${paragrafos}</div>
           ${detalhes}
-          ${blocoFicha(p, coresDe(p).map((c) => c.nome).join(', '))}
+          ${blocoFicha(p)}
 
           <div class="escolhas" data-escolhas>
             ${blocoOpcoes(p)}

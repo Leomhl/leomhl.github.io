@@ -69,12 +69,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -97,7 +101,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 79.0,
+      "preco": 75.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -105,40 +109,51 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/bandeja-hexagonal-coador/01.jpg"
+        "fotos/bandeja-hexagonal-coador/01.jpg",
+        "fotos/bandeja-hexagonal-coador/02.jpg",
+        "fotos/bandeja-hexagonal-coador/03.jpg",
+        "fotos/bandeja-hexagonal-coador/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Bandeja Hexagonal para Coador"
     },
     {
-      "slug": "bandeja-cafe",
-      "nome": "Bandeja para Café",
+      "slug": "dosador-cafe",
+      "nome": "Dosador de Café — Copo + Bandeja",
       "categoria": "organizacao",
-      "resumo": "A bancada do café dentro de um retângulo só.",
-      "paraQueServe": "Delimita o cantinho do café. Em vez de a cafeteira, as xícaras e o pote de açúcar ficarem espalhados pela bancada, tudo fica dentro de um retângulo só, e na hora de limpar você levanta a bandeja inteira e passa o pano embaixo. A borda baixa deixa arrastar a xícara para dentro e para fora sem precisar levantar.",
-      "descricao": "Bandeja retangular com borda baixa, feita para reunir num lugar só o que hoje está espalhado pela bancada. O fundo é reforçado por nervuras internas, então não entorta quando você carrega cheia, e a borda segura respingo de leite e pó derramado.\n\nVocê escolhe o acabamento do fundo: liso, que limpa num passe de pano, ou com textura de veio de madeira gravada direto na peça — sem adesivo e sem verniz, então não descasca com o tempo.",
+      "resumo": "Copo medidor e bandeja com bico, pra pesar e despejar o grão sem sujar a bancada.",
+      "paraQueServe": "Antes de moer, você mede os grãos. O copo dosador segura até 26 g sem deixar grão pular fora — tem uma borda interna que trava o excesso na hora de despejar rápido. A bandeja tem bico de despejo desenhado pra escorrer liso dentro do moedor, sem respingar na bancada. Os dois resolvem a mesma etapa — pesar e transferir o grão — por isso vêm juntos.",
+      "descricao": "O copo tem uma borda em ponte logo na boca: ela trava os grãos quando você despeja rápido, então eles não pulam pra fora na pressa. Cabe até 26 g, o suficiente pra uma dose de espresso.\n\nA bandeja tem bico de despejo desenhado pra escorrer liso dentro do moedor, sem respingo pela bancada, e fundo que pode ser liso ou com textura de veio de madeira — a textura também esconde a costura de impressão.",
       "detalhes": [
-        "Fundo nervurado, não entorta quando carregada",
-        "Borda baixa para arrastar a xícara",
-        "Acabamento liso ou com veio de madeira",
-        "Limpe com pano úmido, sem produto abrasivo"
+        "Copo trava o grão, não deixa pular na hora de despejar",
+        "Copo comporta até 26 g de grão",
+        "Bandeja com bico de despejo direto pro moedor",
+        "Acabamento da bandeja liso ou com textura de madeira"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco — liso ou com veio de madeira, conforme a opção escolhida"
+          "valor": "Copo fosco · bandeja lisa ou com veio de madeira"
         },
         {
           "rotulo": "Dimensões",
-          "valor": "7,3 × 9,1 × 4,5 cm (L × P × A)"
+          "valor": "Copo dosador: 8,0 × 6,6 × 4,1 cm · Bandeja: 7,4 × 9,1 × 4,5 cm (L × P × A)"
         },
         {
           "rotulo": "Peso aproximado",
-          "valor": "≈ 31,3 g"
+          "valor": "≈ 57 g o kit (copo + bandeja)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "Copo dosador + bandeja de despejo"
         },
         {
           "rotulo": "Limpeza",
@@ -149,27 +164,28 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 95.0,
+      "preco": 115.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
-      "fotos": [
-        "fotos/bandeja-cafe/01.jpg"
-      ],
-      "video": null,
-      "revisarFoto": true,
-      "pastaOrigem": "Organização/Bandeja para Café",
       "opcoes": [
         {
-          "titulo": "Acabamento do fundo",
+          "titulo": "Acabamento da bandeja",
           "valores": [
             "Liso",
             "Textura de madeira"
           ]
         }
-      ]
+      ],
+      "fotos": [
+        "fotos/dosador-cafe/01.jpg",
+        "fotos/dosador-cafe/02.jpg",
+        "fotos/dosador-cafe/03.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Dosador para Café"
     },
     {
       "slug": "clipe-saco-cafe",
@@ -185,12 +201,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -213,7 +233,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 34.0,
+      "preco": 29.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -221,65 +241,13 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/clipe-saco-cafe/01.jpg"
+        "fotos/clipe-saco-cafe/01.jpg",
+        "fotos/clipe-saco-cafe/02.jpg",
+        "fotos/clipe-saco-cafe/03.jpg",
+        "fotos/clipe-saco-cafe/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Clipe Dosador para Saco de Café"
-    },
-    {
-      "slug": "copo-dosador-cafe",
-      "nome": "Copo Dosador de Café",
-      "categoria": "organizacao",
-      "resumo": "Cumbuca com bico, para pesar o grão e despejar sem derrubar.",
-      "paraQueServe": "Uma cumbuca para pesar o café antes de moer. Você coloca na balança, zera, despeja o grão até o peso que quer e depois joga tudo no moedor pelo bico alongado, que afunila e não deixa grão pular para fora. Se você mede café de olho hoje, é a peça que faz o sabor ficar igual todo dia.",
-      "descricao": "Você pesa o grão dentro da cumbuca na balança, tara zerada, e despeja no moedor pelo bico alongado — que afunila o grão e evita a chuva de café na bancada. O fundo é largo e baixo, então a peça não tomba quando você solta a mão para mexer na balança.",
-      "detalhes": [
-        "Bico de despejo afunilado",
-        "Base larga, não tomba",
-        "Comporta cerca de 40 g de grão"
-      ],
-      "ficha": [
-        {
-          "rotulo": "Material",
-          "valor": "Bioplástico PLA"
-        },
-        {
-          "rotulo": "Acabamento",
-          "valor": "Fosco"
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": "8 × 6,6 × 4,1 cm (L × P × A)"
-        },
-        {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 25,4 g"
-        },
-        {
-          "rotulo": "Compatibilidade",
-          "valor": "Comporta cerca de 40 g de grão"
-        },
-        {
-          "rotulo": "Limpeza",
-          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
-        }
-      ],
-      "preco": 44.0,
-      "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
-      "cores": null,
-      "opcoes": [],
-      "fotos": [
-        "fotos/copo-dosador-cafe/01.jpg"
-      ],
-      "video": null,
-      "pastaOrigem": "Organização/Copo Dosador de Café"
     },
     {
       "slug": "dispenser-capsulas-nespresso",
@@ -295,12 +263,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -323,7 +295,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 119.0,
+      "preco": 79.0,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -331,7 +303,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/dispenser-capsulas-nespresso/01.jpg"
+        "fotos/dispenser-capsulas-nespresso/01.jpg",
+        "fotos/dispenser-capsulas-nespresso/02.jpg",
+        "fotos/dispenser-capsulas-nespresso/03.jpg",
+        "fotos/dispenser-capsulas-nespresso/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Dispenser de Cápsulas Nespresso"
@@ -350,12 +325,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -374,7 +353,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 89.0,
+      "preco": 94.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -382,7 +361,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/estacao-tamping/01.jpg"
+        "fotos/estacao-tamping/01.jpg",
+        "fotos/estacao-tamping/02.jpg",
+        "fotos/estacao-tamping/03.jpg",
+        "fotos/estacao-tamping/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Estação de Tamping"
@@ -401,12 +383,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -429,7 +415,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 139.0,
+      "preco": 129.0,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -437,7 +423,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/kit-bandeja-porta-capsulas-3em1/01.jpg"
+        "fotos/kit-bandeja-porta-capsulas-3em1/01.jpg",
+        "fotos/kit-bandeja-porta-capsulas-3em1/02.jpg",
+        "fotos/kit-bandeja-porta-capsulas-3em1/03.jpg",
+        "fotos/kit-bandeja-porta-capsulas-3em1/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Kit Bandeja com Porta-Cápsulas 3 em 1"
@@ -456,12 +445,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -484,7 +477,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 92.0,
+      "preco": 89.0,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -492,7 +485,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/knock-box/01.jpg"
+        "fotos/knock-box/01.jpg",
+        "fotos/knock-box/02.jpg",
+        "fotos/knock-box/03.jpg",
+        "fotos/knock-box/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Knock Box com Tampa"
@@ -511,12 +507,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -539,7 +539,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 89.0,
+      "preco": 54.0,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -547,61 +547,13 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/organizador-saches-cha/01.jpg"
+        "fotos/organizador-saches-cha/01.jpg",
+        "fotos/organizador-saches-cha/02.jpg",
+        "fotos/organizador-saches-cha/03.jpg",
+        "fotos/organizador-saches-cha/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Organizador de Sachês de Chá"
-    },
-    {
-      "slug": "organizador-aeropress",
-      "nome": "Organizador para Aeropress",
-      "categoria": "organizacao",
-      "resumo": "Tudo da Aeropress em pé, numa estação só.",
-      "paraQueServe": "A Aeropress é uma cafeteira de êmbolo que vem com várias peças avulsas: cilindro, êmbolo, mexedor, colher e os filtros de papel. Elas costumam acabar espalhadas na gaveta. Aqui cada uma tem um berço próprio, em pé, ocupando mais ou menos o espaço de uma caneca.",
-      "descricao": "Base com encaixes dimensionados para o cilindro, o êmbolo, o mexedor, a colher dosadora e o disco de filtro — cada item no seu berço, em pé, sem rolar pela gaveta. O conjunto ocupa o espaço de uma caneca e deixa a Aeropress pronta para o próximo preparo.",
-      "detalhes": [
-        "Berços para cilindro, êmbolo, mexedor e colher",
-        "Compartimento para filtros de papel",
-        "Pegada vertical compacta"
-      ],
-      "ficha": [
-        {
-          "rotulo": "Material",
-          "valor": "Bioplástico PLA"
-        },
-        {
-          "rotulo": "Acabamento",
-          "valor": "Fosco"
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": "24,2 × 20,4 × 14,8 cm (L × P × A)"
-        },
-        {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 257,7 g"
-        },
-        {
-          "rotulo": "Limpeza",
-          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
-        }
-      ],
-      "preco": 115.0,
-      "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
-      "cores": null,
-      "opcoes": [],
-      "fotos": [
-        "fotos/organizador-aeropress/01.jpg"
-      ],
-      "video": null,
-      "pastaOrigem": "Organização/Organizador para Aeropress"
     },
     {
       "slug": "porta-copos-universal",
@@ -617,12 +569,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -649,7 +605,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/porta-copos-universal/01.jpg"
+        "fotos/porta-copos-universal/01.jpg",
+        "fotos/porta-copos-universal/02.jpg",
+        "fotos/porta-copos-universal/03.jpg",
+        "fotos/porta-copos-universal/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Porta-Copos Universal"
@@ -668,8 +627,12 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
@@ -696,7 +659,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 36.0,
+      "preco": 34.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -704,7 +667,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/porta-guardanapos-slim/01.jpg"
+        "fotos/porta-guardanapos-slim/01.jpg",
+        "fotos/porta-guardanapos-slim/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Porta-Guardanapos Slim"
@@ -723,12 +687,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -755,7 +723,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/porta-guardanapos-xicara/01.jpg"
+        "fotos/porta-guardanapos-xicara/01.jpg",
+        "fotos/porta-guardanapos-xicara/02.jpg",
+        "fotos/porta-guardanapos-xicara/03.jpg",
+        "fotos/porta-guardanapos-xicara/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Porta-Guardanapos Xícara de Café"
@@ -774,12 +745,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -810,7 +785,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/arvore-porta-guardanapos/01.jpg"
+        "fotos/arvore-porta-guardanapos/01.jpg",
+        "fotos/arvore-porta-guardanapos/02.jpg",
+        "fotos/arvore-porta-guardanapos/03.jpg",
+        "fotos/arvore-porta-guardanapos/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Porta-Guardanapos Árvore"
@@ -829,12 +807,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -865,7 +847,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/porta-recados-grao-cafe/01.jpg"
+        "fotos/porta-recados-grao-cafe/01.jpg",
+        "fotos/porta-recados-grao-cafe/02.jpg",
+        "fotos/porta-recados-grao-cafe/03.jpg",
+        "fotos/porta-recados-grao-cafe/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Porta-Recados Grão de Café"
@@ -884,12 +869,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -920,7 +909,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/secador-coador-v60/01.jpg"
+        "fotos/secador-coador-v60/01.jpg",
+        "fotos/secador-coador-v60/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Secador para Coador V60"
@@ -935,20 +925,24 @@
       "detalhes": [
         "Silhueta em fio fino sobre pedestal",
         "Peça decorativa, não acomoda a cafeteira",
-        "Altura aproximada de 20 cm"
+        "Peça vertical, em pé sobre a base — meça a altura depois da primeira impressão"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "7,7 × 9,8 × 2 cm (L × P × A)"
+          "valor": ""
         },
         {
           "rotulo": "Peso aproximado",
@@ -971,7 +965,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/suporte-expositor-bialetti/01.jpg"
+        "fotos/suporte-expositor-bialetti/01.jpg",
+        "fotos/suporte-expositor-bialetti/02.jpg",
+        "fotos/suporte-expositor-bialetti/03.jpg",
+        "fotos/suporte-expositor-bialetti/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Suporte Expositor para Bialetti"
@@ -990,12 +987,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -1022,7 +1023,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 125.0,
+      "preco": 119.0,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -1030,61 +1031,13 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/suporte-coador-apoio-removivel/01.jpg"
+        "fotos/suporte-coador-apoio-removivel/01.jpg",
+        "fotos/suporte-coador-apoio-removivel/02.jpg",
+        "fotos/suporte-coador-apoio-removivel/03.jpg",
+        "fotos/suporte-coador-apoio-removivel/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Suporte para Coador com Apoio Removível"
-    },
-    {
-      "slug": "barra-progresso-cafe",
-      "nome": "Barra de Progresso CAFFEINATING",
-      "categoria": "decoracao",
-      "resumo": "Carregando cafeína… a barra enche enquanto você acorda.",
-      "paraQueServe": "Uma plaquinha de bancada com a palavra CAFFEINATING e uma barra de carregamento embaixo — a brincadeira do computador processando, aplicada à primeira xícara do dia. Fica em pé sozinha. Peça de mesa de escritório e de home office.",
-      "descricao": "Placa de bancada com a palavra CAFFEINATING em relevo e, embaixo, uma barra de progresso de blocos — a piada do computador carregando, aplicada à primeira xícara do dia. Feita em duas cores, letra e moldura destacadas do fundo, sem pintura. Peça de mesa de escritório e de home office.",
-      "detalhes": [
-        "Duas cores, sem pintura",
-        "Fica em pé sozinha, sem suporte",
-        "Cerca de 18 cm de largura"
-      ],
-      "ficha": [
-        {
-          "rotulo": "Material",
-          "valor": "Bioplástico PLA"
-        },
-        {
-          "rotulo": "Acabamento",
-          "valor": "Fosco"
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": "16,2 × 2,8 × 0,8 cm (L × P × A)"
-        },
-        {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 43,9 g"
-        },
-        {
-          "rotulo": "Limpeza",
-          "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
-        }
-      ],
-      "preco": 54.0,
-      "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
-      "cores": null,
-      "opcoes": [],
-      "fotos": [
-        "fotos/barra-progresso-cafe/01.jpg"
-      ],
-      "video": null,
-      "pastaOrigem": "Decoração/Barra de Progresso CAFFEINATING"
     },
     {
       "slug": "coracao-batida-cafe",
@@ -1096,20 +1049,24 @@
       "detalhes": [
         "Linha contínua, peça única",
         "Fixação com fita dupla-face",
-        "Cerca de 40 cm de largura"
+        "Cerca de 20 cm de largura"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "20 × 8,8 × 0,3 cm (L × P × A)"
+          "valor": "20 × 8,8 cm (L × A), espessura 0,3 cm"
         },
         {
           "rotulo": "Peso aproximado",
@@ -1128,7 +1085,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 59.0,
+      "preco": 44.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -1136,7 +1093,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/coracao-batida-cafe/01.jpg"
+        "fotos/coracao-batida-cafe/01.jpg",
+        "fotos/coracao-batida-cafe/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Decoração/Batida de Coração com Café"
@@ -1155,12 +1113,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -1191,7 +1153,9 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/cachepo-xicara/01.jpg"
+        "fotos/cachepo-xicara/01.jpg",
+        "fotos/cachepo-xicara/02.jpg",
+        "fotos/cachepo-xicara/03.jpg"
       ],
       "video": null,
       "pastaOrigem": "Decoração/Cachepô Xicarinha"
@@ -1209,12 +1173,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -1241,7 +1209,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/capivara/01.jpg"
+        "fotos/capivara/01.jpg",
+        "fotos/capivara/02.jpg",
+        "fotos/capivara/03.jpg",
+        "fotos/capivara/04.jpg"
       ],
       "video": null,
       "revisarFoto": true,
@@ -1257,20 +1228,24 @@
       "detalhes": [
         "Várias cores em uma peça só",
         "Perninhas articuladas",
-        "Cerca de 9 cm de altura"
+        "Peça de bancada, poucos centímetros de altura"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "4,6 × 3,7 × 2,5 cm (L × P × A)"
+          "valor": ""
         },
         {
           "rotulo": "Peso aproximado",
@@ -1293,7 +1268,9 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/copo-cafe-buddy/01.jpg"
+        "fotos/copo-cafe-buddy/01.jpg",
+        "fotos/copo-cafe-buddy/02.jpg",
+        "fotos/copo-cafe-buddy/03.jpg"
       ],
       "video": null,
       "pastaOrigem": "Decoração/Copinho Buddy"
@@ -1307,21 +1284,25 @@
       "descricao": "Fantasminha de corpo liso, olhos grandes e arredondados, segurando um copo de café com a tampa preta e o vapor subindo em espiral. O vapor é peça separada e encaixa por cima. Fica bem o ano inteiro, mas some das prateleiras em outubro.",
       "detalhes": [
         "Corpo + copo + vapor encaixáveis",
-        "Cerca de 12 cm de altura",
+        "Peça de bancada, poucos centímetros de altura",
         "Versão translúcida disponível"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "4,2 × 5,4 × 5,3 cm (L × P × A)"
+          "valor": ""
         },
         {
           "rotulo": "Peso aproximado",
@@ -1336,7 +1317,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 52.0,
+      "preco": 47.0,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -1344,10 +1325,12 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/fantasma-cafe/01.jpg"
+        "fotos/fantasma-cafe/01.jpg",
+        "fotos/fantasma-cafe/02.jpg",
+        "fotos/fantasma-cafe/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Fantasminha do Café"
+      "pastaOrigem": "Decoração/Fantasma de Café 3D"
     },
     {
       "slug": "buddy-cafe",
@@ -1363,12 +1346,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -1395,7 +1382,9 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/buddy-cafe/01.jpg"
+        "fotos/buddy-cafe/01.jpg",
+        "fotos/buddy-cafe/02.jpg",
+        "fotos/buddy-cafe/03.jpg"
       ],
       "video": null,
       "pastaOrigem": "Decoração/Grão de Café Articulado"
@@ -1409,13 +1398,17 @@
       "descricao": "A superfície inteira imita ponto de tricô, trabalhada com textura em relevo — de longe parece amigurumi de lã, de perto é peça rígida. Carinha simples de olhos pretos e sorriso, e a fenda do grão desenhada no meio das costas. Peça de prateleira e presente de amigo oculto.",
       "detalhes": [
         "Textura de tricô em relevo",
-        "Cerca de 10 cm",
+        "Cerca de 4 cm",
         "Cores de lã a escolher"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
@@ -1427,7 +1420,7 @@
         },
         {
           "rotulo": "Peso aproximado",
-          "valor": "≈ 42,9 g"
+          "valor": "≈ 8,6 g"
         },
         {
           "rotulo": "Limpeza",
@@ -1465,16 +1458,20 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "19,1 × 19,1 × 0,1 cm (L × P × A)"
+          "valor": "19,1 × 19,1 cm (L × A), espessura 0,1 cm"
         },
         {
           "rotulo": "Peso aproximado",
@@ -1497,7 +1494,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 96.0,
+      "preco": 79.0,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -1505,7 +1502,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/quadros-decoracao-cafe/01.jpg"
+        "fotos/quadros-decoracao-cafe/01.jpg",
+        "fotos/quadros-decoracao-cafe/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Decoração/Jogo de 3 Quadros de Café"
@@ -1524,12 +1522,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -1556,7 +1558,9 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/placa-coffee/01.jpg"
+        "fotos/placa-coffee/01.jpg",
+        "fotos/placa-coffee/02.jpg",
+        "fotos/placa-coffee/03.jpg"
       ],
       "video": null,
       "pastaOrigem": "Decoração/Letreiro COFFEE"
@@ -1571,20 +1575,24 @@
       "detalhes": [
         "Linha contínua, letra vira xícara",
         "Fixação com fita dupla-face",
-        "Cerca de 30 cm de largura"
+        "Cerca de 16 cm de largura"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "16 × 8,6 × 0,1 cm (L × P × A)"
+          "valor": "16 × 8,6 cm (L × A), espessura 0,1 cm"
         },
         {
           "rotulo": "Peso aproximado",
@@ -1603,7 +1611,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 57.0,
+      "preco": 44.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -1632,12 +1640,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -1656,7 +1668,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 24.0,
+      "preco": 19.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -1685,12 +1697,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -1713,7 +1729,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 68.0,
+      "preco": 39.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -1739,21 +1755,25 @@
       "descricao": "Pilha de três xícaras, uma sobre a outra, com o nome da bebida escrito dentro do corpo de cada uma: latte em cima, coffee no meio, espresso embaixo, e o vapor saindo da de cima. Tudo em uma linha vazada só, do tamanho de uma folha A4. Painel de parede para o cantinho do café.",
       "detalhes": [
         "Peça única, linha vazada",
-        "Cerca de 30 cm de altura",
+        "Cerca de 17,6 cm de altura",
         "Fixação com fita dupla-face"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "10,2 × 17,6 × 0,1 cm (L × P × A)"
+          "valor": "10,2 × 17,6 cm (L × A), espessura 0,1 cm"
         },
         {
           "rotulo": "Peso aproximado",
@@ -1772,7 +1792,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 69.0,
+      "preco": 64.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -1797,20 +1817,24 @@
       "detalhes": [
         "Linha vazada contínua",
         "Fixação com fita dupla-face",
-        "Cerca de 50 cm de largura"
+        "Cerca de 23,5 cm de largura"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "23,5 × 22,5 × 0,3 cm (L × P × A)"
+          "valor": "23,5 × 22,5 cm (L × A), espessura 0,3 cm"
         },
         {
           "rotulo": "Peso aproximado",
@@ -1829,7 +1853,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 84.0,
+      "preco": 59.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -1853,20 +1877,24 @@
       "detalhes": [
         "Linha vazada, peça única",
         "Fixação com fita dupla-face",
-        "Cerca de 35 cm de altura"
+        "Cerca de 16,2 cm de altura"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "19,6 × 16,2 × 0,2 cm (L × P × A)"
+          "valor": "19,6 × 16,2 cm (L × A), espessura 0,2 cm"
         },
         {
           "rotulo": "Peso aproximado",
@@ -1914,8 +1942,12 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
@@ -1923,7 +1955,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "12 × 15 × 0,7 cm (L × P × A)"
+          "valor": "12 × 15 cm (L × A), espessura 0,7 cm"
         },
         {
           "rotulo": "Peso aproximado",
@@ -1970,20 +2002,24 @@
       "detalhes": [
         "Três painéis já unidos e alinhados",
         "Fita dupla-face ou furo de parede",
-        "Cerca de 45 cm no conjunto"
+        "Cerca de 9 cm"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "7,5 × 8,9 × 0,3 cm (L × P × A)"
+          "valor": "7,5 × 8,9 cm (L × A), espessura 0,3 cm"
         },
         {
           "rotulo": "Peso aproximado",
@@ -2033,16 +2069,20 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "16,1 × 24 × 0,5 cm (L × P × A)"
+          "valor": "16,1 × 24 cm (L × A), espessura 0,5 cm"
         },
         {
           "rotulo": "Peso aproximado",
@@ -2093,12 +2133,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2110,7 +2154,7 @@
         },
         {
           "rotulo": "Alimentação",
-          "valor": "Fita LED com cabo USB 5 V — liga em qualquer carregador"
+          "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
@@ -2121,7 +2165,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 129.0,
+      "preco": 149.0,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -2129,7 +2173,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/luminaria-coffee-here/01.jpg"
+        "fotos/luminaria-coffee-here/01.jpg",
+        "fotos/luminaria-coffee-here/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Luminárias/Lightbox COFFEE HERE"
@@ -2148,12 +2193,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2165,117 +2214,7 @@
         },
         {
           "rotulo": "Alimentação",
-          "valor": "Fita LED com cabo USB 5 V — liga em qualquer carregador"
-        },
-        {
-          "rotulo": "Limpeza",
-          "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
-        }
-      ],
-      "preco": 134.0,
-      "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
-      "cores": null,
-      "opcoes": [],
-      "fotos": [
-        "fotos/luminaria-coffee-trips/01.jpg"
-      ],
-      "video": null,
-      "pastaOrigem": "Luminárias/Lightbox COFFEE TRIPS"
-    },
-    {
-      "slug": "luminaria-moka-placa",
-      "nome": "Lightbox Moka",
-      "categoria": "luminarias",
-      "resumo": "A cafeteira italiana recortada num quadrado de luz.",
-      "paraQueServe": "Uma plaquinha quadrada com a silhueta de uma cafeteira italiana vazada no meio. Acesa, só o contorno da cafeteira brilha em âmbar. É a menor das luminárias — feita para prateleira estreita e nicho de parede. Liga por cabo USB na traseira.",
-      "descricao": "Placa quadrada de cantos arredondados, com a silhueta da cafeteira moka vazada no centro — acesa, só o contorno da cafeteira brilha, em âmbar, contra a frente escura. Pequena, pensada para prateleira estreita e nicho de parede. Alimentação por cabo USB discreto na traseira.",
-      "detalhes": [
-        "Silhueta de moka vazada",
-        "Formato compacto, cantos arredondados",
-        "Alimentação USB na traseira"
-      ],
-      "ficha": [
-        {
-          "rotulo": "Material",
-          "valor": "Bioplástico PLA"
-        },
-        {
-          "rotulo": "Acabamento",
-          "valor": "Fosco"
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": "10,4 × 10,4 × 4 cm (L × P × A)"
-        },
-        {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 148 g"
-        },
-        {
-          "rotulo": "Alimentação",
-          "valor": "Fita LED com cabo USB 5 V — liga em qualquer carregador"
-        },
-        {
-          "rotulo": "Limpeza",
-          "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
-        }
-      ],
-      "preco": 119.0,
-      "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
-      "cores": null,
-      "opcoes": [],
-      "fotos": [
-        "fotos/luminaria-moka-placa/01.jpg"
-      ],
-      "video": null,
-      "pastaOrigem": "Luminárias/Lightbox Moka"
-    },
-    {
-      "slug": "luminaria-premium-coffee",
-      "nome": "Lightbox PREMIUM COFFEE",
-      "categoria": "luminarias",
-      "resumo": "Letreiro de bar antigo, com moldura e filete.",
-      "paraQueServe": "Uma caixa de luz no estilo das placas esmaltadas antigas de bar, com moldura em relevo e filete em volta. Acesa, o fundo âmbar puxa o ar de letreiro dos anos 50. Pode deitar na prateleira ou pendurar na parede. Alimentação por cabo USB.",
-      "descricao": "Caixa de luz horizontal no estilo de placa esmaltada antiga: moldura em relevo, filete duplo em volta e a tipografia Premium Quality sobre COFFEE em caixa alta. Acesa, o fundo âmbar puxa o ar de letreiro de bar dos anos 50. Deita na prateleira ou pendura na parede.",
-      "detalhes": [
-        "Moldura e filete em relevo",
-        "Apoia deitada ou pendura na parede",
-        "Fita LED com alimentação USB"
-      ],
-      "ficha": [
-        {
-          "rotulo": "Material",
-          "valor": "Bioplástico PLA"
-        },
-        {
-          "rotulo": "Acabamento",
-          "valor": "Fosco"
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": "17,5 × 4,9 × 4 cm (L × P × A)"
-        },
-        {
-          "rotulo": "Peso aproximado",
-          "valor": "≈ 73,2 g"
-        },
-        {
-          "rotulo": "Alimentação",
-          "valor": "Fita LED com cabo USB 5 V — liga em qualquer carregador"
+          "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
@@ -2294,7 +2233,128 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/luminaria-premium-coffee/01.jpg"
+        "fotos/luminaria-coffee-trips/01.jpg",
+        "fotos/luminaria-coffee-trips/02.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Luminárias/Lightbox COFFEE TRIPS"
+    },
+    {
+      "slug": "luminaria-moka-placa",
+      "nome": "Lightbox Moka",
+      "categoria": "luminarias",
+      "resumo": "A cafeteira italiana recortada num quadrado de luz.",
+      "paraQueServe": "Uma plaquinha quadrada com a silhueta de uma cafeteira italiana vazada no meio. Acesa, só o contorno da cafeteira brilha em âmbar. É a menor das luminárias — feita para prateleira estreita e nicho de parede. Liga por cabo USB na traseira.",
+      "descricao": "Placa quadrada de cantos arredondados, com a silhueta da cafeteira moka vazada no centro — acesa, só o contorno da cafeteira brilha, em âmbar, contra a frente escura. Pequena, pensada para prateleira estreita e nicho de parede. Alimentação por cabo USB discreto na traseira.",
+      "detalhes": [
+        "Silhueta de moka vazada",
+        "Formato compacto, cantos arredondados",
+        "Alimentação USB na traseira"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "10,4 × 10,4 × 4 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso aproximado",
+          "valor": "≈ 148 g"
+        },
+        {
+          "rotulo": "Alimentação",
+          "valor": "Luz LED"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Produção",
+          "valor": "Peça produzida por unidade, após o pedido"
+        }
+      ],
+      "preco": 119.0,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/luminaria-moka-placa/01.jpg",
+        "fotos/luminaria-moka-placa/02.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Luminárias/Lightbox Moka"
+    },
+    {
+      "slug": "luminaria-premium-coffee",
+      "nome": "Lightbox PREMIUM COFFEE",
+      "categoria": "luminarias",
+      "resumo": "Letreiro de bar antigo, com moldura e filete.",
+      "paraQueServe": "Uma caixa de luz no estilo das placas esmaltadas antigas de bar, com moldura em relevo e filete em volta. Acesa, o fundo âmbar puxa o ar de letreiro dos anos 50. Pode deitar na prateleira ou pendurar na parede. Alimentação por cabo USB.",
+      "descricao": "Caixa de luz horizontal no estilo de placa esmaltada antiga: moldura em relevo, filete duplo em volta e a tipografia Premium Quality sobre COFFEE em caixa alta. Acesa, o fundo âmbar puxa o ar de letreiro de bar dos anos 50. Deita na prateleira ou pendura na parede.",
+      "detalhes": [
+        "Moldura e filete em relevo",
+        "Apoia deitada ou pendura na parede",
+        "Fita LED com alimentação USB"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "17,5 × 4,9 × 4 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso aproximado",
+          "valor": "≈ 73,2 g"
+        },
+        {
+          "rotulo": "Alimentação",
+          "valor": "Luz LED"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Produção",
+          "valor": "Peça produzida por unidade, após o pedido"
+        }
+      ],
+      "preco": 149.0,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/luminaria-premium-coffee/01.jpg",
+        "fotos/luminaria-premium-coffee/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Luminárias/Lightbox PREMIUM COFFEE"
@@ -2313,8 +2373,12 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
@@ -2330,7 +2394,7 @@
         },
         {
           "rotulo": "Alimentação",
-          "valor": "Soquete E27 — lâmpada LED de até 9 W. Acompanha cabo com interruptor"
+          "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
@@ -2341,7 +2405,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 169.0,
+      "preco": 179.0,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -2349,7 +2413,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/luminaria-moka/01.jpg"
+        "fotos/luminaria-moka/01.jpg",
+        "fotos/luminaria-moka/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Luminárias/Luminária Cafeteira Moka"
@@ -2368,8 +2433,12 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
@@ -2385,7 +2454,7 @@
         },
         {
           "rotulo": "Alimentação",
-          "valor": "Soquete E27 — lâmpada LED de até 9 W. Acompanha cabo com interruptor"
+          "valor": "Luz LED"
         },
         {
           "rotulo": "Limpeza",
@@ -2404,7 +2473,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/luminaria-copo-cafe/01.jpg"
+        "fotos/luminaria-copo-cafe/01.jpg",
+        "fotos/luminaria-copo-cafe/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Luminárias/Luminária Copo de Café"
@@ -2423,12 +2493,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2451,7 +2525,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 45.0,
+      "preco": 24.9,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -2478,20 +2552,24 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
-          "valor": "17,6 × 9,4 × 17,4 cm (L × P × A)"
+          "valor": "V60 02: 12,8 × 6,8 × 12,6 cm · V60 03: 14,2 × 7,6 × 14,0 cm · Chemex: 17,6 × 9,4 × 17,4 cm (L × P × A)"
         },
         {
           "rotulo": "Peso aproximado",
-          "valor": "≈ 721 g"
+          "valor": "≈ 167 g (V60 02) a ≈ 342 g (Chemex), conforme o modelo escolhido"
         },
         {
           "rotulo": "Limpeza",
@@ -2528,7 +2606,9 @@
         }
       ],
       "fotos": [
-        "fotos/caixa-filtro-v60/01.jpg"
+        "fotos/caixa-filtro-v60/01.jpg",
+        "fotos/caixa-filtro-v60/02.jpg",
+        "fotos/caixa-filtro-v60/03.jpg"
       ],
       "video": null,
       "pastaOrigem": "Preparo/Caixa de Filtro V60"
@@ -2547,12 +2627,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2575,7 +2659,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 39.0,
+      "preco": 32.9,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -2583,7 +2667,9 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/colher-tamper/01.jpg"
+        "fotos/colher-tamper/01.jpg",
+        "fotos/colher-tamper/02.jpg",
+        "fotos/colher-tamper/03.jpg"
       ],
       "video": null,
       "pastaOrigem": "Preparo/Colher e Tamper 2 em 1"
@@ -2598,16 +2684,22 @@
       "detalhes": [
         "Tampa de concha, fecho por encaixe",
         "Serve os discos de filtro Aeropress",
-        "Formato de bolso, para viagem"
+        "Formato de bolso, para viagem",
+        "Fecho magnético com 2 ímãs cilíndricos de 3×3 mm",
+        "Dobradiças por encaixe, sem parafuso"
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2630,7 +2722,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 38.0,
+      "preco": 42.9,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -2638,7 +2730,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/estojo-papel-aeropress/01.jpg"
+        "fotos/estojo-papel-aeropress/01.jpg",
+        "fotos/estojo-papel-aeropress/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Preparo/Estojo para Filtros de Aeropress"
@@ -2657,12 +2750,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2689,7 +2786,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 42.0,
+      "preco": 36.9,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -2697,7 +2794,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/suporte-recarga-nespresso-vertuo/01.jpg"
+        "fotos/suporte-recarga-nespresso-vertuo/01.jpg",
+        "fotos/suporte-recarga-nespresso-vertuo/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Preparo/Kit de Recarga para Cápsula Nespresso Vertuo"
@@ -2717,12 +2815,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2749,7 +2851,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 329.0,
+      "preco": 299.0,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -2778,12 +2880,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2806,7 +2912,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 54.0,
+      "preco": 34.9,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -2814,7 +2920,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/molde-cafe-latteshot/01.jpg"
+        "fotos/molde-cafe-latteshot/01.jpg",
+        "fotos/molde-cafe-latteshot/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Preparo/Moldes de Estêncil Avulsos"
@@ -2833,8 +2940,12 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
@@ -2865,7 +2976,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 62.0,
+      "preco": 34.9,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -2873,7 +2984,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/porta-filtro-simples-60/01.jpg"
+        "fotos/porta-filtro-simples-60/01.jpg",
+        "fotos/porta-filtro-simples-60/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Preparo/Porta-Filtro Simples 60"
@@ -2892,12 +3004,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2920,7 +3036,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 89.0,
+      "preco": 44.9,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -2948,12 +3064,16 @@
       ],
       "ficha": [
         {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",
-          "valor": "Fosco"
+          "valor": ""
         },
         {
           "rotulo": "Dimensões",
@@ -2980,7 +3100,7 @@
           "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
-      "preco": 49.0,
+      "preco": 36.9,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -2988,7 +3108,8 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/suporte-filtro-destacavel/01.jpg"
+        "fotos/suporte-filtro-destacavel/01.jpg",
+        "fotos/suporte-filtro-destacavel/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Preparo/Suporte de Filtro Destacável"
