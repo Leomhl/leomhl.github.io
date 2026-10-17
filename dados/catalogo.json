@@ -1838,7 +1838,9 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/placa-cafe-sempre-boa-ideia/01.jpg"
+        "fotos/placa-cafe-sempre-boa-ideia/01.jpg",
+        "fotos/placa-cafe-sempre-boa-ideia/02.jpg",
+        "fotos/placa-cafe-sempre-boa-ideia/03.jpg"
       ],
       "video": null,
       "pastaOrigem": "Decoração/Café é sempre uma boa ideia"
@@ -2049,7 +2051,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "22,4 × 15,4 × 4,2 cm (L × P × A)"
+          "valor": "15,7 × 10,8 × 2,9 cm (L × P × A)"
         },
         {
           "rotulo": "Peso aproximado",
