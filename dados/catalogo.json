@@ -1932,12 +1932,12 @@
       "nome": "Placa Café é Sempre uma Boa Ideia",
       "categoria": "decoracao",
       "resumo": "Mokinha servindo café, com a frase em arco ao redor.",
-      "paraQueServe": "Painel de parede com uma cafeteira moka personagem, de pernas e botas, servindo café numa xícara — e a frase COFFEE IS ALWAYS A GOOD IDEA em arco ao redor do desenho. É silhueta cheia, sem vazado interno, então a peça sai inteira numa impressão só. Para pendurar perto da bancada ou do cantinho do café.",
-      "descricao": "A cafeteira moka ganhou pernas, botas e um fiozinho de café escorrendo pra xícara embaixo — tudo em silhueta cheia, sem vazado interno. A frase COFFEE IS ALWAYS A GOOD IDEA contorna o desenho em arco, fechando a peça num formato só, sem emenda nem montagem. Painel fino, de cerca de 2 mm, pensado pra pendurar na parede do cantinho do café.",
+      "paraQueServe": "Placa de bancada com uma cafeteira moka personagem, de pernas e botas, servindo café numa xícara — e a frase COFFEE IS ALWAYS A GOOD IDEA em arco ao redor do desenho. É silhueta cheia, sem vazado interno, então a peça sai inteira numa impressão só, com base própria para ficar em pé sobre o móvel.",
+      "descricao": "A cafeteira moka ganhou pernas, botas e um fiozinho de café escorrendo pra xícara embaixo — tudo em silhueta cheia, sem vazado interno. A frase COFFEE IS ALWAYS A GOOD IDEA contorna o desenho em arco, fechando a peça num formato só, sem emenda nem montagem. Base integrada na parte de baixo, pensada pra ficar em pé na bancada ou no cantinho do café.",
       "detalhes": [
         "Frase em arco ao redor do desenho",
         "Peça única, sem montagem",
-        "Painel fino, de cerca de 2 mm de espessura"
+        "Base integrada, fica em pé sem apoio"
       ],
       "ficha": [
         {
@@ -1962,7 +1962,7 @@
         },
         {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Base integrada, fica em pé sobre o móvel, sem fixação"
         },
         {
           "rotulo": "Limpeza",
@@ -2650,15 +2650,15 @@
           "valores": [
             {
               "valor": "V60 tamanho 02",
-              "preco": 54
+              "preco": 68
             },
             {
               "valor": "V60 tamanho 03",
-              "preco": 59
+              "preco": 68
             },
             {
               "valor": "Chemex",
-              "preco": 69
+              "preco": 76
             }
           ]
         }
