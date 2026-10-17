@@ -95,10 +95,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 69.69,
@@ -158,10 +154,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 26.8,
@@ -227,10 +219,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 31.75,
@@ -289,10 +277,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 108.64,
@@ -346,10 +330,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 63.91,
@@ -408,10 +388,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 102.29,
@@ -470,10 +446,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 78.89,
@@ -532,10 +504,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 56.37,
@@ -590,10 +558,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 69,
@@ -652,10 +616,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 68.76,
@@ -708,10 +668,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 29.37,
@@ -770,10 +726,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 42.62,
@@ -832,10 +784,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 23.24,
@@ -894,10 +842,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 31.35,
@@ -950,10 +894,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 25.68,
@@ -1016,10 +956,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 93.94,
@@ -1078,10 +1014,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 21.27,
@@ -1138,10 +1070,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 60.45,
@@ -1194,10 +1122,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 41.76,
@@ -1253,10 +1177,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 28.48,
@@ -1310,10 +1230,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 26.22,
@@ -1367,10 +1283,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 26.74,
@@ -1424,10 +1336,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 22.26,
@@ -1487,10 +1395,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 60.19,
@@ -1543,10 +1447,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 32.52,
@@ -1604,10 +1504,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 21.53,
@@ -1661,10 +1557,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 22.79,
@@ -1722,10 +1614,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 40.66,
@@ -1785,10 +1673,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 23.31,
@@ -1846,10 +1730,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 35.7,
@@ -1906,10 +1786,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 26.74,
@@ -1967,10 +1843,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 29.25,
@@ -2030,10 +1902,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 47.81,
@@ -2094,10 +1962,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 28.58,
@@ -2157,10 +2021,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 35.97,
@@ -2217,10 +2077,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 110.35,
@@ -2277,10 +2133,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 63.6,
@@ -2337,10 +2189,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 64.99,
@@ -2397,10 +2245,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 64.99,
@@ -2457,10 +2301,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 65.85,
@@ -2517,10 +2357,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 37.5,
@@ -2577,10 +2413,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 22.12,
@@ -2632,10 +2464,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 68,
@@ -2711,10 +2539,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 33.88,
@@ -2774,10 +2598,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 27.85,
@@ -2838,10 +2658,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 32.47,
@@ -2903,10 +2719,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 141.47,
@@ -2964,10 +2776,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 80.75,
@@ -3028,10 +2836,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 45.43,
@@ -3088,10 +2892,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 94.05,
@@ -3152,10 +2952,6 @@
         {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
-        },
-        {
-          "rotulo": "Produção",
-          "valor": "Peça produzida por unidade, após o pedido"
         }
       ],
       "preco": 38.85,
