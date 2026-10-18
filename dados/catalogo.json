@@ -2066,7 +2066,7 @@
           "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
-      "preco": 110.99,
+      "preco": 64.99,
       "destaque": true,
       "preVenda": false,
       "dataVenda": null,
@@ -2346,7 +2346,7 @@
           "valor": "As cores podem variar levemente de tom em comparação com as fotos"
         }
       ],
-      "preco": 37.99,
+      "preco": 44.99,
       "destaque": false,
       "preVenda": false,
       "dataVenda": null,
@@ -2785,7 +2785,8 @@
         "fotos/molde-cafe-latteshot/05.jpg",
         "fotos/molde-cafe-latteshot/06.jpg",
         "fotos/molde-cafe-latteshot/07.jpg",
-        "fotos/molde-cafe-latteshot/08.jpg"
+        "fotos/molde-cafe-latteshot/08.jpg",
+        "fotos/molde-cafe-latteshot/09.jpg"
       ],
       "video": null,
       "pastaOrigem": "Preparo/Moldes de Estêncil Avulsos"
