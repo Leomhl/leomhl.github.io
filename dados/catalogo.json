@@ -2725,7 +2725,7 @@
         "fotos/latteshot/03.jpg",
         "fotos/latteshot/04.jpg"
       ],
-      "video": null,
+      "video": "fotos/latteshot/video-marketing.mp4",
       "videoObservacao": "O vídeo de montagem (161 MB) não cabe no GitHub Pages. Suba no YouTube e cole o link no campo video.",
       "pastaOrigem": "Preparo/LatteShot — Câmera de Estêncil"
     },
@@ -2788,7 +2788,7 @@
         "fotos/molde-cafe-latteshot/08.jpg",
         "fotos/molde-cafe-latteshot/09.jpg"
       ],
-      "video": "fotos/molde-cafe-latteshot/video.mp4",
+      "video": null,
       "pastaOrigem": "Preparo/Moldes de Estêncil Avulsos"
     },
     {
