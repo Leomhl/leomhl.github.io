@@ -2968,6 +2968,63 @@
       ],
       "video": null,
       "pastaOrigem": "Preparo/Suporte de Filtro Destacável"
+    },
+    {
+      "slug": "modelador-filtro-v60",
+      "nome": "Modelador de Filtro de Papel Hario V60",
+      "categoria": "preparo",
+      "resumo": "Molde que pré-dobra o filtro de papel em leque, pronto pra despejar.",
+      "paraQueServe": "Filtro de papel comum entorta e gruda na parede do V60 quando você molda ele na mão — e isso fecha caminhos preferenciais pra água, deixando a extração desigual. Encaixe o filtro seco dentro do coador, pressione este modelador por cima e ele nasce com as dobras em leque já feitas, afastadas da parede do V60 em toda a volta. Água desce igual por todo o pó, sem precisar comprar filtro pré-dobrado importado.",
+      "descricao": "Peça em formato de estrela com cabo central em bolinha, feita pra encaixar dentro do coador V60 por cima do filtro de papel. A pressão do cabo marca os vincos do leque de uma vez só, nos doze raios.\n\nDepois de marcado, é só tirar o modelador e o filtro mantém o formato — abre sozinho e fica com espaço de ar entre o papel e o plástico do coador, melhorando o fluxo da água durante o preparo.",
+      "detalhes": [
+        "Marca o vinco em leque de uma pressionada só",
+        "Serve nos coadores V60 tamanho 02",
+        "Cabo em bolinha, fácil de empunhar e pressionar"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Bioplástico PLA"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 36.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/modelador-filtro-v60/01.jpg",
+        "fotos/modelador-filtro-v60/02.jpg",
+        "fotos/modelador-filtro-v60/03.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Preparo/Modelador De Filtro De Papel Hario V60 - Pour Over"
     }
   ]
 }
