@@ -431,47 +431,52 @@
     const idVideo = idDoYoutube(p.video);
     const videoLocal = !idVideo ? caminhoVideoLocal(p.video) : null;
 
-    // Quadros do carrossel: fotos primeiro, vídeo por último.
-    const quadros = fotos.map(
+    // Quadros do carrossel: vídeo primeiro (quando houver), depois as fotos.
+    const temVideo = Boolean(idVideo || videoLocal);
+    const quadroFotos = fotos.map(
       (f, i) =>
         `<div class="quadro" role="group" aria-roledescription="slide" aria-label="Foto ${i + 1} de ${fotos.length}">
            <img src="${esc(f)}" alt="${esc(p.nome)} — foto ${i + 1}"
-                loading="${i === 0 ? 'eager' : 'lazy'}" decoding="async"
-                ${i === 0 ? 'fetchpriority="high"' : ''}>
+                loading="${i === 0 && !temVideo ? 'eager' : 'lazy'}" decoding="async"
+                ${i === 0 && !temVideo ? 'fetchpriority="high"' : ''}>
          </div>`
     );
-    if (idVideo || videoLocal) {
-      const capa = idVideo
-        ? `https://i.ytimg.com/vi/${esc(idVideo)}/hqdefault.jpg`
-        : esc(fotos[0] || '');
-      quadros.push(
-        `<div class="quadro" role="group" aria-roledescription="slide" aria-label="Vídeo">
-           <div class="video" ${idVideo ? `data-video="${esc(idVideo)}"` : `data-video-local="${esc(videoLocal)}"`}>
-             <img src="${capa}" alt="" aria-hidden="true" loading="lazy">
+    let quadroVideo = '';
+    if (videoLocal) {
+      quadroVideo = `<div class="quadro" role="group" aria-roledescription="slide" aria-label="Vídeo">
+           <div class="video">
+             <video src="${esc(videoLocal)}" poster="${esc(fotos[0] || '')}"
+                    autoplay muted loop playsinline controls preload="auto"></video>
+           </div>
+         </div>`;
+    } else if (idVideo) {
+      quadroVideo = `<div class="quadro" role="group" aria-roledescription="slide" aria-label="Vídeo">
+           <div class="video" data-video="${esc(idVideo)}">
+             <img src="https://i.ytimg.com/vi/${esc(idVideo)}/hqdefault.jpg" alt="" aria-hidden="true" loading="eager">
              <button class="video-play" type="button" aria-label="Assistir ao vídeo de ${esc(p.nome)}"><span></span></button>
            </div>
-         </div>`
-      );
+         </div>`;
     }
+    const quadros = temVideo ? [quadroVideo, ...quadroFotos] : quadroFotos;
     if (!quadros.length) quadros.push(`<div class="quadro">${semFoto(p.nome)}</div>`);
 
     const miniaturas =
       quadros.length > 1
         ? `<div class="miniaturas" role="tablist" aria-label="Escolher mídia">
-            ${fotos
-              .map(
-                (f, i) =>
-                  `<button class="miniatura" type="button" role="tab" data-ir="${i}" aria-current="${i === 0}"
-                    aria-label="Ver foto ${i + 1}"><img src="${esc(f)}" alt="" loading="lazy"></button>`
-              )
-              .join('')}
             ${
-              idVideo || videoLocal
-                ? `<button class="miniatura miniatura-video" type="button" role="tab" data-ir="${fotos.length}"
-                     aria-current="false" aria-label="Ver o vídeo">
+              temVideo
+                ? `<button class="miniatura miniatura-video" type="button" role="tab" data-ir="0"
+                     aria-current="true" aria-label="Ver o vídeo">
                      <img src="${idVideo ? `https://i.ytimg.com/vi/${esc(idVideo)}/default.jpg` : esc(fotos[0] || '')}" alt="" loading="lazy"></button>`
                 : ''
             }
+            ${fotos
+              .map(
+                (f, i) =>
+                  `<button class="miniatura" type="button" role="tab" data-ir="${temVideo ? i + 1 : i}" aria-current="${!temVideo && i === 0}"
+                    aria-label="Ver foto ${i + 1}"><img src="${esc(f)}" alt="" loading="lazy"></button>`
+              )
+              .join('')}
           </div>`
         : '';
 
@@ -688,19 +693,14 @@
       if (e.key === 'ArrowLeft')  { e.preventDefault(); irPara(atual - 1); }
     });
 
-    // O vídeo só carrega quando alguém pede: nada do YouTube (nem o mp4) baixa antes disso.
+    // O vídeo do YouTube só vira iframe quando alguém pede: nada dele carrega antes disso.
     raiz.querySelector('.video-play')?.addEventListener('click', (e) => {
       const caixa = e.currentTarget.closest('.video');
       const id = caixa.dataset.video;
-      const local = caixa.dataset.videoLocal;
-      if (local) {
-        caixa.innerHTML = `<video src="${local}" controls autoplay playsinline></video>`;
-      } else {
-        caixa.innerHTML =
-          `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1"
-            title="Vídeo do produto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>`;
-      }
+      caixa.innerHTML =
+        `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1"
+          title="Vídeo do produto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>`;
     });
   }
 
