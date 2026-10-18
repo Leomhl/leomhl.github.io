@@ -2414,10 +2414,9 @@
       "opcoes": [],
       "fotos": [
         "fotos/adaptador-dolce-gusto-tres-coracoes/01.webp",
-        "fotos/adaptador-dolce-gusto-tres-coracoes/02.png",
         "fotos/adaptador-dolce-gusto-tres-coracoes/03.webp"
       ],
-      "video": null,
+      "video": "fotos/adaptador-dolce-gusto-tres-coracoes/video.mp4",
       "pastaOrigem": "Preparo/Adaptador Dolce Gusto para Três Corações"
     },
     {
