@@ -224,6 +224,12 @@
     return m ? m[1] : null;
   }
 
+  function caminhoVideoLocal(valor) {
+    if (!valor) return null;
+    const v = String(valor).trim();
+    return /\.(mp4|webm|mov)$/i.test(v) ? v : null;
+  }
+
   /* ---------- Peças de interface ----------------------------------------- */
 
   function selos(p) {
@@ -423,6 +429,7 @@
     const c = categoriaDe(p);
     const fotos = p.fotos || [];
     const idVideo = idDoYoutube(p.video);
+    const videoLocal = !idVideo ? caminhoVideoLocal(p.video) : null;
 
     // Quadros do carrossel: fotos primeiro, vídeo por último.
     const quadros = fotos.map(
@@ -433,11 +440,14 @@
                 ${i === 0 ? 'fetchpriority="high"' : ''}>
          </div>`
     );
-    if (idVideo) {
+    if (idVideo || videoLocal) {
+      const capa = idVideo
+        ? `https://i.ytimg.com/vi/${esc(idVideo)}/hqdefault.jpg`
+        : esc(fotos[0] || '');
       quadros.push(
         `<div class="quadro" role="group" aria-roledescription="slide" aria-label="Vídeo">
-           <div class="video" data-video="${esc(idVideo)}">
-             <img src="https://i.ytimg.com/vi/${esc(idVideo)}/hqdefault.jpg" alt="" aria-hidden="true" loading="lazy">
+           <div class="video" ${idVideo ? `data-video="${esc(idVideo)}"` : `data-video-local="${esc(videoLocal)}"`}>
+             <img src="${capa}" alt="" aria-hidden="true" loading="lazy">
              <button class="video-play" type="button" aria-label="Assistir ao vídeo de ${esc(p.nome)}"><span></span></button>
            </div>
          </div>`
@@ -456,10 +466,10 @@
               )
               .join('')}
             ${
-              idVideo
+              idVideo || videoLocal
                 ? `<button class="miniatura miniatura-video" type="button" role="tab" data-ir="${fotos.length}"
                      aria-current="false" aria-label="Ver o vídeo">
-                     <img src="https://i.ytimg.com/vi/${esc(idVideo)}/default.jpg" alt="" loading="lazy"></button>`
+                     <img src="${idVideo ? `https://i.ytimg.com/vi/${esc(idVideo)}/default.jpg` : esc(fotos[0] || '')}" alt="" loading="lazy"></button>`
                 : ''
             }
           </div>`
@@ -678,14 +688,19 @@
       if (e.key === 'ArrowLeft')  { e.preventDefault(); irPara(atual - 1); }
     });
 
-    // O vídeo só vira iframe quando alguém pede: nada do YouTube carrega antes disso.
+    // O vídeo só carrega quando alguém pede: nada do YouTube (nem o mp4) baixa antes disso.
     raiz.querySelector('.video-play')?.addEventListener('click', (e) => {
       const caixa = e.currentTarget.closest('.video');
       const id = caixa.dataset.video;
-      caixa.innerHTML =
-        `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1"
-          title="Vídeo do produto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>`;
+      const local = caixa.dataset.videoLocal;
+      if (local) {
+        caixa.innerHTML = `<video src="${local}" controls autoplay playsinline></video>`;
+      } else {
+        caixa.innerHTML =
+          `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1"
+            title="Vídeo do produto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>`;
+      }
     });
   }
 
