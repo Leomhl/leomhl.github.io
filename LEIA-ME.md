@@ -233,6 +233,7 @@ No topo do JSON, em `"loja"`:
 | `mensagemPadrao` | Texto que já vai digitado no WhatsApp. Aceita `{pedido}` e `{link}` |
 | `mensagemPreVenda` | O mesmo, para produto em pré-venda |
 | `paletaCores`, `coresPadrao` | As cores que todo produto aceita |
+| `avisoTopo` | Tarja fixa no topo do site, acima do menu. Vazio = some |
 | `avisoFrete` | Aparece na página de cada produto e no rodapé |
 | `prazoEntrega` | Linha pequena ao lado do preço |
 | `instagram`, `email` | Se preenchidos, viram botões no rodapé |

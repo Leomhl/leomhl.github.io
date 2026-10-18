@@ -3,6 +3,7 @@
     "nome": "cafezim",
     "chamada": "Seu café já é bom. Falta o cantinho à altura.",
     "chamadaDestaque": "à altura",
+    "avisoTopo": "Em pré-venda — os envios começam em 10 de novembro! Peça antecipado e garanta o seu.",
     "descricao": "Bandejas, suportes, luminárias e peças de parede para a bancada que você usa toda manhã.",
     "whatsapp": "5522988447540",
     "mensagemPadrao": "Olá! Quero fazer um pedido no cafezim:\n\n{pedido}\n\n{link}",
@@ -2988,7 +2989,7 @@
         },
         {
           "rotulo": "Material",
-          "valor": "Bioplástico PLA"
+          "valor": "Plástico"
         },
         {
           "rotulo": "Acabamento",

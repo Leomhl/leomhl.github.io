@@ -93,6 +93,13 @@ input, button, select, textarea { font-size: 16px; }
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   border-bottom: 1px solid var(--linha);
 }
+.tarja-topo {
+  margin: 0; padding: 8px var(--folga);
+  background: var(--terracota); color: var(--creme);
+  font-family: var(--titulo); font-weight: 600; font-size: .86rem;
+  text-align: center; line-height: 1.3;
+}
+.tarja-topo[hidden] { display: none; }
 .faixa {
   position: relative;
   max-width: var(--largura); margin-inline: auto;

@@ -774,6 +774,12 @@
   function montarMolduras() {
     const loja = catalogo.loja;
 
+    const tarja = document.getElementById('tarja-topo');
+    if (tarja) {
+      tarja.textContent = loja.avisoTopo || '';
+      tarja.hidden = !loja.avisoTopo;
+    }
+
     document.getElementById('menu-categorias').innerHTML = catalogo.categorias
       .map((c) => {
         const n = produtosDa(c.slug).length;
