@@ -3020,10 +3020,9 @@
       "opcoes": [],
       "fotos": [
         "fotos/modelador-filtro-v60/01.jpg",
-        "fotos/modelador-filtro-v60/02.jpg",
-        "fotos/modelador-filtro-v60/03.jpg"
+        "fotos/modelador-filtro-v60/02.jpg"
       ],
-      "video": null,
+      "video": "fotos/modelador-filtro-v60/video.mp4",
       "pastaOrigem": "Preparo/Modelador De Filtro De Papel Hario V60 - Pour Over"
     }
   ]
