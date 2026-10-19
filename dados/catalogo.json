@@ -3025,6 +3025,64 @@
       ],
       "video": "fotos/modelador-filtro-v60/video.mp4",
       "pastaOrigem": "Preparo/Modelador De Filtro De Papel Hario V60 - Pour Over"
+    },
+    {
+      "slug": "suporte-dolce-gusto-20-capsulas",
+      "nome": "Porta Cápsulas Dolce Gusto",
+      "categoria": "organizacao",
+      "resumo": "Suporte giratório que guarda 20 cápsulas Dolce Gusto em pé.",
+      "paraQueServe": "Caixa de cápsulas Dolce Gusto não tem onde ficar perto da máquina: ou fica solta na gaveta, ou amontoada em cima da bancada. Este suporte organiza 20 cápsulas em pé, ao redor de um eixo central, e gira pra você pegar a próxima sem precisar revirar nada.",
+      "descricao": "Base com eixo central onde as cápsulas Dolce Gusto encaixam em pé, uma do lado da outra, até completar 20 unidades. O conjunto gira sobre o próprio eixo, então pegar uma cápsula do fundo é só virar a peça até ela chegar na sua mão.\n\nMontagem em três partes impressas, sem parafuso.",
+      "detalhes": [
+        "Capacidade para 20 cápsulas Dolce Gusto",
+        "Base giratória sobre eixo central",
+        "Montagem em três partes impressas, sem parafuso"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 119.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/suporte-dolce-gusto-20-capsulas/01.jpg",
+        "fotos/suporte-dolce-gusto-20-capsulas/02.jpg",
+        "fotos/suporte-dolce-gusto-20-capsulas/03.jpg",
+        "fotos/suporte-dolce-gusto-20-capsulas/04.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Porta Cápsulas Dolce Gusto"
     }
   ]
 }
