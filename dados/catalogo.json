@@ -25,13 +25,17 @@
       "preto": {
         "nome": "Preto",
         "hex": "#1C1C1C"
+      },
+      "caramelo": {
+        "nome": "Caramelo",
+        "hex": "#C8824E"
       }
     },
     "coresPadrao": [
       "branco",
       "preto"
     ],
-    "avisoPedido": "Escolha acima e o pedido já vai montado na mensagem. Preços sujeitos a alteração."
+    "avisoPedido": "Escolha acima e o pedido já vai montado na mensagem. Preços sujeitos a alteração. Valor referente a uma unidade do produto."
   },
   "categorias": [
     {
@@ -3083,6 +3087,301 @@
       ],
       "video": null,
       "pastaOrigem": "Organização/Porta Cápsulas Dolce Gusto"
+    },
+    {
+      "slug": "porta-capsulas-universal",
+      "nome": "Cesta Esfera para Cápsulas",
+      "categoria": "organizacao",
+      "resumo": "Cesta vazada em formato de xícara que guarda cápsulas de qualquer marca.",
+      "paraQueServe": "A caixa original das cápsulas não cabe na bancada e esconde quantas ainda restam. Esta cesta vazada guarda as cápsulas soltas, à vista, até encher — serve pra Nespresso, Dolce Gusto, Lavazza A Modo Mio e outras marcas redondas. É só ir pegando pelo vão de cima.",
+      "descricao": "Formato de xícara grande, com alça, e parede inteira vazada num padrão de células orgânicas. As cápsulas ficam em pé, encostadas umas nas outras, sustentadas pela trama — cabem cerca de 30 unidades dependendo da marca.\n\nPeça única, sem parte solta: é só encher e girar pra pegar a de trás.",
+      "detalhes": [
+        "Capacidade para cerca de 30 cápsulas, conforme a marca",
+        "Parede vazada em padrão de células orgânicas",
+        "Alça lateral, formato de xícara"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 89.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/porta-capsulas-universal/01.jpg",
+        "fotos/porta-capsulas-universal/02.jpg",
+        "fotos/porta-capsulas-universal/03.jpg",
+        "fotos/porta-capsulas-universal/04.jpg",
+        "fotos/porta-capsulas-universal/05.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Porta Cápsulas Universal"
+    },
+    {
+      "slug": "porta-capsulas-deluxe",
+      "nome": "Porta Cápsulas Deluxe",
+      "categoria": "organizacao",
+      "resumo": "Dispensador de duas câmaras: estoque em cima, uma cápsula pronta embaixo.",
+      "paraQueServe": "Pra pegar uma cápsula do pote comum, você mexe em todas até achar uma solta. Este dispensador separa as coisas: a câmara de cima guarda o estoque empilhado, e uma rampa interna deixa sempre uma cápsula pronta na bandeja da frente. Você pega só a de baixo e fecha — o resto do estoque nem aparece.",
+      "descricao": "Caixa em duas partes encaixadas: o corpo de cima recebe o estoque de cápsulas empilhadas, e uma rampa interna inclinada conduz a próxima cápsula até a bandeja aberta na frente, pronta pra pegar. Tampa solta na parte de cima fecha o estoque contra poeira.\n\nMontagem em três peças impressas (corpo, rampa e tampa), sem parafuso.",
+      "detalhes": [
+        "Duas câmaras: estoque em cima, dispensação embaixo",
+        "Rampa interna conduz a próxima cápsula até a bandeja",
+        "Tampa solta protege o estoque contra poeira"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 95.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/porta-capsulas-deluxe/01.jpg",
+        "fotos/porta-capsulas-deluxe/02.jpg",
+        "fotos/porta-capsulas-deluxe/03.jpg",
+        "fotos/porta-capsulas-deluxe/04.jpg",
+        "fotos/porta-capsulas-deluxe/05.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Porta Cápsulas Deluxe"
+    },
+    {
+      "slug": "torre-capsulas-dupla",
+      "nome": "Torre Dupla para Cápsulas Dolce Gusto",
+      "categoria": "organizacao",
+      "resumo": "Módulo de 2 colunas que se encaixa com outro igual e dobra a capacidade.",
+      "paraQueServe": "Quem toma dois tipos de café precisa de espaço pra cada cápsula, sem misturar. Esta torre guarda 6 cápsulas em 2 colunas — e encaixa lateralmente em outra torre igual, formando um bloco de 4 colunas e 12 cápsulas, cada sabor na sua fileira.",
+      "descricao": "Torre com 2 colunas verticais, 3 cápsulas empilhadas cada, até 6 cápsulas por módulo. Uma trava lateral permite encaixar duas torres lado a lado, formando um bloco único de 4 colunas — sem precisar de parafuso ou cola.\n\nCompatível com cápsulas Dolce Gusto.",
+      "detalhes": [
+        "2 colunas, 6 cápsulas por módulo",
+        "Encaixa lateralmente com outra torre igual, dobrando a capacidade",
+        "Compatível com cápsulas Dolce Gusto"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 76.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/torre-capsulas-dupla/01.jpg",
+        "fotos/torre-capsulas-dupla/02.jpg",
+        "fotos/torre-capsulas-dupla/03.jpg",
+        "fotos/torre-capsulas-dupla/04.jpg",
+        "fotos/torre-capsulas-dupla/05.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Torre Dupla para Cápsulas"
+    },
+    {
+      "slug": "porta-capsulas-nespresso",
+      "nome": "Porta Cápsulas Nespresso",
+      "categoria": "organizacao",
+      "resumo": "Duas colunas que grudam na lateral da máquina ou na parede com fita dupla face.",
+      "paraQueServe": "A caixa original das cápsulas é grande, não fica em pé sozinha e some dentro do armário. Esta peça cola com fita dupla face na lateral da máquina, na parede ou embaixo do armário, e guarda as cápsulas em pé, em duas colunas — sem caixa, sem espaço perdido, com a cor de cada sabor à vista.",
+      "descricao": "Duas colunas verticais encaixadas lado a lado, com uma aba traseira plana pra colar com fita dupla face em qualquer superfície lisa: lateral da máquina, parede, ou embaixo do armário. Cada coluna guarda as cápsulas Nespresso em pé, uma sobre a outra.\n\nVárias unidades podem ser coladas lado a lado pra aumentar a quantidade de colunas.",
+      "detalhes": [
+        "2 colunas por peça, cápsulas Nespresso em pé",
+        "Cola com fita dupla face em qualquer superfície lisa",
+        "Várias unidades podem ser coladas lado a lado"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos. Fita dupla face não inclusa"
+        }
+      ],
+      "preco": 29.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/porta-capsulas-nespresso/01.jpg",
+        "fotos/porta-capsulas-nespresso/02.jpg",
+        "fotos/porta-capsulas-nespresso/03.jpg",
+        "fotos/porta-capsulas-nespresso/04.jpg",
+        "fotos/porta-capsulas-nespresso/05.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Porta Cápsulas Nespresso"
+    },
+    {
+      "slug": "lixeira-capsulas-dolce-gusto",
+      "nome": "Coletor de Cápsulas Usadas",
+      "categoria": "organizacao",
+      "resumo": "Cápsula gigante que vira lixeira das cápsulas usadas, com bandeja de pingo.",
+      "paraQueServe": "Cápsula usada pinga e não tem onde descartar sem sujar a bancada. Esta peça tem o formato de uma cápsula gigante: por dentro, uma bandeja funda recolhe o resto de café e água que escorre, com furo de drenagem no fundo. Encaixa a tampa por cima e esconde tudo até você esvaziar.",
+      "descricao": "Corpo em formato de cápsula ampliada, com bandeja interna removível de fundo mais profundo pra recolher gotas, e um furo de drenagem central. A tampa articulada encaixa por cima e fecha a vista do que foi descartado.\n\nDesmonta em duas partes pra lavar: corpo e bandeja interna.",
+      "detalhes": [
+        "Bandeja interna funda com furo de drenagem",
+        "Tampa articulada esconde as cápsulas descartadas",
+        "Desmonta em duas partes pra lavar"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 99.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": ["branco", "preto", "caramelo"],
+      "opcoes": [],
+      "fotos": [
+        "fotos/lixeira-capsulas-dolce-gusto/01.jpg",
+        "fotos/lixeira-capsulas-dolce-gusto/02.jpg",
+        "fotos/lixeira-capsulas-dolce-gusto/03.jpg",
+        "fotos/lixeira-capsulas-dolce-gusto/04.jpg",
+        "fotos/lixeira-capsulas-dolce-gusto/05.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Lixeira Capsulona Dolce Gusto"
     }
   ]
 }
