@@ -3388,6 +3388,303 @@
       ],
       "video": null,
       "pastaOrigem": "Organização/Lixeira Capsulona Dolce Gusto"
+    },
+    {
+      "slug": "organizador-cabo-oreo",
+      "nome": "Organizador de Cabo Oreo",
+      "categoria": "organizacao",
+      "resumo": "Parece biscoito Oreo, mas é pra guardar cabo.",
+      "paraQueServe": "Enrola o cabo do fone ou do carregador entre dois discos texturizados — igual a um biscoito Oreo, recheio e tudo. Gira pra enrolar, encaixa as duas tampas e o cabo fica preso, sem nó e sem balançar solto na bolsa ou na gaveta.",
+      "descricao": "Os dois biscoitos se encaixam no miolo central, que funciona como o carretel onde o cabo é enrolado. A textura emborrachada imita o biscoito de verdade, inclusive o relevo gravado nas tampas. Serve bem pra cabo de fone de ouvido, USB-C ou Lightning; não é pensado pra cabos grossos de carregador de notebook.",
+      "detalhes": [
+        "Carretel central + duas tampas texturizadas tipo Oreo",
+        "Enrola e trava o cabo sem precisar de nó",
+        "Ideal pra cabo de fone, USB-C ou Lightning"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "5,3 × 5,3 × 2,0 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 26.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/organizador-cabo-oreo/01.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Organizador de cabo Oreo"
+    },
+    {
+      "slug": "organizador-cabo-biscoito",
+      "nome": "Organizador de Cabo Biscoito",
+      "categoria": "organizacao",
+      "resumo": "Biscoito de maizena pra guardar cabo, em 4 tamanhos.",
+      "paraQueServe": "Mesma ideia do Oreo, só que no formato do biscoito de maizena: duas tampas ovais que se encaixam por torção (sem parafuso, sem cola), prendendo o cabo enrolado por dentro. Vem em quatro tamanhos — escolha pelo comprimento do cabo que você quer guardar.",
+      "descricao": "O encaixe é por torção (twist-lock): alinha, gira e trava — e gira de novo pra abrir. Quanto maior o tamanho, mais cabo cabe enrolado. Pensado pra cabo de carregador de celular (cerca de 2,8 mm de diâmetro); cabos mais grossos podem não enrolar tão bem.",
+      "detalhes": [
+        "Encaixe por torção, sem parafuso ou cola",
+        "Quatro tamanhos: P, M, G e GG, conforme o cabo",
+        "Pensado pra cabo de celular (~2,8 mm)"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "P: 4,2 × 4,2 × 2,0 cm · M: 5,0 × 4,2 × 2,0 cm · G: 5,6 × 4,2 × 2,0 cm · GG: 6,3 × 4,9 × 2,0 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 26.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": ["branco", "preto", "caramelo"],
+      "opcoes": [
+        {
+          "titulo": "Tamanho",
+          "valores": [
+            {
+              "valor": "P",
+              "preco": 26.99
+            },
+            {
+              "valor": "M",
+              "preco": 26.99
+            },
+            {
+              "valor": "G",
+              "preco": 26.99
+            },
+            {
+              "valor": "GG",
+              "preco": 26.99
+            }
+          ]
+        }
+      ],
+      "fotos": [
+        "fotos/organizador-cabo-biscoito/01.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Organizador de cabo biscoito"
+    },
+    {
+      "slug": "mug-buddy",
+      "nome": "Mug Buddy",
+      "categoria": "organizacao",
+      "resumo": "Bonequinho que abraça a lata — ou guarda caneta.",
+      "paraQueServe": "Um boneco de bracinhos erguidos, com o corpo vazado do tamanho certo pra abraçar uma lata de 350 ml — cápsula de café, coldbrew, refrigerante ou energético. Sem lata, vira porta-canetas na mesa.",
+      "descricao": "O encaixe é feito pra lata padrão (tipo Coca-Cola, 350 ml); a abertura central também aceita cápsula de café, se você quiser usar como suporte avulso. Tem alça integrada pra pegar como xícara e pezinhos largos pra não virar.",
+      "detalhes": [
+        "Abraça lata padrão de 350 ml (refrigerante, energético, coldbrew)",
+        "Sem lata, funciona como porta-canetas",
+        "Alça integrada e pezinhos pra estabilidade"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "12,7 × 11,0 × 7,6 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Lata padrão ~350 ml"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 52.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": ["branco", "preto", "caramelo"],
+      "opcoes": [],
+      "fotos": [
+        "fotos/mug-buddy/01.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Mug buddy"
+    },
+    {
+      "slug": "suporte-para-latas",
+      "nome": "Suporte para Latas",
+      "categoria": "organizacao",
+      "resumo": "Parede tripla pra lata não esquentar na mão.",
+      "paraQueServe": "Um copo texturizado que veste a lata de 350 ml e isola o calor da mão — a parede tripla cria uma câmara de ar entre o seu dedo e a lata gelada (ou quente). Tem alça lateral pra carregar sem precisar segurar a lata direto.",
+      "descricao": "Feito pra lata padrão de 350 ml, com parede tripla que resiste a queda acidental sem rachar. A alça funciona pra destro e canhoto. Serve pra refrigerante, cerveja, energético ou coldbrew gelado — qualquer lata nesse tamanho.",
+      "detalhes": [
+        "Parede tripla: isola o calor da mão e resiste a queda",
+        "Alça lateral, serve pra destro ou canhoto",
+        "Feito pra lata padrão de 350 ml"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "7,8 × 11,4 × 11,0 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Lata padrão ~350 ml"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 59.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/suporte-para-latas/01.jpg"
+      ],
+      "video": null,
+      "pastaOrigem": "Organização/Suporte para latas"
+    },
+    {
+      "slug": "abridor-latas-garrafas",
+      "nome": "Abridor de Latas e Garrafas",
+      "categoria": "preparo",
+      "resumo": "Chaveiro que abre lata e tampinha de garrafa.",
+      "paraQueServe": "Um abridor pequeno pra andar no chaveiro: de um lado abre a aba da lata, do outro levanta a tampinha de garrafa (cerveja, refrigerante de vidro). Vem em dois modelos — o completo faz as duas funções, o slim é só pra lata e fica mais fino no molho de chaves.",
+      "descricao": "Encaixa num anel de chaveiro comum pelo furo na ponta. Resistente o bastante pro uso do dia a dia; não é pensado pra força de abridor de garrafa industrial, é uso ocasional.",
+      "detalhes": [
+        "Abre lata e tampinha de garrafa",
+        "Furo pra anel de chaveiro",
+        "Dois modelos: completo (lata + garrafa) ou slim (só lata)"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "Completo: 5,7 × 2,2 × 1,3 cm · Slim: 5,7 × 2,2 × 0,7 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 19.99,
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": null,
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [
+        {
+          "titulo": "Modelo",
+          "valores": [
+            {
+              "valor": "Completo (lata + garrafa)",
+              "preco": 19.99
+            },
+            {
+              "valor": "Slim (só lata)",
+              "preco": 19.99
+            }
+          ]
+        }
+      ],
+      "fotos": [],
+      "video": null,
+      "pastaOrigem": "Preparo/Abridor de latas e garrafas"
     }
   ]
 }
