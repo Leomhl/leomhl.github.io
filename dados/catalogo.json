@@ -3435,7 +3435,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/organizador-cabo-oreo/01.jpg"
+        "fotos/organizador-cabo-oreo/01.jpg",
+        "fotos/organizador-cabo-oreo/02.jpg",
+        "fotos/organizador-cabo-oreo/03.jpg",
+        "fotos/organizador-cabo-oreo/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Organizador de cabo Oreo"
@@ -3563,7 +3566,10 @@
       "cores": ["branco", "preto", "caramelo"],
       "opcoes": [],
       "fotos": [
-        "fotos/mug-buddy/01.jpg"
+        "fotos/mug-buddy/01.jpg",
+        "fotos/mug-buddy/02.jpg",
+        "fotos/mug-buddy/03.jpg",
+        "fotos/mug-buddy/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Mug buddy"
@@ -3618,7 +3624,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/suporte-para-latas/01.jpg"
+        "fotos/suporte-para-latas/01.jpg",
+        "fotos/suporte-para-latas/02.jpg",
+        "fotos/suporte-para-latas/03.jpg",
+        "fotos/suporte-para-latas/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Suporte para latas"
