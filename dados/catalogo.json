@@ -3628,12 +3628,11 @@
       "nome": "Abridor de Latas e Garrafas",
       "categoria": "preparo",
       "resumo": "Chaveiro que abre lata e tampinha de garrafa.",
-      "paraQueServe": "Um abridor pequeno pra andar no chaveiro: de um lado abre a aba da lata, do outro levanta a tampinha de garrafa (cerveja, refrigerante de vidro). Vem em dois modelos — o completo faz as duas funções, o slim é só pra lata e fica mais fino no molho de chaves.",
+      "paraQueServe": "Um abridor pequeno pra andar no chaveiro: de um lado abre a aba da lata, do outro levanta a tampinha de garrafa (cerveja, refrigerante de vidro).",
       "descricao": "Encaixa num anel de chaveiro comum pelo furo na ponta. Resistente o bastante pro uso do dia a dia; não é pensado pra força de abridor de garrafa industrial, é uso ocasional.",
       "detalhes": [
         "Abre lata e tampinha de garrafa",
-        "Furo pra anel de chaveiro",
-        "Dois modelos: completo (lata + garrafa) ou slim (só lata)"
+        "Furo pra anel de chaveiro"
       ],
       "ficha": [
         {
@@ -3650,7 +3649,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "Completo: 5,7 × 2,2 × 1,3 cm · Slim: 5,7 × 2,2 × 0,7 cm (L × P × A)"
+          "valor": "5,7 × 2,2 × 1,3 cm (L × P × A)"
         },
         {
           "rotulo": "Limpeza",
@@ -3667,22 +3666,10 @@
       "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
-      "opcoes": [
-        {
-          "titulo": "Modelo",
-          "valores": [
-            {
-              "valor": "Completo (lata + garrafa)",
-              "preco": 19.99
-            },
-            {
-              "valor": "Slim (só lata)",
-              "preco": 19.99
-            }
-          ]
-        }
+      "opcoes": [],
+      "fotos": [
+        "fotos/abridor-latas-garrafas/01.jpg"
       ],
-      "fotos": [],
       "video": null,
       "pastaOrigem": "Preparo/Abridor de latas e garrafas"
     }
