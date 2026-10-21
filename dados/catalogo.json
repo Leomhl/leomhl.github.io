@@ -39,6 +39,11 @@
   },
   "categorias": [
     {
+      "slug": "preparo",
+      "nome": "Preparo",
+      "resumo": "Da dose à extração: suporte de filtro, estojo, colher, tamper, adaptador de cápsula e a câmera LatteShot, que carimba desenho na espuma."
+    },
+    {
       "slug": "organizacao",
       "nome": "Organização",
       "resumo": "A bancada em ordem: bandejas, dispensers, knock box, porta-guardanapos e o armazenamento do grão e do chá."
@@ -52,11 +57,6 @@
       "slug": "luminarias",
       "nome": "Luminárias",
       "resumo": "Lightbox e abajur com tema de café. Luz quente acesa no cantinho."
-    },
-    {
-      "slug": "preparo",
-      "nome": "Preparo",
-      "resumo": "Da dose à extração: suporte de filtro, estojo, colher, tamper, adaptador de cápsula e a câmera LatteShot, que carimba desenho na espuma."
     }
   ],
   "produtos": [
