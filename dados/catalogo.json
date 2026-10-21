@@ -63,7 +63,7 @@
     {
       "slug": "bandeja-hexagonal-coador",
       "nome": "Bandeja Hexagonal para Coador",
-      "categoria": "organizacao",
+      "categoria": "preparo",
       "resumo": "Grade de favos que esconde a água que escorre.",
       "paraQueServe": "Quando você passa café no coador ou tira a xícara da máquina, sempre pinga alguma coisa. Essa bandeja tem uma grade vazada em cima e um reservatório escondido embaixo: a água atravessa a grade e some de vista. A bancada fica seca e você joga fora o que acumulou quando lembrar.",
       "descricao": "A superfície inteira é uma colmeia vazada: a água que pinga do coador ou da xícara atravessa a grade e fica num reservatório embaixo, fora da vista. Você escorre a peça na pia quando encher. É a bandeja que mantém a bancada seca durante a extração, sem pano embaixo.",
@@ -120,7 +120,7 @@
     {
       "slug": "dosador-cafe",
       "nome": "Dosador de Café",
-      "categoria": "organizacao",
+      "categoria": "preparo",
       "resumo": "Copo medidor que trava o grão na hora de despejar.",
       "paraQueServe": "Antes de moer, você mede os grãos. O copo dosador segura até 26 g sem deixar grão pular fora — tem uma borda interna que trava o excesso na hora de despejar rápido.",
       "descricao": "O copo tem uma borda em ponte logo na boca: ela trava os grãos quando você despeja rápido, então eles não pulam pra fora na pressa. Cabe até 26 g, o suficiente pra uma dose de espresso.",
@@ -172,7 +172,7 @@
     {
       "slug": "clipe-saco-cafe",
       "nome": "Clipe Dosador para Saco de Café",
-      "categoria": "organizacao",
+      "categoria": "preparo",
       "resumo": "Fecha o pacote e vira bico dosador na hora de servir.",
       "paraQueServe": "Faz duas coisas que você provavelmente resolve hoje com elástico e com uma colher qualquer. Primeiro, lacra o pacote de café aberto, para o pó não perder o aroma nem pegar umidade. Segundo, a tampa abre e o clipe vira um bico de despejo — você serve o café direto do pacote, sem derrubar.",
       "descricao": "Prende na boca do pacote de café e lacra com pressão de mola, segurando o aroma dentro. Na hora de usar, a tampa rosqueada abre e o próprio clipe vira bico de despejo — o grão sai controlado, sem a bagunça de virar o pacote inteiro. Dispensa transferir o café para outro pote.",
@@ -287,7 +287,7 @@
     {
       "slug": "estacao-tamping",
       "nome": "Estação de Tamping",
-      "categoria": "organizacao",
+      "categoria": "preparo",
       "resumo": "Apoio que segura o portafiltro firme na hora de compactar.",
       "paraQueServe": "Um apoio para quem tem máquina de espresso. O portafiltro é aquela peça com cabo onde vai o café moído; antes de encaixar na máquina, você precisa prensar o pó com força e bem reto. Fazer isso na beira da bancada entorta a peça e o café sai fraco de um lado e amargo do outro. A estação segura o portafiltro firme e nivelado enquanto você aplica a pressão.",
       "descricao": "Pedestal com berço superior que abraça a borda do portafiltro e o mantém nivelado enquanto você aplica a pressão do tamper. O cabo fica livre na lateral, pendurado fora do apoio, e o corpo canelado dá rigidez com pouco material. Sem ele, compactar na beira da bancada tira o portafiltro do prumo e o espresso sai torto.",
@@ -341,7 +341,7 @@
     {
       "slug": "kit-bandeja-porta-capsulas-3em1",
       "nome": "Kit Nivelador e Bate-Borra",
-      "categoria": "organizacao",
+      "categoria": "preparo",
       "resumo": "Bandeja, bate-borra e porta-nivelador na mesma peça.",
       "paraQueServe": "Resolve a etapa de nivelar e descartar a borra numa peça só: o porta-nivelador guarda a ferramenta de nivelar o café moído, com uma janela lateral que facilita pegar sem tirar tudo do lugar, e o bate-borra recebe a batida do portafiltro pra soltar a pastilha usada, com borda ondulada que absorve o impacto. A bandeja embaixo encaixa os dois e contém a sujeira.",
       "descricao": "A bandeja oval tem dois nichos moldados que encaixam exatamente o porta-nivelador e o bate-borra, então nada escorrega na bancada. O porta-nivelador tem uma janela lateral recortada para pegar a ferramenta sem precisar tirar tudo do lugar. O bate-borra tem a borda alta e ondulada, desenhada pra receber a batida do portafiltro e soltar a pastilha de café usada sem espalhar pó. Os três módulos se encaixam e saem — você monta a disposição que cabe na sua bancada e desmonta inteiro para limpar.",
@@ -399,7 +399,7 @@
     {
       "slug": "knock-box",
       "nome": "Knock Box com Tampa",
-      "categoria": "organizacao",
+      "categoria": "preparo",
       "resumo": "Caixa de descarte de borra, com barra de batida e tampa.",
       "paraQueServe": "Depois de tirar um espresso, sobra um disco de café prensado dentro do portafiltro — a borra. Bater isso na lixeira suja tudo e com o tempo amassa a peça. A knock box tem uma barra atravessada na altura certa: você bate o portafiltro nela, o disco inteiro se solta e cai na caixa. A tampa fecha e segura o cheiro até você descartar.",
       "descricao": "A barra interna atravessa a caixa na altura certa para você bater o portafiltro e soltar o puck inteiro de uma vez, sem machucar a cesta. O corpo é fundo e de parede dupla, então o som da batida fica abafado. A tampa fecha por encaixe e segura o cheiro da borra até a hora de descartar.",
@@ -727,9 +727,7 @@
       "opcoes": [],
       "fotos": [
         "fotos/arvore-porta-guardanapos/01.jpg",
-        "fotos/arvore-porta-guardanapos/02.jpg",
-        "fotos/arvore-porta-guardanapos/03.jpg",
-        "fotos/arvore-porta-guardanapos/04.jpg"
+        "fotos/arvore-porta-guardanapos/02.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Porta-Guardanapos Árvore"
@@ -795,7 +793,7 @@
     {
       "slug": "secador-coador-v60",
       "nome": "Secador para Coador V60",
-      "categoria": "organizacao",
+      "categoria": "preparo",
       "resumo": "O V60 seca de boca para baixo, sem marcar a bancada.",
       "paraQueServe": "O V60 é aquele coador cônico de plástico ou cerâmica, com ranhuras por dentro. Depois de usar, se você apoiar na pia, fica uma poça embaixo e ele demora a secar. Esse aro segura o coador de boca para baixo, com o ar circulando: ele seca inteiro e já fica guardado onde você vai usar de novo.",
       "descricao": "Aro de apoio que recebe o coador virado, deixando a boca livre para o ar circular e a água restante escorrer. O V60 seca inteiro, sem a poça que fica embaixo quando você apoia na pia, e já fica guardado no lugar de uso. O vão interno também acomoda o coador em pé, pronto para a próxima extração.",
@@ -905,7 +903,7 @@
     {
       "slug": "suporte-coador-apoio-removivel",
       "nome": "Suporte para Coador com Apoio Removível",
-      "categoria": "organizacao",
+      "categoria": "preparo",
       "resumo": "Estação de pour over com a base que sai para lavar.",
       "paraQueServe": "Uma estação para passar café no coador. O arco segura o coador na altura certa sobre a jarra ou a caneca, e a parede de trás é vazada para você acompanhar a água descendo. O apoio da base, que é onde pinga no fim, sai da peça para lavar na pia. Serve para V60, Kalita e coador de pano.",
       "descricao": "Arco que sustenta o coador na altura certa sobre a jarra, com a parede traseira ventilada para você acompanhar a extração de lado. O apoio da base é removível: puxa, lava na pia e devolve ao lugar — é ele que recebe a água que pinga no fim. Serve para V60, Kalita e coador de pano.",
