@@ -57,10 +57,12 @@
   let escolha = { slug: null, cor: null, opcoes: {}, quantidade: 1 };
 
   function zerarEscolha(p) {
+    const partes = partesCoresDe(p);
     const cores = coresDe(p);
     escolha = {
       slug: p.slug,
-      cor: cores.length ? cores[0].nome : null,
+      cor: partes.length ? null : cores.length ? cores[0].nome : null,
+      cores: Object.fromEntries(partes.map((parte) => [parte.titulo, parte.cores[0]?.nome ?? null])),
       opcoes: Object.fromEntries((p.opcoes || []).map((o) => [o.titulo, (o.valores || [])[0]?.valor ?? null])),
       quantidade: 1,
     };
@@ -72,6 +74,9 @@
     if (escolha.slug === p.slug) {
       linhas.push(`• Quantidade: ${escolha.quantidade}`);
       if (escolha.cor) linhas.push(`• Cor: ${escolha.cor}`);
+      for (const [parte, valor] of Object.entries(escolha.cores || {})) {
+        if (valor) linhas.push(`• Cor (${parte}): ${valor}`);
+      }
       for (const [titulo, valor] of Object.entries(escolha.opcoes)) {
         if (valor) linhas.push(`• ${titulo}: ${valor}`);
       }
@@ -106,6 +111,116 @@
     return 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
   }
 
+  /* ---------- Carrinho ---------------------------------------------------- */
+
+  // Carrinho fica salvo no navegador da pessoa: some só se ela limpar os dados do site.
+  const CHAVE_CARRINHO = 'cafezim-carrinho';
+
+  function carregarCarrinho() {
+    try {
+      const dados = JSON.parse(localStorage.getItem(CHAVE_CARRINHO) || '[]');
+      return Array.isArray(dados) ? dados : [];
+    } catch {
+      return [];
+    }
+  }
+
+  let carrinho = carregarCarrinho();
+
+  function salvarCarrinho() {
+    try {
+      localStorage.setItem(CHAVE_CARRINHO, JSON.stringify(carrinho));
+    } catch {}
+    atualizarBadgeCarrinho();
+  }
+
+  // Mesmo produto com a mesma cor e as mesmas opções soma quantidade em vez de duplicar linha.
+  function chaveItem(it) {
+    return JSON.stringify([it.slug, it.cor, it.cores, it.opcoes]);
+  }
+
+  function adicionarAoCarrinho(p) {
+    const item = {
+      slug: p.slug,
+      nome: p.nome,
+      cor: escolha.slug === p.slug ? escolha.cor : null,
+      cores: escolha.slug === p.slug ? { ...escolha.cores } : {},
+      opcoes: escolha.slug === p.slug ? { ...escolha.opcoes } : {},
+      quantidade: escolha.slug === p.slug ? escolha.quantidade : 1,
+      preco: precoAtual(p),
+    };
+    const existente = carrinho.find((x) => chaveItem(x) === chaveItem(item));
+    if (existente) existente.quantidade += item.quantidade;
+    else carrinho.push(item);
+    salvarCarrinho();
+  }
+
+  function removerDoCarrinho(i) {
+    carrinho.splice(i, 1);
+    salvarCarrinho();
+  }
+
+  function definirQuantidadeCarrinho(i, n) {
+    const item = carrinho[i];
+    if (!item) return;
+    item.quantidade = Math.min(99, Math.max(1, n));
+    salvarCarrinho();
+  }
+
+  function quantidadeCarrinho() {
+    return carrinho.reduce((soma, it) => soma + it.quantidade, 0);
+  }
+
+  function totalCarrinho() {
+    return carrinho.reduce((soma, it) => soma + (it.preco != null ? it.preco * it.quantidade : 0), 0);
+  }
+
+  function atualizarBadgeCarrinho() {
+    const contagem = document.getElementById('carrinho-contagem');
+    if (!contagem) return;
+    const n = quantidadeCarrinho();
+    contagem.textContent = n > 99 ? '99+' : String(n);
+    contagem.hidden = n === 0;
+  }
+
+  function textoItemCarrinho(it) {
+    const linhas = [`• ${it.nome}`, `• Quantidade: ${it.quantidade}`];
+    if (it.cor) linhas.push(`• Cor: ${it.cor}`);
+    for (const [parte, valor] of Object.entries(it.cores || {})) {
+      if (valor) linhas.push(`• Cor (${parte}): ${valor}`);
+    }
+    for (const [titulo, valor] of Object.entries(it.opcoes || {})) {
+      if (valor) linhas.push(`• ${titulo}: ${valor}`);
+    }
+    if (it.preco != null) {
+      linhas.push(
+        it.quantidade > 1
+          ? `• Valor: ${moeda.format(it.preco)} cada — total ${moeda.format(it.preco * it.quantidade)}`
+          : `• Valor: ${moeda.format(it.preco)}`
+      );
+    }
+    return linhas.join('\n');
+  }
+
+  function textoPedidoCarrinho() {
+    const linhas = carrinho.map(textoItemCarrinho).join('\n\n');
+    return `${linhas}\n\n• Total do pedido: ${moeda.format(totalCarrinho())}`;
+  }
+
+  function linkZapCarrinho() {
+    const loja = catalogo.loja;
+    const numero = String(loja.whatsapp || '').replace(/\D/g, '');
+    const algumPreVenda = carrinho.some((it) => porSlug(catalogo.produtos, it.slug)?.preVenda);
+    const modelo = algumPreVenda && loja.mensagemPreVenda ? loja.mensagemPreVenda : loja.mensagemPadrao;
+    const linkCarrinho = location.href.split('#')[0] + '#/carrinho';
+    let texto = String(modelo || 'Olá! Quero pedir:\n{pedido}\n{link}')
+      .replaceAll('{pedido}', textoPedidoCarrinho())
+      .replaceAll('{produto}', 'meu pedido')
+      .replaceAll('{link}', linkCarrinho);
+    if (!modelo.includes('{link}')) texto += '\n' + linkCarrinho;
+    return 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
+  }
+
   /* ---------- Pré-venda -------------------------------------------------- */
 
   function textoPreVenda(p) {
@@ -136,22 +251,48 @@
     return chaves.map((k) => paleta[k] || { nome: k, hex: '#CCC' });
   }
 
+  // Peças que desmontam (tampa, corpo, base…) podem ter cor escolhida por
+  // parte em vez de uma cor só pra peça inteira.
+  function partesCoresDe(p) {
+    const paleta = catalogo.loja.paletaCores || {};
+    return (p.partesCores || []).map((parte) => ({
+      titulo: parte.titulo,
+      cores: (parte.cores || []).map((k) => paleta[k] || { nome: k, hex: '#CCC' }),
+    }));
+  }
+
+  function blocoCoresLista(cores) {
+    return `<div class="escolha-lista">
+      ${cores
+        .map(
+          (c, i) => `<button type="button" class="opcao" role="radio"
+            aria-checked="${i === 0}" data-valor="${esc(c.nome)}">
+            <span class="opcao-bola" style="--cor:${esc(c.hex)}" aria-hidden="true"></span>
+            <span class="opcao-nome">${esc(c.nome)}</span>
+          </button>`
+        )
+        .join('')}
+    </div>`;
+  }
+
   function blocoCores(p) {
+    const partes = partesCoresDe(p);
+    if (partes.length) {
+      return partes
+        .map(
+          (parte) => `<div class="escolha" data-grupo="cor-parte" data-parte="${esc(parte.titulo)}"
+            role="radiogroup" aria-label="Cor — ${esc(parte.titulo)}">
+            <h2 class="escolha-titulo">Cor — ${esc(parte.titulo)}</h2>
+            ${blocoCoresLista(parte.cores)}
+          </div>`
+        )
+        .join('');
+    }
     const cores = coresDe(p);
     if (!cores.length) return '';
     return `<div class="escolha" data-grupo="cor" role="radiogroup" aria-label="Cor">
       <h2 class="escolha-titulo">Cor</h2>
-      <div class="escolha-lista">
-        ${cores
-          .map(
-            (c, i) => `<button type="button" class="opcao" role="radio"
-              aria-checked="${i === 0}" data-valor="${esc(c.nome)}">
-              <span class="opcao-bola" style="--cor:${esc(c.hex)}" aria-hidden="true"></span>
-              <span class="opcao-nome">${esc(c.nome)}</span>
-            </button>`
-          )
-          .join('')}
-      </div>
+      ${blocoCoresLista(cores)}
     </div>`;
   }
 
@@ -497,8 +638,6 @@
       ? `<ul class="detalhes">${p.detalhes.map((d) => `<li>${escLink(d)}</li>`).join('')}</ul>`
       : '';
 
-    const rotuloBotao = p.preVenda ? 'Reservar na pré-venda' : 'Comprar pelo WhatsApp';
-
     return `
       <nav class="trilha" aria-label="Você está em">
         <a href="#/">Início</a><span>/</span>
@@ -554,9 +693,10 @@
 
           <div class="compra">
             <p class="compra-total" data-total hidden></p>
-            <a class="botao botao-zap botao-largo" data-zap href="${linkZap(p)}" target="_blank" rel="noopener">
-              ${SVG_ZAP} ${rotuloBotao}
-            </a>
+            <button type="button" class="botao botao-comprar botao-largo" data-adicionar-carrinho>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 12.4a2 2 0 002 1.6h8.6a2 2 0 002-1.6L21 8H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+              Adicionar ao carrinho
+            </button>
             <p class="compra-nota">${esc(catalogo.loja.avisoPedido || catalogo.loja.avisoPreco || '')}</p>
           </div>
         </div>
@@ -584,21 +724,129 @@
     </div>`;
   }
 
+  function telaCarrinho() {
+    if (!carrinho.length) {
+      return `
+        <nav class="trilha" aria-label="Você está em"><a href="#/">Início</a><span>/</span>Carrinho</nav>
+        <div class="vazio">
+          <img src="marca/mascote-compacto.svg" alt="" aria-hidden="true">
+          <h2>Seu carrinho está vazio</h2>
+          <p>Adicione peças do catálogo pra montar seu pedido.</p>
+          <a class="botao botao-vazado" href="#/">Ver o catálogo</a>
+        </div>
+      `;
+    }
+
+    const linhas = carrinho
+      .map((it, i) => {
+        const p = porSlug(catalogo.produtos, it.slug);
+        const foto = p?.fotos?.[0];
+        const escolhaTexto = [
+          it.cor,
+          ...Object.entries(it.cores || {})
+            .filter(([, v]) => v)
+            .map(([parte, v]) => `${parte}: ${v}`),
+          ...Object.entries(it.opcoes || {})
+            .filter(([, v]) => v)
+            .map(([t, v]) => `${t}: ${v}`),
+        ]
+          .filter(Boolean)
+          .join(' · ');
+        return `
+          <li class="carrinho-item" data-item="${i}">
+            <a class="carrinho-foto" href="#/p/${esc(it.slug)}">${
+              foto ? `<img src="${esc(foto)}" alt="" loading="lazy">` : semFoto(it.nome)
+            }</a>
+            <div class="carrinho-detalhe">
+              <a class="carrinho-nome" href="#/p/${esc(it.slug)}">${esc(it.nome)}</a>
+              ${escolhaTexto ? `<p class="carrinho-opcoes">${esc(escolhaTexto)}</p>` : ''}
+              <div class="contador contador-pequeno">
+                <button type="button" class="contador-botao" data-carrinho-passo="-1" aria-label="Diminuir quantidade">−</button>
+                <span class="contador-campo" aria-live="polite">${it.quantidade}</span>
+                <button type="button" class="contador-botao" data-carrinho-passo="1" aria-label="Aumentar quantidade">+</button>
+              </div>
+            </div>
+            <div class="carrinho-preco">
+              <span>${it.preco != null ? moeda.format(it.preco * it.quantidade) : 'Consultar'}</span>
+              <button type="button" class="carrinho-remover" data-carrinho-remover aria-label="Remover ${esc(it.nome)} do carrinho">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+              </button>
+            </div>
+          </li>
+        `;
+      })
+      .join('');
+
+    return `
+      <nav class="trilha" aria-label="Você está em"><a href="#/">Início</a><span>/</span>Carrinho</nav>
+      <section class="secao carrinho">
+        <div class="secao-topo"><h2>Seu carrinho</h2></div>
+        <ul class="carrinho-lista">${linhas}</ul>
+        <div class="carrinho-resumo">
+          <p class="carrinho-total">Total: <strong>${moeda.format(totalCarrinho())}</strong></p>
+          <a class="botao botao-zap botao-largo" href="${linkZapCarrinho()}" target="_blank" rel="noopener">
+            ${SVG_ZAP} Finalizar pedido no WhatsApp
+          </a>
+          <p class="compra-nota">${esc(catalogo.loja.avisoPedido || catalogo.loja.avisoPreco || '')}</p>
+        </div>
+      </section>
+    `;
+  }
+
+  function ligarCarrinho() {
+    const lista = main.querySelector('.carrinho-lista');
+    if (!lista) return;
+
+    lista.addEventListener('click', (e) => {
+      const linha = e.target.closest('[data-item]');
+      if (!linha) return;
+      const i = Number(linha.dataset.item);
+
+      if (e.target.closest('[data-carrinho-remover]')) {
+        removerDoCarrinho(i);
+        redesenharCarrinho();
+        return;
+      }
+      const passo = e.target.closest('[data-carrinho-passo]');
+      if (passo) {
+        definirQuantidadeCarrinho(i, carrinho[i].quantidade + Number(passo.dataset.carrinhoPasso));
+        redesenharCarrinho();
+      }
+    });
+  }
+
+  // Re-render só da tela do carrinho, sem passar pelo roteador (o hash não muda
+  // ao tirar/ajustar item, então desenhar() normal ignoraria por estar na mesma rota).
+  function redesenharCarrinho() {
+    main.innerHTML = telaCarrinho();
+    ligarCarrinho();
+  }
+
   /* ---------- Seletores do pedido ------------------------------------------ */
 
-  // Cada escolha reescreve o link do WhatsApp na hora: quando a pessoa toca no
-  // botão verde, a mensagem já está montada com produto, quantidade, cor e opção.
+  // Cada escolha recalcula preço e total na hora, pra quando a pessoa adicionar
+  // ao carrinho o item já ir com a quantidade, cor e opção certas.
   function ligarSeletores(p) {
     const caixa = main.querySelector('[data-escolhas]');
     if (!caixa) return;
-    const botaoZap = main.querySelector('[data-zap]');
     const total = main.querySelector('[data-total]');
     const campo = caixa.querySelector('#quantidade');
+    const botaoCarrinho = main.querySelector('[data-adicionar-carrinho]');
+
+    botaoCarrinho?.addEventListener('click', () => {
+      adicionarAoCarrinho(p);
+      const rotuloOriginal = botaoCarrinho.innerHTML;
+      botaoCarrinho.disabled = true;
+      botaoCarrinho.innerHTML = 'Adicionado ✓';
+      setTimeout(() => {
+        botaoCarrinho.innerHTML = rotuloOriginal;
+        botaoCarrinho.disabled = false;
+      }, 1400);
+    });
 
     const mostrador = main.querySelector('[data-preco]');
 
     function atualizar() {
-      botaoZap.href = linkZap(p);
       const preco = precoAtual(p);
       if (mostrador) mostrador.innerHTML = precoHtml(p);
       if (preco != null && escolha.quantidade > 1) {
@@ -618,6 +866,7 @@
         grupo.querySelectorAll('.opcao').forEach((b) => b.setAttribute('aria-checked', String(b === opcao)));
         const nome = grupo.dataset.grupo;
         if (nome === 'cor') escolha.cor = opcao.dataset.valor;
+        else if (nome === 'cor-parte') escolha.cores[grupo.dataset.parte] = opcao.dataset.valor;
         else escolha.opcoes[nome] = opcao.dataset.valor;
         atualizar();
         return;
@@ -713,6 +962,7 @@
     if (tipo === 'c') return { tela: 'categoria', arg };
     if (tipo === 'p') return { tela: 'produto', arg };
     if (tipo === 'busca') return { tela: 'busca', arg };
+    if (tipo === 'carrinho') return { tela: 'carrinho', arg: '' };
     return { tela: 'inicio', arg: '' };
   }
 
@@ -727,6 +977,7 @@
       return c ? `${c.nome} — ${nome}` : nome;
     }
     if (tela === 'busca') return `“${arg}” — ${nome}`;
+    if (tela === 'carrinho') return `Carrinho — ${nome}`;
     return `${nome} — peças para o seu cantinho do café`;
   }
 
@@ -742,6 +993,7 @@
       r.tela === 'produto'   ? telaProduto(r.arg)   :
       r.tela === 'categoria' ? telaCategoria(r.arg) :
       r.tela === 'busca'     ? telaBusca(r.arg)     :
+      r.tela === 'carrinho'  ? telaCarrinho()       :
                                telaInicio();
 
     document.title = titulo(r);
@@ -751,6 +1003,7 @@
       const p = porSlug(catalogo.produtos, r.arg);
       if (p) { zerarEscolha(p); ligarSeletores(p); }
     }
+    if (r.tela === 'carrinho') ligarCarrinho();
 
     // Marca a categoria aberta no menu.
     const alvo = r.tela === 'categoria' ? `#/c/${r.arg}` : r.tela === 'inicio' ? '#/' : '';
@@ -893,6 +1146,7 @@
 
   function iniciar() {
     montarMolduras();
+    atualizarBadgeCarrinho();
     desenhar();
     window.addEventListener('hashchange', () => desenhar());
     conferirEmSegundoPlano();

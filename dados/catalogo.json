@@ -15,8 +15,8 @@
     "avisoFrete": "Frete não incluso no valor mostrado, consultar valores no WhatsApp.",
     "avisoPreco": "Preços sujeitos a alteração. Confirme no WhatsApp antes de fechar o pedido.",
     "mensagemPreVenda": "Olá! Quero reservar na pré-venda do cafezim:\n\n{pedido}\n\n{link}",
-    "textoPreVenda": "Pré-venda. Produção e envio a partir de {data}.",
-    "textoPreVendaSemData": "Pré-venda. Data de produção e envio a confirmar.",
+    "textoPreVenda": "Pré-venda. Envio a partir de {data}.",
+    "textoPreVendaSemData": "Pré-venda. Data de envio a confirmar.",
     "paletaCores": {
       "branco": {
         "nome": "Branco",
@@ -394,7 +394,33 @@
         "fotos/kit-bandeja-porta-capsulas-3em1/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Kit Bandeja com Porta-Cápsulas 3 em 1"
+      "pastaOrigem": "Organização/Kit Bandeja com Porta-Cápsulas 3 em 1",
+      "partesCores": [
+        {
+          "titulo": "Bandeja",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        },
+        {
+          "titulo": "Bate-borra",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        },
+        {
+          "titulo": "Porta-nivelador",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        }
+      ]
     },
     {
       "slug": "knock-box",
@@ -452,7 +478,25 @@
         "fotos/knock-box/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Knock Box com Tampa"
+      "pastaOrigem": "Organização/Knock Box com Tampa",
+      "partesCores": [
+        {
+          "titulo": "Corpo",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        },
+        {
+          "titulo": "Tampa",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        }
+      ]
     },
     {
       "slug": "organizador-saches-cha",
@@ -1180,11 +1224,7 @@
       "preVenda": true,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
-      "cores": [
-        "branco",
-        "preto",
-        "caramelo"
-      ],
+      "cores": null,
       "opcoes": [],
       "fotos": [
         "fotos/copo-cafe-buddy/01.jpg",
@@ -1192,7 +1232,33 @@
         "fotos/copo-cafe-buddy/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Copinho Buddy"
+      "pastaOrigem": "Decoração/Copinho Buddy",
+      "partesCores": [
+        {
+          "titulo": "Tampa",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        },
+        {
+          "titulo": "Cinta",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        },
+        {
+          "titulo": "Perninhas",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        }
+      ]
     },
     {
       "slug": "fantasma-cafe",
@@ -1245,7 +1311,33 @@
         "fotos/fantasma-cafe/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Fantasma de Café 3D"
+      "pastaOrigem": "Decoração/Fantasma de Café 3D",
+      "partesCores": [
+        {
+          "titulo": "Corpo",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        },
+        {
+          "titulo": "Copo",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        },
+        {
+          "titulo": "Vapor",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        }
+      ]
     },
     {
       "slug": "buddy-cafe",
@@ -3399,10 +3491,24 @@
       "preVenda": true,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
-      "cores": [
-        "branco",
-        "preto",
-        "caramelo"
+      "cores": null,
+      "partesCores": [
+        {
+          "titulo": "Corpo",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        },
+        {
+          "titulo": "Base",
+          "cores": [
+            "branco",
+            "preto",
+            "caramelo"
+          ]
+        }
       ],
       "opcoes": [],
       "fotos": [

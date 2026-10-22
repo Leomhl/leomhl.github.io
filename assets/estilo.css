@@ -160,6 +160,22 @@ input, button, select, textarea { font-size: 16px; }
 }
 .busca-abrir svg { width: 18px; height: 18px; fill: none; stroke: var(--tinta); stroke-width: 2; stroke-linecap: round; }
 
+.carrinho-abrir {
+  position: relative; flex: none; width: var(--toque); height: var(--toque);
+  display: grid; place-items: center;
+  border: 1px solid var(--linha); border-radius: 50%;
+  background: var(--papel); text-decoration: none;
+}
+.carrinho-abrir svg { width: 19px; height: 19px; fill: none; stroke: var(--tinta); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.carrinho-contagem {
+  position: absolute; top: 5px; right: 5px;
+  min-width: 17px; height: 17px; padding: 0 4px;
+  display: grid; place-items: center;
+  border-radius: 999px; background: var(--terracota); color: var(--creme);
+  font-family: var(--titulo); font-weight: 700; font-size: .68rem; line-height: 1;
+}
+.carrinho-contagem[hidden] { display: none; }
+
 /* Recolhida: só aparece quando a lupa é tocada, cobrindo a barra. */
 .busca {
   display: none;
@@ -229,6 +245,7 @@ input, button, select, textarea { font-size: 16px; }
 }
 .botao:active { transform: scale(.985); }
 .botao svg { width: 19px; height: 19px; flex: none; }
+.botao-vazado svg, .compra svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 .botao-zap { background: var(--zap); color: #fff; }
 .botao-zap svg { fill: currentColor; }
@@ -463,9 +480,10 @@ input, button, select, textarea { font-size: 16px; }
 }
 .contador-botao:active { background: var(--papel-2); }
 .contador-campo {
-  width: 54px; height: var(--toque); border: 0; background: none;
+  width: 54px; height: var(--toque); border: 0; background: none; padding: 0;
   text-align: center; font-family: var(--titulo); font-weight: 700; font-size: 1.05rem;
-  -moz-appearance: textfield; appearance: textfield;
+  line-height: var(--toque);
+  -moz-appearance: textfield; -webkit-appearance: textfield; appearance: textfield;
 }
 .contador-campo::-webkit-outer-spin-button,
 .contador-campo::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
@@ -476,8 +494,47 @@ input, button, select, textarea { font-size: 16px; }
   text-align: center; margin: 0 0 10px; color: var(--terracota);
 }
 
-/* No celular o bloco de compra gruda no rodapé da tela: o botão fica sempre
-   a um polegar de distância, não importa onde a pessoa parou de ler. */
+/* ---------- Carrinho ------------------------------------------------------ */
+
+.carrinho-lista { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 12px; }
+.carrinho-item {
+  display: grid; grid-template-columns: 76px 1fr auto; align-items: center; gap: 12px;
+  padding: 10px; border: 1px solid var(--linha); border-radius: var(--raio-g); background: var(--papel);
+}
+.carrinho-foto {
+  width: 76px; height: 76px; border-radius: var(--raio); overflow: hidden;
+  background: var(--papel-2); display: block;
+}
+.carrinho-foto img { width: 100%; height: 100%; object-fit: cover; }
+.carrinho-detalhe { min-width: 0; display: grid; gap: 6px; }
+.carrinho-nome {
+  font-family: var(--titulo); font-weight: 700; font-size: .96rem; color: var(--tinta);
+  text-decoration: none;
+}
+.carrinho-opcoes { margin: 0; font-size: .82rem; color: var(--tinta-fraca); }
+.contador-pequeno { --toque: 34px; justify-self: start; width: fit-content; }
+.contador-pequeno .contador-campo { width: 34px; font-size: .92rem; }
+.carrinho-preco {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+  font-family: var(--titulo); font-weight: 700; font-size: .95rem; color: var(--terracota);
+}
+.carrinho-remover {
+  width: 30px; height: 30px; border: 0; border-radius: 50%; background: none; cursor: pointer;
+  display: grid; place-items: center; color: var(--tinta-fraca);
+}
+.carrinho-remover svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.carrinho-remover:hover { background: var(--papel-2); color: var(--tinta); }
+
+.carrinho-resumo {
+  max-width: 420px; margin-inline: auto; text-align: center;
+  display: grid; gap: 10px;
+}
+.carrinho-total { font-family: var(--titulo); font-weight: 700; font-size: 1.15rem; margin: 0; }
+.carrinho-total strong { color: var(--terracota); }
+
+/* Gruda no rodapé da coluna quando a rolagem chega na posição natural do
+   bloco, e larga de novo se a pessoa rolar de volta pra cima — sticky, não
+   fixo, então continua alinhado à largura da coluna de descrição. */
 .compra {
   position: sticky; bottom: calc(10px + var(--seguro-baixo)); z-index: 30;
   margin-top: 24px; padding: 12px; border-radius: var(--raio-g);
@@ -486,6 +543,11 @@ input, button, select, textarea { font-size: 16px; }
   border: 1px solid var(--linha); box-shadow: var(--sombra-g);
 }
 .compra-nota { font-size: .76rem; color: var(--tinta-fraca); text-align: center; margin: 9px 0 0; }
+
+.botao-comprar { background: var(--terracota); }
+@media (hover: hover) {
+  .botao-comprar:hover { background: #B3661F; }
+}
 
 /* ---------- Carrossel ----------------------------------------------------- */
 
@@ -676,15 +738,13 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
   .produto-info h1 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); }
   .produto-preco .preco { font-size: 2rem; }
 
-  /* Com espaço de sobra, o bloco de compra acompanha a rolagem pelo topo. */
+  /* Com espaço de sobra, o cartão sticky de compra fica maior e opaco. */
   .compra {
-    position: sticky; top: 104px; bottom: auto;
     padding: 20px; background: var(--papel);
     backdrop-filter: none; -webkit-backdrop-filter: none;
     box-shadow: var(--sombra);
   }
   .compra-nota { font-size: .82rem; }
-  body[data-tela="produto"] .zap-flutuante { opacity: 1; pointer-events: auto; }
 
   /* Em telas com mouse, as setas do carrossel voltam. */
   .seta {
