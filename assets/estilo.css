@@ -19,6 +19,7 @@
   --tinta:      #2B1810;
   --tinta-fraca:#7A6354;
   --zap:        #1FAF54;
+  --zap-escuro: #1B9C4B;
 
   --titulo: "Quicksand", ui-rounded, "Segoe UI", system-ui, sans-serif;
   --texto:  "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -238,7 +239,7 @@ input, button, select, textarea { font-size: 16px; }
 
 @media (hover: hover) {
   .botao:hover { transform: translateY(-2px); box-shadow: var(--sombra-g); }
-  .botao-zap:hover { background: #1b9c4b; }
+  .botao-zap:hover { background: var(--zap-escuro); }
   .botao-vazado:hover { background: var(--torra); color: var(--creme); }
   .barra-trilho a:hover { background: var(--papel); color: var(--tinta); }
 }

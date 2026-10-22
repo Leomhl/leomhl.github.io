@@ -98,9 +98,9 @@
     } else {
       const modelo = produto.preVenda && loja.mensagemPreVenda ? loja.mensagemPreVenda : loja.mensagemPadrao;
       texto = String(modelo || 'Olá! Quero pedir:\n{pedido}\n{link}')
-        .replace('{pedido}', textoPedido(produto))
-        .replace('{produto}', produto.nome)
-        .replace('{link}', location.href.split('#')[0] + '#/p/' + produto.slug);
+        .replaceAll('{pedido}', textoPedido(produto))
+        .replaceAll('{produto}', produto.nome)
+        .replaceAll('{link}', location.href.split('#')[0] + '#/p/' + produto.slug);
       if (!modelo.includes('{link}')) texto += '\n' + location.href.split('#')[0] + '#/p/' + produto.slug;
     }
     return 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
@@ -213,7 +213,7 @@
     </div>`;
   }
 
-  /* ---------- Vídeo ---  /* ---------- Vídeo ------------------------------------------------------ */
+  /* ---------- Vídeo ------------------------------------------------------ */
 
   // Aceita link completo do YouTube (watch, youtu.be, shorts, embed) ou só o ID.
   function idDoYoutube(valor) {
