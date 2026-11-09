@@ -3,7 +3,7 @@
     "nome": "cafezim",
     "chamada": "Seu café já é bom. Falta o cantinho à altura.",
     "chamadaDestaque": "à altura",
-    "avisoTopo": "Em pré-venda — os envios começam em 10 de novembro! Peça antecipado e garanta o seu.",
+    "avisoTopo": "",
     "descricao": "Bandejas, suportes, luminárias e peças de parede para a bancada que você usa toda manhã.",
     "whatsapp": "5522988447540",
     "mensagemPadrao": "Olá! Quero fazer um pedido no cafezim:\n\n{pedido}\n\n{link}",
@@ -57,6 +57,11 @@
       "slug": "luminarias",
       "nome": "Luminárias",
       "resumo": "Lightbox e abajur com tema de café. Luz quente acesa no cantinho."
+    },
+    {
+      "slug": "diversos",
+      "nome": "Diversos",
+      "resumo": "Fora do tema café: vinho, Apple Watch, iPad, cortadores de biscoito e outras peças da produção própria."
     }
   ],
   "produtos": [
@@ -103,7 +108,7 @@
       ],
       "preco": 69.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -115,7 +120,13 @@
         "fotos/bandeja-hexagonal-coador/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Bandeja Hexagonal para Coador"
+      "pastaOrigem": "Organização/Bandeja Hexagonal para Coador",
+      "envio": {
+        "pesoGramas": 143,
+        "alturaCm": 15.0,
+        "larguraCm": 23.0,
+        "comprimentoCm": 1.5
+      }
     },
     {
       "slug": "dosador-cafe",
@@ -156,7 +167,7 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -167,7 +178,13 @@
         "fotos/dosador-cafe/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Dosador para Café"
+      "pastaOrigem": "Organização/Dosador para Café",
+      "envio": {
+        "pesoGramas": 25,
+        "alturaCm": 8.0,
+        "larguraCm": 6.6,
+        "comprimentoCm": 4.1
+      }
     },
     {
       "slug": "clipe-saco-cafe",
@@ -213,7 +230,7 @@
       ],
       "preco": 31.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -225,7 +242,13 @@
         "fotos/clipe-saco-cafe/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Clipe Dosador para Saco de Café"
+      "pastaOrigem": "Organização/Clipe Dosador para Saco de Café",
+      "envio": {
+        "pesoGramas": 44,
+        "alturaCm": 14.1,
+        "larguraCm": 15.9,
+        "comprimentoCm": 2.4
+      }
     },
     {
       "slug": "dispenser-capsulas-nespresso",
@@ -271,7 +294,7 @@
       ],
       "preco": 108.99,
       "destaque": true,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -282,7 +305,13 @@
         "fotos/dispenser-capsulas-nespresso/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Dispenser de Cápsulas Nespresso"
+      "pastaOrigem": "Organização/Dispenser de Cápsulas Nespresso",
+      "envio": {
+        "pesoGramas": 119,
+        "alturaCm": 10.7,
+        "larguraCm": 10.8,
+        "comprimentoCm": 19.0
+      }
     },
     {
       "slug": "estacao-tamping",
@@ -324,7 +353,7 @@
       ],
       "preco": 63.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -336,7 +365,13 @@
         "fotos/estacao-tamping/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Estação de Tamping"
+      "pastaOrigem": "Organização/Estação de Tamping",
+      "envio": {
+        "pesoGramas": 61,
+        "alturaCm": 10.5,
+        "larguraCm": 10.2,
+        "comprimentoCm": 8.4
+      }
     },
     {
       "slug": "kit-bandeja-porta-capsulas-3em1",
@@ -382,7 +417,7 @@
       ],
       "preco": 101.99,
       "destaque": true,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -420,7 +455,13 @@
             "caramelo"
           ]
         }
-      ]
+      ],
+      "envio": {
+        "pesoGramas": 70,
+        "alturaCm": 22.0,
+        "larguraCm": 12.0,
+        "comprimentoCm": 10.0
+      }
     },
     {
       "slug": "knock-box",
@@ -466,7 +507,7 @@
       ],
       "preco": 78.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -496,7 +537,13 @@
             "caramelo"
           ]
         }
-      ]
+      ],
+      "envio": {
+        "pesoGramas": 78,
+        "alturaCm": 14.8,
+        "larguraCm": 11.5,
+        "comprimentoCm": 14.8
+      }
     },
     {
       "slug": "organizador-saches-cha",
@@ -542,7 +589,7 @@
       ],
       "preco": 56.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -554,7 +601,13 @@
         "fotos/organizador-saches-cha/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Organizador de Sachês de Chá"
+      "pastaOrigem": "Organização/Organizador de Sachês de Chá",
+      "envio": {
+        "pesoGramas": 38,
+        "alturaCm": 8.3,
+        "larguraCm": 8.3,
+        "comprimentoCm": 13.0
+      }
     },
     {
       "slug": "porta-copos-universal",
@@ -596,7 +649,7 @@
       ],
       "preco": 68.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -608,7 +661,13 @@
         "fotos/porta-copos-universal/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta-Copos Universal"
+      "pastaOrigem": "Organização/Porta-Copos Universal",
+      "envio": {
+        "pesoGramas": 36,
+        "alturaCm": 14.4,
+        "larguraCm": 7.9,
+        "comprimentoCm": 9.0
+      }
     },
     {
       "slug": "porta-guardanapos-slim",
@@ -654,7 +713,7 @@
       ],
       "preco": 68.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -664,7 +723,13 @@
         "fotos/porta-guardanapos-slim/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta-Guardanapos Slim"
+      "pastaOrigem": "Organização/Porta-Guardanapos Slim",
+      "envio": {
+        "pesoGramas": 102,
+        "alturaCm": 17.0,
+        "larguraCm": 6.0,
+        "comprimentoCm": 8.0
+      }
     },
     {
       "slug": "porta-guardanapos-xicara",
@@ -706,7 +771,7 @@
       ],
       "preco": 29.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -718,7 +783,13 @@
         "fotos/porta-guardanapos-xicara/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta-Guardanapos Xícara de Café"
+      "pastaOrigem": "Organização/Porta-Guardanapos Xícara de Café",
+      "envio": {
+        "pesoGramas": 9,
+        "alturaCm": 10.8,
+        "larguraCm": 4.0,
+        "comprimentoCm": 14.6
+      }
     },
     {
       "slug": "arvore-porta-guardanapos",
@@ -764,7 +835,7 @@
       ],
       "preco": 42.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -774,7 +845,13 @@
         "fotos/arvore-porta-guardanapos/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta-Guardanapos Árvore"
+      "pastaOrigem": "Organização/Porta-Guardanapos Árvore",
+      "envio": {
+        "pesoGramas": 31,
+        "alturaCm": 2.6,
+        "larguraCm": 7.0,
+        "comprimentoCm": 12.0
+      }
     },
     {
       "slug": "porta-recados-grao-cafe",
@@ -820,7 +897,7 @@
       ],
       "preco": 22.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": [
@@ -836,7 +913,13 @@
         "fotos/porta-recados-grao-cafe/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta-Recados Grão de Café"
+      "pastaOrigem": "Organização/Porta-Recados Grão de Café",
+      "envio": {
+        "pesoGramas": 2,
+        "alturaCm": 3.0,
+        "larguraCm": 2.1,
+        "comprimentoCm": 1.5
+      }
     },
     {
       "slug": "secador-coador-v60",
@@ -882,7 +965,7 @@
       ],
       "preco": 31.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -892,7 +975,13 @@
         "fotos/secador-coador-v60/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Secador para Coador V60"
+      "pastaOrigem": "Organização/Secador para Coador V60",
+      "envio": {
+        "pesoGramas": 17,
+        "alturaCm": 6.0,
+        "larguraCm": 9.0,
+        "comprimentoCm": 4.0
+      }
     },
     {
       "slug": "suporte-expositor-bialetti",
@@ -921,7 +1010,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": ""
+          "valor": "7,7 × 9,8 × 5,5 cm (L × P × A)"
         },
         {
           "rotulo": "Limpeza",
@@ -934,7 +1023,7 @@
       ],
       "preco": 25.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -946,7 +1035,13 @@
         "fotos/suporte-expositor-bialetti/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Suporte Expositor para Bialetti"
+      "pastaOrigem": "Organização/Suporte Expositor para Bialetti",
+      "envio": {
+        "pesoGramas": 14,
+        "alturaCm": 7.7,
+        "larguraCm": 9.8,
+        "comprimentoCm": 5.5
+      }
     },
     {
       "slug": "suporte-coador-apoio-removivel",
@@ -996,7 +1091,7 @@
       ],
       "preco": 93.99,
       "destaque": true,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1008,7 +1103,13 @@
         "fotos/suporte-coador-apoio-removivel/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Suporte para Coador com Apoio Removível"
+      "pastaOrigem": "Organização/Suporte para Coador com Apoio Removível",
+      "envio": {
+        "pesoGramas": 211,
+        "alturaCm": 13.0,
+        "larguraCm": 18.0,
+        "comprimentoCm": 15.0
+      }
     },
     {
       "slug": "coracao-batida-cafe",
@@ -1054,7 +1155,7 @@
       ],
       "preco": 20.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1064,7 +1165,13 @@
         "fotos/coracao-batida-cafe/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Batida de Coração com Café"
+      "pastaOrigem": "Decoração/Batida de Coração com Café",
+      "envio": {
+        "pesoGramas": 7,
+        "alturaCm": 37.0,
+        "larguraCm": 16.3,
+        "comprimentoCm": 1.0
+      }
     },
     {
       "slug": "cachepo-xicara",
@@ -1110,7 +1217,7 @@
       ],
       "preco": 60.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1121,7 +1228,13 @@
         "fotos/cachepo-xicara/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Cachepô Xicarinha"
+      "pastaOrigem": "Decoração/Cachepô Xicarinha",
+      "envio": {
+        "pesoGramas": 63,
+        "alturaCm": 8.1,
+        "larguraCm": 10.0,
+        "comprimentoCm": 7.0
+      }
     },
     {
       "slug": "capivara",
@@ -1162,7 +1275,7 @@
       ],
       "preco": 41.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": [
@@ -1179,7 +1292,13 @@
       ],
       "video": null,
       "revisarFoto": true,
-      "pastaOrigem": "Decoração/Capivara"
+      "pastaOrigem": "Decoração/Capivara",
+      "envio": {
+        "pesoGramas": 34,
+        "alturaCm": 6.5,
+        "larguraCm": 7.8,
+        "comprimentoCm": 10.0
+      }
     },
     {
       "slug": "copo-cafe-buddy",
@@ -1221,7 +1340,7 @@
       ],
       "preco": 28.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1258,7 +1377,13 @@
             "caramelo"
           ]
         }
-      ]
+      ],
+      "envio": {
+        "pesoGramas": 16,
+        "alturaCm": 8.3,
+        "larguraCm": 5.2,
+        "comprimentoCm": 2.4
+      }
     },
     {
       "slug": "fantasma-cafe",
@@ -1287,7 +1412,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": ""
+          "valor": "4,2 × 5,4 × 8,9 cm (L × P × A)"
         },
         {
           "rotulo": "Limpeza",
@@ -1300,7 +1425,7 @@
       ],
       "preco": 25.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1337,7 +1462,13 @@
             "caramelo"
           ]
         }
-      ]
+      ],
+      "envio": {
+        "pesoGramas": 14,
+        "alturaCm": 4.2,
+        "larguraCm": 5.4,
+        "comprimentoCm": 8.9
+      }
     },
     {
       "slug": "buddy-cafe",
@@ -1379,7 +1510,7 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": [
@@ -1393,7 +1524,13 @@
         "fotos/buddy-cafe/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Grão de Café Articulado"
+      "pastaOrigem": "Decoração/Grão de Café Articulado",
+      "envio": {
+        "pesoGramas": 19,
+        "alturaCm": 7.1,
+        "larguraCm": 8.2,
+        "comprimentoCm": 6.7
+      }
     },
     {
       "slug": "grao-de-la",
@@ -1435,7 +1572,7 @@
       ],
       "preco": 21.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": [
@@ -1448,7 +1585,13 @@
         "fotos/grao-de-la/01.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Grão de Lã"
+      "pastaOrigem": "Decoração/Grão de Lã",
+      "envio": {
+        "pesoGramas": 8,
+        "alturaCm": 5.2,
+        "larguraCm": 7.3,
+        "comprimentoCm": 8.0
+      }
     },
     {
       "slug": "quadros-decoracao-cafe",
@@ -1498,7 +1641,7 @@
       ],
       "preco": 59.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1508,7 +1651,13 @@
         "fotos/quadros-decoracao-cafe/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Jogo de 3 Quadros de Café"
+      "pastaOrigem": "Decoração/Jogo de 3 Quadros de Café",
+      "envio": {
+        "pesoGramas": 8,
+        "alturaCm": 8.8,
+        "larguraCm": 8.8,
+        "comprimentoCm": 0.2
+      }
     },
     {
       "slug": "placa-coffee",
@@ -1550,7 +1699,7 @@
       ],
       "preco": 32.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1561,7 +1710,13 @@
         "fotos/placa-coffee/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Letreiro COFFEE"
+      "pastaOrigem": "Decoração/Letreiro COFFEE",
+      "envio": {
+        "pesoGramas": 43,
+        "alturaCm": 23.5,
+        "larguraCm": 13.9,
+        "comprimentoCm": 1.8
+      }
     },
     {
       "slug": "placa-coffee-time",
@@ -1607,7 +1762,7 @@
       ],
       "preco": 21.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1618,7 +1773,13 @@
         "fotos/placa-coffee-time/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Letreiro COFFEE TIME"
+      "pastaOrigem": "Decoração/Letreiro COFFEE TIME",
+      "envio": {
+        "pesoGramas": 9,
+        "alturaCm": 10.0,
+        "larguraCm": 5.4,
+        "comprimentoCm": 0.2
+      }
     },
     {
       "slug": "marcador-paginas-xicara",
@@ -1660,7 +1821,7 @@
       ],
       "preco": 22.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1671,7 +1832,13 @@
         "fotos/marcador-paginas-xicara/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Marcador de Páginas"
+      "pastaOrigem": "Decoração/Marcador de Páginas",
+      "envio": {
+        "pesoGramas": 10,
+        "alturaCm": 11.6,
+        "larguraCm": 2.9,
+        "comprimentoCm": 3.7
+      }
     },
     {
       "slug": "ornamentos-cafe",
@@ -1717,7 +1884,7 @@
       ],
       "preco": 40.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1730,7 +1897,13 @@
       ],
       "video": null,
       "revisarFoto": true,
-      "pastaOrigem": "Decoração/Ornamentos de Café — Jogo com 4"
+      "pastaOrigem": "Decoração/Ornamentos de Café — Jogo com 4",
+      "envio": {
+        "pesoGramas": 6,
+        "alturaCm": 6.0,
+        "larguraCm": 7.0,
+        "comprimentoCm": 0.3
+      }
     },
     {
       "slug": "placa-latte-cafe-espresso",
@@ -1776,7 +1949,7 @@
       ],
       "preco": 23.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1787,7 +1960,13 @@
         "fotos/placa-latte-cafe-espresso/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Painel Latte · Coffee · Espresso"
+      "pastaOrigem": "Decoração/Painel Latte · Coffee · Espresso",
+      "envio": {
+        "pesoGramas": 55,
+        "alturaCm": 17.1,
+        "larguraCm": 29.5,
+        "comprimentoCm": 1.0
+      }
     },
     {
       "slug": "quadro-pao",
@@ -1833,7 +2012,7 @@
       ],
       "preco": 35.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1843,7 +2022,13 @@
         "fotos/quadro-pao/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Painel Pão"
+      "pastaOrigem": "Decoração/Painel Pão",
+      "envio": {
+        "pesoGramas": 18,
+        "alturaCm": 14.5,
+        "larguraCm": 13.9,
+        "comprimentoCm": 1.0
+      }
     },
     {
       "slug": "placa-hora-do-cafe",
@@ -1889,7 +2074,7 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1900,7 +2085,13 @@
         "fotos/placa-hora-do-cafe/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Placa COFFEE TIME"
+      "pastaOrigem": "Decoração/Placa COFFEE TIME",
+      "envio": {
+        "pesoGramas": 25,
+        "alturaCm": 19.6,
+        "larguraCm": 16.2,
+        "comprimentoCm": 1.0
+      }
     },
     {
       "slug": "placa-cafe-sempre-boa-ideia",
@@ -1929,7 +2120,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": ""
+          "valor": "13,2 × 14,8 × 0,4 cm (L × P × A)"
         },
         {
           "rotulo": "Fixação",
@@ -1946,7 +2137,7 @@
       ],
       "preco": 28.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -1956,7 +2147,13 @@
         "fotos/placa-cafe-sempre-boa-ideia/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Café é sempre uma boa ideia"
+      "pastaOrigem": "Decoração/Café é sempre uma boa ideia",
+      "envio": {
+        "pesoGramas": 7,
+        "alturaCm": 13.2,
+        "larguraCm": 14.8,
+        "comprimentoCm": 0.9
+      }
     },
     {
       "slug": "plaquinha-banheiro",
@@ -2006,7 +2203,7 @@
       ],
       "preco": 47.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2016,7 +2213,13 @@
         "fotos/plaquinha-banheiro/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Plaquinhas de Banheiro — Par"
+      "pastaOrigem": "Decoração/Plaquinhas de Banheiro — Par",
+      "envio": {
+        "pesoGramas": 50,
+        "alturaCm": 1.4,
+        "larguraCm": 12.0,
+        "comprimentoCm": 15.0
+      }
     },
     {
       "slug": "cantinho-do-cafe",
@@ -2066,7 +2269,7 @@
       ],
       "preco": 28.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2076,7 +2279,13 @@
         "fotos/cantinho-do-cafe/01.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Trio Cantinho do Café"
+      "pastaOrigem": "Decoração/Trio Cantinho do Café",
+      "envio": {
+        "pesoGramas": 14,
+        "alturaCm": 24.0,
+        "larguraCm": 12.4,
+        "comprimentoCm": 0.3
+      }
     },
     {
       "slug": "quadro-xicaras",
@@ -2126,7 +2335,7 @@
       ],
       "preco": 35.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2136,7 +2345,13 @@
         "fotos/quadro-xicaras/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Decoração/Trio de Xícaras Minimalista"
+      "pastaOrigem": "Decoração/Trio de Xícaras Minimalista",
+      "envio": {
+        "pesoGramas": 46,
+        "alturaCm": 16.1,
+        "larguraCm": 24.0,
+        "comprimentoCm": 0.5
+      }
     },
     {
       "slug": "luminaria-coffee-here",
@@ -2182,7 +2397,7 @@
       ],
       "preco": 64.99,
       "destaque": true,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2192,7 +2407,13 @@
         "fotos/luminaria-coffee-here/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Luminárias/Lightbox COFFEE HERE"
+      "pastaOrigem": "Luminárias/Lightbox COFFEE HERE",
+      "envio": {
+        "pesoGramas": 61,
+        "alturaCm": 22.4,
+        "larguraCm": 4.2,
+        "comprimentoCm": 15.4
+      }
     },
     {
       "slug": "luminaria-coffee-trips",
@@ -2238,7 +2459,7 @@
       ],
       "preco": 63.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2248,7 +2469,13 @@
         "fotos/luminaria-coffee-trips/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Luminárias/Lightbox COFFEE TRIPS"
+      "pastaOrigem": "Luminárias/Lightbox COFFEE TRIPS",
+      "envio": {
+        "pesoGramas": 131,
+        "alturaCm": 5.0,
+        "larguraCm": 12.0,
+        "comprimentoCm": 11.2
+      }
     },
     {
       "slug": "luminaria-moka-placa",
@@ -2294,7 +2521,7 @@
       ],
       "preco": 64.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2304,7 +2531,13 @@
         "fotos/luminaria-moka-placa/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Luminárias/Lightbox Moka"
+      "pastaOrigem": "Luminárias/Lightbox Moka",
+      "envio": {
+        "pesoGramas": 41,
+        "alturaCm": 7.6,
+        "larguraCm": 10.4,
+        "comprimentoCm": 10.4
+      }
     },
     {
       "slug": "luminaria-premium-coffee",
@@ -2350,7 +2583,7 @@
       ],
       "preco": 64.99,
       "destaque": true,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2360,7 +2593,13 @@
         "fotos/luminaria-premium-coffee/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Luminárias/Lightbox PREMIUM COFFEE"
+      "pastaOrigem": "Luminárias/Lightbox PREMIUM COFFEE",
+      "envio": {
+        "pesoGramas": 25,
+        "alturaCm": 4.8,
+        "larguraCm": 4.9,
+        "comprimentoCm": 17.5
+      }
     },
     {
       "slug": "luminaria-moka",
@@ -2406,7 +2645,7 @@
       ],
       "preco": 65.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2416,7 +2655,13 @@
         "fotos/luminaria-moka/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Luminárias/Luminária Cafeteira Moka"
+      "pastaOrigem": "Luminárias/Luminária Cafeteira Moka",
+      "envio": {
+        "pesoGramas": 84,
+        "alturaCm": 10.6,
+        "larguraCm": 9.3,
+        "comprimentoCm": 7.0
+      }
     },
     {
       "slug": "luminaria-copo-cafe",
@@ -2462,7 +2707,7 @@
       ],
       "preco": 44.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2472,7 +2717,13 @@
         "fotos/luminaria-copo-cafe/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Luminárias/Luminária Copo de Café"
+      "pastaOrigem": "Luminárias/Luminária Copo de Café",
+      "envio": {
+        "pesoGramas": 131,
+        "alturaCm": 10.8,
+        "larguraCm": 10.8,
+        "comprimentoCm": 13.2
+      }
     },
     {
       "slug": "adaptador-dolce-gusto-tres-coracoes",
@@ -2521,7 +2772,7 @@
       ],
       "preco": 21.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2531,7 +2782,13 @@
         "fotos/adaptador-dolce-gusto-tres-coracoes/03.webp"
       ],
       "video": "fotos/adaptador-dolce-gusto-tres-coracoes/video.mp4",
-      "pastaOrigem": "Preparo/Adaptador Dolce Gusto para Três Corações"
+      "pastaOrigem": "Preparo/Adaptador Dolce Gusto para Três Corações",
+      "envio": {
+        "pesoGramas": 2,
+        "alturaCm": 5.2,
+        "larguraCm": 5.2,
+        "comprimentoCm": 4.1
+      }
     },
     {
       "slug": "caixa-filtro-v60",
@@ -2573,7 +2830,7 @@
       ],
       "preco": 67.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2602,7 +2859,13 @@
         "fotos/caixa-filtro-v60/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Preparo/Caixa de Filtro V60"
+      "pastaOrigem": "Preparo/Caixa de Filtro V60",
+      "envio": {
+        "pesoGramas": 79,
+        "alturaCm": 7.6,
+        "larguraCm": 14.0,
+        "comprimentoCm": 14.2
+      }
     },
     {
       "slug": "colher-tamper",
@@ -2648,7 +2911,7 @@
       ],
       "preco": 33.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2659,7 +2922,13 @@
         "fotos/colher-tamper/03.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Preparo/Colher e Tamper 2 em 1"
+      "pastaOrigem": "Preparo/Colher e Tamper 2 em 1",
+      "envio": {
+        "pesoGramas": 33,
+        "alturaCm": 5.7,
+        "larguraCm": 5.7,
+        "comprimentoCm": 12.0
+      }
     },
     {
       "slug": "estojo-papel-aeropress",
@@ -2707,7 +2976,7 @@
       ],
       "preco": 27.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2717,7 +2986,13 @@
         "fotos/estojo-papel-aeropress/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Preparo/Estojo para Filtros de Aeropress"
+      "pastaOrigem": "Preparo/Estojo para Filtros de Aeropress",
+      "envio": {
+        "pesoGramas": 10,
+        "alturaCm": 7.5,
+        "larguraCm": 6.9,
+        "comprimentoCm": 2.5
+      }
     },
     {
       "slug": "suporte-recarga-nespresso-vertuo",
@@ -2767,7 +3042,7 @@
       ],
       "preco": 32.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2777,7 +3052,13 @@
         "fotos/suporte-recarga-nespresso-vertuo/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Preparo/Kit de Recarga para Cápsula Nespresso Vertuo"
+      "pastaOrigem": "Preparo/Kit de Recarga para Cápsula Nespresso Vertuo",
+      "envio": {
+        "pesoGramas": 15,
+        "alturaCm": 11.5,
+        "larguraCm": 6.0,
+        "comprimentoCm": 3.9
+      }
     },
     {
       "slug": "latteshot",
@@ -2829,7 +3110,7 @@
       ],
       "preco": 141.99,
       "destaque": true,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2842,7 +3123,13 @@
       ],
       "video": "fotos/latteshot/video-marketing.mp4",
       "videoObservacao": "O vídeo de montagem (161 MB) não cabe no GitHub Pages. Suba no YouTube e cole o link no campo video.",
-      "pastaOrigem": "Preparo/LatteShot — Câmera de Estêncil"
+      "pastaOrigem": "Preparo/LatteShot — Câmera de Estêncil",
+      "envio": {
+        "pesoGramas": 83,
+        "alturaCm": 20.3,
+        "larguraCm": 8.0,
+        "comprimentoCm": 9.6
+      }
     },
     {
       "slug": "molde-cafe-latteshot",
@@ -2887,7 +3174,7 @@
       ],
       "preco": 80.99,
       "destaque": true,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2905,7 +3192,13 @@
         "fotos/molde-cafe-latteshot/10.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Preparo/Moldes de Estêncil Avulsos"
+      "pastaOrigem": "Preparo/Moldes de Estêncil Avulsos",
+      "envio": {
+        "pesoGramas": 40,
+        "alturaCm": 9.0,
+        "larguraCm": 2.9,
+        "comprimentoCm": 12.6
+      }
     },
     {
       "slug": "porta-filtro-simples-60",
@@ -2955,7 +3248,7 @@
       ],
       "preco": 45.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -2965,7 +3258,13 @@
         "fotos/porta-filtro-simples-60/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Preparo/Porta-Filtro Simples 60"
+      "pastaOrigem": "Preparo/Porta-Filtro Simples 60",
+      "envio": {
+        "pesoGramas": 216,
+        "alturaCm": 13.1,
+        "larguraCm": 12.2,
+        "comprimentoCm": 4.8
+      }
     },
     {
       "slug": "stencil-cards-latteshot",
@@ -3011,7 +3310,7 @@
       ],
       "preco": 93.99,
       "destaque": true,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3021,7 +3320,13 @@
         "fotos/stencil-cards-latteshot/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Preparo/Stencil Cards para LatteShot"
+      "pastaOrigem": "Preparo/Stencil Cards para LatteShot",
+      "envio": {
+        "pesoGramas": 39,
+        "alturaCm": 18.6,
+        "larguraCm": 10.4,
+        "comprimentoCm": 0.2
+      }
     },
     {
       "slug": "suporte-filtro-destacavel",
@@ -3071,7 +3376,7 @@
       ],
       "preco": 38.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": [
@@ -3085,7 +3390,13 @@
         "fotos/suporte-filtro-destacavel/02.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Preparo/Suporte de Filtro Destacável"
+      "pastaOrigem": "Preparo/Suporte de Filtro Destacável",
+      "envio": {
+        "pesoGramas": 13,
+        "alturaCm": 4.0,
+        "larguraCm": 10.5,
+        "comprimentoCm": 15.1
+      }
     },
     {
       "slug": "modelador-filtro-v60",
@@ -3114,7 +3425,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": ""
+          "valor": "8,6 × 8,6 × 8,4 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
@@ -3131,7 +3442,7 @@
       ],
       "preco": 36.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3141,7 +3452,13 @@
         "fotos/modelador-filtro-v60/02.jpg"
       ],
       "video": "fotos/modelador-filtro-v60/video.mp4",
-      "pastaOrigem": "Preparo/Modelador De Filtro De Papel Hario V60 - Pour Over"
+      "pastaOrigem": "Preparo/Modelador De Filtro De Papel Hario V60 - Pour Over",
+      "envio": {
+        "pesoGramas": 45,
+        "alturaCm": 8.6,
+        "larguraCm": 8.6,
+        "comprimentoCm": 8.4
+      }
     },
     {
       "slug": "suporte-dolce-gusto-20-capsulas",
@@ -3187,7 +3504,7 @@
       ],
       "preco": 119.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3200,7 +3517,13 @@
         "fotos/suporte-dolce-gusto-20-capsulas/05.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta Cápsulas Dolce Gusto"
+      "pastaOrigem": "Organização/Porta Cápsulas Dolce Gusto",
+      "envio": {
+        "pesoGramas": 138,
+        "alturaCm": 26.9,
+        "larguraCm": 12.9,
+        "comprimentoCm": 16.2
+      }
     },
     {
       "slug": "porta-capsulas-universal",
@@ -3246,7 +3569,7 @@
       ],
       "preco": 89.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3262,7 +3585,13 @@
         "fotos/porta-capsulas-universal/08.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta Cápsulas Universal"
+      "pastaOrigem": "Organização/Porta Cápsulas Universal",
+      "envio": {
+        "pesoGramas": 26,
+        "alturaCm": 16.6,
+        "larguraCm": 14.4,
+        "comprimentoCm": 10.9
+      }
     },
     {
       "slug": "porta-capsulas-deluxe",
@@ -3308,7 +3637,7 @@
       ],
       "preco": 95.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3322,7 +3651,13 @@
         "fotos/porta-capsulas-deluxe/06.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta Cápsulas Deluxe"
+      "pastaOrigem": "Organização/Porta Cápsulas Deluxe",
+      "envio": {
+        "pesoGramas": 62,
+        "alturaCm": 10.3,
+        "larguraCm": 12.6,
+        "comprimentoCm": 14.0
+      }
     },
     {
       "slug": "torre-capsulas-dupla",
@@ -3368,7 +3703,7 @@
       ],
       "preco": 76.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3381,7 +3716,13 @@
         "fotos/torre-capsulas-dupla/05.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Torre Dupla para Cápsulas"
+      "pastaOrigem": "Organização/Torre Dupla para Cápsulas",
+      "envio": {
+        "pesoGramas": 130,
+        "alturaCm": 8.0,
+        "larguraCm": 13.0,
+        "comprimentoCm": 17.0
+      }
     },
     {
       "slug": "porta-capsulas-nespresso",
@@ -3427,7 +3768,7 @@
       ],
       "preco": 29.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3441,7 +3782,13 @@
         "fotos/porta-capsulas-nespresso/06.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta Cápsulas Nespresso"
+      "pastaOrigem": "Organização/Porta Cápsulas Nespresso",
+      "envio": {
+        "pesoGramas": 27,
+        "alturaCm": 7.9,
+        "larguraCm": 17.4,
+        "comprimentoCm": 1.0
+      }
     },
     {
       "slug": "lixeira-capsulas-dolce-gusto",
@@ -3487,7 +3834,7 @@
       ],
       "preco": 99.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3518,7 +3865,13 @@
         "fotos/lixeira-capsulas-dolce-gusto/05.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Lixeira Capsulona Dolce Gusto"
+      "pastaOrigem": "Organização/Lixeira Capsulona Dolce Gusto",
+      "envio": {
+        "pesoGramas": 110,
+        "alturaCm": 17.1,
+        "larguraCm": 16.5,
+        "comprimentoCm": 16.5
+      }
     },
     {
       "slug": "organizador-cabo-oreo",
@@ -3560,7 +3913,7 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3572,7 +3925,13 @@
         "fotos/organizador-cabo-oreo/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Organizador de cabo Oreo"
+      "pastaOrigem": "Organização/Organizador de cabo Oreo",
+      "envio": {
+        "pesoGramas": 7,
+        "alturaCm": 5.3,
+        "larguraCm": 5.3,
+        "comprimentoCm": 1.6
+      }
     },
     {
       "slug": "organizador-cabo-biscoito",
@@ -3614,7 +3973,7 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": [
@@ -3649,7 +4008,13 @@
         "fotos/organizador-cabo-biscoito/01.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Organizador de cabo biscoito"
+      "pastaOrigem": "Organização/Organizador de cabo biscoito",
+      "envio": {
+        "pesoGramas": 27,
+        "alturaCm": 9.7,
+        "larguraCm": 4.9,
+        "comprimentoCm": 6.3
+      }
     },
     {
       "slug": "mug-buddy",
@@ -3695,7 +4060,7 @@
       ],
       "preco": 52.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": [
@@ -3711,7 +4076,13 @@
         "fotos/mug-buddy/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Mug buddy"
+      "pastaOrigem": "Organização/Mug buddy",
+      "envio": {
+        "pesoGramas": 73,
+        "alturaCm": 12.7,
+        "larguraCm": 11.0,
+        "comprimentoCm": 7.6
+      }
     },
     {
       "slug": "suporte-para-latas",
@@ -3757,7 +4128,7 @@
       ],
       "preco": 59.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3769,7 +4140,13 @@
         "fotos/suporte-para-latas/04.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Suporte para latas"
+      "pastaOrigem": "Organização/Suporte para latas",
+      "envio": {
+        "pesoGramas": 120,
+        "alturaCm": 7.8,
+        "larguraCm": 11.4,
+        "comprimentoCm": 11.5
+      }
     },
     {
       "slug": "abridor-latas-garrafas",
@@ -3810,7 +4187,7 @@
       ],
       "preco": 19.99,
       "destaque": false,
-      "preVenda": true,
+      "preVenda": false,
       "dataVenda": "2026-11-10",
       "observacaoPreVenda": "",
       "cores": null,
@@ -3819,7 +4196,1885 @@
         "fotos/abridor-latas-garrafas/01.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Preparo/Abridor de latas e garrafas"
+      "pastaOrigem": "Preparo/Abridor de latas e garrafas",
+      "envio": {
+        "pesoGramas": 5,
+        "alturaCm": 5.7,
+        "larguraCm": 2.2,
+        "comprimentoCm": 1.3
+      }
+    },
+    {
+      "slug": "base-cafeteira-moka-4-xicaras",
+      "nome": "Base para Cafeteira Moka 4 Xícaras",
+      "categoria": "decoracao",
+      "resumo": "Suporte que exibe a moka desmontada, peça por peça, como enfeite de bancada.",
+      "paraQueServe": "A cafeteira italiana (moka) fica linda inteira, mas desmontada ela costuma ficar jogada no armário. Essa base tem três níveis que seguram cada parte — base, filtro e corpo superior — empilhada como se estivesse flutuando. Vira peça de decoração mesmo com a moka fora de uso, e na hora do café é só desencaixar e montar.",
+      "descricao": "Três apoios recortados seguram a cafeteira moka desmontada em camadas, dando a impressão de que as peças flutuam uma sobre a outra. Funciona com a moka Bialetti de 4 xícaras (modelo clássico de rosca); encaixa pelo bocal e pela base, sem aperto, então tirar e recolocar a peça pra usar é rápido.",
+      "detalhes": [
+        "Três níveis de apoio, um pra cada parte da moka",
+        "Feito pro encaixe da Bialetti 4 xícaras (rosca clássica)",
+        "Moka não inclusa — peça só o suporte"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "11,2 × 9,9 × 18,3 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 44.99,
+      "fotos": [
+        "fotos/base-cafeteira-moka-4-xicaras/01.jpg",
+        "fotos/base-cafeteira-moka-4-xicaras/02.jpg",
+        "fotos/base-cafeteira-moka-4-xicaras/03.jpg",
+        "fotos/base-cafeteira-moka-4-xicaras/04.jpg"
+      ],
+      "pastaOrigem": "Decoração/Base para Cafeteira Moka 4 Xícaras",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 50,
+        "alturaCm": 11.2,
+        "larguraCm": 9.9,
+        "comprimentoCm": 18.3
+      }
+    },
+    {
+      "slug": "suporte-coador-cafe",
+      "nome": "Suporte Coador de Café",
+      "categoria": "preparo",
+      "resumo": "Funil que recebe o filtro de papel no formato cônico, pra coar café igual ao V60.",
+      "paraQueServe": "É o cone que segura o filtro de papel em cima da xícara ou jarra — a parte que falta quando você só tem o filtro descartável e nenhum suporte pra encaixá-lo. Encaixa o filtro, coloca o pó, despeja a água quente aos poucos e o café desce coado, sem borra.",
+      "descricao": "Formato cônico com ranhuras internas que afastam o papel do filtro das paredes, deixando o café escorrer por baixo em vez de ficar represado. Serve filtro de papel cônico padrão (tipo 102/V60), e a base se apoia direto na boca da xícara ou jarra.",
+      "detalhes": [
+        "Formato cônico com ranhuras de vazão",
+        "Serve filtro de papel cônico padrão",
+        "Apoia na boca da xícara ou jarra"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 34.99,
+      "fotos": [
+        "fotos/suporte-coador-cafe/01.jpg",
+        "fotos/suporte-coador-cafe/02.jpg",
+        "fotos/suporte-coador-cafe/03.jpg",
+        "fotos/suporte-coador-cafe/04.jpg"
+      ],
+      "pastaOrigem": "Preparo/Suporte Coador de Café",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 37,
+        "alturaCm": 15.5,
+        "larguraCm": 12.0,
+        "comprimentoCm": 18.0
+      }
+    },
+    {
+      "slug": "xicara-cafe-espresso",
+      "nome": "Xícara de Café Espresso",
+      "categoria": "decoracao",
+      "resumo": "Xicarinha de café com perninhas penduradas, pra sentar na beirada da prateleira.",
+      "paraQueServe": "Uma xícara de café em miniatura com duas perninhas penduradas pra fora, criando a cena de alguém sentado na beirada do móvel com as pernas balançando. Fica apoiada na borda de prateleira, porta-retrato ou quadro, sem furar nada — só encaixa pelo peso.",
+      "descricao": "O corpo da xícara fica apoiado na superfície e as perninhas descem pela borda, presas por elos articulados que balançam. Não tem furo nem fita adesiva — o peso da peça já segura o encaixe na beirada.",
+      "detalhes": [
+        "Perninhas articuladas, penduram na beirada",
+        "Sem furo, sem fita — só encaixa pelo peso",
+        "Mede poucos centímetros, cabe em qualquer prateleira"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 19.99,
+      "fotos": [
+        "fotos/xicara-cafe-espresso/01.jpg",
+        "fotos/xicara-cafe-espresso/02.jpg",
+        "fotos/xicara-cafe-espresso/03.jpg",
+        "fotos/xicara-cafe-espresso/04.jpg"
+      ],
+      "pastaOrigem": "Decoração/Xícara de Café Espresso",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 24,
+        "alturaCm": 12.1,
+        "larguraCm": 6.0,
+        "comprimentoCm": 7.6
+      }
+    },
+    {
+      "slug": "cortador-biscoito-capivara",
+      "nome": "Cortador de Biscoito Capivara",
+      "categoria": "diversos",
+      "resumo": "Kit com 5 cortadores de capivara em poses diferentes, pra fazer biscoito com fôrma própria.",
+      "paraQueServe": "Cinco cortadores no tema capivara — sentada, dormindo, com laranja na cabeça, enroscada — pra abrir a massa de biscoito e já sair com o contorno do bichinho pronto, sem precisar desenhar nem recortar à mão.",
+      "descricao": "Cada cortador tem a borda afiada o bastante pra passar na massa crua (biscoito amanteigado, fondant) e as marcações internas ficam em relevo, criando os detalhes do desenho depois de assado.",
+      "detalhes": [
+        "Kit com 5 formatos diferentes de capivara",
+        "Borda de corte + marcações internas em relevo",
+        "Serve pra massa de biscoito e fondant"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "5 cortadores"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 34.99,
+      "fotos": [
+        "fotos/cortador-biscoito-capivara/01.jpg",
+        "fotos/cortador-biscoito-capivara/02.jpg",
+        "fotos/cortador-biscoito-capivara/03.jpg",
+        "fotos/cortador-biscoito-capivara/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Cortador de Biscoito Capivara",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 8,
+        "alturaCm": 8.6,
+        "larguraCm": 7.0,
+        "comprimentoCm": 1.1
+      }
+    },
+    {
+      "slug": "mao-italiana",
+      "nome": "Mão Italiana",
+      "categoria": "diversos",
+      "resumo": "Mão fazendo o gesto italiano, equilibrada sobre uma base curva nas cores da bandeira.",
+      "paraQueServe": "Estatueta de mesa com o gesto de mão típico italiano ('ma che vuoi'), apoiada numa base curva que balança de leve como uma gangorra — decoração pra quem curte a cultura italiana ou só acha o gesto engraçado.",
+      "descricao": "A mão fica presa numa base arqueada pintada nas cores verde, branco e vermelho; o formato curvo faz a peça balançar suavemente quando tocada, sem cair, e assenta sozinha de volta ao centro.",
+      "detalhes": [
+        "Gesto de mão italiano clássico",
+        "Base curva nas cores da bandeira da Itália",
+        "Balança de leve e volta sozinha ao centro"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 27.99,
+      "fotos": [
+        "fotos/mao-italiana/01.jpg",
+        "fotos/mao-italiana/02.jpg",
+        "fotos/mao-italiana/03.jpg",
+        "fotos/mao-italiana/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Mão Italiana",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 12,
+        "alturaCm": 15.1,
+        "larguraCm": 4.4,
+        "comprimentoCm": 9.1
+      }
+    },
+    {
+      "slug": "medidor-agua-ou-cerveja",
+      "nome": "Medidor Água ou Cerveja",
+      "categoria": "diversos",
+      "resumo": "Plaquinha de parede com ponteiro giratório, de brincadeira, entre 'água' e 'cerveja'.",
+      "paraQueServe": "Um painel redondo com um ponteiro que gira entre as palavras 'water' e 'beer' — enfeite de brincadeira pra pendurar na cozinha, adega ou bar de casa, tipo um medidor de humor pra decidir o que vai beber.",
+      "descricao": "O ponteiro fica preso num eixo central e gira livremente entre as duas pontas do mostrador; a peça é plana, com furo pra pendurar na parede.",
+      "detalhes": [
+        "Ponteiro giratório funcional",
+        "Furo pronto pra pendurar na parede",
+        "Peça de brincadeira, sem uso funcional real"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "16 × 16 × 1,1 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 18.99,
+      "fotos": [
+        "fotos/medidor-agua-ou-cerveja/01.jpg",
+        "fotos/medidor-agua-ou-cerveja/02.jpg",
+        "fotos/medidor-agua-ou-cerveja/03.jpg"
+      ],
+      "pastaOrigem": "Diversos/Medidor Água ou Cerveja",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 33,
+        "alturaCm": 16.0,
+        "larguraCm": 16.0,
+        "comprimentoCm": 1.5
+      }
+    },
+    {
+      "slug": "cortador-biscoito-gengibre",
+      "nome": "Cortador de Biscoito",
+      "categoria": "diversos",
+      "resumo": "Cortador no formato clássico de biscoito de gengibre (gingerbread man).",
+      "paraQueServe": "O cortador clássico do bonequinho de gengibre, pra fazer biscoito de Natal com o contorno certo sem precisar desenhar.",
+      "descricao": "Borda única no contorno do bonequinho; passa na massa crua e já sai recortado, pronto pra decorar depois de assado.",
+      "detalhes": [
+        "Formato clássico de gingerbread man",
+        "Corte único, sem relevo interno",
+        "Serve pra massa de biscoito"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 14.99,
+      "fotos": [
+        "fotos/cortador-biscoito-gengibre/01.jpg",
+        "fotos/cortador-biscoito-gengibre/02.jpg"
+      ],
+      "pastaOrigem": "Diversos/Natal/Cortador de Biscoito Gengibre",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 10,
+        "alturaCm": 5.2,
+        "larguraCm": 8.0,
+        "comprimentoCm": 1.2
+      }
+    },
+    {
+      "slug": "kit-cortadores-biscoito-natal",
+      "nome": "Kit Cortadores de Biscoito de Natal",
+      "categoria": "diversos",
+      "resumo": "Kit com 10 cortadores de símbolos natalinos — estrela, árvore, sino, laço e mais.",
+      "paraQueServe": "Dez cortadores com os símbolos clássicos do Natal — estrela, estrela cadente, árvore, casinha, floco de neve, bengala doce, embrulho de presente, sino, nuvem e bonequinho de gengibre — pra fazer um prato variado de biscoitos natalinos de um só kit.",
+      "descricao": "Cada cortador tem borda única, sem relevo interno; passa na massa crua e sai recortado, pronto pra decorar com glacê ou chocolate depois de assado.",
+      "detalhes": [
+        "Kit com 10 formatos natalinos diferentes",
+        "Corte único, sem relevo interno",
+        "Serve pra massa de biscoito e fondant"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "10 cortadores"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 44.99,
+      "fotos": [
+        "fotos/kit-cortadores-biscoito-natal/01.jpg",
+        "fotos/kit-cortadores-biscoito-natal/02.jpg",
+        "fotos/kit-cortadores-biscoito-natal/03.jpg",
+        "fotos/kit-cortadores-biscoito-natal/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Natal/Cortador de cookie natal",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 32,
+        "alturaCm": 13.0,
+        "larguraCm": 7.9,
+        "comprimentoCm": 8.4
+      }
+    },
+    {
+      "slug": "kit-carimbo-biscoito-grinch",
+      "nome": "Kit Carimbo e Cortador Grinch",
+      "categoria": "diversos",
+      "resumo": "Carimbos que estampam o Grinch na massa, com os cortadores dos contornos pra combinar.",
+      "paraQueServe": "Carimbos que imprimem o desenho do Grinch e companhia direto na massa crua, junto com os cortadores do contorno de cada cena — pra fazer biscoito temático sem precisar desenhar nem usar glacê pra detalhar.",
+      "descricao": "Os carimbos têm o desenho em relevo negativo: pressiona na massa crua e o detalhe fica marcado. Os cortadores correspondentes recortam o contorno de cada cena pra já sair no formato certo.",
+      "detalhes": [
+        "Carimbos com o desenho em relevo",
+        "Cortadores combinando com cada carimbo",
+        "Tema Grinch, várias cenas no kit"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "Carimbos + cortadores combinando"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 49.99,
+      "fotos": [
+        "fotos/kit-carimbo-biscoito-grinch/01.jpg",
+        "fotos/kit-carimbo-biscoito-grinch/02.jpg",
+        "fotos/kit-carimbo-biscoito-grinch/03.jpg",
+        "fotos/kit-carimbo-biscoito-grinch/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Natal/Cortador de massas grinch",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 30,
+        "alturaCm": 8.5,
+        "larguraCm": 9.5,
+        "comprimentoCm": 1.3
+      }
+    },
+    {
+      "slug": "porta-copos-grinch",
+      "nome": "Porta-Copos Grinch",
+      "categoria": "diversos",
+      "resumo": "Jogo de porta-copos com desenhos do Grinch, guardado num suporte redondo.",
+      "paraQueServe": "Porta-copos temáticos de Natal pra proteger a mesa do suor do copo ou xícara, com desenhos do Grinch estampados — e um suporte redondo pra guardar o jogo empilhado.",
+      "descricao": "Cada porta-copos tem um desenho diferente do Grinch, com borda levemente elevada pra segurar a base do copo no lugar. O suporte redondo mantém o jogo organizado e à mão.",
+      "detalhes": [
+        "Jogo de porta-copos temático Grinch",
+        "Suporte redondo pra guardar empilhado",
+        "Borda que ajuda a centralizar o copo"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "Porta-copos + suporte"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 32.99,
+      "fotos": [
+        "fotos/porta-copos-grinch/01.jpg",
+        "fotos/porta-copos-grinch/02.jpg",
+        "fotos/porta-copos-grinch/03.jpg",
+        "fotos/porta-copos-grinch/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Natal/Porta-Copos Grinch",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 50,
+        "alturaCm": 4.9,
+        "larguraCm": 11.0,
+        "comprimentoCm": 11.0
+      }
+    },
+    {
+      "slug": "pato",
+      "nome": "Porta-Garrafa Pato",
+      "categoria": "diversos",
+      "resumo": "Pato deitado que segura a garrafa de vinho inclinada no bico, pronta pra servir.",
+      "paraQueServe": "Um pato de corpo deitado que segura a garrafa de vinho (ou outra bebida) inclinada, apoiada no bico — decoração de mesa de bar ou adega que também funciona como suporte de verdade pra servir.",
+      "descricao": "O bico e o pescoço do pato sustentam o gargalo da garrafa na inclinação certa pra ela ficar parada sem cair, enquanto o corpo largo dá estabilidade na base.",
+      "detalhes": [
+        "Segura garrafa de vinho inclinada no bico",
+        "Base larga, estável em cima da mesa",
+        "Garrafa não inclusa — peça só o suporte"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "32,3 × 11,9 × 12,7 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 54.99,
+      "fotos": [
+        "fotos/pato/01.jpg",
+        "fotos/pato/02.jpg",
+        "fotos/pato/03.jpg",
+        "fotos/pato/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Pato",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 330,
+        "alturaCm": 32.3,
+        "larguraCm": 11.9,
+        "comprimentoCm": 12.7
+      }
+    },
+    {
+      "slug": "placa-mais-espresso-menos-depresso",
+      "nome": "Placa Mais Espresso Menos Depresso",
+      "categoria": "decoracao",
+      "resumo": "Placa com a xicarinha mascote e a frase 'More Espresso, Less Depresso'.",
+      "paraQueServe": "Uma placa decorativa com ilustração de xícara animada e a frase de brincadeira 'More Espresso, Less Depresso' — pra pendurar ou apoiar perto da cafeteira, no estilo bem-humorado do cantinho do café.",
+      "descricao": "Placa fina e leve, com a ilustração impressa na frente; fica de pé sozinha apoiada numa superfície ou pode ser pendurada, dependendo do espaço.",
+      "detalhes": [
+        "Ilustração da xicarinha mascote",
+        "Frase 'More Espresso, Less Depresso'",
+        "Fica de pé sozinha, sem precisar de suporte extra"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 22.99,
+      "fotos": [
+        "fotos/placa-mais-espresso-menos-depresso/01.jpg",
+        "fotos/placa-mais-espresso-menos-depresso/02.jpg"
+      ],
+      "pastaOrigem": "Decoração/Placa Café Mais Espresso Menos Depressão",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 7,
+        "alturaCm": 10.0,
+        "larguraCm": 13.4,
+        "comprimentoCm": 0.2
+      }
+    },
+    {
+      "slug": "placa-gato-mais-espresso-menos-depresso",
+      "nome": "Placa Gato Mais Espresso Menos Depresso",
+      "categoria": "decoracao",
+      "resumo": "Placa no estilo 'piso molhado', com gato tomando café e a frase 'More Espresso, Less Depresso'.",
+      "paraQueServe": "Uma placa em formato de cavalete (igual às de 'piso molhado'), com um gato rabugento tomando café e a frase 'More Espresso, Less Depresso' — decoração de bancada ou mesa de trabalho pra quem se identifica com o gato.",
+      "descricao": "Formato de cavalete autoportante, fica de pé sozinha em qualquer superfície plana, com a ilustração do gato e a frase gravadas na frente.",
+      "detalhes": [
+        "Formato de cavalete, fica de pé sozinha",
+        "Ilustração do gato rabugento com café",
+        "Frase 'More Espresso, Less Depresso'"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 26.99,
+      "fotos": [
+        "fotos/placa-gato-mais-espresso-menos-depresso/01.jpg",
+        "fotos/placa-gato-mais-espresso-menos-depresso/02.jpg",
+        "fotos/placa-gato-mais-espresso-menos-depresso/03.jpg",
+        "fotos/placa-gato-mais-espresso-menos-depresso/04.jpg"
+      ],
+      "pastaOrigem": "Decoração/Placa Gato Mais Espresso Menos Depressão",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 6,
+        "alturaCm": 5.0,
+        "larguraCm": 8.7,
+        "comprimentoCm": 0.4
+      }
+    },
+    {
+      "slug": "porta-banana-gansinho",
+      "nome": "Porta-Banana Gansinho",
+      "categoria": "diversos",
+      "resumo": "Suporte em formato de ganso que segura o cacho de banana pendurado pelo bico.",
+      "paraQueServe": "Banana em cacho amadurece mais rápido deitada na fruteira, porque os pontos de contato ficam machucados. Pendurada, ela respira melhor e dura mais. Esse suporte tem formato de ganso e segura o cacho pendurado pelo talo, no bico.",
+      "descricao": "O pescoço longo e curvo eleva o cacho de banana acima da bancada, preso pelo talo no bico do ganso. A base larga e oca dá estabilidade e ainda serve pra guardar alho, cebola ou outros miúdos.",
+      "detalhes": [
+        "Pescoço longo, mantém a banana suspensa",
+        "Base oca, serve pra guardar alho e cebola",
+        "Segura cacho de até 6-7 bananas"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 39.99,
+      "fotos": [
+        "fotos/porta-banana-gansinho/01.jpg",
+        "fotos/porta-banana-gansinho/02.jpg",
+        "fotos/porta-banana-gansinho/03.jpg",
+        "fotos/porta-banana-gansinho/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Porta-Banana Gansinho",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 57,
+        "alturaCm": 14.9,
+        "larguraCm": 14.9,
+        "comprimentoCm": 25.2
+      }
+    },
+    {
+      "slug": "suporte-garrafa-tacas-vinho",
+      "nome": "Suporte para Garrafa e Taças de Vinho",
+      "categoria": "diversos",
+      "resumo": "Suporte em X que carrega a garrafa de vinho e duas taças junto, pela haste.",
+      "paraQueServe": "Pra levar vinho e taças pra mesa de uma vez só, sem fazer duas viagens: a garrafa encaixa no meio do suporte em X e as taças ficam penduradas pela haste, uma em cada ponta, prontas pra servir.",
+      "descricao": "O corpo em X tem um furo central que recebe o gargalo da garrafa e pontas onde as taças ficam penduradas pela haste, de cabeça pra baixo, sem risco de cair.",
+      "detalhes": [
+        "Carrega garrafa + 2 taças de uma vez",
+        "Taças penduradas pela haste, de cabeça pra baixo",
+        "Garrafa e taças não inclusas"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "22,8 × 22,8 × 1,5 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 36.99,
+      "fotos": [
+        "fotos/suporte-garrafa-tacas-vinho/01.jpg",
+        "fotos/suporte-garrafa-tacas-vinho/02.jpg",
+        "fotos/suporte-garrafa-tacas-vinho/03.jpg",
+        "fotos/suporte-garrafa-tacas-vinho/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Porta-Copo A1 Mini",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 70,
+        "alturaCm": 1.5,
+        "larguraCm": 22.8,
+        "comprimentoCm": 22.8
+      }
+    },
+    {
+      "slug": "porta-copos-amantes-cafe",
+      "nome": "Porta-Copos Amantes de Café",
+      "categoria": "organizacao",
+      "resumo": "Jogo de porta-copos com frases e desenhos de quem não dispensa um café.",
+      "paraQueServe": "Porta-copos pra proteger a mesa do suor da xícara ou copo, com frases e desenhos sobre café — coração de grãos, 'but first coffee', 'coffee makes everything better' — pra quem tem a bebida como ritual.",
+      "descricao": "Cada peça do jogo tem um desenho ou frase diferente sobre café, em relevo na superfície, com borda levemente elevada pra ajudar a centralizar o copo ou a xícara.",
+      "detalhes": [
+        "Jogo com 3 desenhos diferentes sobre café",
+        "Borda levemente elevada, ajuda a centralizar",
+        "Protege a mesa do suor do copo"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "3 porta-copos"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 27.99,
+      "fotos": [
+        "fotos/porta-copos-amantes-cafe/01.jpg",
+        "fotos/porta-copos-amantes-cafe/02.jpg",
+        "fotos/porta-copos-amantes-cafe/03.jpg"
+      ],
+      "pastaOrigem": "Organização/Porta-Copos Amantes de Café",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 157,
+        "alturaCm": 29.1,
+        "larguraCm": 29.8,
+        "comprimentoCm": 0.4
+      }
+    },
+    {
+      "slug": "porta-copos-grao-cafe",
+      "nome": "Porta-Copos Grão de Café",
+      "categoria": "organizacao",
+      "resumo": "Porta-copos com mosaico de grãos de café espalhados pela superfície.",
+      "paraQueServe": "Porta-copos com a textura de vários grãos de café, feito pra proteger a mesa do suor do copo e, de quebra, decorar o cantinho com o tema da bebida.",
+      "descricao": "A superfície é coberta por grãos de café em relevo, formando um mosaico; a borda fica levemente elevada e ajuda a centralizar o copo ou a xícara.",
+      "detalhes": [
+        "Mosaico de grãos de café em relevo",
+        "Borda levemente elevada, ajuda a centralizar",
+        "Vendido em jogo"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "8,5 × 8,5 × 0,3 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 27.99,
+      "fotos": [
+        "fotos/porta-copos-grao-cafe/01.jpg",
+        "fotos/porta-copos-grao-cafe/02.jpg",
+        "fotos/porta-copos-grao-cafe/03.jpg",
+        "fotos/porta-copos-grao-cafe/04.jpg"
+      ],
+      "pastaOrigem": "Organização/Porta-Copos Grão de Café",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 25,
+        "alturaCm": 8.5,
+        "larguraCm": 8.5,
+        "comprimentoCm": 0.3
+      }
+    },
+    {
+      "slug": "porta-garrafa-vinho-equilibrio",
+      "nome": "Porta-Garrafa de Vinho em Equilíbrio",
+      "categoria": "diversos",
+      "resumo": "Suporte que deixa a garrafa de vinho flutuando, equilibrada apenas pelo gargalo.",
+      "paraQueServe": "Um suporte fino e inclinado que sustenta a garrafa de vinho deitada, apoiada só pelo gargalo — dá a ilusão de que ela está flutuando, sem cair, mesmo cheia.",
+      "descricao": "O encosto em ângulo faz o centro de gravidade da garrafa cheia cair dentro da base, então ela fica em equilíbrio apoiada apenas no gargalo, sem precisar de mais nada segurando.",
+      "detalhes": [
+        "Equilíbrio só pelo gargalo da garrafa",
+        "Funciona melhor com a garrafa cheia ou quase cheia",
+        "Garrafa não inclusa"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 42.99,
+      "fotos": [
+        "fotos/porta-garrafa-vinho-equilibrio/01.jpg",
+        "fotos/porta-garrafa-vinho-equilibrio/02.jpg",
+        "fotos/porta-garrafa-vinho-equilibrio/03.jpg",
+        "fotos/porta-garrafa-vinho-equilibrio/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Porta-Garrafa",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 83,
+        "alturaCm": 4.5,
+        "larguraCm": 15.8,
+        "comprimentoCm": 17.6
+      }
+    },
+    {
+      "slug": "pote-amanteigados",
+      "nome": "Pote para Amanteigados",
+      "categoria": "diversos",
+      "resumo": "Pote com tampa e nervuras verticais, pra guardar biscoito amanteigado ou doce.",
+      "paraQueServe": "Pote fechado com tampa de encaixe, pra guardar biscoito amanteigado, bolacha ou doce fora da umidade do ar, mantendo a crocância por mais tempo.",
+      "descricao": "O corpo tem nervuras verticais que dão pegada e resistência à peça, com uma faixa lisa na base. A tampa encaixa por pressão e tem um puxador arredondado.",
+      "detalhes": [
+        "Tampa de encaixe por pressão",
+        "Nervuras verticais no corpo",
+        "Mantém biscoito e doce protegidos da umidade"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "15,4 × 15 × 15,4 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "Pote + tampa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 32.99,
+      "fotos": [
+        "fotos/pote-amanteigados/01.jpg",
+        "fotos/pote-amanteigados/02.jpg",
+        "fotos/pote-amanteigados/03.jpg",
+        "fotos/pote-amanteigados/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Pote para amanteigados",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 71,
+        "alturaCm": 15.4,
+        "larguraCm": 15.0,
+        "comprimentoCm": 15.4
+      }
+    },
+    {
+      "slug": "roleta-de-shots",
+      "nome": "Roleta de Shots",
+      "categoria": "diversos",
+      "resumo": "Base giratória que gira o copinho de shot — jogo de bar pra grupo de amigos.",
+      "paraQueServe": "Um disco giratório com encaixe pro copinho de shot no centro: gira, e quem o ponteiro apontar na hora que parar bebe. Jogo simples pra animar roda de amigos.",
+      "descricao": "A base giratória tem rolamento suave, então gira por bastante tempo com um único impulso. O encaixe central é dimensionado pro copo de shot padrão, que fica preso enquanto a base roda.",
+      "detalhes": [
+        "Base giratória com rolamento suave",
+        "Encaixe central pro copo de shot padrão",
+        "Copo de shot não incluso"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": ""
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 29.99,
+      "fotos": [
+        "fotos/roleta-de-shots/01.jpg",
+        "fotos/roleta-de-shots/02.jpg",
+        "fotos/roleta-de-shots/03.jpg",
+        "fotos/roleta-de-shots/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Roleta de Shots",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 22,
+        "alturaCm": 5.0,
+        "larguraCm": 7.4,
+        "comprimentoCm": 9.8
+      }
+    },
+    {
+      "slug": "suporte-cinetico-vinho",
+      "nome": "Suporte Cinético para Vinho",
+      "categoria": "diversos",
+      "resumo": "Placa triangular que equilibra a garrafa de vinho deitada, apoiada só pelo gargalo.",
+      "paraQueServe": "Um apoio fino em formato triangular que sustenta a garrafa de vinho na diagonal, equilibrada pelo peso do próprio gargalo encaixado na base — decoração de mesa que brinca com a sensação de desafiar a gravidade.",
+      "descricao": "A base triangular fica inclinada e o gargalo da garrafa encaixa numa fenda baixa, perto do chão; o peso do corpo da garrafa distribuído pela diagonal mantém tudo em equilíbrio, sem colar nem travar.",
+      "detalhes": [
+        "Equilíbrio só pelo peso da garrafa",
+        "Base triangular, fica inclinada sozinha",
+        "Garrafa não inclusa"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "25,4 × 5,9 × 6,3 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 39.99,
+      "fotos": [
+        "fotos/suporte-cinetico-vinho/01.jpg",
+        "fotos/suporte-cinetico-vinho/02.jpg",
+        "fotos/suporte-cinetico-vinho/03.jpg"
+      ],
+      "pastaOrigem": "Diversos/Suporte Cinético para Vinho",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 64,
+        "alturaCm": 25.4,
+        "larguraCm": 5.9,
+        "comprimentoCm": 6.3
+      }
+    },
+    {
+      "slug": "suporte-vinho-chama",
+      "nome": "Suporte de Vinho Chama",
+      "categoria": "diversos",
+      "resumo": "Suporte curvo, em forma de chama, que apoia a garrafa de vinho pelo gargalo.",
+      "paraQueServe": "Suporte curvo, parecido com uma chama, que segura a garrafa de vinho deitada pelo gargalo — o corpo da garrafa fica suspenso, equilibrado pela curva da peça.",
+      "descricao": "A curva em S sustenta o gargalo da garrafa numa reentrância moldada sob medida, enquanto a base alargada embaixo garante que o conjunto não tombe.",
+      "detalhes": [
+        "Apoia a garrafa pelo gargalo",
+        "Base alargada, não tomba",
+        "Garrafa não inclusa"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "20,8 × 15 × 23,8 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 42.99,
+      "fotos": [
+        "fotos/suporte-vinho-chama/01.jpg",
+        "fotos/suporte-vinho-chama/02.jpg",
+        "fotos/suporte-vinho-chama/03.jpg"
+      ],
+      "pastaOrigem": "Diversos/Suporte de Vinho Chama",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 114,
+        "alturaCm": 20.8,
+        "larguraCm": 15.0,
+        "comprimentoCm": 23.8
+      }
+    },
+    {
+      "slug": "suporte-vinho-gato",
+      "nome": "Suporte de Vinho Gato",
+      "categoria": "diversos",
+      "resumo": "Suporte com corpo de gato estilizado (low poly) que carrega a garrafa de vinho nas costas.",
+      "paraQueServe": "Suporte com corpo de gato em facetas (estilo low poly), com a garrafa de vinho encaixada deitada sobre o lombo — decoração de bar ou adega pra quem curte gato.",
+      "descricao": "O corpo facetado do gato tem um encaixe no lombo que recebe a garrafa deitada; as quatro patas dão estabilidade e a peça fica firme mesmo com a garrafa cheia.",
+      "detalhes": [
+        "Corpo de gato em facetas (low poly)",
+        "Encaixe no lombo pra garrafa deitada",
+        "Garrafa não inclusa"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "9,2 × 27,9 × 9,7 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 44.99,
+      "fotos": [
+        "fotos/suporte-vinho-gato/01.jpg",
+        "fotos/suporte-vinho-gato/02.jpg",
+        "fotos/suporte-vinho-gato/03.jpg",
+        "fotos/suporte-vinho-gato/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Suporte de Vinho Gato",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 148,
+        "alturaCm": 9.2,
+        "larguraCm": 27.9,
+        "comprimentoCm": 9.7
+      }
+    },
+    {
+      "slug": "suporte-vinho-laco-infinito",
+      "nome": "Suporte de Vinho Laço Infinito",
+      "categoria": "diversos",
+      "resumo": "Suporte no formato do símbolo do infinito, que segura a garrafa de vinho deitada no laço.",
+      "paraQueServe": "Suporte no formato do símbolo do infinito (∞): a garrafa de vinho deitada passa por dentro de uma das curvas, apoiada e visível por todos os lados.",
+      "descricao": "O laço duplo cruzado forma duas curvas; uma recebe o corpo da garrafa deitada, enquanto a base do próprio laço sustenta o conjunto em pé, sem precisar de apoio extra.",
+      "detalhes": [
+        "Formato do símbolo do infinito",
+        "Garrafa fica visível, apoiada no laço",
+        "Garrafa não inclusa"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "20,4 × 20,8 × 10 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 39.99,
+      "fotos": [
+        "fotos/suporte-vinho-laco-infinito/01.jpg",
+        "fotos/suporte-vinho-laco-infinito/02.jpg",
+        "fotos/suporte-vinho-laco-infinito/03.jpg",
+        "fotos/suporte-vinho-laco-infinito/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Suporte de Vinho Laço Infinito",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 172,
+        "alturaCm": 20.4,
+        "larguraCm": 20.8,
+        "comprimentoCm": 10.0
+      }
+    },
+    {
+      "slug": "suporte-enrolado-apple-watch",
+      "nome": "Suporte Enrolado para Apple Watch",
+      "categoria": "diversos",
+      "resumo": "Base de carregamento que esconde o cabo enrolado por dentro, pro Apple Watch.",
+      "paraQueServe": "Suporte de mesa pra carregar o Apple Watch, com um canal em espiral que esconde o cabo do carregador MagSafe enrolado por dentro — fica com o fio organizado, sem ele solto em cima da mesa.",
+      "descricao": "O canal espiral passa o cabo do carregador por dentro da peça, do encaixe do carregador até a saída na base; o relógio fica apoiado de lado, deitado na posição de carregamento noturno.",
+      "detalhes": [
+        "Canal espiral esconde o cabo do carregador",
+        "Carregador não incluso — use o seu MagSafe",
+        "Deixa o relógio de lado, pro modo noturno"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "4,2 × 4,7 × 5,4 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 34.99,
+      "fotos": [
+        "fotos/suporte-enrolado-apple-watch/01.jpg",
+        "fotos/suporte-enrolado-apple-watch/02.jpg",
+        "fotos/suporte-enrolado-apple-watch/03.jpg",
+        "fotos/suporte-enrolado-apple-watch/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Suporte Enrolado para Apple Watch",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 5,
+        "alturaCm": 4.2,
+        "larguraCm": 4.7,
+        "comprimentoCm": 5.4
+      }
+    },
+    {
+      "slug": "suporte-ondulado-vinho",
+      "nome": "Suporte Ondulado para Vinho",
+      "categoria": "diversos",
+      "resumo": "Suporte com curvas onduladas que carrega duas garrafas de vinho deitadas, uma sobre a outra.",
+      "paraQueServe": "Suporte comprido com curvas em onda que seguram duas garrafas de vinho deitadas, uma encaixada na curva de cima e outra na de baixo — organiza e exibe o par de garrafas junto.",
+      "descricao": "As ondulações da peça formam dois berços curvos que recebem o corpo das garrafas deitadas; a base plana mantém tudo firme mesmo com as duas garrafas cheias.",
+      "detalhes": [
+        "Carrega 2 garrafas de vinho deitadas",
+        "Base plana, firme com as garrafas cheias",
+        "Garrafas não inclusas"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "25,1 × 23,1 × 12 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 54.99,
+      "fotos": [
+        "fotos/suporte-ondulado-vinho/01.jpg",
+        "fotos/suporte-ondulado-vinho/02.jpg",
+        "fotos/suporte-ondulado-vinho/03.jpg",
+        "fotos/suporte-ondulado-vinho/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Suporte Ondulado para Vinho",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 110,
+        "alturaCm": 25.1,
+        "larguraCm": 23.1,
+        "comprimentoCm": 12.0
+      }
+    },
+    {
+      "slug": "suporte-apple-watch",
+      "nome": "Suporte para Apple Watch",
+      "categoria": "diversos",
+      "resumo": "Base de carregamento com canal pro cabo, pro Apple Watch ficar de pé na mesa.",
+      "paraQueServe": "Suporte de mesa pra apoiar o Apple Watch enquanto carrega, com um canal que organiza o cabo do carregador e uma base que mantém tudo estável, sem o relógio escorregar.",
+      "descricao": "O encaixe superior recebe o disco do carregador MagSafe, com um canal na lateral por onde o cabo desce até a base, mantendo o fio arrumado em vez de solto na mesa.",
+      "detalhes": [
+        "Canal lateral organiza o cabo do carregador",
+        "Base estável, relógio não escorrega",
+        "Carregador não incluso — use o seu MagSafe"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "7,7 × 8,9 × 3,6 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 29.99,
+      "fotos": [
+        "fotos/suporte-apple-watch/01.jpg",
+        "fotos/suporte-apple-watch/02.jpg",
+        "fotos/suporte-apple-watch/03.jpg",
+        "fotos/suporte-apple-watch/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Suporte para Apple Watch",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 30,
+        "alturaCm": 7.7,
+        "larguraCm": 8.9,
+        "comprimentoCm": 3.6
+      }
+    },
+    {
+      "slug": "suporte-garrafa-jack-daniels",
+      "nome": "Suporte para Garrafa Jack Daniel's",
+      "categoria": "diversos",
+      "resumo": "Suporte sob medida que deixa a garrafa de Jack Daniel's flutuando, equilibrada.",
+      "paraQueServe": "Suporte desenhado no contorno da garrafa de Jack Daniel's, que sustenta a garrafa inclinada e aparentemente flutuando, apoiada só pelo próprio peso contra a base recortada.",
+      "descricao": "O recorte da base acompanha o formato quadrado característico da garrafa de Jack Daniel's, travando o corpo na diagonal certa pra ela ficar em equilíbrio sem cair.",
+      "detalhes": [
+        "Recorte sob medida pra garrafa de Jack Daniel's",
+        "Equilíbrio só pelo encaixe, sem colar",
+        "Garrafa não inclusa"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "9,4 × 26,4 × 1,5 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 49.99,
+      "fotos": [
+        "fotos/suporte-garrafa-jack-daniels/01.jpg",
+        "fotos/suporte-garrafa-jack-daniels/02.jpg",
+        "fotos/suporte-garrafa-jack-daniels/03.jpg",
+        "fotos/suporte-garrafa-jack-daniels/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Suporte para Garrafa Jack Daniel's",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 70,
+        "alturaCm": 9.4,
+        "larguraCm": 26.4,
+        "comprimentoCm": 1.5
+      }
+    },
+    {
+      "slug": "suporte-ipad",
+      "nome": "Suporte para iPad",
+      "categoria": "diversos",
+      "resumo": "Base texturizada em formato de esfera, com encaixe pra apoiar o iPad ou tablet em pé.",
+      "paraQueServe": "Suporte de mesa pro iPad ou tablet ficar de pé, na posição ideal pra assistir vídeo, fazer videochamada ou seguir receita na cozinha, sem precisar segurar na mão.",
+      "descricao": "A base esférica texturizada dá estabilidade e um encaixe na parte de cima segura a borda inferior do iPad ou tablet, mantendo o aparelho inclinado numa posição confortável de visualização.",
+      "detalhes": [
+        "Base esférica, estável em qualquer mesa",
+        "Encaixe pra borda inferior do iPad/tablet",
+        "Serve pra tablets de tamanho semelhante ao iPad"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": ""
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "17,4 × 17,4 × 12,7 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": ""
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 44.99,
+      "fotos": [
+        "fotos/suporte-ipad/01.jpg",
+        "fotos/suporte-ipad/02.jpg",
+        "fotos/suporte-ipad/03.jpg",
+        "fotos/suporte-ipad/04.jpg"
+      ],
+      "pastaOrigem": "Diversos/Suporte para iPad",
+      "destaque": false,
+      "preVenda": false,
+      "dataVenda": "2026-11-10",
+      "observacaoPreVenda": "",
+      "cores": null,
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 99,
+        "alturaCm": 17.4,
+        "larguraCm": 17.4,
+        "comprimentoCm": 12.7
+      }
     }
   ]
 }

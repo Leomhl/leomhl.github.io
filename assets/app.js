@@ -204,7 +204,8 @@
 
   function textoPedidoCarrinho() {
     const linhas = carrinho.map(textoItemCarrinho).join('\n\n');
-    return `${linhas}\n\n• Total do pedido: ${moeda.format(totalCarrinho())}`;
+    const frete = textoFrete();
+    return `${linhas}\n\n${frete ? frete + '\n' : ''}• Total do pedido: ${moeda.format(totalCarrinho())}`;
   }
 
   function linkZapCarrinho() {
@@ -784,7 +785,8 @@
         <ul class="carrinho-lista">${linhas}</ul>
         <div class="carrinho-resumo">
           <p class="carrinho-total">Total: <strong>${moeda.format(totalCarrinho())}</strong></p>
-          <a class="botao botao-zap botao-largo" href="${linkZapCarrinho()}" target="_blank" rel="noopener">
+          ${blocoFrete()}
+          <a class="botao botao-zap botao-largo" data-zap-carrinho href="${linkZapCarrinho()}" target="_blank" rel="noopener">
             ${SVG_ZAP} Finalizar pedido no WhatsApp
           </a>
           <p class="compra-nota">${esc(catalogo.loja.avisoPedido || catalogo.loja.avisoPreco || '')}</p>
@@ -820,6 +822,266 @@
   function redesenharCarrinho() {
     main.innerHTML = telaCarrinho();
     ligarCarrinho();
+    ligarFreteCarrinho();
+  }
+
+  /* ---------- Frete (SuperFrete) ------------------------------------------- */
+
+  // Chama o SuperFrete direto do navegador — decisão deliberada de não usar
+  // backend nenhum (Function/Worker). O token abaixo fica legível pra qualquer
+  // pessoa que abra o DevTools ou o histórico do git deste repositório público,
+  // e de lá não sai mais.
+  //
+  // O que ele expõe, verificado contra a API (não é suposição):
+  //   - GET /api/v0/user responde 200 com o cadastro da conta: nome completo,
+  //     telefone e e-mail. Confirmado.
+  //   - O SuperFrete não emite token restrito a cotação. A tela de integração
+  //     tem um token só, sem escopo. Logo este é um token de conta e a hipótese
+  //     padrão é que também cria etiqueta e gasta saldo da carteira.
+  //
+  // Mitigação em uso: manter a carteira SuperFrete zerada e só recarregar na
+  // hora de comprar cada etiqueta. Sem saldo não há etiqueta a ser criada por
+  // terceiros. Se um dia a carteira passar a ficar com saldo parado, este
+  // token vira exposição financeira real e aí precisa de um proxy guardando
+  // o segredo.
+  const SUPERFRETE_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3OTQyMzIyMDYsInN1YiI6ImNUTXdKVEhJZFZOUThPZ2lFQmtvclAyT21UQzIifQ.8tqETixgNADjFZ1q-VCB79dD-WSpuPn5H4xZ600X2lY';
+  const SUPERFRETE_URL = 'https://api.superfrete.com/api/v0/calculator';
+  const CEP_ORIGEM = '25745122';
+  const SERVICOS_FRETE = '1,2,17,3,31,33';
+  const CHAVE_CEP_FRETE = 'cafezim-cep-frete';
+  const cacheFrete = new Map();
+
+  async function calcularFrete(cepDestino, itens) {
+    const chave = cepDestino + '|' + JSON.stringify(itens);
+    if (cacheFrete.has(chave)) return cacheFrete.get(chave);
+
+    const caixa = caixaCombinada(itens);
+    const resposta = await fetch(SUPERFRETE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: `Bearer ${SUPERFRETE_TOKEN}`,
+        'User-Agent': 'cafezim (marinhoesathler@gmail.com)',
+      },
+      body: JSON.stringify({
+        from: { postal_code: CEP_ORIGEM },
+        to: { postal_code: cepDestino },
+        services: SERVICOS_FRETE,
+        package: {
+          weight: caixa.pesoGramas / 1000,
+          height: Math.max(caixa.alturaCm, 0.4),
+          width: Math.max(caixa.larguraCm, 6),
+          length: Math.max(caixa.comprimentoCm, 11),
+        },
+      }),
+    });
+    const dados = await resposta.json().catch(() => null);
+    if (!resposta.ok) throw new Error(dados?.message || 'Não foi possível calcular o frete agora.');
+    const opcoes = (Array.isArray(dados) ? dados : [])
+      .filter((o) => !o.has_error && o.price != null)
+      .map((o) => ({
+        nome: o.name,
+        transportadora: o.company?.name || null,
+        prazoDias: o.delivery_time ?? o.delivery_range?.max ?? null,
+        preco: Number(o.price),
+      }))
+      .sort((a, b) => a.preco - b.preco);
+    cacheFrete.set(chave, opcoes);
+    return opcoes;
+  }
+
+  function cepSalvo() {
+    try { return localStorage.getItem(CHAVE_CEP_FRETE) || ''; } catch { return ''; }
+  }
+
+  function salvarCep(cep) {
+    try { localStorage.setItem(CHAVE_CEP_FRETE, cep); } catch {}
+  }
+
+  function maskCep(valor) {
+    const d = String(valor).replace(/\D/g, '').slice(0, 8);
+    return d.length > 5 ? `${d.slice(0, 5)}-${d.slice(5)}` : d;
+  }
+
+  function diasUteis(n) {
+    if (n == null) return '';
+    return n === 1 ? 'até 1 dia útil' : `até ${n} dias úteis`;
+  }
+
+  function blocoFrete() {
+    return `
+      <div class="frete" data-frete>
+        <div class="frete-linha">
+          <input type="text" inputmode="numeric" class="frete-cep" data-frete-cep
+                 placeholder="00000-000" maxlength="9" aria-label="CEP de destino para calcular o frete">
+          <button type="button" class="botao botao-vazado frete-botao" data-frete-calcular>Calcular frete</button>
+        </div>
+        <div class="frete-resultado" data-frete-resultado aria-live="polite"></div>
+      </div>
+    `;
+  }
+
+  // `lista` é [{produto, quantidade}]. Volta null se algum produto não tem
+  // peso/dimensão cadastrados — melhor avisar do que cotar frete errado.
+  function itensParaFrete(lista) {
+    const itens = [];
+    for (const { produto, quantidade } of lista) {
+      const envio = produto?.envio;
+      if (!envio?.pesoGramas || !envio?.alturaCm || !envio?.larguraCm || !envio?.comprimentoCm) return null;
+      itens.push({
+        pesoGramas: envio.pesoGramas,
+        alturaCm: envio.alturaCm,
+        larguraCm: envio.larguraCm,
+        comprimentoCm: envio.comprimentoCm,
+        quantidade,
+      });
+    }
+    return itens;
+  }
+
+  // As peças não vão soltas: vão numa caixa só com plástico bolha. Então o
+  // pedido inteiro vira UMA caixa combinada, não uma cotação por peça.
+  //
+  // Cada peça entra DEITADA — a menor das três medidas é que empilha, as duas
+  // maiores formam o chão da caixa. É como se embala de verdade (ninguém põe
+  // uma plaquinha de pé numa caixa) e é o que mantém o pedido dentro do Mini
+  // Envios, que exige altura até 4cm e sai ~22% mais barato que o PAC. Os
+  // campos alturaCm/larguraCm/comprimentoCm do catálogo são só os três eixos
+  // do modelo, em ordem arbitrária — por isso ordena aqui em vez de confiar
+  // no nome do campo.
+  //
+  // Margem menor na altura que no chão: peça fina não vira pacote de 4,4cm,
+  // vira ~2,9cm com o bolha (bolha ~1cm + papelão ~0,6cm). Nas laterais o
+  // bolha sobra mais, daí os 3cm.
+  const MARGEM_ALTURA_CM = 1.5;
+  const MARGEM_CHAO_CM = 3;
+  const PESO_EMBALAGEM_GRAMAS = 50;
+
+  function caixaCombinada(itens) {
+    let alturaEmpilhada = 0;
+    let largura = 0;
+    let comprimento = 0;
+    let peso = PESO_EMBALAGEM_GRAMAS;
+    for (const it of itens) {
+      const [menor, medio, maior] = [it.alturaCm, it.larguraCm, it.comprimentoCm].sort(
+        (a, b) => a - b
+      );
+      alturaEmpilhada += menor * it.quantidade;
+      largura = Math.max(largura, medio);
+      comprimento = Math.max(comprimento, maior);
+      peso += it.pesoGramas * it.quantidade;
+    }
+    return {
+      pesoGramas: peso,
+      alturaCm: alturaEmpilhada + MARGEM_ALTURA_CM,
+      larguraCm: largura + MARGEM_CHAO_CM,
+      comprimentoCm: comprimento + MARGEM_CHAO_CM,
+    };
+  }
+
+  // A pessoa escolhe qual frete quer — fica marcado e entra na mensagem do
+  // WhatsApp. Zera a cada novo cálculo (CEP ou itens mudaram).
+  let freteEscolhido = null;
+
+  function renderizarOpcoesFrete(opcoes) {
+    if (!opcoes.length) return '<p class="frete-erro">Nenhuma opção de frete pra esse CEP.</p>';
+    return `<ul class="frete-opcoes" role="radiogroup" aria-label="Opções de frete">${opcoes
+      .map(
+        (o, i) => `
+        <li>
+          <button type="button" class="frete-opcao" role="radio"
+                  aria-checked="${o === freteEscolhido}" data-frete-opcao="${i}">
+            <span class="frete-opcao-nome">${esc(o.nome)}${
+              o.transportadora ? ` <small>(${esc(o.transportadora)})</small>` : ''
+            }</span>
+            <span class="frete-opcao-prazo">${esc(diasUteis(o.prazoDias))}</span>
+            <span class="frete-opcao-preco">${moeda.format(o.preco)}</span>
+          </button>
+        </li>`
+      )
+      .join('')}</ul>`;
+  }
+
+  // Linha pra entrar no pedido do WhatsApp — vazia se nada foi escolhido ainda.
+  function textoFrete() {
+    if (!freteEscolhido) return '';
+    const transp = freteEscolhido.transportadora ? ` (${freteEscolhido.transportadora})` : '';
+    return `• Frete: ${freteEscolhido.nome}${transp} — ${moeda.format(freteEscolhido.preco)} — ${diasUteis(freteEscolhido.prazoDias)}`;
+  }
+
+  // `obterLista()` lê a escolha/carrinho no momento do clique, não no momento
+  // em que o bloco foi desenhado — assim quantidade atualizada sempre entra.
+  // `aoMudar()`, se passado, roda toda vez que a seleção de frete muda — usado
+  // pra manter o link do WhatsApp (que é montado uma vez só no HTML) sincronizado.
+  function ligarFrete(raiz, obterLista, aoMudar) {
+    const caixa = raiz.querySelector('[data-frete]');
+    if (!caixa) return;
+    const campoCep = caixa.querySelector('[data-frete-cep]');
+    const botao = caixa.querySelector('[data-frete-calcular]');
+    const resultado = caixa.querySelector('[data-frete-resultado]');
+
+    campoCep.value = cepSalvo();
+    campoCep.addEventListener('input', () => { campoCep.value = maskCep(campoCep.value); });
+    freteEscolhido = null;
+    aoMudar?.();
+
+    async function executar() {
+      const cep = campoCep.value.replace(/\D/g, '');
+      if (cep.length !== 8) {
+        freteEscolhido = null;
+        resultado.innerHTML = '<p class="frete-erro">Digite um CEP válido.</p>';
+        aoMudar?.();
+        return;
+      }
+      salvarCep(campoCep.value);
+
+      const itens = itensParaFrete(obterLista());
+      if (!itens) {
+        freteEscolhido = null;
+        resultado.innerHTML =
+          '<p class="frete-erro">Ainda não temos as dimensões cadastradas pra calcular esse frete. Fala com a gente no WhatsApp.</p>';
+        aoMudar?.();
+        return;
+      }
+
+      botao.disabled = true;
+      freteEscolhido = null;
+      resultado.innerHTML = '<p class="frete-carregando">Calculando…</p>';
+      try {
+        const opcoes = await calcularFrete(cep, itens);
+        freteEscolhido = opcoes[0] || null; // mais barato já vem marcado; a pessoa pode trocar.
+        resultado.innerHTML = renderizarOpcoesFrete(opcoes);
+      } catch (erro) {
+        resultado.innerHTML = `<p class="frete-erro">${esc(erro.message || 'Não foi possível calcular o frete agora.')}</p>`;
+      } finally {
+        botao.disabled = false;
+        aoMudar?.();
+      }
+    }
+
+    botao.addEventListener('click', executar);
+    campoCep.addEventListener('keydown', (e) => { if (e.key === 'Enter') executar(); });
+
+    resultado.addEventListener('click', (e) => {
+      const item = e.target.closest('[data-frete-opcao]');
+      if (!item) return;
+      const opcoesAtuais = cacheFrete.get(campoCep.value.replace(/\D/g, '') + '|' + JSON.stringify(itensParaFrete(obterLista())));
+      freteEscolhido = opcoesAtuais?.[Number(item.dataset.freteOpcao)] || freteEscolhido;
+      resultado.querySelectorAll('[data-frete-opcao]').forEach((b) => {
+        b.setAttribute('aria-checked', String(Number(b.dataset.freteOpcao) === Number(item.dataset.freteOpcao)));
+      });
+      aoMudar?.();
+    });
+  }
+
+  function ligarFreteCarrinho() {
+    const linkZap = () => main.querySelector('[data-zap-carrinho]');
+    ligarFrete(
+      main,
+      () => carrinho.map((it) => ({ produto: porSlug(catalogo.produtos, it.slug), quantidade: it.quantidade })),
+      () => { const a = linkZap(); if (a) a.href = linkZapCarrinho(); }
+    );
   }
 
   /* ---------- Seletores do pedido ------------------------------------------ */
@@ -1003,7 +1265,7 @@
       const p = porSlug(catalogo.produtos, r.arg);
       if (p) { zerarEscolha(p); ligarSeletores(p); }
     }
-    if (r.tela === 'carrinho') ligarCarrinho();
+    if (r.tela === 'carrinho') { ligarCarrinho(); ligarFreteCarrinho(); }
 
     // Marca a categoria aberta no menu.
     const alvo = r.tela === 'categoria' ? `#/c/${r.arg}` : r.tela === 'inicio' ? '#/' : '';
