@@ -851,11 +851,7 @@
   const CHAVE_CEP_FRETE = 'cafezim-cep-frete';
   const cacheFrete = new Map();
 
-  async function calcularFrete(cepDestino, itens) {
-    const chave = cepDestino + '|' + JSON.stringify(itens);
-    if (cacheFrete.has(chave)) return cacheFrete.get(chave);
-
-    const caixa = caixaCombinada(itens);
+  async function cotarCaixa(cepDestino, caixa) {
     const resposta = await fetch(SUPERFRETE_URL, {
       method: 'POST',
       headers: {
@@ -878,15 +874,39 @@
     });
     const dados = await resposta.json().catch(() => null);
     if (!resposta.ok) throw new Error(dados?.message || 'Não foi possível calcular o frete agora.');
-    const opcoes = (Array.isArray(dados) ? dados : [])
-      .filter((o) => !o.has_error && o.price != null)
-      .map((o) => ({
-        nome: o.name,
-        transportadora: o.company?.name || null,
-        prazoDias: o.delivery_time ?? o.delivery_range?.max ?? null,
-        preco: Number(o.price),
-      }))
-      .sort((a, b) => a.preco - b.preco);
+    return (Array.isArray(dados) ? dados : []).filter((o) => !o.has_error && o.price != null);
+  }
+
+  async function calcularFrete(cepDestino, itens) {
+    const chave = cepDestino + '|' + JSON.stringify(itens);
+    if (cacheFrete.has(chave)) return cacheFrete.get(chave);
+
+    // Cota cada arranjo e fica com o menor preço de cada modalidade. Um arranjo
+    // que falhe (ou que a transportadora recuse por formato) não derruba os
+    // outros — só não contribui.
+    const respostas = await Promise.allSettled(
+      caixasCandidatas(itens).map((c) => cotarCaixa(cepDestino, c))
+    );
+    const erro = respostas.every((r) => r.status === 'rejected');
+    if (erro) throw respostas[0].reason;
+
+    const melhorPorServico = new Map();
+    for (const r of respostas) {
+      if (r.status !== 'fulfilled') continue;
+      for (const o of r.value) {
+        const atual = melhorPorServico.get(o.name);
+        if (!atual || Number(o.price) < atual.preco) {
+          melhorPorServico.set(o.name, {
+            nome: o.name,
+            transportadora: o.company?.name || null,
+            prazoDias: o.delivery_time ?? o.delivery_range?.max ?? null,
+            preco: Number(o.price),
+          });
+        }
+      }
+    }
+
+    const opcoes = [...melhorPorServico.values()].sort((a, b) => a.preco - b.preco);
     cacheFrete.set(chave, opcoes);
     return opcoes;
   }
@@ -958,26 +978,72 @@
   const MARGEM_CHAO_CM = 3;
   const PESO_EMBALAGEM_GRAMAS = 50;
 
-  function caixaCombinada(itens) {
-    let alturaEmpilhada = 0;
+  // Monta a caixa para um arranjo dado: nx peças lado a lado na largura e ny
+  // no comprimento, antes de começar uma camada nova. nx=ny=1 é a torre pura.
+  function caixaComArranjo(itens, nx, ny) {
     let largura = 0;
     let comprimento = 0;
     let peso = PESO_EMBALAGEM_GRAMAS;
     for (const it of itens) {
-      const [menor, medio, maior] = [it.alturaCm, it.larguraCm, it.comprimentoCm].sort(
-        (a, b) => a - b
-      );
-      alturaEmpilhada += menor * it.quantidade;
-      largura = Math.max(largura, medio);
-      comprimento = Math.max(comprimento, maior);
+      const [, medio, maior] = [it.alturaCm, it.larguraCm, it.comprimentoCm].sort((a, b) => a - b);
+      largura = Math.max(largura, medio * nx);
+      comprimento = Math.max(comprimento, maior * ny);
       peso += it.pesoGramas * it.quantidade;
     }
+
+    // Quantas peças de cada tipo cabem numa camada deste chão, e quantas
+    // camadas isso exige. Peça grande num chão pequeno cai em 1 por camada.
+    let altura = 0;
+    for (const it of itens) {
+      const [menor, medio, maior] = [it.alturaCm, it.larguraCm, it.comprimentoCm].sort((a, b) => a - b);
+      const porCamada = Math.max(
+        1,
+        Math.floor(largura / medio) * Math.floor(comprimento / maior)
+      );
+      altura += Math.ceil(it.quantidade / porCamada) * menor;
+    }
+
     return {
       pesoGramas: peso,
-      alturaCm: alturaEmpilhada + MARGEM_ALTURA_CM,
+      alturaCm: altura + MARGEM_ALTURA_CM,
       larguraCm: largura + MARGEM_CHAO_CM,
       comprimentoCm: comprimento + MARGEM_CHAO_CM,
     };
+  }
+
+  // Um mesmo pedido cabe em caixas de formatos diferentes, e o formato muda o
+  // preço: o Mini Envios, o mais barato, só aceita até 4cm de altura. Quatro
+  // cortadores empilhados dão 5,9cm e perdem a modalidade; os mesmos quatro
+  // lado a lado dão 3,7cm e ganham — a diferença passa de R$3 no bolso de quem
+  // compra. Como as regras de aceitação são de cada transportadora e mudam sem
+  // aviso, não vale replicá-las aqui: o código monta alguns arranjos plausíveis
+  // e deixa a cotação dizer qual sai melhor.
+  function caixasCandidatas(itens) {
+    const vistas = new Set();
+    let caixas = [];
+    for (const [nx, ny] of [[1, 1], [1, 2], [2, 1], [2, 2], [1, 3], [3, 1]]) {
+      const c = caixaComArranjo(itens, nx, ny);
+      const assinatura = [c.alturaCm, c.larguraCm, c.comprimentoCm].map((v) => v.toFixed(1)).join('x');
+      if (vistas.has(assinatura)) continue;
+      vistas.add(assinatura);
+      caixas.push(c);
+    }
+
+    // Espalhar nem sempre encurta a pilha: quando o pedido é pequeno, a altura
+    // já é a mínima e o chão só cresce à toa. Caixa que perde nas três medidas
+    // pra outra não tem como sair mais barata — fora, pra não gastar chamada.
+    const dominada = (a, b) =>
+      b.alturaCm <= a.alturaCm && b.larguraCm <= a.larguraCm && b.comprimentoCm <= a.comprimentoCm &&
+      (b.alturaCm < a.alturaCm || b.larguraCm < a.larguraCm || b.comprimentoCm < a.comprimentoCm);
+    caixas = caixas.filter((a) => !caixas.some((b) => dominada(a, b)));
+
+    return caixas;
+  }
+
+  // Mantida para o resto do código (e os testes) que pedem "a" caixa do pedido:
+  // é o arranjo conservador, tudo empilhado.
+  function caixaCombinada(itens) {
+    return caixaComArranjo(itens, 1, 1);
   }
 
   // A pessoa escolhe qual frete quer — fica marcado e entra na mensagem do
