@@ -86,10 +86,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "15 × 23 × 1,5 cm (L × P × A)"
         },
@@ -109,7 +105,7 @@
       "preco": 69.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -168,7 +164,7 @@
       "preco": 26.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -208,10 +204,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "14,1 × 15,9 × 2,4 cm (L × P × A)"
         },
@@ -231,7 +223,7 @@
       "preco": 31.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -272,10 +264,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "19 × 10,8 × 8,8 cm (L × P × A)"
         },
@@ -295,7 +283,7 @@
       "preco": 108.99,
       "destaque": true,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -335,10 +323,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "10,2 × 10,4 × 8,4 cm (L × P × A)"
         },
@@ -354,7 +338,7 @@
       "preco": 63.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -395,10 +379,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "22 × 12 × 10 cm (L × P × A)"
         },
@@ -418,7 +398,7 @@
       "preco": 101.99,
       "destaque": true,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -485,10 +465,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "14,8 × 14,8 × 11,5 cm (L × P × A)"
         },
@@ -508,7 +484,7 @@
       "preco": 78.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -567,10 +543,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "9,1 × 9,1 × 13 cm (L × P × A)"
         },
@@ -590,7 +562,7 @@
       "preco": 56.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -631,10 +603,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "7,9 × 7,9 × 9 cm (L × P × A)"
         },
@@ -650,7 +618,7 @@
       "preco": 68.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -714,7 +682,7 @@
       "preco": 68.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -753,10 +721,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "10,8 × 14,6 × 0,6 cm (L × P × A)"
         },
@@ -772,7 +736,7 @@
       "preco": 29.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -813,10 +777,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "12,1 × 10,2 × 1 cm (L × P × A)"
         },
@@ -836,7 +796,7 @@
       "preco": 42.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -875,10 +835,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "3 × 2,1 × 1,5 cm (L × P × A)"
         },
@@ -898,7 +854,7 @@
       "preco": 22.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": [
         "branco",
@@ -943,10 +899,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "4 × 9 × 6 cm (L × P × A)"
         },
@@ -966,7 +918,7 @@
       "preco": 31.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1005,10 +957,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "7,7 × 9,8 × 5,5 cm (L × P × A)"
         },
@@ -1024,7 +972,7 @@
       "preco": 25.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1065,10 +1013,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "13 × 18 × 15 cm (L × P × A)"
         },
@@ -1092,7 +1036,7 @@
       "preco": 93.99,
       "destaque": true,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1133,10 +1077,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "20 × 8,8 cm (L × A), espessura 0,3 cm"
         },
@@ -1156,7 +1096,7 @@
       "preco": 20.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1195,10 +1135,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "12,1 × 15,1 × 10,5 cm (L × P × A)"
         },
@@ -1218,7 +1154,7 @@
       "preco": 60.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1257,10 +1193,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "7,8 × 6,5 × 10 cm (L × P × A)"
         },
@@ -1276,7 +1208,7 @@
       "preco": 41.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": [
         "branco",
@@ -1322,14 +1254,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -1341,7 +1265,7 @@
       "preco": 28.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1407,10 +1331,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "4,2 × 5,4 × 8,9 cm (L × P × A)"
         },
@@ -1426,7 +1346,7 @@
       "preco": 25.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1492,10 +1412,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "4,7 × 3,8 × 5,7 cm (L × P × A)"
         },
@@ -1511,7 +1427,7 @@
       "preco": 26.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": [
         "branco",
@@ -1573,7 +1489,7 @@
       "preco": 21.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": [
         "branco",
@@ -1615,10 +1531,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "19,1 × 19,1 cm (L × A), espessura 0,1 cm"
         },
@@ -1642,7 +1554,7 @@
       "preco": 59.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1681,10 +1593,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "21,9 × 20,2 × 1,8 cm (L × P × A)"
         },
@@ -1700,7 +1608,7 @@
       "preco": 32.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1740,10 +1648,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "16 × 8,6 cm (L × A), espessura 0,1 cm"
         },
@@ -1763,7 +1667,7 @@
       "preco": 21.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1803,10 +1707,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "11,6 × 3,7 × 2,9 cm (L × P × A)"
         },
@@ -1822,7 +1722,7 @@
       "preco": 22.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1862,10 +1762,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "cerca de 4 a 7 cm cada peça (jogo com 4 formatos diferentes)"
         },
@@ -1885,7 +1781,7 @@
       "preco": 40.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1927,10 +1823,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "10,2 × 17,6 cm (L × A), espessura 0,1 cm"
         },
@@ -1950,7 +1842,7 @@
       "preco": 23.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -1990,10 +1882,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "23,5 × 22,5 cm (L × A), espessura 0,3 cm"
         },
@@ -2013,7 +1901,7 @@
       "preco": 35.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2052,10 +1940,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "19,6 × 16,2 cm (L × A), espessura 0,2 cm"
         },
@@ -2075,7 +1959,7 @@
       "preco": 26.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2115,10 +1999,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "13,2 × 14,8 × 0,4 cm (L × P × A)"
         },
@@ -2138,7 +2018,7 @@
       "preco": 28.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2204,7 +2084,7 @@
       "preco": 47.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2243,10 +2123,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "7,5 × 8,9 cm (L × A), espessura 0,3 cm"
         },
@@ -2270,7 +2146,7 @@
       "preco": 28.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2309,10 +2185,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "16,1 × 24 cm (L × A), espessura 0,5 cm"
         },
@@ -2336,7 +2208,7 @@
       "preco": 35.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2375,10 +2247,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "15,7 × 10,8 × 2,9 cm (L × P × A)"
         },
@@ -2398,7 +2266,7 @@
       "preco": 64.99,
       "destaque": true,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2437,10 +2305,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "9,4 × 12 × 11,2 cm (L × P × A)"
         },
@@ -2460,7 +2324,7 @@
       "preco": 63.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2499,10 +2363,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "10,4 × 10,4 × 4 cm (L × P × A)"
         },
@@ -2522,7 +2382,7 @@
       "preco": 64.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2561,10 +2421,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "17,5 × 4,9 × 4 cm (L × P × A)"
         },
@@ -2584,7 +2440,7 @@
       "preco": 64.99,
       "destaque": true,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2646,7 +2502,7 @@
       "preco": 65.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2708,7 +2564,7 @@
       "preco": 44.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2750,10 +2606,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "5,2 × 5,2 × 4,1 cm (L × P × A)"
         },
@@ -2773,7 +2625,7 @@
       "preco": 21.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2812,10 +2664,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "V60 02: 12,8 × 6,8 × 12,6 cm · V60 03: 14,2 × 7,6 × 14,0 cm · Chemex: 17,6 × 9,4 × 17,4 cm (L × P × A)"
         },
@@ -2831,7 +2679,7 @@
       "preco": 67.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [
@@ -2889,10 +2737,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "5,7 × 5,7 × 12 cm (L × P × A)"
         },
@@ -2912,7 +2756,7 @@
       "preco": 33.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -2954,10 +2798,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "7,5 × 6,9 × 2,5 cm (L × P × A)"
         },
@@ -2977,7 +2817,7 @@
       "preco": 27.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3016,10 +2856,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "11,5 × 6 × 3,9 cm (L × P × A)"
         },
@@ -3043,7 +2879,7 @@
       "preco": 32.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3084,10 +2920,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "20,3 × 9,4 × 9,6 cm (L × P × A)"
         },
@@ -3111,7 +2943,7 @@
       "preco": 141.99,
       "destaque": true,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3152,10 +2984,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "12,6 × 12,6 × 2,9 cm (L × P × A)"
         },
@@ -3175,7 +3003,7 @@
       "preco": 80.99,
       "destaque": true,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3249,7 +3077,7 @@
       "preco": 45.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3288,10 +3116,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "18,6 × 10,3 × 0,1 cm (L × P × A)"
         },
@@ -3311,7 +3135,7 @@
       "preco": 93.99,
       "destaque": true,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3350,10 +3174,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "15,1 × 10,5 × 1,2 cm (L × P × A)"
         },
@@ -3377,7 +3197,7 @@
       "preco": 38.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": [
         "branco",
@@ -3420,16 +3240,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "8,6 × 8,6 × 8,4 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "45 g"
         },
         {
           "rotulo": "Limpeza",
@@ -3443,7 +3259,7 @@
       "preco": 36.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3482,16 +3298,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "≈ 13 cm de diâmetro × 20 cm de altura"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "138 g"
         },
         {
           "rotulo": "Limpeza",
@@ -3505,7 +3317,7 @@
       "preco": 119.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3547,16 +3359,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "16,6 × 14,4 × 10,9 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "26 g"
         },
         {
           "rotulo": "Limpeza",
@@ -3570,7 +3378,7 @@
       "preco": 89.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3615,16 +3423,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "10,4 × 12,6 × 14,0 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "62 g"
         },
         {
           "rotulo": "Limpeza",
@@ -3638,7 +3442,7 @@
       "preco": 95.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3681,16 +3485,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "8 × 13 × 17 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "130 g"
         },
         {
           "rotulo": "Limpeza",
@@ -3704,7 +3504,7 @@
       "preco": 76.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3746,16 +3546,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "7,9 × 17,4 × 1,0 cm (L × A × Espessura)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "27 g"
         },
         {
           "rotulo": "Limpeza",
@@ -3769,7 +3565,7 @@
       "preco": 29.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3812,16 +3608,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "15,5 cm de diâmetro × 8 cm de altura (com tampa)"
-        },
-        {
-          "rotulo": "Peso",
-          "valor": ""
         },
         {
           "rotulo": "Limpeza",
@@ -3835,7 +3623,7 @@
       "preco": 99.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "partesCores": [
@@ -3895,10 +3683,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "5,3 × 5,3 × 2,0 cm (L × P × A)"
         },
@@ -3914,7 +3698,7 @@
       "preco": 26.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -3955,10 +3739,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "P: 4,2 × 4,2 × 2,0 cm · M: 5,0 × 4,2 × 2,0 cm · G: 5,6 × 4,2 × 2,0 cm · GG: 6,3 × 4,9 × 2,0 cm (L × P × A)"
         },
@@ -3974,7 +3754,7 @@
       "preco": 26.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": [
         "branco",
@@ -4038,10 +3818,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "12,7 × 11,0 × 7,6 cm (L × P × A)"
         },
@@ -4061,7 +3837,7 @@
       "preco": 52.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": [
         "branco",
@@ -4106,10 +3882,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "7,8 × 11,4 × 11,0 cm (L × P × A)"
         },
@@ -4129,7 +3901,7 @@
       "preco": 59.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4169,10 +3941,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "5,7 × 2,2 × 1,3 cm (L × P × A)"
         },
@@ -4188,7 +3956,7 @@
       "preco": 19.99,
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4226,16 +3994,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "11,2 × 9,9 × 18,3 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "50 g"
         },
         {
           "rotulo": "Limpeza",
@@ -4256,7 +4020,7 @@
       "pastaOrigem": "Decoração/Base para Cafeteira Moka 4 Xícaras",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4290,16 +4054,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "37 g"
         },
         {
           "rotulo": "Limpeza",
@@ -4320,7 +4076,7 @@
       "pastaOrigem": "Preparo/Suporte Coador de Café",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4354,18 +4110,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
-          "rotulo": "Peso",
-          "valor": ""
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -4384,7 +4128,7 @@
       "pastaOrigem": "Decoração/Xícara de Café Espresso",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4418,16 +4162,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "8 g"
         },
         {
           "rotulo": "Itens inclusos",
@@ -4452,7 +4188,7 @@
       "pastaOrigem": "Diversos/Cortador de Biscoito Capivara",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4486,16 +4222,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "12 g"
         },
         {
           "rotulo": "Limpeza",
@@ -4516,7 +4244,7 @@
       "pastaOrigem": "Diversos/Mão Italiana",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4550,16 +4278,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "16 × 16 × 1,1 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "33 g"
         },
         {
           "rotulo": "Limpeza",
@@ -4579,7 +4303,7 @@
       "pastaOrigem": "Diversos/Medidor Água ou Cerveja",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4613,16 +4337,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "10 g"
         },
         {
           "rotulo": "Limpeza",
@@ -4641,7 +4357,7 @@
       "pastaOrigem": "Diversos/Natal/Cortador de Biscoito Gengibre",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4675,18 +4391,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
-          "rotulo": "Peso",
-          "valor": ""
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "10 cortadores"
         },
@@ -4709,7 +4413,7 @@
       "pastaOrigem": "Diversos/Natal/Cortador de cookie natal",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4743,16 +4447,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "30 g"
         },
         {
           "rotulo": "Itens inclusos",
@@ -4777,7 +4473,7 @@
       "pastaOrigem": "Diversos/Natal/Cortador de massas grinch",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4811,18 +4507,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
-          "rotulo": "Peso",
-          "valor": ""
-        },
-        {
           "rotulo": "Itens inclusos",
           "valor": "Porta-copos + suporte"
         },
@@ -4845,7 +4529,7 @@
       "pastaOrigem": "Diversos/Natal/Porta-Copos Grinch",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4879,16 +4563,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "32,3 × 11,9 × 12,7 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "330 g"
         },
         {
           "rotulo": "Limpeza",
@@ -4909,7 +4589,7 @@
       "pastaOrigem": "Diversos/Pato",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -4943,16 +4623,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "7 g"
         },
         {
           "rotulo": "Limpeza",
@@ -4971,7 +4643,7 @@
       "pastaOrigem": "Decoração/Placa Café Mais Espresso Menos Depressão",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5005,16 +4677,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "6 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5035,7 +4699,7 @@
       "pastaOrigem": "Decoração/Placa Gato Mais Espresso Menos Depressão",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5069,16 +4733,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "57 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5099,7 +4755,7 @@
       "pastaOrigem": "Diversos/Porta-Banana Gansinho",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5133,16 +4789,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "22,8 × 22,8 × 1,5 cm (L × P × A)"
-        },
-        {
-          "rotulo": "Peso",
-          "valor": ""
         },
         {
           "rotulo": "Limpeza",
@@ -5163,7 +4811,7 @@
       "pastaOrigem": "Diversos/Porta-Copo A1 Mini",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5197,16 +4845,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "157 g"
         },
         {
           "rotulo": "Itens inclusos",
@@ -5230,7 +4870,7 @@
       "pastaOrigem": "Organização/Porta-Copos Amantes de Café",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5264,16 +4904,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "8,5 × 8,5 × 0,3 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "25 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5294,7 +4930,7 @@
       "pastaOrigem": "Organização/Porta-Copos Grão de Café",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5328,16 +4964,8 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "83 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5358,7 +4986,7 @@
       "pastaOrigem": "Diversos/Porta-Garrafa",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5392,16 +5020,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "15,4 × 15 × 15,4 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "71 g"
         },
         {
           "rotulo": "Itens inclusos",
@@ -5426,7 +5050,7 @@
       "pastaOrigem": "Diversos/Pote para amanteigados",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5460,18 +5084,6 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
-          "rotulo": "Dimensões",
-          "valor": ""
-        },
-        {
-          "rotulo": "Peso",
-          "valor": ""
-        },
-        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -5490,7 +5102,7 @@
       "pastaOrigem": "Diversos/Roleta de Shots",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5524,16 +5136,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "25,4 × 5,9 × 6,3 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "64 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5553,7 +5161,7 @@
       "pastaOrigem": "Diversos/Suporte Cinético para Vinho",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5587,16 +5195,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "20,8 × 15 × 23,8 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "114 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5616,7 +5220,7 @@
       "pastaOrigem": "Diversos/Suporte de Vinho Chama",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5650,16 +5254,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "9,2 × 27,9 × 9,7 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "148 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5680,7 +5280,7 @@
       "pastaOrigem": "Diversos/Suporte de Vinho Gato",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5714,16 +5314,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "20,4 × 20,8 × 10 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "172 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5744,7 +5340,7 @@
       "pastaOrigem": "Diversos/Suporte de Vinho Laço Infinito",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5778,16 +5374,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "4,2 × 4,7 × 5,4 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "5 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5808,7 +5400,7 @@
       "pastaOrigem": "Diversos/Suporte Enrolado para Apple Watch",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5842,16 +5434,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "25,1 × 23,1 × 12 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "110 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5872,7 +5460,7 @@
       "pastaOrigem": "Diversos/Suporte Ondulado para Vinho",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5906,16 +5494,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "7,7 × 8,9 × 3,6 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "30 g"
         },
         {
           "rotulo": "Limpeza",
@@ -5936,7 +5520,7 @@
       "pastaOrigem": "Diversos/Suporte para Apple Watch",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -5970,16 +5554,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "9,4 × 26,4 × 1,5 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "70 g"
         },
         {
           "rotulo": "Limpeza",
@@ -6000,7 +5580,7 @@
       "pastaOrigem": "Diversos/Suporte para Garrafa Jack Daniel's",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
@@ -6034,16 +5614,12 @@
           "valor": "Plástico"
         },
         {
-          "rotulo": "Acabamento",
-          "valor": ""
-        },
-        {
           "rotulo": "Dimensões",
           "valor": "17,4 × 17,4 × 12,7 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
-          "valor": ""
+          "valor": "99 g"
         },
         {
           "rotulo": "Limpeza",
@@ -6064,7 +5640,7 @@
       "pastaOrigem": "Diversos/Suporte para iPad",
       "destaque": false,
       "preVenda": false,
-      "dataVenda": "2026-11-10",
+      "dataVenda": null,
       "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
