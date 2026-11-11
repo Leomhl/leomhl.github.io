@@ -14,9 +14,6 @@
     "prazoEntrega": "",
     "avisoFrete": "",
     "avisoPreco": "Preços sujeitos a alteração. Confirme no WhatsApp antes de fechar o pedido.",
-    "mensagemPreVenda": "Olá! Quero reservar na pré-venda do cafezim:\n\n{pedido}\n\n{link}",
-    "textoPreVenda": "Pré-venda. Envio a partir de {data}.",
-    "textoPreVendaSemData": "Pré-venda. Data de envio a confirmar.",
     "paletaCores": {
       "branco": {
         "nome": "Branco",
@@ -35,7 +32,37 @@
       "branco",
       "preto"
     ],
-    "avisoPedido": "Escolha acima e o pedido já vai montado na mensagem. Preços sujeitos a alteração. Valor referente a uma unidade do produto."
+    "avisoPedido": "Escolha acima e o pedido já vai montado na mensagem. Preços sujeitos a alteração. Valor referente a uma unidade do produto.",
+    "provas": [
+      {
+        "titulo": "Cabe na sua bancada",
+        "texto": "Cada peça mostra medida em centímetros, o que vem incluso e como lavar. Você confere antes de comprar, não depois."
+      },
+      {
+        "titulo": "Sai na cor do seu cantinho",
+        "texto": "Branco e preto em todas as peças, caramelo em algumas. A cor é sua escolha no pedido e não muda o preço."
+      },
+      {
+        "titulo": "Quem responde é quem produz",
+        "texto": "Fabricação própria, do desenho ao envio. Dúvida de encaixe ou de medida vai no WhatsApp e volta de quem fez a peça."
+      }
+    ],
+    "fechamento": {
+      "titulo": "Dúvida de medida, cor ou encaixe?",
+      "texto": "Mande uma foto da sua bancada no WhatsApp. Dizemos qual peça serve, em qual cor, e o valor com frete.",
+      "textoBotao": "Falar no WhatsApp"
+    },
+    "feedback": {
+      "titulo": "Depoimentos",
+      "rota": "conta-como-ficou",
+      "agradecimento": "Recebemos, obrigado! Vamos dar uma olhada e seu depoimento entra no site nos próximos dias.",
+      "mensagemWhatsapp": "Olá! Quero deixar um feedback sobre o cafezim:\n\n{depoimento}",
+      "firebase": {
+        "projeto": "cafezim-store",
+        "chaveApi": "AIzaSyD2QoZUAKylT5iX19Lsx1dCWnfbg9uN40U",
+        "colecao": "avaliacoes"
+      }
+    }
   },
   "categorias": [
     {
@@ -104,9 +131,6 @@
       ],
       "preco": 69.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -119,10 +143,16 @@
       "pastaOrigem": "Organização/Bandeja Hexagonal para Coador",
       "envio": {
         "pesoGramas": 143,
-        "alturaCm": 15.0,
-        "larguraCm": 23.0,
+        "alturaCm": 15,
+        "larguraCm": 23,
         "comprimentoCm": 1.5
-      }
+      },
+      "combinaCom": [
+        "knock-box",
+        "suporte-coador-cafe",
+        "dosador-cafe",
+        "suporte-coador-apoio-removivel"
+      ]
     },
     {
       "slug": "dosador-cafe",
@@ -163,9 +193,6 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -177,10 +204,16 @@
       "pastaOrigem": "Organização/Dosador para Café",
       "envio": {
         "pesoGramas": 25,
-        "alturaCm": 8.0,
+        "alturaCm": 8,
         "larguraCm": 6.6,
         "comprimentoCm": 4.1
-      }
+      },
+      "combinaCom": [
+        "colher-tamper",
+        "clipe-saco-cafe",
+        "estacao-tamping",
+        "estojo-papel-aeropress"
+      ]
     },
     {
       "slug": "clipe-saco-cafe",
@@ -222,9 +255,6 @@
       ],
       "preco": 31.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -240,7 +270,13 @@
         "alturaCm": 14.1,
         "larguraCm": 15.9,
         "comprimentoCm": 2.4
-      }
+      },
+      "combinaCom": [
+        "dosador-cafe",
+        "caixa-filtro-v60",
+        "grao-de-la",
+        "organizador-saches-cha"
+      ]
     },
     {
       "slug": "dispenser-capsulas-nespresso",
@@ -282,9 +318,6 @@
       ],
       "preco": 108.99,
       "destaque": true,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -298,8 +331,14 @@
         "pesoGramas": 119,
         "alturaCm": 10.7,
         "larguraCm": 10.8,
-        "comprimentoCm": 19.0
-      }
+        "comprimentoCm": 19
+      },
+      "combinaCom": [
+        "porta-capsulas-nespresso",
+        "porta-capsulas-deluxe",
+        "lixeira-capsulas-dolce-gusto",
+        "knock-box"
+      ]
     },
     {
       "slug": "estacao-tamping",
@@ -337,9 +376,6 @@
       ],
       "preco": 63.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -355,7 +391,12 @@
         "alturaCm": 10.5,
         "larguraCm": 10.2,
         "comprimentoCm": 8.4
-      }
+      },
+      "combinaCom": [
+        "knock-box",
+        "colher-tamper",
+        "kit-bandeja-porta-capsulas-3em1"
+      ]
     },
     {
       "slug": "kit-bandeja-porta-capsulas-3em1",
@@ -397,9 +438,6 @@
       ],
       "preco": 101.99,
       "destaque": true,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -438,10 +476,15 @@
       ],
       "envio": {
         "pesoGramas": 70,
-        "alturaCm": 22.0,
-        "larguraCm": 12.0,
-        "comprimentoCm": 10.0
-      }
+        "alturaCm": 22,
+        "larguraCm": 12,
+        "comprimentoCm": 10
+      },
+      "combinaCom": [
+        "knock-box",
+        "estacao-tamping",
+        "porta-capsulas-universal"
+      ]
     },
     {
       "slug": "knock-box",
@@ -483,9 +526,6 @@
       ],
       "preco": 78.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -519,7 +559,13 @@
         "alturaCm": 14.8,
         "larguraCm": 11.5,
         "comprimentoCm": 14.8
-      }
+      },
+      "combinaCom": [
+        "estacao-tamping",
+        "colher-tamper",
+        "bandeja-hexagonal-coador",
+        "suporte-coador-apoio-removivel"
+      ]
     },
     {
       "slug": "organizador-saches-cha",
@@ -561,9 +607,6 @@
       ],
       "preco": 56.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -578,8 +621,13 @@
         "pesoGramas": 38,
         "alturaCm": 8.3,
         "larguraCm": 8.3,
-        "comprimentoCm": 13.0
-      }
+        "comprimentoCm": 13
+      },
+      "combinaCom": [
+        "clipe-saco-cafe",
+        "porta-guardanapos-slim",
+        "bandeja-hexagonal-coador"
+      ]
     },
     {
       "slug": "porta-copos-universal",
@@ -617,9 +665,6 @@
       ],
       "preco": 68.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -634,8 +679,13 @@
         "pesoGramas": 36,
         "alturaCm": 14.4,
         "larguraCm": 7.9,
-        "comprimentoCm": 9.0
-      }
+        "comprimentoCm": 9
+      },
+      "combinaCom": [
+        "porta-guardanapos-slim",
+        "suporte-para-latas",
+        "bandeja-hexagonal-coador"
+      ]
     },
     {
       "slug": "porta-guardanapos-slim",
@@ -681,9 +731,6 @@
       ],
       "preco": 68.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -694,10 +741,15 @@
       "pastaOrigem": "Organização/Porta-Guardanapos Slim",
       "envio": {
         "pesoGramas": 102,
-        "alturaCm": 17.0,
-        "larguraCm": 6.0,
-        "comprimentoCm": 8.0
-      }
+        "alturaCm": 17,
+        "larguraCm": 6,
+        "comprimentoCm": 8
+      },
+      "combinaCom": [
+        "porta-copos-universal",
+        "arvore-porta-guardanapos",
+        "porta-guardanapos-xicara"
+      ]
     },
     {
       "slug": "porta-guardanapos-xicara",
@@ -735,9 +787,6 @@
       ],
       "preco": 29.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -751,9 +800,14 @@
       "envio": {
         "pesoGramas": 9,
         "alturaCm": 10.8,
-        "larguraCm": 4.0,
+        "larguraCm": 4,
         "comprimentoCm": 14.6
-      }
+      },
+      "combinaCom": [
+        "porta-guardanapos-slim",
+        "arvore-porta-guardanapos",
+        "porta-copos-amantes-cafe"
+      ]
     },
     {
       "slug": "arvore-porta-guardanapos",
@@ -795,9 +849,6 @@
       ],
       "preco": 42.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -809,9 +860,14 @@
       "envio": {
         "pesoGramas": 31,
         "alturaCm": 2.6,
-        "larguraCm": 7.0,
-        "comprimentoCm": 12.0
-      }
+        "larguraCm": 7,
+        "comprimentoCm": 12
+      },
+      "combinaCom": [
+        "porta-guardanapos-slim",
+        "porta-guardanapos-xicara",
+        "quadro-xicaras"
+      ]
     },
     {
       "slug": "porta-recados-grao-cafe",
@@ -853,9 +909,6 @@
       ],
       "preco": 22.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": [
         "branco",
         "preto",
@@ -872,10 +925,15 @@
       "pastaOrigem": "Organização/Porta-Recados Grão de Café",
       "envio": {
         "pesoGramas": 2,
-        "alturaCm": 3.0,
+        "alturaCm": 3,
         "larguraCm": 2.1,
         "comprimentoCm": 1.5
-      }
+      },
+      "combinaCom": [
+        "porta-copos-grao-cafe",
+        "buddy-cafe",
+        "grao-de-la"
+      ]
     },
     {
       "slug": "secador-coador-v60",
@@ -917,9 +975,6 @@
       ],
       "preco": 31.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -930,10 +985,16 @@
       "pastaOrigem": "Organização/Secador para Coador V60",
       "envio": {
         "pesoGramas": 17,
-        "alturaCm": 6.0,
-        "larguraCm": 9.0,
-        "comprimentoCm": 4.0
-      }
+        "alturaCm": 6,
+        "larguraCm": 9,
+        "comprimentoCm": 4
+      },
+      "combinaCom": [
+        "suporte-coador-cafe",
+        "caixa-filtro-v60",
+        "bandeja-hexagonal-coador",
+        "suporte-filtro-destacavel"
+      ]
     },
     {
       "slug": "suporte-expositor-bialetti",
@@ -971,9 +1032,6 @@
       ],
       "preco": 25.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -989,7 +1047,12 @@
         "alturaCm": 7.7,
         "larguraCm": 9.8,
         "comprimentoCm": 5.5
-      }
+      },
+      "combinaCom": [
+        "base-cafeteira-moka-4-xicaras",
+        "luminaria-moka",
+        "ornamentos-cafe"
+      ]
     },
     {
       "slug": "suporte-coador-apoio-removivel",
@@ -1035,9 +1098,6 @@
       ],
       "preco": 93.99,
       "destaque": true,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1050,10 +1110,15 @@
       "pastaOrigem": "Organização/Suporte para Coador com Apoio Removível",
       "envio": {
         "pesoGramas": 211,
-        "alturaCm": 13.0,
-        "larguraCm": 18.0,
-        "comprimentoCm": 15.0
-      }
+        "alturaCm": 13,
+        "larguraCm": 18,
+        "comprimentoCm": 15
+      },
+      "combinaCom": [
+        "caixa-filtro-v60",
+        "secador-coador-v60",
+        "knock-box"
+      ]
     },
     {
       "slug": "coracao-batida-cafe",
@@ -1095,9 +1160,6 @@
       ],
       "preco": 20.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1108,10 +1170,15 @@
       "pastaOrigem": "Decoração/Batida de Coração com Café",
       "envio": {
         "pesoGramas": 7,
-        "alturaCm": 37.0,
+        "alturaCm": 37,
         "larguraCm": 16.3,
-        "comprimentoCm": 1.0
-      }
+        "comprimentoCm": 1
+      },
+      "combinaCom": [
+        "placa-mais-espresso-menos-depresso",
+        "quadro-xicaras",
+        "cantinho-do-cafe"
+      ]
     },
     {
       "slug": "cachepo-xicara",
@@ -1153,9 +1220,6 @@
       ],
       "preco": 60.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1168,9 +1232,14 @@
       "envio": {
         "pesoGramas": 63,
         "alturaCm": 8.1,
-        "larguraCm": 10.0,
-        "comprimentoCm": 7.0
-      }
+        "larguraCm": 10,
+        "comprimentoCm": 7
+      },
+      "combinaCom": [
+        "capivara",
+        "grao-de-la",
+        "xicara-cafe-espresso"
+      ]
     },
     {
       "slug": "capivara",
@@ -1207,9 +1276,6 @@
       ],
       "preco": 41.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": [
         "branco",
         "preto",
@@ -1229,8 +1295,14 @@
         "pesoGramas": 34,
         "alturaCm": 6.5,
         "larguraCm": 7.8,
-        "comprimentoCm": 10.0
-      }
+        "comprimentoCm": 10
+      },
+      "combinaCom": [
+        "cortador-biscoito-capivara",
+        "buddy-cafe",
+        "grao-de-la",
+        "cachepo-xicara"
+      ]
     },
     {
       "slug": "copo-cafe-buddy",
@@ -1264,9 +1336,6 @@
       ],
       "preco": 28.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1307,7 +1376,12 @@
         "alturaCm": 8.3,
         "larguraCm": 5.2,
         "comprimentoCm": 2.4
-      }
+      },
+      "combinaCom": [
+        "buddy-cafe",
+        "mug-buddy",
+        "xicara-cafe-espresso"
+      ]
     },
     {
       "slug": "fantasma-cafe",
@@ -1345,9 +1419,6 @@
       ],
       "preco": 25.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1388,7 +1459,12 @@
         "alturaCm": 4.2,
         "larguraCm": 5.4,
         "comprimentoCm": 8.9
-      }
+      },
+      "combinaCom": [
+        "buddy-cafe",
+        "grao-de-la",
+        "capivara"
+      ]
     },
     {
       "slug": "buddy-cafe",
@@ -1426,9 +1502,6 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": [
         "branco",
         "preto",
@@ -1446,7 +1519,13 @@
         "alturaCm": 7.1,
         "larguraCm": 8.2,
         "comprimentoCm": 6.7
-      }
+      },
+      "combinaCom": [
+        "copo-cafe-buddy",
+        "grao-de-la",
+        "mug-buddy",
+        "fantasma-cafe"
+      ]
     },
     {
       "slug": "grao-de-la",
@@ -1488,9 +1567,6 @@
       ],
       "preco": 21.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": [
         "branco",
         "preto",
@@ -1506,8 +1582,14 @@
         "pesoGramas": 8,
         "alturaCm": 5.2,
         "larguraCm": 7.3,
-        "comprimentoCm": 8.0
-      }
+        "comprimentoCm": 8
+      },
+      "combinaCom": [
+        "buddy-cafe",
+        "porta-recados-grao-cafe",
+        "capivara",
+        "fantasma-cafe"
+      ]
     },
     {
       "slug": "quadros-decoracao-cafe",
@@ -1553,9 +1635,6 @@
       ],
       "preco": 59.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1569,7 +1648,13 @@
         "alturaCm": 8.8,
         "larguraCm": 8.8,
         "comprimentoCm": 0.2
-      }
+      },
+      "combinaCom": [
+        "quadro-xicaras",
+        "cantinho-do-cafe",
+        "placa-coffee",
+        "plaquinha-banheiro"
+      ]
     },
     {
       "slug": "placa-coffee",
@@ -1607,9 +1692,6 @@
       ],
       "preco": 32.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1624,7 +1706,13 @@
         "alturaCm": 23.5,
         "larguraCm": 13.9,
         "comprimentoCm": 1.8
-      }
+      },
+      "combinaCom": [
+        "placa-coffee-time",
+        "luminaria-coffee-here",
+        "cantinho-do-cafe",
+        "plaquinha-banheiro"
+      ]
     },
     {
       "slug": "placa-coffee-time",
@@ -1666,9 +1754,6 @@
       ],
       "preco": 21.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1680,10 +1765,15 @@
       "pastaOrigem": "Decoração/Letreiro COFFEE TIME",
       "envio": {
         "pesoGramas": 9,
-        "alturaCm": 10.0,
+        "alturaCm": 10,
         "larguraCm": 5.4,
         "comprimentoCm": 0.2
-      }
+      },
+      "combinaCom": [
+        "placa-coffee",
+        "placa-hora-do-cafe",
+        "luminaria-coffee-trips"
+      ]
     },
     {
       "slug": "marcador-paginas-xicara",
@@ -1721,9 +1811,6 @@
       ],
       "preco": 22.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1738,7 +1825,12 @@
         "alturaCm": 11.6,
         "larguraCm": 2.9,
         "comprimentoCm": 3.7
-      }
+      },
+      "combinaCom": [
+        "xicara-cafe-espresso",
+        "grao-de-la",
+        "placa-coffee-time"
+      ]
     },
     {
       "slug": "ornamentos-cafe",
@@ -1780,9 +1872,6 @@
       ],
       "preco": 40.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1796,10 +1885,15 @@
       "pastaOrigem": "Decoração/Ornamentos de Café — Jogo com 4",
       "envio": {
         "pesoGramas": 6,
-        "alturaCm": 6.0,
-        "larguraCm": 7.0,
+        "alturaCm": 6,
+        "larguraCm": 7,
         "comprimentoCm": 0.3
-      }
+      },
+      "combinaCom": [
+        "suporte-expositor-bialetti",
+        "cantinho-do-cafe",
+        "kit-cortadores-biscoito-natal"
+      ]
     },
     {
       "slug": "placa-latte-cafe-espresso",
@@ -1841,9 +1935,6 @@
       ],
       "preco": 23.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1857,8 +1948,13 @@
         "pesoGramas": 55,
         "alturaCm": 17.1,
         "larguraCm": 29.5,
-        "comprimentoCm": 1.0
-      }
+        "comprimentoCm": 1
+      },
+      "combinaCom": [
+        "quadro-xicaras",
+        "placa-coffee",
+        "cantinho-do-cafe"
+      ]
     },
     {
       "slug": "quadro-pao",
@@ -1900,9 +1996,6 @@
       ],
       "preco": 35.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1915,8 +2008,14 @@
         "pesoGramas": 18,
         "alturaCm": 14.5,
         "larguraCm": 13.9,
-        "comprimentoCm": 1.0
-      }
+        "comprimentoCm": 1
+      },
+      "combinaCom": [
+        "pote-amanteigados",
+        "quadro-xicaras",
+        "placa-hora-do-cafe",
+        "porta-banana-gansinho"
+      ]
     },
     {
       "slug": "placa-hora-do-cafe",
@@ -1958,9 +2057,6 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -1974,8 +2070,13 @@
         "pesoGramas": 25,
         "alturaCm": 19.6,
         "larguraCm": 16.2,
-        "comprimentoCm": 1.0
-      }
+        "comprimentoCm": 1
+      },
+      "combinaCom": [
+        "placa-coffee-time",
+        "placa-cafe-sempre-boa-ideia",
+        "luminaria-coffee-here"
+      ]
     },
     {
       "slug": "placa-cafe-sempre-boa-ideia",
@@ -2017,9 +2118,6 @@
       ],
       "preco": 28.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2033,7 +2131,12 @@
         "alturaCm": 13.2,
         "larguraCm": 14.8,
         "comprimentoCm": 0.9
-      }
+      },
+      "combinaCom": [
+        "placa-hora-do-cafe",
+        "base-cafeteira-moka-4-xicaras",
+        "luminaria-moka-placa"
+      ]
     },
     {
       "slug": "plaquinha-banheiro",
@@ -2083,9 +2186,6 @@
       ],
       "preco": 47.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2097,9 +2197,14 @@
       "envio": {
         "pesoGramas": 50,
         "alturaCm": 1.4,
-        "larguraCm": 12.0,
-        "comprimentoCm": 15.0
-      }
+        "larguraCm": 12,
+        "comprimentoCm": 15
+      },
+      "combinaCom": [
+        "placa-hora-do-cafe",
+        "quadro-xicaras",
+        "placa-coffee"
+      ]
     },
     {
       "slug": "cantinho-do-cafe",
@@ -2145,9 +2250,6 @@
       ],
       "preco": 28.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2158,10 +2260,15 @@
       "pastaOrigem": "Decoração/Trio Cantinho do Café",
       "envio": {
         "pesoGramas": 14,
-        "alturaCm": 24.0,
+        "alturaCm": 24,
         "larguraCm": 12.4,
         "comprimentoCm": 0.3
-      }
+      },
+      "combinaCom": [
+        "quadros-decoracao-cafe",
+        "quadro-xicaras",
+        "placa-coffee"
+      ]
     },
     {
       "slug": "quadro-xicaras",
@@ -2207,9 +2314,6 @@
       ],
       "preco": 35.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2221,9 +2325,14 @@
       "envio": {
         "pesoGramas": 46,
         "alturaCm": 16.1,
-        "larguraCm": 24.0,
+        "larguraCm": 24,
         "comprimentoCm": 0.5
-      }
+      },
+      "combinaCom": [
+        "quadros-decoracao-cafe",
+        "cantinho-do-cafe",
+        "placa-latte-cafe-espresso"
+      ]
     },
     {
       "slug": "luminaria-coffee-here",
@@ -2265,9 +2374,6 @@
       ],
       "preco": 64.99,
       "destaque": true,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2281,7 +2387,13 @@
         "alturaCm": 22.4,
         "larguraCm": 4.2,
         "comprimentoCm": 15.4
-      }
+      },
+      "combinaCom": [
+        "luminaria-premium-coffee",
+        "luminaria-coffee-trips",
+        "placa-coffee",
+        "luminaria-copo-cafe"
+      ]
     },
     {
       "slug": "luminaria-coffee-trips",
@@ -2323,9 +2435,6 @@
       ],
       "preco": 63.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2336,10 +2445,15 @@
       "pastaOrigem": "Luminárias/Lightbox COFFEE TRIPS",
       "envio": {
         "pesoGramas": 131,
-        "alturaCm": 5.0,
-        "larguraCm": 12.0,
+        "alturaCm": 5,
+        "larguraCm": 12,
         "comprimentoCm": 11.2
-      }
+      },
+      "combinaCom": [
+        "luminaria-coffee-here",
+        "luminaria-premium-coffee",
+        "placa-coffee-time"
+      ]
     },
     {
       "slug": "luminaria-moka-placa",
@@ -2381,9 +2495,6 @@
       ],
       "preco": 64.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2397,7 +2508,12 @@
         "alturaCm": 7.6,
         "larguraCm": 10.4,
         "comprimentoCm": 10.4
-      }
+      },
+      "combinaCom": [
+        "luminaria-moka",
+        "base-cafeteira-moka-4-xicaras",
+        "suporte-expositor-bialetti"
+      ]
     },
     {
       "slug": "luminaria-premium-coffee",
@@ -2439,9 +2555,6 @@
       ],
       "preco": 64.99,
       "destaque": true,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2455,7 +2568,13 @@
         "alturaCm": 4.8,
         "larguraCm": 4.9,
         "comprimentoCm": 17.5
-      }
+      },
+      "combinaCom": [
+        "luminaria-coffee-here",
+        "luminaria-coffee-trips",
+        "placa-hora-do-cafe",
+        "luminaria-copo-cafe"
+      ]
     },
     {
       "slug": "luminaria-moka",
@@ -2501,9 +2620,6 @@
       ],
       "preco": 65.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2516,8 +2632,13 @@
         "pesoGramas": 84,
         "alturaCm": 10.6,
         "larguraCm": 9.3,
-        "comprimentoCm": 7.0
-      }
+        "comprimentoCm": 7
+      },
+      "combinaCom": [
+        "luminaria-moka-placa",
+        "suporte-expositor-bialetti",
+        "base-cafeteira-moka-4-xicaras"
+      ]
     },
     {
       "slug": "luminaria-copo-cafe",
@@ -2563,9 +2684,6 @@
       ],
       "preco": 44.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2579,7 +2697,12 @@
         "alturaCm": 10.8,
         "larguraCm": 10.8,
         "comprimentoCm": 13.2
-      }
+      },
+      "combinaCom": [
+        "copo-cafe-buddy",
+        "luminaria-coffee-trips",
+        "mug-buddy"
+      ]
     },
     {
       "slug": "adaptador-dolce-gusto-tres-coracoes",
@@ -2624,9 +2747,6 @@
       ],
       "preco": 21.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2640,7 +2760,13 @@
         "alturaCm": 5.2,
         "larguraCm": 5.2,
         "comprimentoCm": 4.1
-      }
+      },
+      "combinaCom": [
+        "suporte-dolce-gusto-20-capsulas",
+        "torre-capsulas-dupla",
+        "lixeira-capsulas-dolce-gusto",
+        "porta-capsulas-universal"
+      ]
     },
     {
       "slug": "caixa-filtro-v60",
@@ -2678,9 +2804,6 @@
       ],
       "preco": 67.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [
         {
@@ -2711,9 +2834,15 @@
       "envio": {
         "pesoGramas": 79,
         "alturaCm": 7.6,
-        "larguraCm": 14.0,
+        "larguraCm": 14,
         "comprimentoCm": 14.2
-      }
+      },
+      "combinaCom": [
+        "modelador-filtro-v60",
+        "suporte-coador-cafe",
+        "secador-coador-v60",
+        "porta-filtro-simples-60"
+      ]
     },
     {
       "slug": "colher-tamper",
@@ -2755,9 +2884,6 @@
       ],
       "preco": 33.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2771,8 +2897,14 @@
         "pesoGramas": 33,
         "alturaCm": 5.7,
         "larguraCm": 5.7,
-        "comprimentoCm": 12.0
-      }
+        "comprimentoCm": 12
+      },
+      "combinaCom": [
+        "estacao-tamping",
+        "knock-box",
+        "dosador-cafe",
+        "estojo-papel-aeropress"
+      ]
     },
     {
       "slug": "estojo-papel-aeropress",
@@ -2816,9 +2948,6 @@
       ],
       "preco": 27.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2832,7 +2961,12 @@
         "alturaCm": 7.5,
         "larguraCm": 6.9,
         "comprimentoCm": 2.5
-      }
+      },
+      "combinaCom": [
+        "dosador-cafe",
+        "clipe-saco-cafe",
+        "colher-tamper"
+      ]
     },
     {
       "slug": "suporte-recarga-nespresso-vertuo",
@@ -2878,9 +3012,6 @@
       ],
       "preco": 32.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2892,9 +3023,15 @@
       "envio": {
         "pesoGramas": 15,
         "alturaCm": 11.5,
-        "larguraCm": 6.0,
+        "larguraCm": 6,
         "comprimentoCm": 3.9
-      }
+      },
+      "combinaCom": [
+        "porta-capsulas-universal",
+        "lixeira-capsulas-dolce-gusto",
+        "dosador-cafe",
+        "knock-box"
+      ]
     },
     {
       "slug": "latteshot",
@@ -2942,9 +3079,6 @@
       ],
       "preco": 141.99,
       "destaque": true,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -2959,9 +3093,13 @@
       "envio": {
         "pesoGramas": 83,
         "alturaCm": 20.3,
-        "larguraCm": 8.0,
+        "larguraCm": 8,
         "comprimentoCm": 9.6
-      }
+      },
+      "combinaCom": [
+        "molde-cafe-latteshot",
+        "stencil-cards-latteshot"
+      ]
     },
     {
       "slug": "molde-cafe-latteshot",
@@ -3002,9 +3140,6 @@
       ],
       "preco": 80.99,
       "destaque": true,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3023,10 +3158,14 @@
       "pastaOrigem": "Preparo/Moldes de Estêncil Avulsos",
       "envio": {
         "pesoGramas": 40,
-        "alturaCm": 9.0,
+        "alturaCm": 9,
         "larguraCm": 2.9,
         "comprimentoCm": 12.6
-      }
+      },
+      "combinaCom": [
+        "latteshot",
+        "stencil-cards-latteshot"
+      ]
     },
     {
       "slug": "porta-filtro-simples-60",
@@ -3076,9 +3215,6 @@
       ],
       "preco": 45.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3092,7 +3228,12 @@
         "alturaCm": 13.1,
         "larguraCm": 12.2,
         "comprimentoCm": 4.8
-      }
+      },
+      "combinaCom": [
+        "caixa-filtro-v60",
+        "secador-coador-v60",
+        "modelador-filtro-v60"
+      ]
     },
     {
       "slug": "stencil-cards-latteshot",
@@ -3134,9 +3275,6 @@
       ],
       "preco": 93.99,
       "destaque": true,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3150,7 +3288,11 @@
         "alturaCm": 18.6,
         "larguraCm": 10.4,
         "comprimentoCm": 0.2
-      }
+      },
+      "combinaCom": [
+        "latteshot",
+        "molde-cafe-latteshot"
+      ]
     },
     {
       "slug": "suporte-filtro-destacavel",
@@ -3196,9 +3338,6 @@
       ],
       "preco": 38.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": [
         "branco",
         "preto",
@@ -3213,10 +3352,15 @@
       "pastaOrigem": "Preparo/Suporte de Filtro Destacável",
       "envio": {
         "pesoGramas": 13,
-        "alturaCm": 4.0,
+        "alturaCm": 4,
         "larguraCm": 10.5,
         "comprimentoCm": 15.1
-      }
+      },
+      "combinaCom": [
+        "caixa-filtro-v60",
+        "modelador-filtro-v60",
+        "bandeja-hexagonal-coador"
+      ]
     },
     {
       "slug": "modelador-filtro-v60",
@@ -3258,9 +3402,6 @@
       ],
       "preco": 36.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3274,7 +3415,13 @@
         "alturaCm": 8.6,
         "larguraCm": 8.6,
         "comprimentoCm": 8.4
-      }
+      },
+      "combinaCom": [
+        "caixa-filtro-v60",
+        "suporte-coador-cafe",
+        "secador-coador-v60",
+        "porta-filtro-simples-60"
+      ]
     },
     {
       "slug": "suporte-dolce-gusto-20-capsulas",
@@ -3316,9 +3463,6 @@
       ],
       "preco": 119.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3335,7 +3479,13 @@
         "alturaCm": 26.9,
         "larguraCm": 12.9,
         "comprimentoCm": 16.2
-      }
+      },
+      "combinaCom": [
+        "torre-capsulas-dupla",
+        "adaptador-dolce-gusto-tres-coracoes",
+        "lixeira-capsulas-dolce-gusto",
+        "porta-capsulas-universal"
+      ]
     },
     {
       "slug": "porta-capsulas-universal",
@@ -3377,9 +3527,6 @@
       ],
       "preco": 89.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3399,7 +3546,13 @@
         "alturaCm": 16.6,
         "larguraCm": 14.4,
         "comprimentoCm": 10.9
-      }
+      },
+      "combinaCom": [
+        "porta-capsulas-deluxe",
+        "lixeira-capsulas-dolce-gusto",
+        "mug-buddy",
+        "suporte-recarga-nespresso-vertuo"
+      ]
     },
     {
       "slug": "porta-capsulas-deluxe",
@@ -3441,9 +3594,6 @@
       ],
       "preco": 95.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3460,8 +3610,14 @@
         "pesoGramas": 62,
         "alturaCm": 10.3,
         "larguraCm": 12.6,
-        "comprimentoCm": 14.0
-      }
+        "comprimentoCm": 14
+      },
+      "combinaCom": [
+        "porta-capsulas-universal",
+        "lixeira-capsulas-dolce-gusto",
+        "knock-box",
+        "bandeja-hexagonal-coador"
+      ]
     },
     {
       "slug": "torre-capsulas-dupla",
@@ -3503,9 +3659,6 @@
       ],
       "preco": 76.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3519,10 +3672,16 @@
       "pastaOrigem": "Organização/Torre Dupla para Cápsulas",
       "envio": {
         "pesoGramas": 130,
-        "alturaCm": 8.0,
-        "larguraCm": 13.0,
-        "comprimentoCm": 17.0
-      }
+        "alturaCm": 8,
+        "larguraCm": 13,
+        "comprimentoCm": 17
+      },
+      "combinaCom": [
+        "suporte-dolce-gusto-20-capsulas",
+        "adaptador-dolce-gusto-tres-coracoes",
+        "lixeira-capsulas-dolce-gusto",
+        "porta-capsulas-universal"
+      ]
     },
     {
       "slug": "porta-capsulas-nespresso",
@@ -3564,9 +3723,6 @@
       ],
       "preco": 29.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3583,8 +3739,14 @@
         "pesoGramas": 27,
         "alturaCm": 7.9,
         "larguraCm": 17.4,
-        "comprimentoCm": 1.0
-      }
+        "comprimentoCm": 1
+      },
+      "combinaCom": [
+        "dispenser-capsulas-nespresso",
+        "porta-capsulas-deluxe",
+        "porta-capsulas-universal",
+        "lixeira-capsulas-dolce-gusto"
+      ]
     },
     {
       "slug": "lixeira-capsulas-dolce-gusto",
@@ -3622,9 +3784,6 @@
       ],
       "preco": 99.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "partesCores": [
         {
@@ -3659,7 +3818,13 @@
         "alturaCm": 17.1,
         "larguraCm": 16.5,
         "comprimentoCm": 16.5
-      }
+      },
+      "combinaCom": [
+        "porta-capsulas-universal",
+        "porta-capsulas-deluxe",
+        "knock-box",
+        "bandeja-hexagonal-coador"
+      ]
     },
     {
       "slug": "organizador-cabo-oreo",
@@ -3697,9 +3862,6 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3715,7 +3877,12 @@
         "alturaCm": 5.3,
         "larguraCm": 5.3,
         "comprimentoCm": 1.6
-      }
+      },
+      "combinaCom": [
+        "organizador-cabo-biscoito",
+        "pote-amanteigados",
+        "suporte-apple-watch"
+      ]
     },
     {
       "slug": "organizador-cabo-biscoito",
@@ -3753,9 +3920,6 @@
       ],
       "preco": 26.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": [
         "branco",
         "preto",
@@ -3794,7 +3958,12 @@
         "alturaCm": 9.7,
         "larguraCm": 4.9,
         "comprimentoCm": 6.3
-      }
+      },
+      "combinaCom": [
+        "organizador-cabo-oreo",
+        "pote-amanteigados",
+        "suporte-apple-watch"
+      ]
     },
     {
       "slug": "mug-buddy",
@@ -3836,9 +4005,6 @@
       ],
       "preco": 52.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": [
         "branco",
         "preto",
@@ -3856,9 +4022,14 @@
       "envio": {
         "pesoGramas": 73,
         "alturaCm": 12.7,
-        "larguraCm": 11.0,
+        "larguraCm": 11,
         "comprimentoCm": 7.6
-      }
+      },
+      "combinaCom": [
+        "copo-cafe-buddy",
+        "buddy-cafe",
+        "porta-copos-grao-cafe"
+      ]
     },
     {
       "slug": "suporte-para-latas",
@@ -3900,9 +4071,6 @@
       ],
       "preco": 59.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3918,7 +4086,12 @@
         "alturaCm": 7.8,
         "larguraCm": 11.4,
         "comprimentoCm": 11.5
-      }
+      },
+      "combinaCom": [
+        "porta-copos-universal",
+        "abridor-latas-garrafas",
+        "mug-buddy"
+      ]
     },
     {
       "slug": "abridor-latas-garrafas",
@@ -3955,9 +4128,6 @@
       ],
       "preco": 19.99,
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "fotos": [
@@ -3970,7 +4140,12 @@
         "alturaCm": 5.7,
         "larguraCm": 2.2,
         "comprimentoCm": 1.3
-      }
+      },
+      "combinaCom": [
+        "suporte-para-latas",
+        "roleta-de-shots",
+        "medidor-agua-ou-cerveja"
+      ]
     },
     {
       "slug": "base-cafeteira-moka-4-xicaras",
@@ -4019,9 +4194,6 @@
       ],
       "pastaOrigem": "Decoração/Base para Cafeteira Moka 4 Xícaras",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -4030,7 +4202,12 @@
         "alturaCm": 11.2,
         "larguraCm": 9.9,
         "comprimentoCm": 18.3
-      }
+      },
+      "combinaCom": [
+        "suporte-expositor-bialetti",
+        "luminaria-moka",
+        "cantinho-do-cafe"
+      ]
     },
     {
       "slug": "suporte-coador-cafe",
@@ -4075,18 +4252,21 @@
       ],
       "pastaOrigem": "Preparo/Suporte Coador de Café",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 37,
         "alturaCm": 15.5,
-        "larguraCm": 12.0,
-        "comprimentoCm": 18.0
-      }
+        "larguraCm": 12,
+        "comprimentoCm": 18
+      },
+      "combinaCom": [
+        "caixa-filtro-v60",
+        "secador-coador-v60",
+        "bandeja-hexagonal-coador",
+        "suporte-filtro-destacavel"
+      ]
     },
     {
       "slug": "xicara-cafe-espresso",
@@ -4127,18 +4307,21 @@
       ],
       "pastaOrigem": "Decoração/Xícara de Café Espresso",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 24,
         "alturaCm": 12.1,
-        "larguraCm": 6.0,
+        "larguraCm": 6,
         "comprimentoCm": 7.6
-      }
+      },
+      "combinaCom": [
+        "marcador-paginas-xicara",
+        "buddy-cafe",
+        "grao-de-la",
+        "cachepo-xicara"
+      ]
     },
     {
       "slug": "cortador-biscoito-capivara",
@@ -4187,18 +4370,20 @@
       ],
       "pastaOrigem": "Diversos/Cortador de Biscoito Capivara",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 8,
         "alturaCm": 8.6,
-        "larguraCm": 7.0,
+        "larguraCm": 7,
         "comprimentoCm": 1.1
-      }
+      },
+      "combinaCom": [
+        "capivara",
+        "pote-amanteigados",
+        "kit-cortadores-biscoito-natal"
+      ]
     },
     {
       "slug": "mao-italiana",
@@ -4243,9 +4428,6 @@
       ],
       "pastaOrigem": "Diversos/Mão Italiana",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -4254,7 +4436,12 @@
         "alturaCm": 15.1,
         "larguraCm": 4.4,
         "comprimentoCm": 9.1
-      }
+      },
+      "combinaCom": [
+        "suporte-expositor-bialetti",
+        "base-cafeteira-moka-4-xicaras",
+        "pato"
+      ]
     },
     {
       "slug": "medidor-agua-ou-cerveja",
@@ -4302,18 +4489,20 @@
       ],
       "pastaOrigem": "Diversos/Medidor Água ou Cerveja",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 33,
-        "alturaCm": 16.0,
-        "larguraCm": 16.0,
+        "alturaCm": 16,
+        "larguraCm": 16,
         "comprimentoCm": 1.5
-      }
+      },
+      "combinaCom": [
+        "roleta-de-shots",
+        "abridor-latas-garrafas",
+        "mao-italiana"
+      ]
     },
     {
       "slug": "cortador-biscoito-gengibre",
@@ -4356,18 +4545,20 @@
       ],
       "pastaOrigem": "Diversos/Natal/Cortador de Biscoito Gengibre",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 10,
         "alturaCm": 5.2,
-        "larguraCm": 8.0,
+        "larguraCm": 8,
         "comprimentoCm": 1.2
-      }
+      },
+      "combinaCom": [
+        "kit-cortadores-biscoito-natal",
+        "kit-carimbo-biscoito-grinch",
+        "pote-amanteigados"
+      ]
     },
     {
       "slug": "kit-cortadores-biscoito-natal",
@@ -4412,18 +4603,20 @@
       ],
       "pastaOrigem": "Diversos/Natal/Cortador de cookie natal",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 32,
-        "alturaCm": 13.0,
+        "alturaCm": 13,
         "larguraCm": 7.9,
         "comprimentoCm": 8.4
-      }
+      },
+      "combinaCom": [
+        "cortador-biscoito-gengibre",
+        "kit-carimbo-biscoito-grinch",
+        "pote-amanteigados"
+      ]
     },
     {
       "slug": "kit-carimbo-biscoito-grinch",
@@ -4472,9 +4665,6 @@
       ],
       "pastaOrigem": "Diversos/Natal/Cortador de massas grinch",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -4483,7 +4673,12 @@
         "alturaCm": 8.5,
         "larguraCm": 9.5,
         "comprimentoCm": 1.3
-      }
+      },
+      "combinaCom": [
+        "porta-copos-grinch",
+        "kit-cortadores-biscoito-natal",
+        "cortador-biscoito-gengibre"
+      ]
     },
     {
       "slug": "porta-copos-grinch",
@@ -4528,18 +4723,20 @@
       ],
       "pastaOrigem": "Diversos/Natal/Porta-Copos Grinch",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 50,
         "alturaCm": 4.9,
-        "larguraCm": 11.0,
-        "comprimentoCm": 11.0
-      }
+        "larguraCm": 11,
+        "comprimentoCm": 11
+      },
+      "combinaCom": [
+        "kit-carimbo-biscoito-grinch",
+        "kit-cortadores-biscoito-natal",
+        "porta-copos-amantes-cafe"
+      ]
     },
     {
       "slug": "pato",
@@ -4588,9 +4785,6 @@
       ],
       "pastaOrigem": "Diversos/Pato",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -4599,7 +4793,12 @@
         "alturaCm": 32.3,
         "larguraCm": 11.9,
         "comprimentoCm": 12.7
-      }
+      },
+      "combinaCom": [
+        "porta-garrafa-vinho-equilibrio",
+        "suporte-vinho-gato",
+        "suporte-garrafa-tacas-vinho"
+      ]
     },
     {
       "slug": "placa-mais-espresso-menos-depresso",
@@ -4642,18 +4841,20 @@
       ],
       "pastaOrigem": "Decoração/Placa Café Mais Espresso Menos Depressão",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 7,
-        "alturaCm": 10.0,
+        "alturaCm": 10,
         "larguraCm": 13.4,
         "comprimentoCm": 0.2
-      }
+      },
+      "combinaCom": [
+        "placa-gato-mais-espresso-menos-depresso",
+        "placa-coffee-time",
+        "coracao-batida-cafe"
+      ]
     },
     {
       "slug": "placa-gato-mais-espresso-menos-depresso",
@@ -4698,18 +4899,20 @@
       ],
       "pastaOrigem": "Decoração/Placa Gato Mais Espresso Menos Depressão",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 6,
-        "alturaCm": 5.0,
+        "alturaCm": 5,
         "larguraCm": 8.7,
         "comprimentoCm": 0.4
-      }
+      },
+      "combinaCom": [
+        "placa-mais-espresso-menos-depresso",
+        "suporte-vinho-gato",
+        "placa-coffee-time"
+      ]
     },
     {
       "slug": "porta-banana-gansinho",
@@ -4754,9 +4957,6 @@
       ],
       "pastaOrigem": "Diversos/Porta-Banana Gansinho",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -4765,7 +4965,12 @@
         "alturaCm": 14.9,
         "larguraCm": 14.9,
         "comprimentoCm": 25.2
-      }
+      },
+      "combinaCom": [
+        "pote-amanteigados",
+        "porta-copos-universal",
+        "quadro-pao"
+      ]
     },
     {
       "slug": "suporte-garrafa-tacas-vinho",
@@ -4810,9 +5015,6 @@
       ],
       "pastaOrigem": "Diversos/Porta-Copo A1 Mini",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -4821,7 +5023,12 @@
         "alturaCm": 1.5,
         "larguraCm": 22.8,
         "comprimentoCm": 22.8
-      }
+      },
+      "combinaCom": [
+        "suporte-ondulado-vinho",
+        "pato",
+        "porta-garrafa-vinho-equilibrio"
+      ]
     },
     {
       "slug": "porta-copos-amantes-cafe",
@@ -4869,9 +5076,6 @@
       ],
       "pastaOrigem": "Organização/Porta-Copos Amantes de Café",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -4880,7 +5084,12 @@
         "alturaCm": 29.1,
         "larguraCm": 29.8,
         "comprimentoCm": 0.4
-      }
+      },
+      "combinaCom": [
+        "porta-copos-grao-cafe",
+        "porta-guardanapos-xicara",
+        "placa-mais-espresso-menos-depresso"
+      ]
     },
     {
       "slug": "porta-copos-grao-cafe",
@@ -4929,9 +5138,6 @@
       ],
       "pastaOrigem": "Organização/Porta-Copos Grão de Café",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -4940,7 +5146,12 @@
         "alturaCm": 8.5,
         "larguraCm": 8.5,
         "comprimentoCm": 0.3
-      }
+      },
+      "combinaCom": [
+        "porta-copos-amantes-cafe",
+        "porta-recados-grao-cafe",
+        "buddy-cafe"
+      ]
     },
     {
       "slug": "porta-garrafa-vinho-equilibrio",
@@ -4985,9 +5196,6 @@
       ],
       "pastaOrigem": "Diversos/Porta-Garrafa",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -4996,7 +5204,12 @@
         "alturaCm": 4.5,
         "larguraCm": 15.8,
         "comprimentoCm": 17.6
-      }
+      },
+      "combinaCom": [
+        "suporte-cinetico-vinho",
+        "suporte-vinho-laco-infinito",
+        "suporte-garrafa-tacas-vinho"
+      ]
     },
     {
       "slug": "pote-amanteigados",
@@ -5049,18 +5262,21 @@
       ],
       "pastaOrigem": "Diversos/Pote para amanteigados",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 71,
         "alturaCm": 15.4,
-        "larguraCm": 15.0,
+        "larguraCm": 15,
         "comprimentoCm": 15.4
-      }
+      },
+      "combinaCom": [
+        "kit-cortadores-biscoito-natal",
+        "cortador-biscoito-gengibre",
+        "quadro-pao",
+        "porta-banana-gansinho"
+      ]
     },
     {
       "slug": "roleta-de-shots",
@@ -5101,18 +5317,20 @@
       ],
       "pastaOrigem": "Diversos/Roleta de Shots",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 22,
-        "alturaCm": 5.0,
+        "alturaCm": 5,
         "larguraCm": 7.4,
         "comprimentoCm": 9.8
-      }
+      },
+      "combinaCom": [
+        "medidor-agua-ou-cerveja",
+        "abridor-latas-garrafas",
+        "suporte-garrafa-jack-daniels"
+      ]
     },
     {
       "slug": "suporte-cinetico-vinho",
@@ -5160,9 +5378,6 @@
       ],
       "pastaOrigem": "Diversos/Suporte Cinético para Vinho",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -5171,7 +5386,12 @@
         "alturaCm": 25.4,
         "larguraCm": 5.9,
         "comprimentoCm": 6.3
-      }
+      },
+      "combinaCom": [
+        "porta-garrafa-vinho-equilibrio",
+        "suporte-vinho-laco-infinito",
+        "suporte-garrafa-tacas-vinho"
+      ]
     },
     {
       "slug": "suporte-vinho-chama",
@@ -5219,18 +5439,20 @@
       ],
       "pastaOrigem": "Diversos/Suporte de Vinho Chama",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
       "envio": {
         "pesoGramas": 114,
         "alturaCm": 20.8,
-        "larguraCm": 15.0,
+        "larguraCm": 15,
         "comprimentoCm": 23.8
-      }
+      },
+      "combinaCom": [
+        "suporte-vinho-laco-infinito",
+        "suporte-ondulado-vinho",
+        "suporte-cinetico-vinho"
+      ]
     },
     {
       "slug": "suporte-vinho-gato",
@@ -5279,9 +5501,6 @@
       ],
       "pastaOrigem": "Diversos/Suporte de Vinho Gato",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -5290,7 +5509,12 @@
         "alturaCm": 9.2,
         "larguraCm": 27.9,
         "comprimentoCm": 9.7
-      }
+      },
+      "combinaCom": [
+        "suporte-vinho-laco-infinito",
+        "pato",
+        "placa-gato-mais-espresso-menos-depresso"
+      ]
     },
     {
       "slug": "suporte-vinho-laco-infinito",
@@ -5339,9 +5563,6 @@
       ],
       "pastaOrigem": "Diversos/Suporte de Vinho Laço Infinito",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -5349,8 +5570,13 @@
         "pesoGramas": 172,
         "alturaCm": 20.4,
         "larguraCm": 20.8,
-        "comprimentoCm": 10.0
-      }
+        "comprimentoCm": 10
+      },
+      "combinaCom": [
+        "suporte-vinho-chama",
+        "suporte-cinetico-vinho",
+        "porta-garrafa-vinho-equilibrio"
+      ]
     },
     {
       "slug": "suporte-enrolado-apple-watch",
@@ -5399,9 +5625,6 @@
       ],
       "pastaOrigem": "Diversos/Suporte Enrolado para Apple Watch",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -5410,7 +5633,12 @@
         "alturaCm": 4.2,
         "larguraCm": 4.7,
         "comprimentoCm": 5.4
-      }
+      },
+      "combinaCom": [
+        "suporte-apple-watch",
+        "organizador-cabo-oreo",
+        "suporte-ipad"
+      ]
     },
     {
       "slug": "suporte-ondulado-vinho",
@@ -5459,9 +5687,6 @@
       ],
       "pastaOrigem": "Diversos/Suporte Ondulado para Vinho",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -5469,8 +5694,13 @@
         "pesoGramas": 110,
         "alturaCm": 25.1,
         "larguraCm": 23.1,
-        "comprimentoCm": 12.0
-      }
+        "comprimentoCm": 12
+      },
+      "combinaCom": [
+        "suporte-garrafa-tacas-vinho",
+        "suporte-vinho-chama",
+        "pato"
+      ]
     },
     {
       "slug": "suporte-apple-watch",
@@ -5519,9 +5749,6 @@
       ],
       "pastaOrigem": "Diversos/Suporte para Apple Watch",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -5530,7 +5757,12 @@
         "alturaCm": 7.7,
         "larguraCm": 8.9,
         "comprimentoCm": 3.6
-      }
+      },
+      "combinaCom": [
+        "suporte-enrolado-apple-watch",
+        "organizador-cabo-oreo",
+        "suporte-ipad"
+      ]
     },
     {
       "slug": "suporte-garrafa-jack-daniels",
@@ -5579,9 +5811,6 @@
       ],
       "pastaOrigem": "Diversos/Suporte para Garrafa Jack Daniel's",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -5590,7 +5819,12 @@
         "alturaCm": 9.4,
         "larguraCm": 26.4,
         "comprimentoCm": 1.5
-      }
+      },
+      "combinaCom": [
+        "roleta-de-shots",
+        "suporte-garrafa-tacas-vinho",
+        "abridor-latas-garrafas"
+      ]
     },
     {
       "slug": "suporte-ipad",
@@ -5639,9 +5873,6 @@
       ],
       "pastaOrigem": "Diversos/Suporte para iPad",
       "destaque": false,
-      "preVenda": false,
-      "dataVenda": null,
-      "observacaoPreVenda": "",
       "cores": null,
       "opcoes": [],
       "video": null,
@@ -5650,7 +5881,13 @@
         "alturaCm": 17.4,
         "larguraCm": 17.4,
         "comprimentoCm": 12.7
-      }
+      },
+      "combinaCom": [
+        "suporte-apple-watch",
+        "suporte-enrolado-apple-watch",
+        "organizador-cabo-oreo"
+      ]
     }
-  ]
+  ],
+  "avaliacoes": []
 }
