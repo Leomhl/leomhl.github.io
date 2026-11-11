@@ -3,3 +3,12 @@ _site/
 .DS_Store
 node_modules/
 
+
+# Credenciais locais das ferramentas — NUNCA versionar.
+# ferramentas/.chaves.local  guarda a chave do TinyPNG (e o que mais aparecer).
+# ferramentas/.conta-firebase.json  é a chave da conta de serviço do Firebase,
+# que dá acesso total ao Firestore. Ver ferramentas/colher-depoimentos.mjs.
+ferramentas/.chaves.local
+ferramentas/.conta-firebase.json
+ferramentas/*.local
+*.pem

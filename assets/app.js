@@ -48,6 +48,34 @@
   const produtosDa = (slugCategoria) =>
     catalogo.produtos.filter((p) => p.categoria === slugCategoria);
 
+  /* ---------- Analytics --------------------------------------------------- */
+
+  // Usa os nomes de evento que o GA4 já reconhece (view_item, add_to_cart,
+  // begin_checkout, search) em vez de nomes próprios: assim os relatórios de
+  // monetização se preenchem sozinhos, sem configurar métrica personalizada.
+  //
+  // Guarda o window.gtag porque o site tem que funcionar com a tag bloqueada
+  // por adblock, ou aberto por file:// — nesses casos o evento só não acontece.
+  function medir(nome, parametros) {
+    if (typeof window.gtag !== 'function') return;
+    try {
+      window.gtag('event', nome, parametros || {});
+    } catch {}
+  }
+
+  // O item no formato que o GA4 espera. Preço é o de agora: numa peça com
+  // opção que muda preço, o que importa é o valor que a pessoa está vendo.
+  function itemMedido(p, quantidade = 1) {
+    const preco = precoAtual(p);
+    return {
+      item_id: p.slug,
+      item_name: p.nome,
+      item_category: categoriaDe(p)?.nome || p.categoria,
+      ...(preco != null && { price: preco }),
+      quantity: quantidade,
+    };
+  }
+
   /* ---------- WhatsApp -------------------------------------------------- */
 
   const SVG_ZAP =
@@ -90,7 +118,6 @@
           : `• Valor: ${moeda.format(preco)}`
       );
     }
-    if (p.preVenda) linhas.push(`• ${textoPreVenda(p)}`);
     return linhas.join('\n');
   }
 
@@ -101,7 +128,7 @@
     if (!produto) {
       texto = loja.mensagemGeral || 'Olá! Vim pelo site.';
     } else {
-      const modelo = produto.preVenda && loja.mensagemPreVenda ? loja.mensagemPreVenda : loja.mensagemPadrao;
+      const modelo = loja.mensagemPadrao;
       texto = String(modelo || 'Olá! Quero pedir:\n{pedido}\n{link}')
         .replaceAll('{pedido}', textoPedido(produto))
         .replaceAll('{produto}', produto.nome)
@@ -211,8 +238,7 @@
   function linkZapCarrinho() {
     const loja = catalogo.loja;
     const numero = String(loja.whatsapp || '').replace(/\D/g, '');
-    const algumPreVenda = carrinho.some((it) => porSlug(catalogo.produtos, it.slug)?.preVenda);
-    const modelo = algumPreVenda && loja.mensagemPreVenda ? loja.mensagemPreVenda : loja.mensagemPadrao;
+    const modelo = loja.mensagemPadrao;
     const linkCarrinho = location.href.split('#')[0] + '#/carrinho';
     let texto = String(modelo || 'Olá! Quero pedir:\n{pedido}\n{link}')
       .replaceAll('{pedido}', textoPedidoCarrinho())
@@ -222,25 +248,242 @@
     return 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
   }
 
-  /* ---------- Pré-venda -------------------------------------------------- */
+  /* ---------- Recomendação ------------------------------------------------ */
 
-  function textoPreVenda(p) {
-    if (!p.preVenda) return '';
-    const loja = catalogo.loja;
-    if (p.dataVenda) {
-      return (loja.textoPreVenda || 'Pré-venda. Produção e envio a partir de {data}.')
-        .replace('{data}', dataLonga(p.dataVenda));
+  // Ordem de preferência: o que você escolheu à mão no campo `combinaCom`,
+  // depois a mesma categoria, e por último o resto do catálogo mais próximo
+  // em preço. A terceira camada existe porque Luminárias só tem 6 peças — sem
+  // ela a seção apareceria com dois cartões numa página de luminária.
+  const ALVO_RELACIONADOS = 4;
+
+  function relacionados(p) {
+    const escolhidos = [];
+    const jaTem = new Set([p.slug]);
+
+    const juntar = (lista) => {
+      for (const x of lista) {
+        if (escolhidos.length >= ALVO_RELACIONADOS) return;
+        if (!x || jaTem.has(x.slug)) continue;
+        jaTem.add(x.slug);
+        escolhidos.push(x);
+      }
+    };
+
+    // 1. curadoria manual: `"combinaCom": ["knock-box", "dosador-cafe"]`
+    juntar((p.combinaCom || []).map((slug) => porSlug(catalogo.produtos, slug)));
+
+    // 2. mesma categoria, destaque primeiro — é a peça que você já sabe que sai
+    const irmaos = produtosDa(p.categoria).filter((x) => x.slug !== p.slug);
+    juntar([...irmaos].sort((a, b) => Number(Boolean(b.destaque)) - Number(Boolean(a.destaque))));
+
+    // 3. completa com o preço mais parecido: quem olha peça de R$ 30 não se
+    //    interessa pela de R$ 110 só porque sobrou espaço na grade.
+    const preco = precoAtual(p);
+    if (preco != null) {
+      const resto = catalogo.produtos
+        .filter((x) => !jaTem.has(x.slug) && precoAtual(x) != null)
+        .sort((a, b) => Math.abs(precoAtual(a) - preco) - Math.abs(precoAtual(b) - preco));
+      juntar(resto);
     }
-    return loja.textoPreVendaSemData || 'Pré-venda. Data de produção e envio a confirmar.';
+
+    return escolhidos;
   }
 
-  function blocoPreVenda(p) {
-    if (!p.preVenda) return '';
-    const extra = p.observacaoPreVenda ? `<span>${esc(p.observacaoPreVenda)}</span>` : '';
-    return `<div class="aviso-prevenda">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M12 14v3"/></svg>
-      <p class="aviso-prevenda-texto"><strong>${esc(textoPreVenda(p))}</strong>${extra}</p>
-    </div>`;
+  function secaoRelacionados(p) {
+    const lista = relacionados(p);
+    if (!lista.length) return '';
+    const c = categoriaDe(p);
+    return `<section class="secao">
+      <div class="secao-topo">
+        <h2>Você também pode gostar</h2>
+        ${c ? `<a class="ver-tudo" href="#/c/${esc(c.slug)}">Ver ${esc(c.nome)} →</a>` : ''}
+      </div>
+      ${grade(lista)}
+    </section>`;
+  }
+
+  /* ---------- Firestore (depoimentos) ------------------------------------- */
+
+  // Por que REST e não o SDK do Firebase: o SDK são ~100 KB de JavaScript de
+  // terceiro pra fazer dois pedidos HTTP. A premissa deste site é abrir com o
+  // catálogo embutido e zero dependência externa — um SDK aqui trocaria isso
+  // por conveniência de sintaxe. A API REST faz o mesmo com `fetch`, e as
+  // regras de segurança valem igual: pedido com chave de API e sem login conta
+  // como anônimo (`request.auth == null` nas regras).
+  //
+  // A chave de API do Firebase é pública por desenho — ela identifica o
+  // projeto, não autoriza nada. Quem protege os dados são as regras em
+  // ferramentas/firestore.rules: leitura só do que está aprovado, escrita só
+  // de documento novo no formato certo, alterar e apagar nunca.
+  //
+  // Sem Storage e sem Cloud Functions (ambos exigem plano Blaze, e o projeto
+  // fica no Spark de propósito) este é o teto: texto sim, foto não. Foto de
+  // cliente continua chegando pelo WhatsApp e entra à mão no catalogo.json.
+
+  const ESPERA_FIRESTORE = 8000;
+
+  // O site NÃO lê o Firestore. Depoimento só aparece depois de passar pelo
+  // ferramentas/colher-depoimentos.mjs, que baixa texto e fotos e grava no
+  // catalogo.json — então o que está no ar passou pela sua conferência, e a
+  // página não depende do Firebase estar de pé pra mostrar prova social.
+  //
+  // Daqui o Firestore é só escrita: o formulário grava, e as regras não
+  // permitem leitura a ninguém de fora (ferramentas/firestore.rules).
+  const fbConfig = () => {
+    const c = catalogo.loja.feedback?.firebase;
+    if (!c?.projeto || !c?.chaveApi) return null;
+    if (location.protocol === 'file:') return null;
+    return c;
+  };
+
+  const fbUrl = (c, caminho) =>
+    `https://firestore.googleapis.com/v1/projects/${encodeURIComponent(c.projeto)}` +
+    `/databases/(default)/documents${caminho}?key=${encodeURIComponent(c.chaveApi)}`;
+
+  const fbPedido = (c, caminho, corpo) =>
+    fetch(fbUrl(c, caminho), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(corpo),
+      // Sem isto, rede pendurada deixa a promessa aberta pra sempre — no
+      // formulário isso é um botão "Enviando..." que nunca volta.
+      signal: AbortSignal.timeout?.(ESPERA_FIRESTORE),
+    }).then((r) => (r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status))));
+
+  function enviarAvaliacao(dados) {
+    const c = fbConfig();
+    if (!c) return Promise.reject(new Error('sem-firebase'));
+    const campos = {
+      nome: { stringValue: dados.nome },
+      cidade: { stringValue: dados.cidade || '' },
+      texto: { stringValue: dados.texto },
+      produto: { stringValue: dados.produto || '' },
+      criadoEm: { timestampValue: new Date().toISOString() },
+      // Nasce reprovado. Formulário aberto na internet publicando direto é
+      // convite a spam na própria vitrine; virar `true` é um clique no console
+      // do Firebase, e é esse clique que publica.
+      aprovado: { booleanValue: false },
+      destaque: { booleanValue: false },
+    };
+    // Foto vai como data URI dentro do próprio documento. Não é jeito de
+    // SERVIR imagem — é caixa de entrada: documento com foto nunca é lido pelo
+    // site (só os aprovados são, e aprovar passa por tirar a foto daqui).
+    // Ver ferramentas/colher-depoimentos.mjs e "Fotos de cliente" no LEIA-ME.
+    if (dados.fotos?.length) {
+      campos.fotos = {
+        arrayValue: { values: dados.fotos.map((f) => ({ stringValue: f })) },
+      };
+    }
+    return fbPedido(c, '/' + encodeURIComponent(c.colecao || 'avaliacoes'), { fields: campos });
+  }
+
+  /* ---------- Avaliações -------------------------------------------------- */
+
+  // Fonte única: `avaliacoes` no catálogo. O que está no Firestore ainda não é
+  // público — vira público quando o colher-depoimentos.mjs traz pra cá.
+  const todasAvaliacoes = () =>
+    (catalogo.avaliacoes || []).filter((a) => a && a.texto && a.nome);
+
+  const avaliacoesDe = (p) => todasAvaliacoes().filter((a) => a.produto === p.slug);
+
+  // Sem estrela e sem média: com um punhado de depoimentos por peça, nota média
+  // é estatística de enfeite — e estrela vazia ao lado do preço comunica
+  // "ninguém avaliou" em vez de "é bom". Vale o texto do cliente, só.
+  // Aceita `fotos: [...]` e também `foto: "..."` de uma entrada antiga, pra não
+  // quebrar depoimento já cadastrado com o campo no singular.
+  const fotosDe = (a) => (a.fotos?.length ? a.fotos : a.foto ? [a.foto] : []);
+
+  // Com mínimo de 51 caracteres e teto de 1200, um depoimento pode ser bem
+  // mais longo que o vizinho — e cartão de 20 linhas ao lado de um de 3 destrói
+  // a grade. Então o texto é recortado por CSS e ganha um "ver mais".
+  //
+  // O botão é criado aqui, depois de pintar, e não no HTML: só dá pra saber se
+  // o texto transbordou medindo o elemento já renderizado. Depoimento curto não
+  // ganha botão nenhum — "ver mais" que não revela nada é pior que não ter.
+  const FOLGA_RECORTE = 4; // px de tolerância pra arredondamento de linha
+
+  function ligarVerMais(raiz) {
+    for (const txt of raiz.querySelectorAll('.avaliacao-texto')) {
+      if (txt.dataset.medido) continue;
+      txt.dataset.medido = '1';
+      if (txt.scrollHeight - txt.clientHeight <= FOLGA_RECORTE) {
+        // Cabe inteiro: tira o recorte pra não deixar reticências sobrando num
+        // texto que não precisava delas.
+        txt.classList.add('avaliacao-texto-inteiro');
+        continue;
+      }
+      const botao = document.createElement('button');
+      botao.type = 'button';
+      botao.className = 'avaliacao-vermais';
+      botao.textContent = 'ver mais';
+      botao.setAttribute('aria-expanded', 'false');
+      botao.addEventListener('click', () => {
+        const aberto = txt.classList.toggle('avaliacao-texto-inteiro');
+        botao.textContent = aberto ? 'ver menos' : 'ver mais';
+        botao.setAttribute('aria-expanded', String(aberto));
+      });
+      txt.insertAdjacentElement('afterend', botao);
+    }
+  }
+
+  function cartaoAvaliacao(a, mostrarProduto = false) {
+    const p = a.produto ? porSlug(catalogo.produtos, a.produto) : null;
+    const assinatura = [a.nome, a.cidade].filter(Boolean).join(' · ');
+    const fotos = fotosDe(a);
+    return `<figure class="avaliacao">
+      <blockquote class="avaliacao-texto">&ldquo;${esc(a.texto)}&rdquo;</blockquote>
+      ${
+        fotos.length
+          ? `<div class="avaliacao-fotos" data-quantas="${Math.min(fotos.length, 3)}">
+              ${fotos
+                .map(
+                  (f, i) => `<img src="${esc(f)}"
+                       alt="Foto ${i + 1} enviada por ${esc(a.nome)}"
+                       role="button" tabindex="0"
+                       title="Ver em tamanho grande"
+                       loading="lazy" decoding="async">`
+                )
+                .join('')}
+            </div>`
+          : ''
+      }
+      <figcaption class="avaliacao-autor">
+        ${esc(assinatura)}
+        ${
+          mostrarProduto && p
+            ? ` <a class="avaliacao-produto" href="#/p/${esc(p.slug)}">${esc(p.nome)}</a>`
+            : ''
+        }
+      </figcaption>
+    </figure>`;
+  }
+
+  // Não existe convite público pra deixar depoimento. A rota #/feedback continua
+  // viva e funcionando — o link é mandado por WhatsApp pra quem comprou. Isso é
+  // o que mantém a seção honesta: quem escreve é cliente, não quem passou pelo
+  // site. Sem depoimento, a seção simplesmente não aparece.
+  function blocoAvaliacoes(p) {
+    const lista = avaliacoesDe(p);
+    if (!lista.length) return '';
+    const f = catalogo.loja.feedback || {};
+    return `<section class="secao avaliacoes" id="avaliacoes">
+      <div class="secao-topo"><h2>${esc(f.titulo || 'Quem já tem em casa')}</h2></div>
+      <div class="avaliacao-grade">${lista.map((a) => cartaoAvaliacao(a)).join('')}</div>
+    </section>`;
+  }
+
+  // Na capa: os marcados com `destaque`, e se não houver nenhum marcado cai
+  // nos mais recentes — assim a seção nasce funcionando sem curadoria manual.
+  function secaoAvaliacoesInicio() {
+    const todas = todasAvaliacoes();
+    const marcadas = todas.filter((a) => a.destaque);
+    const lista = (marcadas.length ? marcadas : [...todas].reverse()).slice(0, 3);
+    if (!lista.length) return '';
+    const f = catalogo.loja.feedback || {};
+    return `<section class="secao avaliacoes">
+      <div class="secao-topo"><h2>${esc(f.titulo || 'Quem já tem em casa')}</h2></div>
+      <div class="avaliacao-grade">${lista.map((a) => cartaoAvaliacao(a, true)).join('')}</div>
+    </section>`;
   }
 
   /* ---------- Cores -------------------------------------------------------- */
@@ -372,11 +615,106 @@
     return /\.(mp4|webm|mov)$/i.test(v) ? v : null;
   }
 
+  /* ---------- Foto ampliada (depoimentos) --------------------------------- */
+
+  // Foto de cliente na bancada dele é o argumento mais forte que a página tem,
+  // e miniatura de 100px não deixa ver acabamento nem a cor de verdade. Daqui
+  // abre em tela cheia, com seta pra percorrer as do mesmo depoimento.
+  //
+  // Um overlay só, criado na primeira abertura e reaproveitado: um por cartão
+  // multiplicaria nó e ouvinte à toa.
+  let lupa = null;
+  let lupaFotos = [];
+  let lupaAtual = 0;
+
+  function montarLupa() {
+    if (lupa) return lupa;
+    lupa = document.createElement('div');
+    lupa.className = 'lupa';
+    lupa.hidden = true;
+    lupa.innerHTML = `
+      <button type="button" class="lupa-fechar" aria-label="Fechar">&times;</button>
+      <button type="button" class="lupa-seta lupa-anterior" aria-label="Foto anterior">&#8249;</button>
+      <figure class="lupa-palco"><img alt=""><figcaption></figcaption></figure>
+      <button type="button" class="lupa-seta lupa-proxima" aria-label="Próxima foto">&#8250;</button>`;
+    document.body.appendChild(lupa);
+
+    lupa.addEventListener('click', (e) => {
+      if (e.target.closest('.lupa-anterior')) return mostrarNaLupa(lupaAtual - 1);
+      if (e.target.closest('.lupa-proxima')) return mostrarNaLupa(lupaAtual + 1);
+      // Clique fora da imagem fecha. É o gesto que todo mundo tenta primeiro.
+      if (!e.target.closest('.lupa-palco') || e.target.closest('.lupa-fechar')) fecharLupa();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (lupa.hidden) return;
+      if (e.key === 'Escape') fecharLupa();
+      if (e.key === 'ArrowLeft') mostrarNaLupa(lupaAtual - 1);
+      if (e.key === 'ArrowRight') mostrarNaLupa(lupaAtual + 1);
+    });
+    return lupa;
+  }
+
+  function mostrarNaLupa(i) {
+    if (!lupaFotos.length) return;
+    // Circular: na última, a seta volta pra primeira em vez de virar botão morto.
+    lupaAtual = (i + lupaFotos.length) % lupaFotos.length;
+    const f = lupaFotos[lupaAtual];
+    const img = lupa.querySelector('.lupa-palco img');
+    img.src = f.src;
+    img.alt = f.alt;
+    lupa.querySelector('figcaption').textContent =
+      lupaFotos.length > 1 ? `${lupaAtual + 1} de ${lupaFotos.length} — ${f.legenda}` : f.legenda;
+    lupa.querySelectorAll('.lupa-seta').forEach((b) => (b.hidden = lupaFotos.length < 2));
+  }
+
+  function abrirLupa(fotos, i) {
+    montarLupa();
+    lupaFotos = fotos;
+    mostrarNaLupa(i);
+    lupa.hidden = false;
+    // Trava a rolagem do fundo: sem isto, rolar no celular move a página atrás
+    // da foto em vez de nada.
+    document.body.classList.add('sem-rolagem');
+    lupa.querySelector('.lupa-fechar').focus();
+  }
+
+  function fecharLupa() {
+    if (!lupa) return;
+    lupa.hidden = true;
+    // removeAttribute e não src='': string vazia faz o navegador resolver pra
+    // URL da página e disparar um pedido inútil a cada fechamento.
+    lupa.querySelector('.lupa-palco img').removeAttribute('src');
+    document.body.classList.remove('sem-rolagem');
+  }
+
+  // Delegado no document: os cartões são redesenhados a cada rota, enganchar em
+  // cada imagem exigiria religar o ouvinte em todo desenho.
+  // Enter e espaço abrem igual ao clique: a imagem tem role=button e tabindex,
+  // então precisa responder ao teclado pra não ser um botão que só o mouse usa.
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const img = e.target.closest?.('.avaliacao-fotos img');
+    if (!img) return;
+    e.preventDefault();
+    img.click();
+  });
+
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.avaliacao-fotos img');
+    if (!img) return;
+    const cartao = img.closest('.avaliacao');
+    const todas = [...cartao.querySelectorAll('.avaliacao-fotos img')];
+    const autor = cartao.querySelector('.avaliacao-autor')?.textContent.trim() || '';
+    abrirLupa(
+      todas.map((x) => ({ src: x.src, alt: x.alt, legenda: `Foto de ${autor.split('·')[0].trim()}` })),
+      todas.indexOf(img)
+    );
+  });
+
   /* ---------- Peças de interface ----------------------------------------- */
 
   function selos(p) {
     const itens = [];
-    if (p.preVenda) itens.push('<span class="selo selo-prevenda">Pré-venda</span>');
     if (p.destaque) itens.push('<span class="selo selo-destaque">Destaque</span>');
     return itens.length ? `<div class="selos">${itens.join('')}</div>` : '';
   }
@@ -448,21 +786,62 @@
     return esc(texto.slice(0, i)) + `<em>${esc(alvo)}</em>` + esc(texto.slice(i + alvo.length));
   }
 
+  /* ---------- Blocos de venda da capa ------------------------------------- */
+
+  // Afirmações sobre a loja, logo abaixo da capa: título é o benefício, `texto`
+  // é o mecanismo que o sustenta (o <p> só nasce se o texto existir, pra dar
+  // pra ficar só no título quando a frase de apoio repetiria o título com mais
+  // palavras). Ficam no JSON porque
+  // são texto de venda, não lógica — e os marcadores {minimo} e {total} são
+  // preenchidos com o catálogo de verdade, pra não envelhecerem: preço mínimo
+  // escrito à mão vira mentira na primeira mudança de tabela.
+  function blocoProvas() {
+    const provas = catalogo.loja.provas || [];
+    if (!provas.length) return '';
+    const precos = catalogo.produtos.map(precoAtual).filter((v) => v != null);
+    const dados = {
+      '{total}': String(catalogo.produtos.length),
+      '{minimo}': precos.length ? moeda.format(Math.min(...precos)) : '',
+    };
+    const preencher = (t) =>
+      Object.entries(dados).reduce((acc, [de, para]) => acc.replaceAll(de, para), String(t || ''));
+
+    return `<section class="provas" aria-label="Por que comprar aqui">
+      ${provas
+        .map(
+          (p) => `<div class="prova">
+            <h3>${esc(preencher(p.titulo))}</h3>
+            ${p.texto ? `<p>${esc(preencher(p.texto))}</p>` : ''}
+          </div>`
+        )
+        .join('')}
+    </section>`;
+  }
+
+  // Fecha a home puxando pra conversa. Numa loja que vende por WhatsApp, a
+  // dúvida que não é respondida é a venda que não acontece — e a dúvida mais
+  // comum aqui é "serve na minha máquina?", que só uma foto resolve.
+  function blocoFechamento() {
+    const f = catalogo.loja.fechamento;
+    if (!f?.titulo) return '';
+    // Texto e botão em caixas separadas pro desktop poder pôr um ao lado do
+    // outro sem o botão esticar junto com o parágrafo.
+    return `<section class="fechamento">
+      <div class="fechamento-caixa">
+        <div class="fechamento-texto">
+          <h2>${esc(f.titulo)}</h2>
+          ${f.texto ? `<p>${esc(f.texto)}</p>` : ''}
+        </div>
+        <a class="botao botao-zap" href="${linkZap(null)}" target="_blank" rel="noopener">
+          ${SVG_ZAP} ${esc(f.textoBotao || 'Falar no WhatsApp')}
+        </a>
+      </div>
+    </section>`;
+  }
+
   function telaInicio() {
     const loja = catalogo.loja;
     const destaques = catalogo.produtos.filter((p) => p.destaque).slice(0, 8);
-    const preVenda = catalogo.produtos.filter((p) => p.preVenda);
-
-    const cartoesCategoria = catalogo.categorias
-      .map((c) => {
-        const n = produtosDa(c.slug).length;
-        return `<a class="cartao-categoria" href="#/c/${esc(c.slug)}">
-          <h3>${esc(c.nome)}</h3>
-          <p>${esc(c.resumo || '')}</p>
-          <span class="contagem">${n} ${n === 1 ? 'peça' : 'peças'}</span>
-        </a>`;
-      })
-      .join('');
 
     return `
       <section class="capa">
@@ -471,7 +850,7 @@
             <h1>${chamadaHtml(loja)}</h1>
             <p class="capa-texto">${esc(loja.descricao || '')}</p>
             <div class="capa-acoes">
-              <a class="botao" href="#/c/${esc(catalogo.categorias[0].slug)}">Ver o catálogo</a>
+              <a class="botao" href="#/c/${esc(catalogo.categorias[0].slug)}">Ver as peças</a>
               <a class="botao botao-zap" href="${linkZap(null)}" target="_blank" rel="noopener">
                 ${SVG_ZAP} Falar no WhatsApp
               </a>
@@ -483,30 +862,20 @@
         </div>
       </section>
 
-      ${
-        preVenda.length
-          ? `<section class="secao">
-              <div class="secao-topo"><h2>Em pré-venda</h2></div>
-              <p class="secao-resumo">Reserve agora e garanta a peça no primeiro lote.</p>
-              ${grade(preVenda)}
-            </section>`
-          : ''
-      }
-
-      <section class="secao">
-        <div class="secao-topo"><h2>Categorias</h2></div>
-        <p class="secao-resumo">${catalogo.produtos.length} peças, divididas por onde elas vivem no seu cantinho do café.</p>
-        <div class="grade-categorias">${cartoesCategoria}</div>
-      </section>
+      ${blocoProvas()}
 
       ${
         destaques.length
           ? `<section class="secao">
-              <div class="secao-topo"><h2>As que mais saem</h2></div>
+              <div class="secao-topo"><h2>O que mais sai</h2></div>
               ${grade(destaques)}
             </section>`
           : ''
       }
+
+      ${secaoAvaliacoesInicio()}
+
+      ${blocoFechamento()}
     `;
   }
 
@@ -658,7 +1027,6 @@
           <h1>${esc(p.nome)}</h1>
           <p class="produto-resumo">${esc(p.resumo || '')}</p>
 
-          ${blocoPreVenda(p)}
 
           <div class="produto-preco">
             <span data-preco>${precoHtml(p)}</span>
@@ -703,17 +1071,352 @@
         </div>
       </article>
 
-      ${(() => {
-        const irmaos = produtosDa(c.slug).filter((x) => x.slug !== p.slug).slice(0, 4);
-        return irmaos.length
-          ? `<section class="secao">
-              <div class="secao-topo"><h2>Também em ${esc(c.nome)}</h2>
-                <a class="ver-tudo" href="#/c/${esc(c.slug)}">Ver todas →</a></div>
-              ${grade(irmaos)}
-            </section>`
-          : '';
-      })()}
+      ${blocoAvaliacoes(p)}
+
+      ${secaoRelacionados(p)}
     `;
+  }
+
+  /* ---------- Fotos do cliente (compressão no navegador) ------------------ */
+
+  // Um documento do Firestore tem teto de 1 MiB, e base64 infla 33%. Com três
+  // fotos sobra pouco, então cada uma é reduzida aqui no navegador até caber no
+  // orçamento abaixo. Não é a compressão final: o TinyPNG, que aperta de
+  // verdade, roda depois em ferramentas/colher-depoimentos.mjs, onde a chave
+  // dele fica em máquina sua em vez de no JavaScript do site.
+  const MAX_FOTOS = 3;
+  const ORCAMENTO_FOTO = 230_000; // caracteres de base64, por foto
+  const LADO_INICIAL = 1280; // px no maior lado — folga pra o TinyPNG trabalhar
+  const QUALIDADE_INICIAL = 0.72;
+
+  // Foto de celular moderno passa de 4 MB. Ler isso inteiro pra memória antes
+  // de saber se dá pra decodificar é desperdício, mas é o único caminho: o
+  // navegador não expõe as dimensões sem decodificar.
+  function carregarImagem(arquivo) {
+    return new Promise((resolve, reject) => {
+      const url = URL.createObjectURL(arquivo);
+      const img = new Image();
+      img.onload = () => {
+        URL.revokeObjectURL(url);
+        resolve(img);
+      };
+      img.onerror = () => {
+        URL.revokeObjectURL(url);
+        // Acontece de verdade com HEIC em navegador que não decodifica o
+        // formato. O iPhone normalmente converte pra JPEG no seletor de
+        // arquivo, mas não dá pra contar com isso.
+        reject(new Error('formato-nao-suportado'));
+      };
+      img.src = url;
+    });
+  }
+
+  function desenhar1(img, lado, qualidade) {
+    const escala = Math.min(1, lado / Math.max(img.naturalWidth, img.naturalHeight));
+    const tela = document.createElement('canvas');
+    tela.width = Math.round(img.naturalWidth * escala);
+    tela.height = Math.round(img.naturalHeight * escala);
+    const ctx = tela.getContext('2d');
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(img, 0, 0, tela.width, tela.height);
+    // JPEG e não WebP: o script de colheita e o TinyPNG lidam com os dois, mas
+    // JPEG decodifica em qualquer navegador que chegue até aqui.
+    return tela.toDataURL('image/jpeg', qualidade);
+  }
+
+  // Sem corte: só reduz e recomprime, mantendo o enquadramento que a pessoa
+  // escolheu. Vai apertando até caber no orçamento — primeiro pela qualidade,
+  // que degrada menos que perder pixel, depois pelo tamanho.
+  async function comprimirFoto(arquivo) {
+    const img = await carregarImagem(arquivo);
+    let lado = LADO_INICIAL;
+    let qualidade = QUALIDADE_INICIAL;
+    let saida = desenhar1(img, lado, qualidade);
+    for (let i = 0; i < 6 && saida.length > ORCAMENTO_FOTO; i++) {
+      if (qualidade > 0.45) qualidade -= 0.1;
+      else lado = Math.round(lado * 0.8);
+      saida = desenhar1(img, lado, qualidade);
+    }
+    // Se depois de seis tentativas ainda não couber, é imagem fora do normal
+    // (panorâmica gigante, por exemplo). Melhor recusar do que estourar o
+    // documento e o envio falhar com erro que não explica nada.
+    if (saida.length > ORCAMENTO_FOTO) throw new Error('foto-grande-demais');
+    return saida;
+  }
+
+  /* ---------- Tela de feedback -------------------------------------------- */
+
+  // Mínimo do depoimento: baixo de propósito. Piso só pra barrar "oi" e ".";
+  // exigir texto longo espanta quem ia escrever duas linhas boas, e duas linhas
+  // boas valem mais que nenhuma. Quem quiser escrever muito tem até 1200 — e é
+  // por isso que o cartão ganhou "ver mais".
+  //
+  // Igual ao que as regras do Firestore exigem (ferramentas/firestore.rules).
+  // Se mudar aqui, mudar lá: cliente mais permissivo que servidor viraria envio
+  // recusado com 403 depois da pessoa já ter escrito.
+  const MIN_TEXTO = 10;
+
+  // Não há rascunho salvo no navegador, de propósito: o formulário abre sempre
+  // em branco. O preço disso é que recarregar a página no meio perde o texto;
+  // em troca ninguém encontra o formulário já preenchido com o que digitou
+  // semanas antes (ou, em computador compartilhado, com o que outra pessoa
+  // digitou). Se o ENVIO falhar o texto continua na tela e no botão de
+  // WhatsApp — que é o caso em que perder de verdade doeria.
+
+  // Mensagem de WhatsApp com o depoimento dentro. É a rota de fuga quando o
+  // Firestore não responde — e é uma rota boa, porque WhatsApp já é o canal da
+  // loja: o texto chega, só chega por outro cano.
+  function linkZapFeedback(dados) {
+    const loja = catalogo.loja;
+    const f = loja.feedback || {};
+    const corpo = [
+      dados.texto,
+      '',
+      `— ${dados.nome}${dados.cidade ? ', ' + dados.cidade : ''}`,
+      dados.produto ? `Peça: ${porSlug(catalogo.produtos, dados.produto)?.nome || dados.produto}` : '',
+      'Autorizo publicar no site e nas redes sociais.',
+      // Link de wa.me só carrega texto. Se a pessoa tinha escolhido foto, ela
+      // precisa anexar na mão — e precisa saber disso antes de mandar.
+      dados.fotos?.length
+        ? `(Tinha ${dados.fotos.length} foto(s) junto — dá pra anexar aqui na conversa.)`
+        : '',
+    ]
+      .filter(Boolean)
+      .join('\n');
+    const modelo = f.mensagemWhatsapp || 'Olá! Quero deixar um feedback:\n\n{depoimento}';
+    const texto = String(modelo).replaceAll('{depoimento}', corpo);
+    return 'https://wa.me/' + String(loja.whatsapp || '').replace(/\D/g, '') + '?text=' + encodeURIComponent(texto);
+  }
+
+  function telaFeedback(slug) {
+    const f = catalogo.loja.feedback || {};
+    // A peça vem da URL (#/feedback/<slug>), não de um campo: quem clicou no
+    // convite dentro da página do Mug Buddy está falando do Mug Buddy. Aparece
+    // como texto, não como campo — é contexto, não pergunta.
+    const peca = slug ? porSlug(catalogo.produtos, slug) : null;
+
+    return `
+      <nav class="trilha" aria-label="Você está em"><a href="#/">Início</a><span>/</span>Deixar feedback</nav>
+
+      <section class="secao feedback-pagina">
+        <div class="secao-topo"><h1>Conta como ficou seu cantinho</h1></div>
+        <p class="feedback-intro">
+          Seu depoimento ajuda quem está decidindo mais do que qualquer texto nosso.
+          Leva um minuto, e não precisa de conta em lugar nenhum.
+        </p>
+
+        <form class="feedback-form" novalidate>
+          ${
+            peca
+              ? `<p class="feedback-peca">Sobre a <strong>${esc(peca.nome)}</strong>.</p>`
+              : ''
+          }
+
+          <label class="feedback-campo">
+            <span>Seu nome <em>(aparece no site)</em></span>
+            <input name="nome" type="text" required maxlength="60" autocomplete="name"
+                   placeholder="Pode ser só o primeiro nome">
+          </label>
+
+          <label class="feedback-campo">
+            <span>Cidade e estado</span>
+            <input name="cidade" type="text" required maxlength="80" autocomplete="address-level2"
+                   placeholder="Ex: Niterói, RJ">
+          </label>
+
+          <label class="feedback-campo">
+            <span>Conta pra gente</span>
+            <textarea name="texto" required rows="7" minlength="${MIN_TEXTO}" maxlength="1200"
+                      placeholder="O que te fez comprar, e o que mudou no seu cantinho depois que chegou? Duas ou três linhas já bastam."></textarea>
+            <small class="feedback-conta" data-conta aria-live="polite"></small>
+          </label>
+
+          <div class="feedback-campo">
+            <span>Fotos da peça na sua casa <em>(opcional, até ${MAX_FOTOS})</em></span>
+            <p class="feedback-dica">
+              É o que mais ajuda quem está decidindo: a peça na bancada de verdade,
+              não na foto do catálogo. Não precisa enquadrar nem cortar.
+            </p>
+            <label class="feedback-anexar">
+              <!-- Escondido por recorte, e não pelo atributo hidden: hidden tira
+                   o campo da ordem de tabulação e deixa o anexo inalcançável
+                   por teclado. Assim ele continua focável, e o foco aparece na
+                   borda do botão via :focus-within. -->
+              <input name="fotos" type="file" accept="image/*" multiple class="so-leitor">
+              <span class="botao botao-vazado">Escolher fotos</span>
+            </label>
+            <div class="feedback-previas" data-previas></div>
+          </div>
+
+          <label class="feedback-autorizo">
+            <input name="autorizo" type="checkbox" required>
+            <span>
+              Autorizo o cafezim a publicar meu depoimento, minhas fotos, meu nome e
+              minha cidade no site e nas redes sociais. Posso pedir a remoção quando
+              quiser pelo WhatsApp.
+            </span>
+          </label>
+
+          <div class="feedback-acoes">
+            <button type="submit" class="botao botao-largo" data-enviar>Enviar meu depoimento</button>
+          </div>
+
+          <p class="feedback-aviso" data-aviso role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="feedback-nota">
+          Tirou foto da peça na sua bancada? Manda no
+          <a href="${esc(linkZap(null))}" target="_blank" rel="noopener">nosso WhatsApp</a> —
+          é o que mais ajuda, e é por lá que recebo imagem.
+        </p>
+      </section>
+    `;
+  }
+
+  function ligarFormularioFeedback() {
+    const form = main.querySelector('.feedback-form');
+    if (!form) return;
+
+    const aviso = form.querySelector('[data-aviso]');
+    const botao = form.querySelector('[data-enviar]');
+    const conta = form.querySelector('[data-conta]');
+    const campoTexto = form.elements.texto;
+
+    const dizer = (html, tipo) => {
+      aviso.innerHTML = html;
+      aviso.dataset.tipo = tipo;
+    };
+
+    const campoFotos = form.elements.fotos;
+    const previas = form.querySelector('[data-previas]');
+
+    let fotos = [];
+
+    const lerCampos = () => ({
+      nome: form.elements.nome.value.trim(),
+      cidade: form.elements.cidade.value.trim(),
+      // Vem da rota, não de campo: #/feedback/<slug>. Confere contra o catálogo
+      // pra slug inventado na URL não entrar no banco.
+      produto: (() => {
+        const arg = rota().arg;
+        return arg && porSlug(catalogo.produtos, arg) ? arg : '';
+      })(),
+      texto: campoTexto.value.trim(),
+      fotos,
+    });
+
+    function desenharPrevias() {
+      previas.innerHTML = fotos
+        .map(
+          (src, i) => `<figure class="feedback-previa">
+            <img src="${src}" alt="Foto ${i + 1} que você escolheu">
+            <button type="button" class="feedback-tirar" data-tirar="${i}"
+                    aria-label="Tirar a foto ${i + 1}">&times;</button>
+          </figure>`
+        )
+        .join('');
+      previas.hidden = !fotos.length;
+    }
+    desenharPrevias();
+
+    previas.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-tirar]');
+      if (!b) return;
+      fotos.splice(Number(b.dataset.tirar), 1);
+      desenharPrevias();
+    });
+
+    campoFotos?.addEventListener('change', async () => {
+      const escolhidas = [...(campoFotos.files || [])];
+      campoFotos.value = ''; // libera o mesmo arquivo pra ser escolhido de novo
+      if (!escolhidas.length) return;
+
+      const vagas = MAX_FOTOS - fotos.length;
+      if (vagas <= 0) return dizer(`Já são ${MAX_FOTOS} fotos — tire uma pra trocar.`, 'erro');
+
+      dizer('Preparando as fotos…', '');
+      const recusadas = [];
+      for (const arquivo of escolhidas.slice(0, vagas)) {
+        try {
+          fotos.push(await comprimirFoto(arquivo));
+        } catch {
+          recusadas.push(arquivo.name);
+        }
+      }
+      desenharPrevias();
+
+      if (recusadas.length)
+        dizer(
+          `Não conseguimos usar ${recusadas.map((n) => esc(n)).join(', ')}. ` +
+            'Tenta tirar um print ou salvar como JPEG — e sem foto o depoimento vale igual.',
+          'erro'
+        );
+      else if (escolhidas.length > vagas)
+        dizer(`Pegamos as ${vagas} primeiras: o limite é ${MAX_FOTOS} fotos.`, '');
+      else dizer('', '');
+    });
+
+    // Campo vazio não mostra contador: "0 de 10 caracteres" num formulário que a
+    // pessoa acabou de abrir é cobrança antes de ela começar.
+    const atualizarConta = () => {
+      const n = campoTexto.value.trim().length;
+      conta.textContent = !n
+        ? ''
+        : n < MIN_TEXTO
+          ? `${n} de ${MIN_TEXTO} caracteres no mínimo`
+          : `${n} caracteres`;
+      conta.classList.toggle('feedback-conta-curta', n > 0 && n < MIN_TEXTO);
+    };
+    atualizarConta();
+
+    form.addEventListener('input', atualizarConta);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const dados = lerCampos();
+
+      // Validação própria em vez de só confiar no `required`: a mensagem nativa
+      // do navegador é um balãozinho que some, e aqui o erro precisa ficar na
+      // tela junto com a saída de emergência.
+      if (dados.nome.length < 2) return dizer('Falta seu nome.', 'erro');
+      if (dados.cidade.length < 2) return dizer('Falta sua cidade.', 'erro');
+      if (dados.texto.length < MIN_TEXTO)
+        return dizer('Escreve um pouquinho mais, só pra dar pra entender.', 'erro');
+      if (!form.elements.autorizo.checked)
+        return dizer('Preciso da sua autorização pra publicar o depoimento.', 'erro');
+
+      botao.disabled = true;
+      botao.textContent = 'Enviando…';
+      dizer('', '');
+
+      enviarAvaliacao(dados)
+        .then(() => {
+          medir('feedback_enviado', { ...(dados.produto && { item_id: dados.produto }) });
+          const f = catalogo.loja.feedback || {};
+          main.querySelector('.feedback-pagina').innerHTML = `
+            <div class="vazio">
+              <img src="marca/mascote.svg" alt="" aria-hidden="true">
+              <h2>Obrigado de verdade!</h2>
+              <p>${esc(f.agradecimento || 'Recebemos seu depoimento. Ele entra no site depois de uma olhada nossa.')}</p>
+              <a class="botao botao-vazado" href="#/">Voltar ao catálogo</a>
+            </div>`;
+        })
+        .catch((erro) => {
+          // Nunca perder o depoimento é mais importante do que gravar no
+          // Firestore. Falhou a gravação (offline, regra, projeto fora, bloqueio
+          // de rastreador): o texto fica na tela, intacto, e o aviso vira um
+          // link de WhatsApp com ele inteiro dentro, pronto pra mandar.
+          botao.disabled = false;
+          botao.textContent = 'Tentar enviar de novo';
+          medir('feedback_falhou', { motivo: String(erro?.message || erro).slice(0, 80) });
+          dizer(
+            `Não conseguimos salvar agora — seu texto está guardado aqui, não se perdeu.
+             <a class="botao botao-zap feedback-escape" href="${esc(linkZapFeedback(dados))}"
+                target="_blank" rel="noopener">Mandar pelo WhatsApp</a>`,
+            'erro'
+          );
+        });
+    });
   }
 
   function telaNaoEncontrado(mensagem) {
@@ -1163,6 +1866,12 @@
 
     botaoCarrinho?.addEventListener('click', () => {
       adicionarAoCarrinho(p);
+      const precoAdd = precoAtual(p);
+      medir('add_to_cart', {
+        currency: 'BRL',
+        ...(precoAdd != null && { value: precoAdd * escolha.quantidade }),
+        items: [itemMedido(p, escolha.quantidade)],
+      });
       const rotuloOriginal = botaoCarrinho.innerHTML;
       botaoCarrinho.disabled = true;
       botaoCarrinho.innerHTML = 'Adicionado ✓';
@@ -1283,6 +1992,16 @@
 
   /* ---------- Roteador ---------------------------------------------------- */
 
+  // Segmento da URL do formulário de feedback. Vem do catálogo porque é pra ser
+  // trocável: não há link pra ele em lugar nenhum do site, o endereço é mandado
+  // por WhatsApp pra quem comprou, e um segmento que ninguém adivinha evita
+  // robô achando o formulário por tentativa.
+  //
+  // Isso é obscuridade, não segurança — quem receber o link pode repassar. O
+  // que de fato protege continua sendo as regras do Firestore: depoimento nasce
+  // com `aprovado: false` e só aparece no site depois que você aprova.
+  const rotaFeedback = () => catalogo.loja.feedback?.rota || 'feedback';
+
   function rota() {
     const h = location.hash.replace(/^#\/?/, '');
     const [tipo, ...resto] = h.split('/');
@@ -1291,6 +2010,7 @@
     if (tipo === 'p') return { tela: 'produto', arg };
     if (tipo === 'busca') return { tela: 'busca', arg };
     if (tipo === 'carrinho') return { tela: 'carrinho', arg: '' };
+    if (tipo === rotaFeedback()) return { tela: 'feedback', arg };
     return { tela: 'inicio', arg: '' };
   }
 
@@ -1306,6 +2026,7 @@
     }
     if (tela === 'busca') return `“${arg}” — ${nome}`;
     if (tela === 'carrinho') return `Carrinho — ${nome}`;
+    if (tela === 'feedback') return `Deixar feedback — ${nome}`;
     return `${nome} — peças para o seu cantinho do café`;
   }
 
@@ -1322,16 +2043,37 @@
       r.tela === 'categoria' ? telaCategoria(r.arg) :
       r.tela === 'busca'     ? telaBusca(r.arg)     :
       r.tela === 'carrinho'  ? telaCarrinho()       :
+      r.tela === 'feedback'  ? telaFeedback(r.arg)  :
                                telaInicio();
 
     document.title = titulo(r);
     document.body.dataset.tela = r.tela;
+
+    medir('page_view', {
+      page_title: document.title,
+      page_location: location.href,
+      tela: r.tela,
+    });
+    if (r.tela === 'produto') {
+      const vista = porSlug(catalogo.produtos, r.arg);
+      if (vista) {
+        const preco = precoAtual(vista);
+        medir('view_item', {
+          currency: 'BRL',
+          ...(preco != null && { value: preco }),
+          items: [itemMedido(vista)],
+        });
+      }
+    }
+    if (r.tela === 'busca' && r.arg) medir('search', { search_term: r.arg });
     main.querySelectorAll('[data-carrossel]').forEach(ligarCarrossel);
+    ligarVerMais(main);
     if (r.tela === 'produto') {
       const p = porSlug(catalogo.produtos, r.arg);
       if (p) { zerarEscolha(p); ligarSeletores(p); }
     }
     if (r.tela === 'carrinho') { ligarCarrinho(); ligarFreteCarrinho(); }
+    if (r.tela === 'feedback') ligarFormularioFeedback();
 
     // Marca a categoria aberta no menu.
     const alvo = r.tela === 'categoria' ? `#/c/${r.arg}` : r.tela === 'inicio' ? '#/' : '';
@@ -1435,6 +2177,37 @@
   });
 
   let timerBusca;
+  // Clique em qualquer link do WhatsApp. Delegado no document porque esses
+  // links são redesenhados a cada rota (capa, carrinho, rodapé) — enganchar em
+  // cada um exigiria religar o ouvinte em todo desenho.
+  //
+  // O do carrinho é begin_checkout: fechar pedido aqui É mandar a mensagem, não
+  // existe etapa de pagamento depois. Os outros são contato solto.
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="wa.me"]');
+    if (!link) return;
+
+    if (link.matches('[data-zap-carrinho]')) {
+      medir('begin_checkout', {
+        currency: 'BRL',
+        value: totalCarrinho(),
+        items: carrinho.map((it) => ({
+          item_id: it.slug,
+          item_name: it.nome,
+          ...(it.preco != null && { price: it.preco }),
+          quantity: it.quantidade,
+        })),
+        ...(freteEscolhido && {
+          shipping_tier: freteEscolhido.nome,
+          shipping: freteEscolhido.preco,
+        }),
+      });
+      return;
+    }
+
+    medir('contato_whatsapp', { origem: document.body.dataset.tela || 'desconhecida' });
+  });
+
   campoBusca?.addEventListener('input', () => {
     clearTimeout(timerBusca);
     timerBusca = setTimeout(() => {
@@ -1460,7 +2233,16 @@
       .then((novo) => {
         if (!novo?.produtos) return;
         for (const p of novo.produtos) for (const c of CAMPOS_INTERNOS) delete p[c];
-        const limpo = (o) => JSON.stringify({ loja: o.loja, categorias: o.categorias, produtos: o.produtos });
+        // `avaliacoes` entra na comparação: depoimento colado à mão no JSON sem
+        // rodar o gerador é exatamente o caso que esta conferência existe pra
+        // cobrir, e deixá-lo fora fazia a correção nunca disparar por isso.
+        const limpo = (o) =>
+          JSON.stringify({
+            loja: o.loja,
+            categorias: o.categorias,
+            produtos: o.produtos,
+            avaliacoes: o.avaliacoes || [],
+          });
         if (limpo(novo) === limpo(catalogo)) return;
         novo.versao = 'json-' + Date.now();
         catalogo = window.CATALOGO = novo;
@@ -1488,7 +2270,7 @@
       .then((r) => r.json())
       .then((d) => { catalogo = window.CATALOGO = d; iniciar(); })
       .catch(() => {
-        main.innerHTML = telaNaoEncontrado('Não consegui carregar o catálogo.');
+        main.innerHTML = telaNaoEncontrado('Não conseguimos carregar o catálogo.');
       });
   }
 })();

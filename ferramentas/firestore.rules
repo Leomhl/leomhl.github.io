@@ -1,0 +1,96 @@
+rules_version = '2';
+
+// ===========================================================================
+// cafezim — regras do Firestore (projeto cafezim-store, plano Spark)
+//
+// Cole isto em console.firebase.google.com > Firestore Database > Regras e
+// clique em Publicar. Elas são a ÚNICA proteção dos dados: a chave de API que
+// está em dados/catalogo.json é pública por desenho (identifica o projeto, não
+// autoriza nada), e o site conversa com o Firestore sem login nenhum — todo
+// pedido chega aqui como anônimo, com request.auth == null.
+//
+// O que isto permite a um anônimo:
+//   criar  um depoimento novo, no formato exato abaixo, sempre reprovado
+// O que isto NÃO permite a ninguém de fora:
+//   LER qualquer coisa, alterar qualquer documento, apagar qualquer documento,
+//   criar documento fora da coleção `avaliacoes`.
+//
+// Publicar um depoimento NÃO é clique no console: é rodar
+//   node ferramentas/colher-depoimentos.mjs
+// que baixa texto e fotos, grava no catalogo.json e sobe o site local pra
+// você conferir antes de commitar. O campo `aprovado` fica só como sua
+// marcação de triagem — não é ele que publica.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /avaliacoes/{id} {
+
+      // Leitura fechada pra todo mundo. O site NÃO lê esta coleção: depoimento
+      // só aparece depois de passar pelo ferramentas/colher-depoimentos.mjs,
+      // que grava texto e fotos no catalogo.json. Quem lê daqui é só aquele
+      // script, com credencial de conta de serviço, que passa por cima das
+      // regras.
+      //
+      // Com isso o base64 das fotos e o depoimento não conferido ficam
+      // invisíveis até você publicar — ninguém de fora enxerga o que entrou
+      // pelo formulário.
+      allow read: if false;
+
+      // Criação aberta, mas com formato travado. Sem os limites de tamanho um
+      // robô enche a cota diária do Spark (20 mil escritas/dia) com um
+      // documento de 1 MB por vez.
+      allow create: if
+             request.resource.data.keys().hasOnly(
+               ['nome', 'cidade', 'texto', 'produto', 'aprovado', 'destaque', 'criadoEm', 'fotos'])
+          && request.resource.data.keys().hasAll(
+               ['nome', 'cidade', 'texto', 'produto', 'aprovado', 'destaque', 'criadoEm'])
+
+          // Nasce invisível. Sem isto o formulário publica direto no site e a
+          // vitrine vira mural de spam.
+          && request.resource.data.aprovado == false
+          && request.resource.data.destaque == false
+
+          && request.resource.data.nome is string
+          && request.resource.data.nome.size() >= 2
+          && request.resource.data.nome.size() <= 60
+
+          && request.resource.data.texto is string
+          && request.resource.data.texto.size() >= 10
+          && request.resource.data.texto.size() <= 1200
+
+          // Vazio é válido: os dois campos são opcionais no formulário e o site
+          // manda string vazia em vez de omitir, pro formato ficar sempre igual.
+          && request.resource.data.cidade is string
+          && request.resource.data.cidade.size() <= 80
+          && request.resource.data.produto is string
+          && request.resource.data.produto.size() <= 80
+
+          && request.resource.data.criadoEm is timestamp
+
+          // `fotos` é opcional e guarda data URIs (base64). É caixa de entrada,
+          // não jeito de servir imagem: documento com foto nasce reprovado e o
+          // site só lê os aprovados, e aprovar passa por tirar a foto daqui
+          // (ferramentas/colher-depoimentos.mjs faz isso).
+          //
+          // O limite de bytes quem impõe é o Firestore: 1 MiB por documento,
+          // teto duro. Aqui só se limita a quantidade — a linguagem de regras
+          // não tem laço, e indexar `fotos[0]` numa lista menor derruba a
+          // avaliação inteira da regra.
+          && (!('fotos' in request.resource.data)
+              || (request.resource.data.fotos is list
+                  && request.resource.data.fotos.size() <= 3));
+
+      // Aprovar, editar e apagar é só pelo console (que passa por cima das
+      // regras por ser acesso de administrador).
+      allow update, delete: if false;
+    }
+
+    // Explícito, não obrigatório: no Firestore o que não é liberado já está
+    // bloqueado. Fica aqui pra deixar claro que nenhuma outra coleção é pública
+    // — e pra não restar nada do modelo de banco novo, que libera tudo por 30 dias.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

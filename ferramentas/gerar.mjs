@@ -7,7 +7,7 @@
 //
 // Campos internos (pastaOrigem, revisarFoto, observacoes) são removidos do arquivo publicado.
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -53,9 +53,87 @@ for (const p of catalogo.produtos) {
   if (p.preco == null && gruposComPreco === 0 && p.opcoes?.length === 0) {
     // produto sem preço nenhum é válido: a vitrine mostra "Consultar".
   }
-  if (p.preVenda && p.dataVenda && Number.isNaN(Date.parse(p.dataVenda)))
-    erros.push(`${p.slug}: dataVenda "${p.dataVenda}" não é uma data válida (use AAAA-MM-DD)`);
+  // combinaCom aponta o "Você também pode gostar". Slug errado cairia calado no
+  // fallback por categoria, e aí a curadoria que você escreveu não apareceria.
+  for (const slug of p.combinaCom || []) {
+    if (slug === p.slug) erros.push(`${p.slug}: combinaCom aponta para o próprio produto`);
+    else if (!catalogo.produtos.some((x) => x.slug === slug))
+      erros.push(`${p.slug}: combinaCom aponta "${slug}", que não existe no catálogo`);
+  }
   for (const campo of CAMPOS_INTERNOS) delete p[campo];
+}
+
+// Avaliações: lista única, cada item podendo apontar para um produto. Valida
+// aqui porque um depoimento com slug errado não aparece em lugar nenhum e não
+// dá erro no navegador — some calado, que é o pior jeito de quebrar.
+catalogo.avaliacoes = catalogo.avaliacoes || [];
+catalogo.avaliacoes.forEach((a, i) => {
+  const onde = `avaliacoes[${i}]${a.nome ? ` (${a.nome})` : ''}`;
+  if (!a.nome) erros.push(`${onde}: sem nome`);
+  if (!a.texto) erros.push(`${onde}: sem texto`);
+  if (a.produto && !slugs.has(a.produto))
+    erros.push(`${onde}: produto "${a.produto}" não existe no catálogo`);
+  if (a.data && Number.isNaN(Date.parse(a.data)))
+    erros.push(`${onde}: data "${a.data}" inválida (use AAAA-MM-DD)`);
+  // Foto de depoimento que não existe no disco renderiza como imagem quebrada
+  // no meio da prova social — pior que não ter foto. Aceita `foto` no singular
+  // de entrada antiga, igual ao site faz.
+  const fotos = a.fotos?.length ? a.fotos : a.foto ? [a.foto] : [];
+  if (a.fotos && !Array.isArray(a.fotos)) erros.push(`${onde}: "fotos" tem que ser uma lista`);
+  for (const f of fotos) {
+    if (typeof f !== 'string' || !f.trim()) erros.push(`${onde}: tem foto vazia na lista`);
+    else if (!existsSync(join(raiz, f))) erros.push(`${onde}: foto "${f}" não existe no disco`);
+  }
+});
+
+// Config do Firestore: chave errada não dá erro no navegador (a busca falha e
+// o site mostra só as avaliações embutidas, calado de propósito). Então o
+// erro de digitação tem que aparecer aqui.
+// Rota do formulário de feedback. Validada aqui porque errar nela não dá erro
+// no navegador: o endereço simplesmente cai na capa, e você só descobre quando
+// o cliente diz que o link não abriu nada.
+const rotaFb = catalogo.loja.feedback?.rota;
+if (rotaFb !== undefined) {
+  const reservadas = new Set(['c', 'p', 'busca', 'carrinho']);
+  if (typeof rotaFb !== 'string' || !/^[a-z0-9][a-z0-9-]*$/.test(rotaFb))
+    erros.push(`loja.feedback.rota "${rotaFb}" inválida (use só minúsculas, números e hífen)`);
+  else if (reservadas.has(rotaFb))
+    erros.push(`loja.feedback.rota "${rotaFb}" colide com uma rota do site (${[...reservadas].join(', ')})`);
+}
+
+const fbCfg = catalogo.loja.feedback?.firebase;
+if (fbCfg) {
+  const permitidas = new Set(['projeto', 'chaveApi', 'colecao']);
+  for (const k of Object.keys(fbCfg))
+    if (!permitidas.has(k)) erros.push(`loja.feedback.firebase: campo "${k}" não existe (use ${[...permitidas].join(', ')})`);
+  if (fbCfg.chaveApi && !fbCfg.projeto)
+    erros.push('loja.feedback.firebase: tem chaveApi mas não tem projeto');
+  if (fbCfg.chaveApi && !/^AIza[\w-]{30,}$/.test(fbCfg.chaveApi))
+    erros.push(`loja.feedback.firebase.chaveApi não parece uma chave de API do Google (começa com "AIza")`);
+}
+
+// Cápsula de sistema errado é o erro mais caro do "Você também pode gostar":
+// a pessoa compra um porta-cápsulas que não serve na máquina dela e devolve.
+// O slug não serve de pista — `torre-capsulas-dupla` é Dolce Gusto, não
+// Nespresso. Então classifica pelo texto que o cliente lê.
+const sistemaDe = (p) => {
+  const txt = `${p.nome} ${p.resumo || ''} ${p.descricao || ''} ${p.paraQueServe || ''}`.toLowerCase();
+  const nespresso = txt.includes('nespresso') || txt.includes('vertuo');
+  const dolce = txt.includes('dolce gusto');
+  if (nespresso && !dolce) return 'Nespresso';
+  if (dolce && !nespresso) return 'Dolce Gusto';
+  return null; // universal, ou não é peça de cápsula
+};
+
+for (const p of catalogo.produtos) {
+  const meu = sistemaDe(p);
+  if (!meu) continue;
+  for (const slug of p.combinaCom || []) {
+    const outro = catalogo.produtos.find((x) => x.slug === slug);
+    const dele = outro && sistemaDe(outro);
+    if (dele && dele !== meu)
+      erros.push(`${p.slug} (${meu}) recomenda ${slug} (${dele}) — sistemas de cápsula incompatíveis`);
+  }
 }
 
 if (erros.length) {
@@ -100,6 +178,10 @@ function precoDe(p) {
   return precos.length ? Math.min(...precos) : null;
 }
 
+function avaliacoesDe(p) {
+  return catalogo.avaliacoes.filter((a) => a.produto === p.slug && a.nome && a.texto);
+}
+
 function paginaProduto(p) {
   const preco = precoDe(p);
   const url = `${SITE}/p/${p.slug}/`;
@@ -111,6 +193,13 @@ function paginaProduto(p) {
     .join(' ');
 
   // JSON-LD: é o que faz o Google mostrar preço e disponibilidade no resultado.
+  //
+  // Sem aggregateRating de propósito. O Google só mostra estrela no resultado
+  // com nota agregada, e nota agregada em cima de dois ou três depoimentos por
+  // peça não mede nada — fora que obriga a manter nota em todo depoimento. Os
+  // depoimentos entram como texto na página; a estrela do resultado de busca
+  // fica pra quando houver volume que a sustente.
+  const avaliacoes = avaliacoesDe(p);
   const dadosEstruturados = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -163,7 +252,21 @@ ${preco != null ? `<meta property="product:price:amount" content="${preco.toFixe
 <p>${esc(p.resumo || '')}</p>
 <p>${esc(precoTexto)}</p>
 ${p.fotos?.length ? `<img src="${esc(foto)}" alt="${esc(p.nome)}" width="600">` : ''}
-<p><a href="${SITE}/#/p/${p.slug}">Ver na loja</a></p>
+${
+  avaliacoes.length
+    ? `<section>
+<h2>Quem já tem em casa</h2>
+${avaliacoes
+  .map(
+    (a) => `<blockquote><p>${esc(a.texto)}</p><footer>${esc(
+      [a.nome, a.cidade].filter(Boolean).join(' — ')
+    )}</footer></blockquote>`
+  )
+  .join('\n')}
+</section>
+`
+    : ''
+}<p><a href="${SITE}/#/p/${p.slug}">Ver na loja</a></p>
 </body>
 </html>
 `;
@@ -195,11 +298,54 @@ writeFileSync(
   `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`
 );
 
+// Versiona assets/app.js e assets/estilo.css no index.html com o hash do
+// próprio arquivo. Sem isso o navegador de quem já visitou continua com o JS e
+// o CSS antigos depois de um deploy — e o site fica meio novo, meio velho, que
+// é pior que inteiro velho. Hash por arquivo, e não um só pros dois: mexer no
+// CSS não precisa invalidar o JS.
+const ASSETS = ['assets/app.js', 'assets/estilo.css', 'dados/catalogo.js'];
+let indice = readFileSync(join(raiz, 'index.html'), 'utf8');
+const versoesAsset = [];
+
+for (const asset of ASSETS) {
+  const hash = createHash('sha256')
+    .update(readFileSync(join(raiz, asset)))
+    .digest('hex')
+    .slice(0, 8);
+  versoesAsset.push(`${asset.split('/').pop()}@${hash}`);
+  // Casa com ou sem ?v= já aplicado, pra rodar duas vezes dar o mesmo arquivo.
+  const antes = indice;
+  // O (?![\w.]) é o que impede `dados/catalogo.js` de casar dentro de
+  // `dados/catalogo.json` — já corrompeu um comentário do index.html assim.
+  indice = indice.replaceAll(
+    new RegExp(`${asset.replaceAll('.', '\\.')}(\\?v=[0-9a-f]+)?(?![\\w.])`, 'g'),
+    `${asset}?v=${hash}`
+  );
+  if (antes === indice && !indice.includes(`${asset}?v=${hash}`))
+    erros.push(`index.html não referencia ${asset} — o versionamento não pegou`);
+}
+writeFileSync(join(raiz, 'index.html'), indice);
+
 const semFoto = catalogo.produtos.filter((p) => !p.fotos?.length).map((p) => p.slug);
-const preVenda = catalogo.produtos.filter((p) => p.preVenda).length;
 console.log(
-  `catalogo.js gerado — ${catalogo.produtos.length} produtos, ${catalogo.categorias.length} categorias, ` +
-    `${preVenda} em pré-venda, versão ${catalogo.versao}`
+  `catalogo.js gerado — ${catalogo.produtos.length} produtos, ` +
+    `${catalogo.categorias.length} categorias, versão ${catalogo.versao}`
 );
 console.log(`páginas de compartilhamento: ${catalogo.produtos.length} em p/ + sitemap.xml + robots.txt`);
+console.log(`assets versionados no index.html: ${versoesAsset.join(', ')}`);
+console.log(`formulário de feedback (sem link no site, mande por WhatsApp): ${SITE}/#/${rotaFb || 'feedback'}`);
 if (semFoto.length) console.log(`sem foto: ${semFoto.join(', ')}`);
+
+const comDepoimento = catalogo.produtos.filter((p) => avaliacoesDe(p).length).length;
+const curados = catalogo.produtos.filter((p) => p.combinaCom?.length).length;
+const fb = catalogo.loja.feedback?.firebase;
+console.log(
+  `avaliações: ${catalogo.avaliacoes.length} embutidas no catálogo (reserva), em ${comDepoimento} produto(s); ` +
+    (fb?.projeto && fb?.chaveApi
+      ? `o formulário grava no Firestore (projeto ${fb.projeto}); nada aparece no site antes de rodar colher-depoimentos.mjs`
+      : 'loja.feedback.firebase sem projeto/chaveApi — o formulário cai no WhatsApp')
+);
+console.log(
+  `"você também pode gostar": ${curados} produto(s) com combinaCom escolhido à mão, ` +
+    `${catalogo.produtos.length - curados} no automático (categoria + preço próximo)`
+);

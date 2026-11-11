@@ -275,21 +275,57 @@ input, button, select, textarea { font-size: 16px; }
   color: var(--terracota); text-decoration: none; white-space: nowrap;
 }
 
-/* ---------- Categorias --------------------------------------------------- */
+/* ---------- Argumentos e fechamento da capa -------------------------------- */
 
-.grade-categorias { display: grid; gap: 10px; grid-template-columns: 1fr; }
-.cartao-categoria {
-  display: flex; flex-direction: column; gap: 4px;
-  padding: 16px 16px 14px; border-radius: var(--raio-g);
-  background: var(--papel); border: 1px solid var(--linha);
-  text-decoration: none; transition: transform .16s ease, box-shadow .2s ease, border-color .16s;
+/* Mesmo contêiner de .secao (max-width + folga lateral). Sem isso os dois
+   ficavam de borda a borda enquanto o resto da página estava recuado — a
+   página inteira parecia desalinhada. */
+.provas, .fechamento {
+  max-width: var(--largura); margin-inline: auto;
+  padding-inline: var(--folga);
 }
-.cartao-categoria:active { transform: scale(.99); }
-.cartao-categoria h3 { font-size: 1.05rem; }
-.cartao-categoria p { font-size: .88rem; color: var(--tinta-fraca); margin: 0; }
-.cartao-categoria .contagem {
-  margin-top: 6px; font-family: var(--titulo); font-weight: 600;
-  font-size: .78rem; color: var(--terracota);
+
+/* Sem caixa e sem borda, de propósito: cartão com borda aqui competia com o
+   cartão de produto logo abaixo e dava cara de grade de features de template.
+   O que separa um argumento do outro é um traço fino e o espaço. */
+.provas {
+  display: grid; gap: 22px;
+  padding-block: 4px 0; margin-bottom: 8px;
+}
+.prova { padding-top: 14px; border-top: 2px solid var(--terracota); }
+.prova h3 {
+  margin: 0 0 5px; font-size: 1rem; line-height: 1.3;
+  font-family: var(--titulo); font-weight: 700; color: var(--tinta);
+}
+.prova p {
+  margin: 0; font-size: .89rem; line-height: 1.55; color: var(--tinta-fraca);
+  max-width: 38ch;
+}
+
+/* Fecha a home puxando pra conversa, que é onde a venda acontece de fato. O
+   fundo é de um filho, não da própria section: a section carrega a folga
+   lateral do contêiner, e pintar o fundo nela deixaria a cor sangrando pra
+   fora do alinhamento do resto. */
+.fechamento { padding-block: 10px 32px; }
+.fechamento-caixa {
+  padding: 26px 20px; border-radius: var(--raio-g); background: var(--papel-2);
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+}
+.fechamento h2 { margin: 0; font-size: 1.2rem; line-height: 1.3; }
+.fechamento p {
+  margin: 0; max-width: 52ch; font-size: .95rem; line-height: 1.6; color: var(--tinta-fraca);
+}
+
+@media (min-width: 760px) {
+  .provas { grid-template-columns: repeat(3, 1fr); gap: 32px; padding-block: 10px 0; }
+  .prova h3 { font-size: 1.05rem; }
+  .fechamento-caixa {
+    flex-direction: row; align-items: center; justify-content: space-between;
+    gap: 28px; padding: 30px 32px;
+  }
+  .fechamento h2 { font-size: 1.4rem; }
+  .fechamento-texto { flex: 1; }
+  .fechamento-caixa .botao { flex: none; }
 }
 
 /* ---------- Grade de produtos -------------------------------------------- */
@@ -331,21 +367,7 @@ input, button, select, textarea { font-size: 16px; }
   box-shadow: 0 2px 8px rgba(43,24,16,.25);
 }
 .selo-destaque { background: var(--ambar); color: var(--torra); }
-.selo-prevenda { background: var(--terracota); color: #fff; }
 
-.aviso-prevenda {
-  display: flex; align-items: flex-start; gap: 10px;
-  background: linear-gradient(180deg, #FDF2E2, #FAE8D2);
-  border: 1px solid #EBCFA8; border-left: 4px solid var(--terracota);
-  border-radius: var(--raio); padding: 12px 14px; margin: 0 0 16px;
-}
-.aviso-prevenda svg {
-  width: 20px; height: 20px; flex: none; margin-top: 2px;
-  fill: none; stroke: var(--terracota); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-}
-.aviso-prevenda-texto { font-size: .9rem; line-height: 1.5; margin: 0; }
-.aviso-prevenda strong { font-family: var(--titulo); display: block; }
-.aviso-prevenda span { color: var(--tinta-fraca); }
 
 /* ---------- Página de produto -------------------------------------------- */
 
@@ -438,6 +460,238 @@ input, button, select, textarea { font-size: 16px; }
 .frete-opcao-nome small { font-weight: 400; color: var(--tinta-fraca); }
 .frete-opcao-prazo { color: var(--tinta-fraca); font-size: .8rem; flex: 1; text-align: right; }
 .frete-opcao-preco { font-family: var(--titulo); font-weight: 700; color: var(--terracota); }
+
+/* ---------- Avaliações ------------------------------------------------------ */
+
+/* Uma coluna no celular; a partir do tablet acompanha a grade de cartões. */
+.avaliacao-grade { display: grid; gap: 12px; }
+
+.avaliacao {
+  margin: 0; padding: 16px;
+  background: var(--papel); border: 1px solid var(--linha); border-radius: var(--raio-g);
+  display: flex; flex-direction: column; gap: 10px;
+}
+
+/* Recorte em 6 linhas. O JS mede depois de pintar: se o texto couber inteiro
+   ele ganha .avaliacao-texto-inteiro e o recorte sai; se não, aparece um botão
+   "ver mais" que põe a mesma classe. Depoimento curto não fica com reticências
+   nem com botão que não revela nada.
+
+   As aspas tipográficas são escritas no markup, não em ::before/::after: dentro
+   de um -webkit-box com line-clamp, pseudo-elemento é conteúdo que o navegador
+   acomoda em caixa própria, e aí a conta de linhas sai errada. O texto no JSON
+   continua limpo — quem põe as aspas é o template. */
+.avaliacao-texto {
+  margin: 0; font-size: .95rem; line-height: 1.55; color: var(--tinta);
+  display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.avaliacao-texto-inteiro { display: block; -webkit-line-clamp: none; overflow: visible; }
+
+.avaliacao-vermais {
+  align-self: flex-start; margin: -4px 0 0; padding: 0;
+  background: none; border: 0; cursor: pointer;
+  font-family: var(--titulo); font-weight: 600; font-size: .84rem;
+  color: var(--terracota); text-decoration: underline;
+}
+
+/* Uma foto ocupa a largura toda; duas ou mais viram grade quadrada. O
+   data-quantas vem limitado a 3 no JS, então 4+ fotos caem na mesma grade de
+   3 colunas e quebram em linhas — sem miniatura virar selo de 20px. */
+.avaliacao-fotos { display: grid; gap: 6px; }
+.avaliacao-fotos[data-quantas="2"] { grid-template-columns: 1fr 1fr; }
+.avaliacao-fotos[data-quantas="3"] { grid-template-columns: repeat(3, 1fr); }
+.avaliacao-fotos img {
+  width: 100%; object-fit: cover;
+  border-radius: var(--raio); background: var(--papel-2);
+}
+.avaliacao-fotos[data-quantas="1"] img { aspect-ratio: 4 / 3; }
+.avaliacao-fotos:not([data-quantas="1"]) img { aspect-ratio: 1 / 1; }
+
+.avaliacao-autor {
+  font-family: var(--titulo); font-weight: 600; font-size: .86rem; color: var(--tinta-fraca);
+  margin-top: auto;
+}
+.avaliacao-produto { color: var(--terracota); text-decoration: none; }
+.avaliacao-produto::before { content: "· "; color: var(--tinta-fraca); }
+
+@media (min-width: 700px) {
+  .avaliacao-grade { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+}
+
+@media (hover: hover) {
+  .avaliacao-produto:hover { text-decoration: underline; }
+  .avaliacao-vermais:hover { color: var(--torra); }
+}
+
+/* ---------- Tela de deixar feedback (#/feedback) ---------------------------- */
+
+/* Coluna estreita de propósito: formulário largo em desktop parece planilha e
+   a linha de texto fica longa demais pra reler o que se escreveu. */
+.feedback-pagina { max-width: 620px; margin-inline: auto; }
+.feedback-pagina h1 { font-size: 1.5rem; }
+.feedback-intro {
+  margin: 0 0 22px; color: var(--tinta-fraca); font-size: .95rem; line-height: 1.6;
+}
+
+.feedback-form {
+  display: grid; gap: 16px;
+  padding: 20px; border-radius: var(--raio-g);
+  background: var(--papel); border: 1px solid var(--linha);
+}
+
+/* A peça vem da URL, não de um campo: é contexto, então tem cara de recado e
+   não de pergunta. */
+.feedback-peca {
+  margin: 0; padding: 11px 14px;
+  background: var(--papel-2); border-radius: var(--raio);
+  font-size: .9rem; color: var(--tinta-fraca);
+}
+.feedback-peca strong { color: var(--tinta); }
+
+.feedback-campo { display: grid; gap: 6px; }
+.feedback-campo > span {
+  font-family: var(--titulo); font-weight: 600; font-size: .88rem; color: var(--tinta);
+}
+.feedback-campo > span em {
+  font-style: normal; font-weight: 400; color: var(--tinta-fraca);
+}
+.feedback-campo input,
+.feedback-campo textarea {
+  width: 100%; padding: 11px 13px;
+  border-radius: var(--raio); border: 2px solid var(--linha);
+  background: var(--papel-2); color: var(--tinta);
+  font-family: var(--texto); font-size: 16px; /* 16px evita o zoom do iOS no foco */
+}
+.feedback-campo input { height: var(--toque); }
+.feedback-campo textarea { resize: vertical; min-height: 150px; line-height: 1.55; }
+.feedback-campo :is(input, textarea):focus {
+  outline: none; border-color: var(--terracota); background: var(--papel);
+}
+.feedback-campo ::placeholder { color: var(--tinta-fraca); opacity: .8; }
+
+.feedback-conta { font-size: .78rem; color: var(--tinta-fraca); }
+.feedback-conta-curta { color: var(--terracota); }
+
+/* Anexo de foto. O <input type=file> fica escondido e o <label> em volta vira o
+   botão: o controle nativo não aceita estilo e desenha um "Nenhum arquivo
+   selecionado" que não combina com nada. */
+.feedback-dica {
+  margin: 0; font-size: .82rem; line-height: 1.5; color: var(--tinta-fraca);
+}
+.feedback-anexar { display: inline-flex; cursor: pointer; margin-top: 4px; position: relative; }
+.feedback-anexar .botao { pointer-events: none; }
+.feedback-anexar:focus-within .botao { outline: 2px solid var(--terracota); outline-offset: 2px; }
+
+/* Esconde do olho sem esconder do teclado nem do leitor de tela. `display:none`
+   e o atributo hidden tirariam o campo da ordem de tabulação. */
+.so-leitor {
+  position: absolute; width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip-path: inset(50%); overflow: hidden; white-space: nowrap;
+}
+
+.feedback-previas {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px;
+}
+.feedback-previas[hidden] { display: none; }
+.feedback-previa { position: relative; margin: 0; }
+.feedback-previa img {
+  width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+  border-radius: var(--raio); background: var(--papel-2); display: block;
+}
+.feedback-tirar {
+  position: absolute; top: -6px; right: -6px;
+  width: 28px; height: 28px; padding: 0;
+  display: grid; place-items: center;
+  border: 2px solid var(--papel); border-radius: 50%;
+  background: var(--torra); color: var(--creme);
+  font-size: 1rem; line-height: 1; cursor: pointer;
+}
+
+/* A autorização fica visualmente separada do resto: é consentimento, não é
+   mais um campo do formulário. */
+.feedback-autorizo {
+  display: flex; gap: 11px; align-items: flex-start;
+  padding: 14px; border-radius: var(--raio); background: var(--papel-2);
+  font-size: .86rem; line-height: 1.5; color: var(--tinta-fraca); cursor: pointer;
+}
+.feedback-autorizo input {
+  flex: none; width: 20px; height: 20px; margin: 1px 0 0;
+  accent-color: var(--terracota);
+}
+
+.feedback-acoes { display: grid; }
+.feedback-acoes button[disabled] { opacity: .6; cursor: progress; }
+
+/* Vazio no caso normal; o :not(:empty) evita um buraco embaixo do botão. */
+.feedback-aviso { margin: 0; font-size: .88rem; line-height: 1.55; }
+.feedback-aviso:not(:empty) {
+  padding: 13px 14px; border-radius: var(--raio); background: var(--papel-2);
+}
+.feedback-aviso[data-tipo="erro"] {
+  color: var(--tinta); border-left: 3px solid var(--terracota);
+}
+/* A saída de emergência é um botão de verdade, não um link no meio do texto:
+   quando o Firestore falha, mandar pelo WhatsApp é a ação principal da tela. */
+.feedback-escape { margin-top: 12px; display: inline-flex; }
+
+.feedback-nota {
+  margin: 18px 0 0; font-size: .86rem; line-height: 1.6; color: var(--tinta-fraca);
+}
+.feedback-nota a { color: var(--terracota); font-weight: 600; }
+
+/* ---------- Foto ampliada do depoimento ------------------------------------ */
+
+.avaliacao-fotos img { cursor: zoom-in; }
+.avaliacao-fotos img:focus-visible { outline: 3px solid var(--terracota); outline-offset: 2px; }
+
+.sem-rolagem { overflow: hidden; }
+
+.lupa {
+  position: fixed; inset: 0; z-index: 90;
+  background: rgba(23, 12, 7, .92);
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  padding: max(12px, env(safe-area-inset-top)) 8px max(12px, var(--seguro-baixo));
+}
+.lupa[hidden] { display: none; }
+
+.lupa-palco { margin: 0; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.lupa-palco img {
+  /* Cabe inteira na tela sem cortar e sem esticar além do tamanho real: foto de
+     cliente costuma ser pequena, e ampliar além do original só mostra pixel. */
+  max-width: min(94vw, 1100px); max-height: 82vh;
+  width: auto; height: auto; object-fit: contain;
+  border-radius: var(--raio); background: var(--papel-2);
+}
+.lupa-palco figcaption {
+  text-align: center; font-size: .82rem; color: rgba(247, 239, 228, .72);
+  font-family: var(--titulo);
+}
+
+.lupa-fechar, .lupa-seta {
+  flex: none; border: 0; cursor: pointer;
+  background: rgba(247, 239, 228, .12); color: var(--creme);
+  display: grid; place-items: center; line-height: 1;
+}
+.lupa-fechar {
+  position: absolute; top: max(10px, env(safe-area-inset-top)); right: 12px;
+  width: var(--toque); height: var(--toque); border-radius: 50%; font-size: 1.6rem;
+}
+.lupa-seta { width: 40px; height: 72px; border-radius: var(--raio); font-size: 1.9rem; }
+.lupa-seta[hidden] { display: none; }
+
+@media (max-width: 560px) {
+  /* No celular as setas saem de cima da imagem e viram barra embaixo: a 40px de
+     largura elas cobriam a peça justamente onde a pessoa quer olhar. */
+  .lupa { flex-wrap: wrap; align-content: center; }
+  .lupa-palco { order: 1; flex-basis: 100%; }
+  .lupa-seta { order: 2; width: 84px; height: var(--toque); }
+}
+
+@media (hover: hover) {
+  .lupa-fechar:hover, .lupa-seta:hover { background: rgba(247, 239, 228, .24); }
+}
 
 /* ---------- Ficha técnica -------------------------------------------------- */
 
@@ -730,7 +984,6 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
   .grade { gap: 16px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
   .cartao-foto { aspect-ratio: 4 / 3; }
   .cartao-seta { display: inline; }
-  .grade-categorias { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
   .capa-acoes { display: flex; flex-wrap: wrap; gap: 12px; }
   .marca img { width: 140px; }
   .palco { margin-inline: 0; border: 1px solid var(--linha); border-radius: var(--raio-g); }
@@ -797,7 +1050,6 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
 @media (hover: hover) and (min-width: 800px) {
   .cartao:hover { transform: translateY(-4px); box-shadow: var(--sombra-g); border-color: #D8C3A9; }
   .cartao:hover .cartao-foto img { transform: scale(1.045); }
-  .cartao-categoria:hover { transform: translateY(-3px); box-shadow: var(--sombra-g); border-color: var(--terracota); }
   .ver-tudo:hover, .trilha a:hover { text-decoration: underline; }
   .miniatura:hover { opacity: 1; }
   .rodape-links a:hover { background: rgba(247,239,228,.1); border-color: rgba(247,239,228,.5); }
