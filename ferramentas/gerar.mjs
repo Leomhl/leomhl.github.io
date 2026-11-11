@@ -63,16 +63,16 @@ for (const p of catalogo.produtos) {
   for (const campo of CAMPOS_INTERNOS) delete p[campo];
 }
 
-// Avaliações: lista única, cada item podendo apontar para um produto. Valida
-// aqui porque um depoimento com slug errado não aparece em lugar nenhum e não
-// dá erro no navegador — some calado, que é o pior jeito de quebrar.
+// Avaliações: lista única, sem vínculo com produto — todas aparecem na capa.
+// Entrada antiga com "produto" é recusada aqui em vez de ignorada: slug mudo no
+// JSON é dado que ninguém lê e que engana quem for editar depois.
 catalogo.avaliacoes = catalogo.avaliacoes || [];
 catalogo.avaliacoes.forEach((a, i) => {
   const onde = `avaliacoes[${i}]${a.nome ? ` (${a.nome})` : ''}`;
   if (!a.nome) erros.push(`${onde}: sem nome`);
   if (!a.texto) erros.push(`${onde}: sem texto`);
-  if (a.produto && !slugs.has(a.produto))
-    erros.push(`${onde}: produto "${a.produto}" não existe no catálogo`);
+  if (a.produto)
+    erros.push(`${onde}: "produto" não existe mais — depoimento não é amarrado a peça`);
   if (a.data && Number.isNaN(Date.parse(a.data)))
     erros.push(`${onde}: data "${a.data}" inválida (use AAAA-MM-DD)`);
   // Foto de depoimento que não existe no disco renderiza como imagem quebrada
@@ -178,10 +178,6 @@ function precoDe(p) {
   return precos.length ? Math.min(...precos) : null;
 }
 
-function avaliacoesDe(p) {
-  return catalogo.avaliacoes.filter((a) => a.produto === p.slug && a.nome && a.texto);
-}
-
 function paginaProduto(p) {
   const preco = precoDe(p);
   const url = `${SITE}/p/${p.slug}/`;
@@ -197,9 +193,8 @@ function paginaProduto(p) {
   // Sem aggregateRating de propósito. O Google só mostra estrela no resultado
   // com nota agregada, e nota agregada em cima de dois ou três depoimentos por
   // peça não mede nada — fora que obriga a manter nota em todo depoimento. Os
-  // depoimentos entram como texto na página; a estrela do resultado de busca
-  // fica pra quando houver volume que a sustente.
-  const avaliacoes = avaliacoesDe(p);
+  // a estrela do resultado de busca fica pra quando houver volume que a
+  // sustente.
   const dadosEstruturados = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -252,21 +247,7 @@ ${preco != null ? `<meta property="product:price:amount" content="${preco.toFixe
 <p>${esc(p.resumo || '')}</p>
 <p>${esc(precoTexto)}</p>
 ${p.fotos?.length ? `<img src="${esc(foto)}" alt="${esc(p.nome)}" width="600">` : ''}
-${
-  avaliacoes.length
-    ? `<section>
-<h2>Quem já tem em casa</h2>
-${avaliacoes
-  .map(
-    (a) => `<blockquote><p>${esc(a.texto)}</p><footer>${esc(
-      [a.nome, a.cidade].filter(Boolean).join(' — ')
-    )}</footer></blockquote>`
-  )
-  .join('\n')}
-</section>
-`
-    : ''
-}<p><a href="${SITE}/#/p/${p.slug}">Ver na loja</a></p>
+<p><a href="${SITE}/#/p/${p.slug}">Ver na loja</a></p>
 </body>
 </html>
 `;
@@ -336,11 +317,10 @@ console.log(`assets versionados no index.html: ${versoesAsset.join(', ')}`);
 console.log(`formulário de feedback (sem link no site, mande por WhatsApp): ${SITE}/#/${rotaFb || 'feedback'}`);
 if (semFoto.length) console.log(`sem foto: ${semFoto.join(', ')}`);
 
-const comDepoimento = catalogo.produtos.filter((p) => avaliacoesDe(p).length).length;
 const curados = catalogo.produtos.filter((p) => p.combinaCom?.length).length;
 const fb = catalogo.loja.feedback?.firebase;
 console.log(
-  `avaliações: ${catalogo.avaliacoes.length} embutidas no catálogo (reserva), em ${comDepoimento} produto(s); ` +
+  `avaliações: ${catalogo.avaliacoes.length} embutidas no catálogo (reserva), todas na capa; ` +
     (fb?.projeto && fb?.chaveApi
       ? `o formulário grava no Firestore (projeto ${fb.projeto}); nada aparece no site antes de rodar colher-depoimentos.mjs`
       : 'loja.feedback.firebase sem projeto/chaveApi — o formulário cai no WhatsApp')

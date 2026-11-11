@@ -207,7 +207,6 @@ function criarCliente(projeto, token) {
             nome: String(valor(f.nome) || '').trim(),
             cidade: String(valor(f.cidade) || '').trim(),
             texto: String(valor(f.texto) || '').trim(),
-            produto: String(valor(f.produto) || '').trim(),
             fotos: (valor(f.fotos) || []).filter(Boolean),
             aprovado: valor(f.aprovado) === true,
             destaque: valor(f.destaque) === true,
@@ -471,7 +470,6 @@ async function principal() {
 
   catalogo.avaliacoes = catalogo.avaliacoes || [];
   const jaEstaticos = new Set(catalogo.avaliacoes.map(identidade));
-  const slugs = new Set(catalogo.produtos.map((p) => p.slug));
 
   const novos = [];
   const paraArquivar = [];
@@ -532,10 +530,8 @@ async function principal() {
       const a = { nome: d.nome, texto: d.texto };
       if (d.cidade) a.cidade = d.cidade;
       if (d.criadoEm) a.data = String(d.criadoEm).slice(0, 10);
-      // Slug que não existe mais no catálogo travaria o gerador. Melhor o
-      // depoimento virar de capa do que a colheita inteira falhar.
-      if (d.produto && slugs.has(d.produto)) a.produto = d.produto;
-      else if (d.produto) console.log(`  ⚠ ${d.nome}: produto "${d.produto}" não existe, saiu`);
+      // Documento antigo pode ter campo `produto`: ele é ignorado de propósito.
+      // Depoimento não é mais amarrado a peça, e o gerador recusa a chave.
       if (d.destaque) a.destaque = true;
       if (caminhos.length) a.fotos = caminhos;
 

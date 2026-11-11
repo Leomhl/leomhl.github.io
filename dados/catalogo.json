@@ -55,7 +55,7 @@
     "feedback": {
       "titulo": "Depoimentos",
       "rota": "conta-como-ficou",
-      "agradecimento": "Recebemos, obrigado! Vamos dar uma olhada e seu depoimento entra no site nos próximos dias.",
+      "agradecimento": "Recebemos, e ficamos felizes de verdade! Vamos dar uma olhada e seu depoimento entra no site nos próximos dias.",
       "mensagemWhatsapp": "Olá! Quero deixar um feedback sobre o cafezim:\n\n{depoimento}",
       "firebase": {
         "projeto": "cafezim-store",

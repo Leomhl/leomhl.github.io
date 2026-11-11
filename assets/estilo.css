@@ -512,15 +512,11 @@ input, button, select, textarea { font-size: 16px; }
   font-family: var(--titulo); font-weight: 600; font-size: .86rem; color: var(--tinta-fraca);
   margin-top: auto;
 }
-.avaliacao-produto { color: var(--terracota); text-decoration: none; }
-.avaliacao-produto::before { content: "· "; color: var(--tinta-fraca); }
-
 @media (min-width: 700px) {
   .avaliacao-grade { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 }
 
 @media (hover: hover) {
-  .avaliacao-produto:hover { text-decoration: underline; }
   .avaliacao-vermais:hover { color: var(--torra); }
 }
 
@@ -530,6 +526,12 @@ input, button, select, textarea { font-size: 16px; }
    a linha de texto fica longa demais pra reler o que se escreveu. */
 .feedback-pagina { max-width: 620px; margin-inline: auto; }
 .feedback-pagina h1 { font-size: 1.5rem; }
+
+/* A logo aparece aqui, e não só no topo do site, porque esta página é aberta
+   por um link mandado no WhatsApp: quem chega precisa reconhecer a loja antes
+   de digitar nome e cidade num formulário. */
+.feedback-marca { display: flex; justify-content: center; margin-bottom: 26px; }
+.feedback-marca img { width: 132px; height: auto; }
 .feedback-intro {
   margin: 0 0 22px; color: var(--tinta-fraca); font-size: .95rem; line-height: 1.6;
 }
@@ -539,15 +541,6 @@ input, button, select, textarea { font-size: 16px; }
   padding: 20px; border-radius: var(--raio-g);
   background: var(--papel); border: 1px solid var(--linha);
 }
-
-/* A peça vem da URL, não de um campo: é contexto, então tem cara de recado e
-   não de pergunta. */
-.feedback-peca {
-  margin: 0; padding: 11px 14px;
-  background: var(--papel-2); border-radius: var(--raio);
-  font-size: .9rem; color: var(--tinta-fraca);
-}
-.feedback-peca strong { color: var(--tinta); }
 
 .feedback-campo { display: grid; gap: 6px; }
 .feedback-campo > span {

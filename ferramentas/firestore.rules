@@ -42,9 +42,9 @@ service cloud.firestore {
       // documento de 1 MB por vez.
       allow create: if
              request.resource.data.keys().hasOnly(
-               ['nome', 'cidade', 'texto', 'produto', 'aprovado', 'destaque', 'criadoEm', 'fotos'])
+               ['nome', 'cidade', 'texto', 'aprovado', 'destaque', 'criadoEm', 'fotos'])
           && request.resource.data.keys().hasAll(
-               ['nome', 'cidade', 'texto', 'produto', 'aprovado', 'destaque', 'criadoEm'])
+               ['nome', 'cidade', 'texto', 'aprovado', 'destaque', 'criadoEm'])
 
           // Nasce invisível. Sem isto o formulário publica direto no site e a
           // vitrine vira mural de spam.
@@ -59,12 +59,10 @@ service cloud.firestore {
           && request.resource.data.texto.size() >= 10
           && request.resource.data.texto.size() <= 1200
 
-          // Vazio é válido: os dois campos são opcionais no formulário e o site
-          // manda string vazia em vez de omitir, pro formato ficar sempre igual.
+          // Vazio é válido: cidade é opcional no formulário e o site manda
+          // string vazia em vez de omitir, pro formato ficar sempre igual.
           && request.resource.data.cidade is string
           && request.resource.data.cidade.size() <= 80
-          && request.resource.data.produto is string
-          && request.resource.data.produto.size() <= 80
 
           && request.resource.data.criadoEm is timestamp
 

@@ -318,17 +318,14 @@ console — não é ele que publica.
 |---|---|---|
 | `nome` | sim | Aparece na assinatura |
 | `texto` | sim | O depoimento |
-| `produto` | não | Slug. Com ele o depoimento aparece na página daquela peça; sem ele, só na capa |
 | `cidade` | não | Entra na assinatura, depois do nome |
 | `data` | não | `AAAA-MM-DD`. Vai pro `datePublished` do JSON-LD |
 | `fotos` | não | Lista de caminhos, ex. `fotos/avaliacoes/mariana-01.jpg`. Uma foto ocupa a largura toda; duas ou mais viram grade. Aceita também `foto` no singular, de entrada antiga |
 | `destaque` | não | Marca quais aparecem na capa. Se nenhum estiver marcado, a capa mostra os 3 mais recentes |
 
-Onde aparece:
-
-- **Página do produto:** seção "Quem já tem em casa" com os depoimentos daquela
-  peça, logo antes do "Você também pode gostar".
-- **Capa:** seção com até 3 depoimentos.
+Onde aparece: **só na capa**, em seção com até 3 depoimentos. Página de produto
+não tem depoimento — o campo `produto` foi removido do modelo, e o gerador
+recusa quem insistir em usá-lo.
 
 **Sem nenhum depoimento a seção desaparece** — não fica um bloco vazio nem um
 "0 avaliações". E **foto só aparece depois de passar pelo
@@ -338,9 +335,6 @@ base64.
 O texto do cartão é recortado em **6 linhas** e ganha um "ver mais" quando passa
 disso. O botão é criado pelo JS depois de pintar, medindo o elemento: depoimento
 que cabe inteiro não fica com reticências nem com botão que não revela nada.
-
-Com as duas fontes vazias a seção mostra **só o convite pro formulário** — sem
-"0 avaliações" e sem nada de enfeite.
 
 **Não há estrela nem nota em lugar nenhum**, de propósito. Com um punhado de
 depoimentos por peça, média é estatística sem significado, e estrela vazia ao
@@ -363,8 +357,8 @@ achando o formulário por tentativa; é obscuridade, não segurança, e o que de
 fato protege continua sendo a moderação (`aprovado: false`).
 
 Pra trocar o endereço: mude `loja.feedback.rota` e rode o gerador. Ele valida o
-formato e imprime a URL completa no fim. Mandando `#/<rota>/<slug>` o formulário
-já chega sabendo a peça.
+formato e imprime a URL completa no fim. Link antigo com peça no fim
+(`#/<rota>/<slug>`) continua abrindo o formulário — o segmento extra é ignorado.
 
 Sem login, sem Google Forms, sem sair do domínio.
 Pede nome, cidade e o depoimento — **os três obrigatórios** — mais até 3 fotos
@@ -378,10 +372,12 @@ cartão tem "ver mais". O valor é o mesmo nas regras do Firestore
 (`MIN_TEXTO` em `app.js` e `texto.size() >= 10` em `firestore.rules`) — mudar num
 lugar só faria o envio ser recusado com 403 depois da pessoa ter escrito.
 
-**Não pergunta qual peça.** Quando o convite é clicado dentro da página de um
-produto, o link é `#/feedback/<slug>` e a peça vem da URL — aparece como a linha
-"Sobre a *Mug Buddy*", não como campo. Slug inventado na URL é conferido contra
-o catálogo antes de ir pro banco.
+**Não pergunta qual peça, e não guarda peça nenhuma.** O depoimento não é
+amarrado a produto: aparece na capa, e só na capa. Enquanto a peça vinha do slug
+da URL, o link mandado por WhatsApp carregava o nome dela atravessado no
+endereço, e a mesma seção existia em duas telas — contexto que ninguém pedia e
+um campo a mais pra manter. O gerador **recusa** `produto` em `avaliacoes[]`:
+chave muda no JSON é dado que ninguém lê e que engana quem editar depois.
 
 **O formulário abre sempre em branco.** Não há rascunho salvo no navegador: o
 preço é que recarregar a página no meio perde o texto, e em troca ninguém

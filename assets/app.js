@@ -357,7 +357,6 @@
       nome: { stringValue: dados.nome },
       cidade: { stringValue: dados.cidade || '' },
       texto: { stringValue: dados.texto },
-      produto: { stringValue: dados.produto || '' },
       criadoEm: { timestampValue: new Date().toISOString() },
       // Nasce reprovado. Formulário aberto na internet publicando direto é
       // convite a spam na própria vitrine; virar `true` é um clique no console
@@ -383,8 +382,6 @@
   // público — vira público quando o colher-depoimentos.mjs traz pra cá.
   const todasAvaliacoes = () =>
     (catalogo.avaliacoes || []).filter((a) => a && a.texto && a.nome);
-
-  const avaliacoesDe = (p) => todasAvaliacoes().filter((a) => a.produto === p.slug);
 
   // Sem estrela e sem média: com um punhado de depoimentos por peça, nota média
   // é estatística de enfeite — e estrela vazia ao lado do preço comunica
@@ -426,8 +423,7 @@
     }
   }
 
-  function cartaoAvaliacao(a, mostrarProduto = false) {
-    const p = a.produto ? porSlug(catalogo.produtos, a.produto) : null;
+  function cartaoAvaliacao(a) {
     const assinatura = [a.nome, a.cidade].filter(Boolean).join(' · ');
     const fotos = fotosDe(a);
     return `<figure class="avaliacao">
@@ -447,33 +443,16 @@
             </div>`
           : ''
       }
-      <figcaption class="avaliacao-autor">
-        ${esc(assinatura)}
-        ${
-          mostrarProduto && p
-            ? ` <a class="avaliacao-produto" href="#/p/${esc(p.slug)}">${esc(p.nome)}</a>`
-            : ''
-        }
-      </figcaption>
+      <figcaption class="avaliacao-autor">${esc(assinatura)}</figcaption>
     </figure>`;
   }
 
-  // Não existe convite público pra deixar depoimento. A rota #/feedback continua
-  // viva e funcionando — o link é mandado por WhatsApp pra quem comprou. Isso é
-  // o que mantém a seção honesta: quem escreve é cliente, não quem passou pelo
-  // site. Sem depoimento, a seção simplesmente não aparece.
-  function blocoAvaliacoes(p) {
-    const lista = avaliacoesDe(p);
-    if (!lista.length) return '';
-    const f = catalogo.loja.feedback || {};
-    return `<section class="secao avaliacoes" id="avaliacoes">
-      <div class="secao-topo"><h2>${esc(f.titulo || 'Quem já tem em casa')}</h2></div>
-      <div class="avaliacao-grade">${lista.map((a) => cartaoAvaliacao(a)).join('')}</div>
-    </section>`;
-  }
-
-  // Na capa: os marcados com `destaque`, e se não houver nenhum marcado cai
-  // nos mais recentes — assim a seção nasce funcionando sem curadoria manual.
+  // Depoimento não é amarrado a peça: aparece na capa, e só na capa. Enquanto
+  // ele vinha do slug da URL do formulário, o link mandado por WhatsApp
+  // carregava o nome da peça e a seção existia em duas telas — contexto que
+  // ninguém pedia e um campo a mais pra manter. Na capa: os marcados com
+  // `destaque`, e se não houver nenhum marcado cai nos mais recentes, pra a
+  // seção nascer funcionando sem curadoria manual.
   function secaoAvaliacoesInicio() {
     const todas = todasAvaliacoes();
     const marcadas = todas.filter((a) => a.destaque);
@@ -482,7 +461,7 @@
     const f = catalogo.loja.feedback || {};
     return `<section class="secao avaliacoes">
       <div class="secao-topo"><h2>${esc(f.titulo || 'Quem já tem em casa')}</h2></div>
-      <div class="avaliacao-grade">${lista.map((a) => cartaoAvaliacao(a, true)).join('')}</div>
+      <div class="avaliacao-grade">${lista.map((a) => cartaoAvaliacao(a)).join('')}</div>
     </section>`;
   }
 
@@ -1071,8 +1050,6 @@
         </div>
       </article>
 
-      ${blocoAvaliacoes(p)}
-
       ${secaoRelacionados(p)}
     `;
   }
@@ -1173,7 +1150,6 @@
       dados.texto,
       '',
       `— ${dados.nome}${dados.cidade ? ', ' + dados.cidade : ''}`,
-      dados.produto ? `Peça: ${porSlug(catalogo.produtos, dados.produto)?.nome || dados.produto}` : '',
       'Autorizo publicar no site e nas redes sociais.',
       // Link de wa.me só carrega texto. Se a pessoa tinha escolhido foto, ela
       // precisa anexar na mão — e precisa saber disso antes de mandar.
@@ -1188,54 +1164,52 @@
     return 'https://wa.me/' + String(loja.whatsapp || '').replace(/\D/g, '') + '?text=' + encodeURIComponent(texto);
   }
 
-  function telaFeedback(slug) {
+  function telaFeedback() {
     const f = catalogo.loja.feedback || {};
-    // A peça vem da URL (#/feedback/<slug>), não de um campo: quem clicou no
-    // convite dentro da página do Mug Buddy está falando do Mug Buddy. Aparece
-    // como texto, não como campo — é contexto, não pergunta.
-    const peca = slug ? porSlug(catalogo.produtos, slug) : null;
-
+    // Sem peça: nem na URL, nem como campo. O depoimento vale pela história de
+    // quem escreve, e amarrar a um slug só servia pra deixar o nome da peça
+    // atravessado no link que vai por WhatsApp.
     return `
       <nav class="trilha" aria-label="Você está em"><a href="#/">Início</a><span>/</span>Deixar feedback</nav>
 
       <section class="secao feedback-pagina">
-        <div class="secao-topo"><h1>Conta como ficou seu cantinho</h1></div>
+        <div class="feedback-marca">
+          <img src="marca/logo-vertical.svg" alt="cafezim" width="132" height="132">
+        </div>
+        <div class="secao-topo"><h1>Que bom te ver por aqui!</h1></div>
         <p class="feedback-intro">
-          Seu depoimento ajuda quem está decidindo mais do que qualquer texto nosso.
-          Leva um minuto, e não precisa de conta em lugar nenhum.
+          Obrigado de verdade por comprar com a gente. Se a peça já está no seu cantinho,
+          conta como ficou: o que você escreve aqui ajuda quem está decidindo muito mais
+          do que qualquer texto nosso. Leva um minuto, e não precisa criar conta em
+          lugar nenhum.
         </p>
 
         <form class="feedback-form" novalidate>
-          ${
-            peca
-              ? `<p class="feedback-peca">Sobre a <strong>${esc(peca.nome)}</strong>.</p>`
-              : ''
-          }
-
           <label class="feedback-campo">
-            <span>Seu nome <em>(aparece no site)</em></span>
+            <span>Como podemos te chamar? <em>(aparece no site)</em></span>
             <input name="nome" type="text" required maxlength="60" autocomplete="name"
-                   placeholder="Pode ser só o primeiro nome">
+                   placeholder="Só o primeiro nome já está ótimo">
           </label>
 
           <label class="feedback-campo">
-            <span>Cidade e estado</span>
+            <span>De onde você fala com a gente?</span>
             <input name="cidade" type="text" required maxlength="80" autocomplete="address-level2"
                    placeholder="Ex: Niterói, RJ">
           </label>
 
           <label class="feedback-campo">
-            <span>Conta pra gente</span>
+            <span>Conta como ficou</span>
             <textarea name="texto" required rows="7" minlength="${MIN_TEXTO}" maxlength="1200"
-                      placeholder="O que te fez comprar, e o que mudou no seu cantinho depois que chegou? Duas ou três linhas já bastam."></textarea>
+                      placeholder="O que te fez escolher a peça, e como ela ficou no seu cantinho? Duas ou três linhas já fazem o nosso dia."></textarea>
             <small class="feedback-conta" data-conta aria-live="polite"></small>
           </label>
 
           <div class="feedback-campo">
             <span>Fotos da peça na sua casa <em>(opcional, até ${MAX_FOTOS})</em></span>
             <p class="feedback-dica">
-              É o que mais ajuda quem está decidindo: a peça na bancada de verdade,
-              não na foto do catálogo. Não precisa enquadrar nem cortar.
+              Essa é a parte que mais ajuda quem está decidindo: a peça na bancada de
+              verdade, não na foto do catálogo. Manda do jeito que está — não precisa
+              enquadrar, cortar nem arrumar a cozinha.
             </p>
             <label class="feedback-anexar">
               <!-- Escondido por recorte, e não pelo atributo hidden: hidden tira
@@ -1265,9 +1239,9 @@
         </form>
 
         <p class="feedback-nota">
-          Tirou foto da peça na sua bancada? Manda no
-          <a href="${esc(linkZap(null))}" target="_blank" rel="noopener">nosso WhatsApp</a> —
-          é o que mais ajuda, e é por lá que recebo imagem.
+          Preferir mandar pelo WhatsApp, ou ficou com alguma dúvida? Fala com a gente
+          <a href="${esc(linkZap(null))}" target="_blank" rel="noopener">por aqui</a> —
+          a gente responde.
         </p>
       </section>
     `;
@@ -1295,12 +1269,6 @@
     const lerCampos = () => ({
       nome: form.elements.nome.value.trim(),
       cidade: form.elements.cidade.value.trim(),
-      // Vem da rota, não de campo: #/feedback/<slug>. Confere contra o catálogo
-      // pra slug inventado na URL não entrar no banco.
-      produto: (() => {
-        const arg = rota().arg;
-        return arg && porSlug(catalogo.produtos, arg) ? arg : '';
-      })(),
       texto: campoTexto.value.trim(),
       fotos,
     });
@@ -1348,11 +1316,11 @@
       if (recusadas.length)
         dizer(
           `Não conseguimos usar ${recusadas.map((n) => esc(n)).join(', ')}. ` +
-            'Tenta tirar um print ou salvar como JPEG — e sem foto o depoimento vale igual.',
+            'Tenta um print ou salvar como JPEG — e sem foto o depoimento vale igual, de verdade.',
           'erro'
         );
       else if (escolhidas.length > vagas)
-        dizer(`Pegamos as ${vagas} primeiras: o limite é ${MAX_FOTOS} fotos.`, '');
+        dizer(`Pegamos as ${vagas} primeiras — o limite é ${MAX_FOTOS} fotos.`, '');
       else dizer('', '');
     });
 
@@ -1378,12 +1346,12 @@
       // Validação própria em vez de só confiar no `required`: a mensagem nativa
       // do navegador é um balãozinho que some, e aqui o erro precisa ficar na
       // tela junto com a saída de emergência.
-      if (dados.nome.length < 2) return dizer('Falta seu nome.', 'erro');
-      if (dados.cidade.length < 2) return dizer('Falta sua cidade.', 'erro');
+      if (dados.nome.length < 2) return dizer('Como podemos te chamar? Falta o nome.', 'erro');
+      if (dados.cidade.length < 2) return dizer('Falta a cidade — pode ser só a cidade e o estado.', 'erro');
       if (dados.texto.length < MIN_TEXTO)
-        return dizer('Escreve um pouquinho mais, só pra dar pra entender.', 'erro');
+        return dizer('Conta um pouquinho mais, pra dar pra entender a ideia.', 'erro');
       if (!form.elements.autorizo.checked)
-        return dizer('Preciso da sua autorização pra publicar o depoimento.', 'erro');
+        return dizer('Precisamos da sua autorização pra publicar o depoimento no site.', 'erro');
 
       botao.disabled = true;
       botao.textContent = 'Enviando…';
@@ -1391,7 +1359,7 @@
 
       enviarAvaliacao(dados)
         .then(() => {
-          medir('feedback_enviado', { ...(dados.produto && { item_id: dados.produto }) });
+          medir('feedback_enviado');
           const f = catalogo.loja.feedback || {};
           main.querySelector('.feedback-pagina').innerHTML = `
             <div class="vazio">
@@ -1422,7 +1390,7 @@
   function telaNaoEncontrado(mensagem) {
     return `<div class="vazio">
       <img src="marca/mascote.svg" alt="" aria-hidden="true">
-      <h2>Não achei essa página</h2>
+      <h2>Não achamos essa página</h2>
       <p>${esc(mensagem)}</p>
       <a class="botao" href="#/">Voltar ao início</a>
     </div>`;
@@ -2043,7 +2011,7 @@
       r.tela === 'categoria' ? telaCategoria(r.arg) :
       r.tela === 'busca'     ? telaBusca(r.arg)     :
       r.tela === 'carrinho'  ? telaCarrinho()       :
-      r.tela === 'feedback'  ? telaFeedback(r.arg)  :
+      r.tela === 'feedback'  ? telaFeedback()      :
                                telaInicio();
 
     document.title = titulo(r);
