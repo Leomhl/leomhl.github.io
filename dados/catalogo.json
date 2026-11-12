@@ -5893,5 +5893,15 @@
       ]
     }
   ],
-  "avaliacoes": []
+  "avaliacoes": [
+    {
+      "nome": "Camila",
+      "texto": "A capivara é uma gracinha e o dosador de grãos ajuda muito na hora de colocar no moedor manual, já que da a quantidade certinha! Muito satisfeita com minha compra!",
+      "cidade": "Nova Friburgo/RJ",
+      "data": "2026-11-12",
+      "fotos": [
+        "fotos/avaliacoes/camila-01.jpg"
+      ]
+    }
+  ]
 }

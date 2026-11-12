@@ -12,7 +12,7 @@ site/
 ├── dados/catalogo.js             gerado a partir do JSON — não edite à mão
 ├── fotos/<slug>/01.jpg           fotos dos produtos
 ├── marca/                        logos e ícones
-└── ferramentas/                  os dois scripts de manutenção
+└── ferramentas/                  gerador, colheita de depoimentos, regras
 ```
 
 ## Por que o site abre sem delay
@@ -33,15 +33,22 @@ plano. Se você editou o JSON e esqueceu de gerar o `.js`, ele se corrige sozinh
 
 ### Pela interface do GitHub (sem instalar nada)
 
-Edite `site/dados/catalogo.json` direto no site do GitHub e salve. O workflow
-`.github/workflows/publicar.yml` regera o `catalogo.js`, valida e publica.
-Se você escrever algo inválido, a publicação falha com a mensagem do erro em vez
-de subir um site quebrado.
+Edite `dados/catalogo.json` direto no site do GitHub e salve. **Não há
+workflow nenhum** — o GitHub Pages serve a raiz do branch como está, então o
+`catalogo.js` fica com o dado velho até alguém rodar o gerador. O site se
+corrige: ele confere o `catalogo.json` em segundo plano (`assets/app.js`) e
+repinta com o dado novo.
+
+O custo de editar só pela interface é esse: a primeira tela de quem abre o site
+mostra o estado anterior por um instante, e nada valida o JSON antes de subir —
+se você escrever algo inválido, o `catalogo.js` velho continua no ar e o
+conserto em segundo plano falha calado. **Rodar `node ferramentas/gerar.mjs` não
+é redundância com um CI: é a única geração e a única validação que existem.**
 
 ### Na sua máquina
 
 ```bash
-node site/ferramentas/gerar.mjs          # valida o JSON e regera o catalogo.js
+node ferramentas/gerar.mjs               # valida o JSON e regera o catalogo.js
 ```
 
 Rode sempre depois de editar o JSON.
@@ -186,15 +193,12 @@ carrega** antes de alguém tocar no play — só a miniatura.
 Uma foto por arquivo em `fotos/<slug>/`, numeradas: `01.jpg`, `02.jpg`, `03.jpg`.
 Liste na ordem que você quer no carrossel; a primeira é a capa.
 
-Para puxar de novo o `thumbnail.png` da pasta de trabalho de cada produto:
-
-```bash
-./site/ferramentas/sincronizar-fotos.sh            # só preenche o que falta
-./site/ferramentas/sincronizar-fotos.sh --forcar   # refaz todas as capas
-```
-
-Ele nunca encosta em `02.jpg` para cima — fotos que você adicionou à mão ficam.
-Precisa do ImageMagick (`brew install imagemagick`).
+Copiar da pasta de produção pra cá é manual. Existia um
+`ferramentas/sincronizar-fotos.sh` que gerava a capa a partir do
+`thumbnail.png` de cada pasta de produto; foi removido porque aquele arquivo não
+existe mais (as pastas têm `miniatura.png`, com 240x180 — menor que as capas que
+já estão no ar) e porque `pastaOrigem` aponta pra fora do repositório, que é
+onde o script precisava ler.
 
 ## Analytics (GA4)
 
@@ -228,12 +232,14 @@ simplesmente não acontece e nada quebra.
 
 ## Publicar no GitHub Pages
 
-1. Suba o repositório.
-2. **Settings › Pages › Build and deployment › Source: GitHub Actions.**
-3. Pronto. Cada push na `main` republica.
+O repositório é `Leomhl/leomhl.github.io` — site de usuário do GitHub
+Pages, servido direto da raiz do branch. **Sem GitHub Actions e sem workflow:**
+cada push na `master` republica os arquivos como estão. O `CNAME` da raiz aponta
+o domínio `www.cafezim.store`.
 
-O workflow envia **apenas a pasta `site/`** — cerca de 2,7 MB. As pastas de
-modelos ficam fora do deploy.
+Por isso o gerador roda **na sua máquina, antes do commit** — não há CI pra
+cobrir se você esquecer. As pastas de produção (`Decoração/`, `Preparo/`, ...)
+estão fora do repositório, então nunca entram no deploy.
 
 ## Dados da loja
 
@@ -536,14 +542,6 @@ ler o que não foi aprovado e escrever em qualquer outra coleção: tudo negado.
 
 Pra republicar depois de editar o arquivo: console do Firebase > Firestore >
 Regras, cole e clique em Publicar.
-
-### O Google Forms antigo
-
-`ferramentas/formulario-feedback.gs` criou um Google Forms que o formulário do
-site substituiu. Ficou no repositório como histórico — pode apagar. O que ele
-tinha de bom (as perguntas, o texto da autorização) está no formulário novo; o
-que ele tinha de ruim era exigir login do Google pra anexar foto, que derrubava
-a taxa de resposta.
 
 ## O que ainda falta
 
