@@ -13,7 +13,7 @@
     "cidade": "",
     "prazoEntrega": "",
     "avisoFrete": "",
-    "avisoPreco": "Preços sujeitos a alteração. Confirme no WhatsApp antes de fechar o pedido.",
+    "avisoPreco": "O preço da página é o preço do pedido. O frete você calcula pelo CEP, aqui no carrinho.",
     "paletaCores": {
       "branco": {
         "nome": "Branco",
@@ -32,11 +32,11 @@
       "branco",
       "preto"
     ],
-    "avisoPedido": "Escolha acima e o pedido já vai montado na mensagem. Preços sujeitos a alteração. Valor referente a uma unidade do produto.",
+    "avisoPedido": "Escolha acima e o pedido já vai montado na mensagem. O valor é de uma unidade; o frete entra no carrinho, pelo seu CEP.",
     "provas": [
       {
         "titulo": "Cabe na sua bancada",
-        "texto": "Cada peça mostra medida em centímetros, o que vem incluso e como lavar. Você confere antes de comprar, não depois."
+        "texto": "Cada peça mostra o material, o que vem incluso e como lavar, e a maioria traz a medida em centímetros. Você confere antes de comprar, não depois."
       },
       {
         "titulo": "Sai na cor do seu cantinho",
@@ -45,6 +45,10 @@
       {
         "titulo": "Quem responde é quem produz",
         "texto": "Fabricação própria, do desenho ao envio. Dúvida de encaixe ou de medida vai no WhatsApp e volta de quem fez a peça."
+      },
+      {
+        "titulo": "Preço fechado, sem surpresa",
+        "texto": "São {total} peças a partir de {minimo}. O preço que está na página é o que vai na mensagem do pedido — o frete você calcula pelo CEP antes de fechar."
       }
     ],
     "fechamento": {
