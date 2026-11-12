@@ -81,6 +81,19 @@
   const SVG_ZAP =
     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.95C.16 5.33 5.5 0 12.06 0a11.8 11.8 0 018.4 3.49 11.78 11.78 0 013.48 8.4c0 6.55-5.34 11.89-11.9 11.89a11.9 11.9 0 01-5.68-1.45L.06 24zm6.6-3.8c1.64.97 3.2 1.55 5.27 1.55 5.45 0 9.89-4.43 9.9-9.88a9.88 9.88 0 00-16.86-7 9.82 9.82 0 00-2.9 7 9.85 9.85 0 001.51 5.26l-.99 3.6 3.7-.97zm11.1-5.66c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07a8.1 8.1 0 01-2.38-1.47 9 9 0 01-1.65-2.05c-.17-.3-.02-.46.13-.6.14-.14.3-.36.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.5.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.28.18-1.4z"/></svg>';
 
+  /* ---------- Ícones da faixa de garantias ------------------------------- */
+
+  // Um ícone por argumento, na ordem em que os argumentos estão no catálogo
+  // (medida, cor, fabricação própria, preço). São desenhos de traço, no mesmo
+  // peso do resto da interface: a faixa precisa ser varrida de relance, e um
+  // ícone resolve em meio segundo o que o título leva uma linha pra dizer.
+  const ICONES_PROVA = [
+    '<svg viewBox="0 0 24 24"><path d="M3 8h18v8H3zM7 8v3M11 8v4M15 8v3M19 8v4"/></svg>',
+    '<svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18h1.5a2 2 0 001.6-3.2 2 2 0 011.6-3.2H20a1 1 0 001-1A9 9 0 0012 3z"/><circle cx="7.5" cy="11.5" r="1.1"/><circle cx="11" cy="7.5" r="1.1"/><circle cx="15.5" cy="9.5" r="1.1"/></svg>',
+    '<svg viewBox="0 0 24 24"><path d="M4 20V9.5l5-3 5 3V20M14 20V12h6v8M3 20h18M7.5 12.5h2M7.5 16h2M17 16h0"/></svg>',
+    '<svg viewBox="0 0 24 24"><path d="M3.8 12.6l7.6-7.6a2 2 0 011.4-.6h5a1.8 1.8 0 011.8 1.8v5a2 2 0 01-.6 1.4l-7.6 7.6a1.8 1.8 0 01-2.6 0l-5-5a1.8 1.8 0 010-2.6z"/><circle cx="16" cy="8" r="1.3"/></svg>',
+  ];
+
   // O que a pessoa escolheu na página do produto. Zera a cada troca de produto.
   let escolha = { slug: null, cor: null, opcoes: {}, quantidade: 1 };
 
@@ -229,10 +242,24 @@
     return linhas.join('\n');
   }
 
+  // Total com o frete escolhido, quando há um. Quem lê a mensagem no WhatsApp
+  // (os dois lados) precisa ver um número que fecha: antes a linha do frete
+  // aparecia e logo abaixo um "Total do pedido" que não a incluía.
+  function totalComFrete() {
+    return totalCarrinho() + (freteEscolhido?.preco || 0);
+  }
+
   function textoPedidoCarrinho() {
     const linhas = carrinho.map(textoItemCarrinho).join('\n\n');
     const frete = textoFrete();
-    return `${linhas}\n\n${frete ? frete + '\n' : ''}• Total do pedido: ${moeda.format(totalCarrinho())}`;
+    if (!frete) return `${linhas}\n\n• Total do pedido: ${moeda.format(totalCarrinho())}`;
+    return [
+      linhas,
+      '',
+      `• Subtotal das peças: ${moeda.format(totalCarrinho())}`,
+      frete,
+      `• Total com frete: ${moeda.format(totalComFrete())}`,
+    ].join('\n');
   }
 
   function linkZapCarrinho() {
@@ -423,10 +450,18 @@
     }
   }
 
+  // Inicial do nome num disco de cor. Não é foto de perfil (ninguém manda uma
+  // e inventar avatar seria mentir): é só âncora visual pro nome não ficar
+  // boiando numa linha solta de rodapé.
+  function inicialDe(nome) {
+    const letra = String(nome || '?').trim().charAt(0).toUpperCase();
+    return letra || '?';
+  }
+
   function cartaoAvaliacao(a) {
-    const assinatura = [a.nome, a.cidade].filter(Boolean).join(' · ');
     const fotos = fotosDe(a);
     return `<figure class="avaliacao">
+      <span class="avaliacao-aspas" aria-hidden="true">&ldquo;</span>
       <blockquote class="avaliacao-texto">&ldquo;${esc(a.texto)}&rdquo;</blockquote>
       ${
         fotos.length
@@ -443,7 +478,13 @@
             </div>`
           : ''
       }
-      <figcaption class="avaliacao-autor">${esc(assinatura)}</figcaption>
+      <figcaption class="avaliacao-autor">
+        <span class="avaliacao-inicial" aria-hidden="true">${esc(inicialDe(a.nome))}</span>
+        <span class="avaliacao-assinatura">
+          <strong>${esc(a.nome)}</strong>
+          ${a.cidade || a.data ? `<small>${esc([a.cidade, a.data ? dataLonga(a.data) : ''].filter(Boolean).join(' · '))}</small>` : ''}
+        </span>
+      </figcaption>
     </figure>`;
   }
 
@@ -459,9 +500,19 @@
     const lista = (marcadas.length ? marcadas : [...todas].reverse()).slice(0, 3);
     if (!lista.length) return '';
     const f = catalogo.loja.feedback || {};
-    return `<section class="secao avaliacoes">
-      <div class="secao-topo"><h2>${esc(f.titulo || 'Quem já tem em casa')}</h2></div>
-      <div class="avaliacao-grade">${lista.map((a) => cartaoAvaliacao(a)).join('')}</div>
+    // `data-quantas` existe porque a seção tem que ficar de pé com um
+    // depoimento só: com auto-fill, um cartão sozinho virava uma caixinha
+    // estreita encostada na esquerda e dois terços da faixa vazios. Com a
+    // contagem no markup, o CSS escolhe o arranjo (um = cartão largo com a
+    // foto ao lado do texto; dois ou três = colunas iguais).
+    return `<section class="avaliacoes-faixa">
+      <div class="secao avaliacoes">
+        <div class="secao-topo"><h2>${esc(f.titulo || 'Quem já tem em casa')}</h2></div>
+        <p class="secao-resumo">Fotos e palavras de quem comprou e montou o cantinho em casa.</p>
+        <div class="avaliacao-grade" data-quantas="${lista.length}">
+          ${lista.map((a) => cartaoAvaliacao(a)).join('')}
+        </div>
+      </div>
     </section>`;
   }
 
@@ -733,19 +784,45 @@
     }${moeda.format(valor)}</span>`;
   }
 
+  // Bolinhas de cor no cartão: é a pergunta que mais aparece antes do clique
+  // ("sai em preto?"), e responder na grade poupa a visita à página. Mostra no
+  // máximo quatro e resume o resto num "+N" — fila de dez bolinhas vira ruído.
+  function bolinhasCartao(p) {
+    const cores = coresDe(p);
+    if (cores.length < 2) return '';
+    const visiveis = cores.slice(0, 4);
+    const sobra = cores.length - visiveis.length;
+    return `<div class="cartao-cores" aria-label="Cores: ${esc(cores.map((c) => c.nome).join(', '))}">
+      ${visiveis
+        .map((c) => `<span class="cartao-cor" style="--cor:${esc(c.hex)}" aria-hidden="true"></span>`)
+        .join('')}
+      ${sobra > 0 ? `<span class="cartao-cor-mais" aria-hidden="true">+${sobra}</span>` : ''}
+    </div>`;
+  }
+
+  // Cartão de catálogo enxuto: foto, nome, cor e preço. O resumo saiu de
+  // propósito — na grade ele dobrava a altura do cartão sem ajudar a escolher,
+  // e quem quer o detalhe abre a peça. A segunda foto aparece no hover (padrão
+  // de vitrine: mostra o outro ângulo sem tirar a pessoa da grade).
   function cartao(p, prioridade = false) {
-    const foto = p.fotos && p.fotos[0];
+    const fotos = p.fotos || [];
+    const foto = fotos[0];
     const img = foto
-      ? `<img src="${esc(foto)}" alt="${esc(p.nome)}" width="800" height="600"
+      ? `<img class="cartao-img" src="${esc(foto)}" alt="${esc(p.nome)}" width="800" height="600"
            loading="${prioridade ? 'eager' : 'lazy'}" decoding="async"
-           ${prioridade ? 'fetchpriority="high"' : ''}>`
+           ${prioridade ? 'fetchpriority="high"' : ''}>${
+          fotos[1]
+            ? `<img class="cartao-img cartao-img-verso" src="${esc(fotos[1])}" alt=""
+                 aria-hidden="true" loading="lazy" decoding="async">`
+            : ''
+        }`
       : semFoto(p.nome);
     return `<a class="cartao" href="#/p/${esc(p.slug)}">
       <div class="cartao-foto">${selos(p)}${img}</div>
       <div class="cartao-corpo">
         <h3>${esc(p.nome)}</h3>
-        <p class="cartao-resumo">${esc(p.resumo || '')}</p>
-        <div class="cartao-rodape">${precoHtml(p)}<span class="cartao-seta">Ver peça →</span></div>
+        ${bolinhasCartao(p)}
+        <div class="cartao-rodape">${precoHtml(p)}<span class="cartao-seta">Ver peça</span></div>
       </div>
     </a>`;
   }
@@ -786,14 +863,63 @@
       Object.entries(dados).reduce((acc, [de, para]) => acc.replaceAll(de, para), String(t || ''));
 
     return `<section class="provas" aria-label="Por que comprar aqui">
-      ${provas
-        .map(
-          (p) => `<div class="prova">
-            <h3>${esc(preencher(p.titulo))}</h3>
-            ${p.texto ? `<p>${esc(preencher(p.texto))}</p>` : ''}
-          </div>`
-        )
-        .join('')}
+      <div class="provas-interno">
+        ${provas
+          .map(
+            (p, i) => `<div class="prova">
+              <span class="prova-icone" aria-hidden="true">${ICONES_PROVA[i % ICONES_PROVA.length]}</span>
+              <div>
+                <h3>${esc(preencher(p.titulo))}</h3>
+                ${p.texto ? `<p>${esc(preencher(p.texto))}</p>` : ''}
+              </div>
+            </div>`
+          )
+          .join('')}
+      </div>
+    </section>`;
+  }
+
+  // Vitrine de categorias logo abaixo da capa. Quem chega numa loja decide
+  // primeiro o tipo de peça ("quero uma luminária"), não a peça — e no celular
+  // o menu de categorias está escondido atrás do hambúrguer, então sem esta
+  // faixa a primeira tela não oferece caminho nenhum além de rolar.
+  // A foto de cada azulejo sai do catálogo: primeira peça em destaque da
+  // categoria, ou a primeira com foto. Nada de arte nova pra manter.
+  // `evitar` são os slugs que já aparecem na grade de destaques logo abaixo:
+  // sem isso o azulejo de "Organização" era a mesma foto do primeiro cartão de
+  // "O que mais sai", a dois palmos de distância, e a página parecia repetida.
+  function capaDaCategoria(slug, evitar = new Set()) {
+    const comFoto = produtosDa(slug).filter((p) => p.fotos && p.fotos.length);
+    const livres = comFoto.filter((p) => !evitar.has(p.slug));
+    const pool = livres.length ? livres : comFoto;
+    const escolhida = pool.find((p) => p.destaque) || pool[0];
+    return escolhida ? escolhida.fotos[0] : null;
+  }
+
+  function blocoCategorias(evitar = new Set()) {
+    const cats = catalogo.categorias || [];
+    if (cats.length < 2) return '';
+    return `<section class="secao categorias-secao">
+      <div class="secao-topo"><h2>Escolha por tipo de peça</h2></div>
+      <div class="categorias" data-quantas="${cats.length}">
+        ${cats
+          .map((c) => {
+            const foto = capaDaCategoria(c.slug, evitar);
+            const quantas = produtosDa(c.slug).length;
+            return `<a class="categoria" href="#/c/${esc(c.slug)}">
+              <div class="categoria-foto">
+                ${
+                  foto
+                    ? `<img src="${esc(foto)}" alt="" aria-hidden="true" loading="lazy" decoding="async">`
+                    : `<img src="marca/mascote.svg" alt="" aria-hidden="true">`
+                }
+              </div>
+              <span class="categoria-nome">${esc(c.nome)}</span>
+              <span class="categoria-conta">${quantas} ${quantas === 1 ? 'peça' : 'peças'}</span>
+            </a>`;
+          })
+          .join('')}
+      </div>
     </section>`;
   }
 
@@ -818,35 +944,61 @@
     </section>`;
   }
 
+  // A arte da capa é foto de peça, não mascote: numa loja, a primeira tela tem
+  // que mostrar o que se vende. Duas fotos sobrepostas (a de destaque e uma
+  // segunda em plano menor) dão profundidade sem precisar de arte nova. Se não
+  // houver foto nenhuma no catálogo, cai no mascote de novo.
+  function arteDaCapa(destaques) {
+    const comFoto = destaques.filter((p) => p.fotos && p.fotos.length);
+    if (!comFoto.length) {
+      return `<img class="capa-mascote" src="marca/mascote-cheio.svg" alt="" aria-hidden="true" width="280" height="280">`;
+    }
+    const [a, b] = comFoto;
+    return `<figure class="capa-pilha">
+      <img class="capa-foto capa-foto-frente" src="${esc(a.fotos[0])}" alt="${esc(a.nome)}"
+           width="800" height="800" fetchpriority="high" decoding="async">
+      ${
+        b
+          ? `<img class="capa-foto capa-foto-fundo" src="${esc(b.fotos[0])}" alt=""
+               aria-hidden="true" width="600" height="600" loading="lazy" decoding="async">`
+          : ''
+      }
+    </figure>`;
+  }
+
   function telaInicio() {
     const loja = catalogo.loja;
     const destaques = catalogo.produtos.filter((p) => p.destaque).slice(0, 8);
+    const primeira = catalogo.categorias[0];
 
     return `
       <section class="capa">
         <div class="capa-interno">
-          <div>
+          <div class="capa-texto-bloco">
             <h1>${chamadaHtml(loja)}</h1>
             <p class="capa-texto">${esc(loja.descricao || '')}</p>
             <div class="capa-acoes">
-              <a class="botao" href="#/c/${esc(catalogo.categorias[0].slug)}">Ver as peças</a>
+              <a class="botao" href="#/c/${esc(primeira.slug)}">Ver as peças</a>
               <a class="botao botao-zap" href="${linkZap(null)}" target="_blank" rel="noopener">
                 ${SVG_ZAP} Falar no WhatsApp
               </a>
             </div>
           </div>
-          <div class="capa-arte">
-            <img src="marca/mascote-cheio.svg" alt="" aria-hidden="true" width="280" height="280">
-          </div>
+          <div class="capa-arte">${arteDaCapa(destaques)}</div>
         </div>
       </section>
 
       ${blocoProvas()}
 
+      ${blocoCategorias(new Set(destaques.map((p) => p.slug)))}
+
       ${
         destaques.length
           ? `<section class="secao">
-              <div class="secao-topo"><h2>O que mais sai</h2></div>
+              <div class="secao-topo">
+                <h2>O que mais sai</h2>
+                <a class="ver-tudo" href="#/c/${esc(primeira.slug)}">Ver o catálogo</a>
+              </div>
               ${grade(destaques)}
             </section>`
           : ''
@@ -1387,13 +1539,51 @@
     });
   }
 
+  // Piada sorteada a cada erro. Página de erro é o único lugar do site onde a
+  // pessoa chegou sem querer: ou ela ri e fica, ou fecha a aba. Sortear em vez
+  // de fixar uma frase é de graça e rende a quem bate aqui duas vezes.
+  const PIADAS_404 = [
+    'Essa página passou direto pelo filtro.',
+    'Procuramos na bancada, no armário e atrás da máquina. Nada.',
+    'A água ferveu, mas não tinha pó nenhum aqui.',
+    'Essa página saiu pra tomar um café e até agora não voltou.',
+    'Nem com dose dupla a gente achou essa página.',
+    'Moemos o grão, passamos na prensa e veio só água quente.',
+  ];
+
   function telaNaoEncontrado(mensagem) {
-    return `<div class="vazio">
-      <img src="marca/mascote.svg" alt="" aria-hidden="true">
-      <h2>Não achamos essa página</h2>
-      <p>${esc(mensagem)}</p>
-      <a class="botao" href="#/">Voltar ao início</a>
-    </div>`;
+    const piada = PIADAS_404[Math.floor(Math.random() * PIADAS_404.length)];
+    // Pode ser chamada com o catálogo ainda não carregado (falha de rede no
+    // dados/catalogo.js): sem ele, nada de botão de WhatsApp nem de sugestões.
+    const temCatalogo = !!(catalogo && catalogo.loja);
+    const sugestoes = temCatalogo ? catalogo.produtos.filter((p) => p.destaque).slice(0, 4) : [];
+    return `<div class="vazio erro">
+      <div class="erro-arte" aria-hidden="true">
+        <span class="erro-numero">404</span>
+        <img class="erro-mascote" src="marca/mascote.svg" alt="">
+      </div>
+      <h2>Xícara vazia.</h2>
+      <p class="erro-piada">${esc(piada)}</p>
+      <p class="erro-motivo">${esc(mensagem)}</p>
+      <div class="erro-acoes">
+        <a class="botao" href="#/">Voltar ao início</a>
+        ${
+          temCatalogo
+            ? `<a class="botao botao-zap" href="${linkZap(null)}" target="_blank" rel="noopener">
+                 ${SVG_ZAP} Falar no WhatsApp
+               </a>`
+            : ''
+        }
+      </div>
+    </div>
+    ${
+      sugestoes.length
+        ? `<section class="secao">
+            <div class="secao-topo"><h2>Já que você está por aqui</h2></div>
+            ${grade(sugestoes)}
+          </section>`
+        : ''
+    }`;
   }
 
   function telaCarrinho() {
@@ -1440,6 +1630,11 @@
             </div>
             <div class="carrinho-preco">
               <span>${it.preco != null ? moeda.format(it.preco * it.quantidade) : 'Consultar'}</span>
+              ${
+                it.preco != null && it.quantidade > 1
+                  ? `<small class="carrinho-unitario">${moeda.format(it.preco)} cada</small>`
+                  : ''
+              }
               <button type="button" class="carrinho-remover" data-carrinho-remover aria-label="Remover ${esc(it.nome)} do carrinho">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
               </button>
@@ -1449,21 +1644,61 @@
       })
       .join('');
 
+    const pecas = quantidadeCarrinho();
+    // Duas colunas no desktop, como em qualquer loja: a lista rola à esquerda e
+    // o resumo fica grudado à direita, com o botão sempre à vista. Antes a lista
+    // ocupava a largura inteira e o total vinha solto embaixo, centralizado —
+    // quem tinha cinco itens perdia o botão de vista ao conferir o quinto.
     return `
       <nav class="trilha" aria-label="Você está em"><a href="#/">Início</a><span>/</span>Carrinho</nav>
       <section class="secao carrinho">
-        <div class="secao-topo"><h2>Seu carrinho</h2></div>
-        <ul class="carrinho-lista">${linhas}</ul>
-        <div class="carrinho-resumo">
-          <p class="carrinho-total">Total: <strong>${moeda.format(totalCarrinho())}</strong></p>
-          ${blocoFrete()}
-          <a class="botao botao-zap botao-largo" data-zap-carrinho href="${linkZapCarrinho()}" target="_blank" rel="noopener">
-            ${SVG_ZAP} Finalizar pedido no WhatsApp
-          </a>
-          <p class="compra-nota">${esc(catalogo.loja.avisoPedido || catalogo.loja.avisoPreco || '')}</p>
+        <div class="secao-topo">
+          <h2>Seu carrinho</h2>
+          <a class="ver-tudo" href="#/">Continuar comprando</a>
+        </div>
+        <div class="carrinho-corpo">
+          <ul class="carrinho-lista">${linhas}</ul>
+          <aside class="carrinho-resumo" aria-label="Resumo do pedido">
+            <h3 class="carrinho-resumo-titulo">Resumo do pedido</h3>
+            <dl class="carrinho-contas">
+              <div>
+                <dt>Subtotal (${pecas} ${pecas === 1 ? 'peça' : 'peças'})</dt>
+                <dd data-resumo-subtotal>${moeda.format(totalCarrinho())}</dd>
+              </div>
+              <div>
+                <dt>Frete</dt>
+                <dd data-resumo-frete class="carrinho-conta-fraca">calcule pelo CEP</dd>
+              </div>
+            </dl>
+            ${blocoFrete()}
+            <p class="carrinho-total">Total <strong data-resumo-total>${moeda.format(totalCarrinho())}</strong></p>
+            <a class="botao botao-zap botao-largo" data-zap-carrinho href="${linkZapCarrinho()}" target="_blank" rel="noopener">
+              ${SVG_ZAP} Finalizar no WhatsApp
+            </a>
+            <p class="compra-nota">${esc(
+              catalogo.loja.avisoCarrinho || catalogo.loja.avisoPreco || ''
+            )}</p>
+          </aside>
         </div>
       </section>
     `;
+  }
+
+  // Mantém o resumo em dia quando a pessoa escolhe (ou troca) o frete. Roda
+  // pelo `aoMudar` do bloco de frete, o mesmo gancho que atualiza o link do
+  // WhatsApp — nenhum re-render, só os três números.
+  function atualizarResumoCarrinho() {
+    const alvoFrete = main.querySelector('[data-resumo-frete]');
+    const alvoTotal = main.querySelector('[data-resumo-total]');
+    if (!alvoFrete || !alvoTotal) return;
+    if (freteEscolhido) {
+      alvoFrete.textContent = moeda.format(freteEscolhido.preco);
+      alvoFrete.classList.remove('carrinho-conta-fraca');
+    } else {
+      alvoFrete.textContent = 'calcule pelo CEP';
+      alvoFrete.classList.add('carrinho-conta-fraca');
+    }
+    alvoTotal.textContent = moeda.format(totalComFrete());
   }
 
   function ligarCarrinho() {
@@ -1604,7 +1839,11 @@
     return `
       <div class="frete" data-frete>
         <div class="frete-linha">
-          <input type="text" inputmode="numeric" class="frete-cep" data-frete-cep
+          <!-- size="9" não é decoração: a largura intrínseca de um input é a do
+               atributo size (20 caracteres por padrão), e é ela que entra na
+               conta de min-content da coluna. Com o padrão, a linha do CEP não
+               cabia na caixa de resumo do carrinho e vazava pra fora dela. -->
+          <input type="text" inputmode="numeric" class="frete-cep" data-frete-cep size="9"
                  placeholder="00000-000" maxlength="9" aria-label="CEP de destino para calcular o frete">
           <button type="button" class="botao botao-vazado frete-botao" data-frete-calcular>Calcular frete</button>
         </div>
@@ -1817,7 +2056,11 @@
     ligarFrete(
       main,
       () => carrinho.map((it) => ({ produto: porSlug(catalogo.produtos, it.slug), quantidade: it.quantidade })),
-      () => { const a = linkZap(); if (a) a.href = linkZapCarrinho(); }
+      () => {
+        const a = linkZap();
+        if (a) a.href = linkZapCarrinho();
+        atualizarResumoCarrinho();
+      }
     );
   }
 

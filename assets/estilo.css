@@ -225,8 +225,26 @@ input, button, select, textarea { font-size: 16px; }
   padding: 28px var(--folga) 32px;
   display: grid; gap: 18px; align-items: center;
 }
-.capa-arte { justify-self: center; width: min(168px, 46vw); order: -1; }
-.capa-arte img { width: 100%; height: auto; filter: drop-shadow(0 14px 26px rgba(43,24,16,.16)); }
+.capa-arte { justify-self: center; width: min(236px, 62vw); order: -1; }
+.capa-mascote { width: min(168px, 46vw); height: auto; filter: drop-shadow(0 14px 26px rgba(43,24,16,.16)); }
+
+/* Duas fotos sobrepostas: a da peça em destaque na frente, a segunda atrás e
+   deslocada. É o que dá à capa cara de vitrine em vez de cara de folheto — e
+   sai do próprio catálogo, sem arte nova pra manter. A de trás some no celular
+   estreito, onde ela só roubaria largura da principal. */
+.capa-pilha { position: relative; margin: 0; width: 100%; aspect-ratio: 1 / 1; }
+.capa-foto {
+  position: absolute; object-fit: cover;
+  border-radius: var(--raio-g); background: var(--papel-2);
+}
+.capa-foto-frente {
+  inset: 0 14% 12% 0; width: 86%; height: 88%;
+  box-shadow: var(--sombra-g); border: 3px solid var(--papel); z-index: 2;
+}
+.capa-foto-fundo {
+  right: 0; bottom: 0; width: 52%; height: 52%;
+  box-shadow: var(--sombra); border: 3px solid var(--papel);
+}
 .capa h1 { font-size: clamp(1.65rem, 7.4vw, 2.2rem); margin-bottom: .4em; }
 .capa h1 em { font-style: normal; color: var(--terracota); }
 .capa-texto { font-size: 1rem; color: var(--tinta-fraca); max-width: 46ch; margin-bottom: 0; }
@@ -280,27 +298,80 @@ input, button, select, textarea { font-size: 16px; }
 /* Mesmo contêiner de .secao (max-width + folga lateral). Sem isso os dois
    ficavam de borda a borda enquanto o resto da página estava recuado — a
    página inteira parecia desalinhada. */
-.provas, .fechamento {
+.fechamento {
   max-width: var(--largura); margin-inline: auto;
   padding-inline: var(--folga);
 }
 
-/* Sem caixa e sem borda, de propósito: cartão com borda aqui competia com o
-   cartão de produto logo abaixo e dava cara de grade de features de template.
-   O que separa um argumento do outro é um traço fino e o espaço. */
-.provas {
-  display: grid; gap: 22px;
-  padding-block: 4px 0; margin-bottom: 8px;
+/* Faixa de garantias logo abaixo da capa, no lugar onde toda loja põe a dela.
+   Era uma grade de três colunas com quatro argumentos — sobrava um sozinho na
+   linha de baixo e cada coluna era um parágrafo inteiro. Agora é uma faixa só,
+   de fundo próprio: ícone à esquerda, título em uma linha, apoio em corpo
+   miúdo. Quatro colunas no desktop fecham a linha exata. */
+.provas { background: var(--papel-2); border-block: 1px solid var(--linha); }
+/* No celular a faixa rola na horizontal, um argumento por tela. Em grade de
+   2×2 os quatro parágrafos empilhados comiam ~390px de altura e empurravam a
+   vitrine pra fora da primeira rolagem — e cortar o texto não é opção: é onde
+   mora o número que prova a loja ("São 92 peças a partir de R$ 14,99"). */
+.provas-interno {
+  max-width: var(--largura); margin-inline: auto;
+  padding: 14px var(--folga);
+  display: grid; grid-auto-flow: column; grid-auto-columns: 78%;
+  gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  /* Sem o scroll-padding o snap alinha o primeiro item com a borda da área de
+     rolagem, não com o padding — a faixa nascia rolada e o primeiro ícone
+     encostava na borda da tela, fora do alinhamento do resto da página. */
+  scroll-padding-inline: var(--folga);
+  scrollbar-width: none;
 }
-.prova { padding-top: 14px; border-top: 2px solid var(--terracota); }
+.provas-interno::-webkit-scrollbar { display: none; }
+.prova { display: flex; gap: 9px; align-items: flex-start; scroll-snap-align: start; }
+.prova-icone { flex: none; display: block; width: 22px; height: 22px; margin-top: 2px; }
+.prova-icone svg {
+  width: 100%; height: 100%; display: block;
+  fill: none; stroke: var(--terracota); stroke-width: 1.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
 .prova h3 {
-  margin: 0 0 5px; font-size: 1rem; line-height: 1.3;
+  margin: 0 0 3px; font-size: .88rem; line-height: 1.3;
   font-family: var(--titulo); font-weight: 700; color: var(--tinta);
 }
 .prova p {
-  margin: 0; font-size: .89rem; line-height: 1.55; color: var(--tinta-fraca);
-  max-width: 38ch;
+  margin: 0; font-size: .78rem; line-height: 1.45; color: var(--tinta-fraca);
+  max-width: 40ch;
 }
+
+/* ---------- Vitrine de categorias ---------------------------------------- */
+
+/* Rola na horizontal no celular (o dedo já espera isso de uma fileira de
+   azulejos) e vira grade de uma linha só a partir do tablet: com uma coluna
+   por categoria, nunca sobra azulejo órfão na linha de baixo. */
+.categorias {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 42vw;
+  gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding-bottom: 4px; margin-inline: calc(var(--folga) * -1); padding-inline: var(--folga);
+  scroll-padding-inline: var(--folga); /* ver nota em .provas-interno */
+  scrollbar-width: none;
+}
+.categorias::-webkit-scrollbar { display: none; }
+.categoria {
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; gap: 2px;
+  text-decoration: none; color: inherit;
+}
+.categoria-foto {
+  aspect-ratio: 1 / 1; overflow: hidden; margin-bottom: 8px;
+  border-radius: var(--raio-g); background: var(--papel-2);
+  border: 1px solid var(--linha);
+}
+.categoria-foto img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .4s cubic-bezier(.2,.7,.3,1);
+}
+.categoria-nome {
+  font-family: var(--titulo); font-weight: 700; font-size: .95rem; line-height: 1.25;
+}
+.categoria-conta { font-size: .78rem; color: var(--tinta-fraca); }
 
 /* Fecha a home puxando pra conversa, que é onde a venda acontece de fato. O
    fundo é de um filho, não da própria section: a section carrega a folga
@@ -317,8 +388,22 @@ input, button, select, textarea { font-size: 16px; }
 }
 
 @media (min-width: 760px) {
-  .provas { grid-template-columns: repeat(3, 1fr); gap: 32px; padding-block: 10px 0; }
-  .prova h3 { font-size: 1.05rem; }
+  .provas-interno {
+    grid-auto-flow: row; grid-auto-columns: auto; overflow: visible;
+    grid-template-columns: repeat(4, 1fr); gap: 26px; padding-block: 22px;
+  }
+  .prova-icone { width: 26px; height: 26px; }
+  .prova h3 { font-size: .95rem; }
+  .prova p { font-size: .82rem; line-height: 1.5; }
+  .categorias {
+    grid-auto-flow: row; grid-auto-columns: auto; overflow: visible;
+    grid-template-columns: repeat(var(--colunas, 4), minmax(0, 1fr));
+    margin-inline: 0; padding-inline: 0; gap: 18px;
+  }
+  .categorias[data-quantas="2"] { --colunas: 2; }
+  .categorias[data-quantas="3"] { --colunas: 3; }
+  .categorias[data-quantas="5"] { --colunas: 5; }
+  .categorias[data-quantas="6"] { --colunas: 6; }
   .fechamento-caixa {
     flex-direction: row; align-items: center; justify-content: space-between;
     gap: 28px; padding: 30px 32px;
@@ -342,21 +427,36 @@ input, button, select, textarea { font-size: 16px; }
 }
 .cartao:active { transform: scale(.99); }
 .cartao-foto { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--papel-2); }
-.cartao-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s cubic-bezier(.2,.7,.3,1); }
-.cartao-corpo { padding: 12px 13px 14px; display: flex; flex-direction: column; flex: 1; gap: 4px; }
-.cartao-corpo h3 { font-size: .96rem; line-height: 1.25; }
-.cartao-resumo {
-  font-size: .82rem; color: var(--tinta-fraca); margin: 0; flex: 1;
+.cartao-img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s cubic-bezier(.2,.7,.3,1); }
+
+/* Segunda foto empilhada sobre a primeira, invisível até o hover. É o truque
+   de vitrine que toda loja usa: mostra o outro ângulo sem tirar quem navega da
+   grade. No celular (sem hover) ela nunca aparece e nem é baixada antes de
+   precisar — fica `lazy` e atrás de `opacity`. */
+.cartao-img-verso { position: absolute; inset: 0; opacity: 0; transition: opacity .25s ease; }
+.cartao-corpo { padding: 12px 13px 14px; display: flex; flex-direction: column; flex: 1; gap: 5px; }
+.cartao-corpo h3 {
+  font-size: .96rem; line-height: 1.25;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
-.cartao-rodape { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; }
+
+/* Bolinhas de cor: respondem "sai em preto?" sem abrir a peça. */
+.cartao-cores { display: flex; align-items: center; gap: 5px; }
+.cartao-cor {
+  width: 12px; height: 12px; border-radius: 50%; background: var(--cor);
+  box-shadow: inset 0 0 0 1px rgba(43,24,16,.22);
+}
+.cartao-cor-mais { font-size: .7rem; color: var(--tinta-fraca); font-weight: 600; }
+
+.cartao-rodape { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 8px; }
 .preco { font-family: var(--titulo); font-weight: 700; font-size: 1rem; }
 .preco-consultar { font-size: .9rem; color: var(--tinta-fraca); font-weight: 600; }
 .preco-apartir {
   display: block; font-family: var(--texto); font-weight: 500;
   font-size: .62em; color: var(--tinta-fraca); line-height: 1.2;
 }
-.cartao-seta { display: none; font-size: .8rem; font-family: var(--titulo); font-weight: 700; color: var(--terracota); }
+.cartao-seta { display: none; font-size: .78rem; font-family: var(--titulo); font-weight: 700; color: var(--terracota); }
+.cartao-seta::after { content: " →"; }
 
 /* ---------- Selos -------------------------------------------------------- */
 
@@ -449,27 +549,54 @@ input, button, select, textarea { font-size: 16px; }
   margin: 0; font-size: .84rem; color: var(--tinta-fraca);
 }
 .frete-opcoes { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+/* Grade de duas colunas em vez de uma linha flex: o nome da transportadora
+   varia muito de tamanho (de "PAC" a "JADLOG.PACKAGE") e, numa coluna estreita
+   como a do resumo do carrinho, o flex espremia o prazo em três linhas. Aqui o
+   nome ocupa a primeira linha inteira e prazo/preço dividem a segunda. */
 .frete-opcao {
-  width: 100%; display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+  width: 100%; display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: baseline;
   padding: 8px 12px; border-radius: var(--raio); background: var(--papel-2);
   border: 2px solid transparent; font-size: .88rem; font-family: inherit; text-align: left;
   cursor: pointer; transition: border-color .16s, background .16s;
 }
 .frete-opcao[aria-checked="true"] { border-color: var(--terracota); background: var(--papel); }
-.frete-opcao-nome { font-family: var(--titulo); font-weight: 600; color: var(--tinta); }
+.frete-opcao-nome {
+  grid-column: 1 / -1; font-family: var(--titulo); font-weight: 600; color: var(--tinta);
+}
 .frete-opcao-nome small { font-weight: 400; color: var(--tinta-fraca); }
-.frete-opcao-prazo { color: var(--tinta-fraca); font-size: .8rem; flex: 1; text-align: right; }
-.frete-opcao-preco { font-family: var(--titulo); font-weight: 700; color: var(--terracota); }
+.frete-opcao-prazo { color: var(--tinta-fraca); font-size: .8rem; }
+.frete-opcao-preco { font-family: var(--titulo); font-weight: 700; color: var(--terracota); text-align: right; }
 
 /* ---------- Avaliações ------------------------------------------------------ */
+
+/* A seção ganha faixa própria: separada do catálogo por cor de fundo, como
+   toda loja faz com prova social. Antes ela flutuava no mesmo creme do resto e
+   um depoimento só parecia um cartão perdido no meio da página. */
+.avaliacoes-faixa {
+  background:
+    radial-gradient(620px 260px at 12% 0%, rgba(240,166,60,.16), transparent 70%),
+    var(--papel-2);
+  border-block: 1px solid var(--linha);
+  margin-top: 8px;
+}
+.avaliacoes .secao-resumo { margin-bottom: 20px; }
 
 /* Uma coluna no celular; a partir do tablet acompanha a grade de cartões. */
 .avaliacao-grade { display: grid; gap: 12px; }
 
 .avaliacao {
-  margin: 0; padding: 16px;
+  position: relative; margin: 0; padding: 20px 18px 18px;
   background: var(--papel); border: 1px solid var(--linha); border-radius: var(--raio-g);
-  display: flex; flex-direction: column; gap: 10px;
+  box-shadow: var(--sombra);
+  display: flex; flex-direction: column; gap: 12px;
+}
+
+/* Aspas grandes como marca-d'água. É decoração que diz o gênero do bloco antes
+   de qualquer leitura — sem elas o cartão parecia um aviso. */
+.avaliacao-aspas {
+  position: absolute; top: -2px; right: 14px;
+  font-family: var(--titulo); font-weight: 700; font-size: 4.2rem; line-height: 1;
+  color: var(--terracota); opacity: .16; pointer-events: none;
 }
 
 /* Recorte em 6 linhas. O JS mede depois de pintar: se o texto couber inteiro
@@ -508,12 +635,58 @@ input, button, select, textarea { font-size: 16px; }
 .avaliacao-fotos[data-quantas="1"] img { aspect-ratio: 4 / 3; }
 .avaliacao-fotos:not([data-quantas="1"]) img { aspect-ratio: 1 / 1; }
 
+/* Assinatura com inicial em disco: o nome deixa de ser uma linha solta no pé
+   do cartão e vira a pessoa que escreveu. Não é avatar de verdade (ninguém
+   manda foto de rosto) — é âncora, e por isso sai do fluxo de leitura. */
 .avaliacao-autor {
-  font-family: var(--titulo); font-weight: 600; font-size: .86rem; color: var(--tinta-fraca);
-  margin-top: auto;
+  display: flex; align-items: center; gap: 10px;
+  margin-top: auto; padding-top: 12px; border-top: 1px solid var(--linha);
 }
+.avaliacao-inicial {
+  flex: none; width: 34px; height: 34px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--torra); color: var(--creme);
+  font-family: var(--titulo); font-weight: 700; font-size: 1rem;
+}
+.avaliacao-assinatura { display: flex; flex-direction: column; min-width: 0; }
+.avaliacao-assinatura strong {
+  font-family: var(--titulo); font-weight: 700; font-size: .92rem; color: var(--tinta);
+}
+.avaliacao-assinatura small { font-size: .78rem; color: var(--tinta-fraca); }
+
 @media (min-width: 700px) {
-  .avaliacao-grade { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .avaliacao-grade { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+  .avaliacao-grade[data-quantas="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .avaliacao-grade[data-quantas="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  /* Um depoimento só não vira cartão estreito encostado na esquerda: vira
+     cartão largo, com a foto de quem comprou ao lado do texto. É o arranjo que
+     uma loja nova precisa — enquanto há pouca prova social, a pouca que há
+     aparece grande em vez de aparecer sozinha num canto. */
+  .avaliacao-grade[data-quantas="1"] { grid-template-columns: minmax(0, 1fr); }
+  .avaliacao-grade[data-quantas="1"] .avaliacao {
+    display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+    grid-template-areas: "foto texto" "foto autor";
+    grid-template-rows: auto auto; align-content: center;
+    gap: 16px 26px; padding: 26px;
+  }
+  .avaliacao-grade[data-quantas="1"] .avaliacao-fotos { grid-area: foto; align-self: center; }
+  .avaliacao-grade[data-quantas="1"] .avaliacao-fotos img,
+  .avaliacao-grade[data-quantas="1"] .avaliacao-fotos[data-quantas="1"] img { aspect-ratio: 1 / 1; }
+  .avaliacao-grade[data-quantas="1"] .avaliacao-texto {
+    grid-area: texto; align-self: start;
+    font-size: 1.12rem; line-height: 1.6; -webkit-line-clamp: 8;
+  }
+  .avaliacao-grade[data-quantas="1"] .avaliacao-autor {
+    grid-area: autor; align-self: start; margin-top: 0; padding-top: 16px;
+  }
+  .avaliacao-grade[data-quantas="1"] .avaliacao-aspas { font-size: 5.4rem; right: 22px; }
+
+  /* Sem foto, o cartão largo sozinho viraria uma faixa de texto de ponta a
+     ponta: volta a ser uma coluna só, centrada. */
+  .avaliacao-grade[data-quantas="1"] .avaliacao:not(:has(.avaliacao-fotos)) {
+    display: flex; max-width: 680px; margin-inline: auto;
+  }
 }
 
 @media (hover: hover) {
@@ -770,7 +943,8 @@ input, button, select, textarea { font-size: 16px; }
 
 /* ---------- Carrinho ------------------------------------------------------ */
 
-.carrinho-lista { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 12px; }
+.carrinho-corpo { display: grid; gap: 20px; align-items: start; }
+.carrinho-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .carrinho-item {
   display: grid; grid-template-columns: 76px 1fr auto; align-items: center; gap: 12px;
   padding: 10px; border: 1px solid var(--linha); border-radius: var(--raio-g); background: var(--papel);
@@ -789,9 +963,13 @@ input, button, select, textarea { font-size: 16px; }
 .contador-pequeno { --toque: 34px; justify-self: start; width: fit-content; }
 .contador-pequeno .contador-campo { width: 34px; font-size: .92rem; }
 .carrinho-preco {
-  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
   font-family: var(--titulo); font-weight: 700; font-size: .95rem; color: var(--terracota);
 }
+/* Preço unitário só aparece quando há mais de uma unidade: com uma, repetiria
+   o número de cima. */
+.carrinho-unitario { font-family: var(--texto); font-weight: 500; font-size: .74rem; color: var(--tinta-fraca); }
+.carrinho-remover { margin-top: 4px; }
 .carrinho-remover {
   width: 30px; height: 30px; border: 0; border-radius: 50%; background: none; cursor: pointer;
   display: grid; place-items: center; color: var(--tinta-fraca);
@@ -799,12 +977,28 @@ input, button, select, textarea { font-size: 16px; }
 .carrinho-remover svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
 .carrinho-remover:hover { background: var(--papel-2); color: var(--tinta); }
 
+/* Caixa de resumo do pedido, igual à de qualquer loja: subtotal, frete e total
+   empilhados, CEP no meio e o botão no fim. No desktop ela vira a coluna da
+   direita e fica sticky — o botão não some de vista enquanto a lista rola. */
 .carrinho-resumo {
-  max-width: 420px; margin-inline: auto; text-align: center;
-  display: grid; gap: 10px;
+  display: grid; gap: 12px; align-content: start;
+  padding: 18px 16px; border-radius: var(--raio-g);
+  background: var(--papel); border: 1px solid var(--linha); box-shadow: var(--sombra);
 }
-.carrinho-total { font-family: var(--titulo); font-weight: 700; font-size: 1.15rem; margin: 0; }
-.carrinho-total strong { color: var(--terracota); }
+.carrinho-resumo-titulo { font-size: 1rem; margin: 0; }
+.carrinho-contas { margin: 0; display: grid; gap: 8px; font-size: .9rem; }
+.carrinho-contas > div { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.carrinho-contas dt { color: var(--tinta-fraca); }
+.carrinho-contas dd { margin: 0; font-family: var(--titulo); font-weight: 600; color: var(--tinta); }
+.carrinho-conta-fraca { font-family: var(--texto); font-weight: 500; font-size: .82rem; color: var(--tinta-fraca); }
+.carrinho-total {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  font-family: var(--titulo); font-weight: 700; font-size: 1.1rem; margin: 0;
+  padding-top: 12px; border-top: 1px solid var(--linha);
+}
+.carrinho-total strong { color: var(--terracota); font-size: 1.3rem; }
+.carrinho-resumo .frete { margin: 0; min-width: 0; }
+.carrinho-resumo .frete-botao { padding: 0 12px; font-size: .82rem; }
 
 /* Gruda no rodapé da coluna quando a rolagem chega na posição natural do
    bloco, e larga de novo se a pessoa rolar de volta pra cima — sticky, não
@@ -901,6 +1095,30 @@ input, button, select, textarea { font-size: 16px; }
 .vazio h2 { font-size: 1.35rem; margin-bottom: .4em; }
 .vazio p { color: var(--tinta-fraca); margin-bottom: 20px; }
 
+/* ---------- Página de erro ------------------------------------------------ */
+
+/* O 404 é o único lugar onde a pessoa chega sem querer. O número aparece
+   grande e desbotado atrás do mascote — dá o recado ("não é a página que você
+   queria") antes de qualquer leitura, e a piada segura quem já ia fechar. */
+.erro { padding-bottom: 32px; max-width: 620px; }
+.erro-arte { position: relative; display: grid; place-items: center; margin-bottom: 10px; }
+.erro-numero {
+  font-family: var(--titulo); font-weight: 700; font-size: clamp(5.5rem, 22vw, 8rem);
+  line-height: 1; color: var(--terracota); opacity: .17; letter-spacing: -.04em;
+  user-select: none;
+}
+.erro-mascote {
+  position: absolute; width: 92px; margin: 0;
+  transform: rotate(-12deg); filter: drop-shadow(0 10px 18px rgba(43,24,16,.18));
+}
+.erro h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+.erro-piada {
+  font-family: var(--titulo); font-weight: 600; font-size: 1.05rem;
+  color: var(--tinta); margin-bottom: 6px;
+}
+.erro-motivo { font-size: .92rem; }
+.erro-acoes { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
 /* ---------- Rodapé -------------------------------------------------------- */
 
 .rodape { background: var(--torra); color: var(--creme); margin-top: 16px; }
@@ -988,7 +1206,8 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
     padding: 52px var(--folga) 48px; gap: 36px;
     grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
   }
-  .capa-arte { order: 0; width: min(270px, 30vw); }
+  .capa-arte { order: 0; width: 100%; }
+  .capa-mascote { width: min(270px, 30vw); }
   .capa h1 { font-size: clamp(2rem, 4.4vw, 3.05rem); }
   .capa-texto { font-size: 1.12rem; }
 
@@ -998,8 +1217,8 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
   .grade { gap: 22px; grid-template-columns: repeat(auto-fill, minmax(238px, 1fr)); }
   .cartao-corpo { padding: 15px 16px 17px; }
   .cartao-corpo h3 { font-size: 1rem; }
-  .cartao-resumo { font-size: .85rem; -webkit-line-clamp: 3; }
   .preco { font-size: 1.04rem; }
+  .categoria-nome { font-size: 1rem; }
   .selo { font-size: .7rem; padding: 5px 11px; }
   .selos { top: 10px; left: 10px; }
 
@@ -1007,6 +1226,11 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
 }
 
 @media (min-width: 900px) {
+  .carrinho-corpo { grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; }
+  .carrinho-resumo { position: sticky; top: 92px; }
+  .carrinho-item { grid-template-columns: 92px 1fr auto; padding: 12px; }
+  .carrinho-foto { width: 92px; height: 92px; }
+
   .produto { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 40px; padding: 22px var(--folga) 60px; }
   .produto-info h1 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); }
   .produto-preco .preco { font-size: 2rem; }
@@ -1041,6 +1265,9 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
 }
 
 @media (hover: hover) and (min-width: 800px) {
+  .cartao:hover .cartao-img-verso { opacity: 1; }
+  .categoria:hover .categoria-foto img { transform: scale(1.05); }
+  .categoria:hover .categoria-nome { color: var(--terracota); }
   .cartao:hover { transform: translateY(-4px); box-shadow: var(--sombra-g); border-color: #D8C3A9; }
   .cartao:hover .cartao-foto img { transform: scale(1.045); }
   .ver-tudo:hover, .trilha a:hover { text-decoration: underline; }

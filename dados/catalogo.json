@@ -33,6 +33,7 @@
       "preto"
     ],
     "avisoPedido": "Escolha acima e o pedido já vai montado na mensagem. O valor é de uma unidade; o frete entra no carrinho, pelo seu CEP.",
+    "avisoCarrinho": "O pedido vai montado na mensagem, com as peças, as cores e o frete que você escolheu. A gente confirma tudo antes de qualquer pagamento.",
     "provas": [
       {
         "titulo": "Cabe na sua bancada",
