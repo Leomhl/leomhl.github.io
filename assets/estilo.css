@@ -581,8 +581,52 @@ input, button, select, textarea { font-size: 16px; }
 }
 .avaliacoes .secao-resumo { margin-bottom: 20px; }
 
-/* Uma coluna no celular; a partir do tablet acompanha a grade de cartões. */
-.avaliacao-grade { display: grid; gap: 12px; }
+/* Um depoimento por vez, num trilho que rola com snap (o dedo arrasta no
+   celular, igual ao carrossel de fotos do produto). O quadro ocupa a largura
+   inteira: na grade de dois ou três, cada cartão ficava estreito e o segundo
+   não era lido.
+
+   A folga vertical é pra sombra do cartão não ser cortada pelo overflow. Não
+   há folga nas laterais de propósito: padding-inline num container de snap
+   desalinha o primeiro quadro. */
+.avaliacao-carrossel { position: relative; }
+.avaliacao-trilho {
+  display: flex;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+  padding-block: 4px 10px;
+}
+.avaliacao-trilho::-webkit-scrollbar { display: none; }
+/* Todos os quadros esticam até a altura do mais alto: assim a seção não pula
+   de tamanho a cada troca automática. */
+.avaliacao-quadro { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; display: flex; }
+.avaliacao-quadro > .avaliacao { flex: 1; }
+
+.avaliacao-controles { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.avaliacao-pontos { display: flex; align-items: center; gap: 2px; }
+/* O alvo do dedo é a caixa de 24px; a bolinha de 9px é só o que se vê. */
+.avaliacao-ponto {
+  width: 24px; height: 24px; padding: 0; border: 0; background: none; cursor: pointer;
+  display: grid; place-items: center;
+}
+.avaliacao-ponto::after {
+  content: ""; width: 9px; height: 9px; border-radius: 50%;
+  border: 1px solid var(--terracota); background: transparent;
+  transition: background .16s, transform .16s;
+}
+.avaliacao-ponto[aria-current="true"]::after { background: var(--terracota); transform: scale(1.3); }
+/* Estas setas ficam embaixo do cartão, não em cima da foto: aparecem no
+   celular também, onde são o único jeito de passar sem adivinhar que arrasta. */
+.avaliacao-seta {
+  width: 34px; height: 34px; padding: 0; border-radius: 50%; cursor: pointer;
+  display: grid; place-items: center;
+  background: var(--papel); border: 1px solid var(--linha); box-shadow: var(--sombra);
+  transition: background .16s, transform .16s;
+}
+.avaliacao-seta svg {
+  width: 17px; height: 17px; fill: none; stroke: var(--torra);
+  stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
+}
 
 .avaliacao {
   position: relative; margin: 0; padding: 20px 18px 18px;
@@ -655,42 +699,38 @@ input, button, select, textarea { font-size: 16px; }
 .avaliacao-assinatura small { font-size: .78rem; color: var(--tinta-fraca); }
 
 @media (min-width: 700px) {
-  .avaliacao-grade { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
-  .avaliacao-grade[data-quantas="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .avaliacao-grade[data-quantas="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-
-  /* Um depoimento só não vira cartão estreito encostado na esquerda: vira
-     cartão largo, com a foto de quem comprou ao lado do texto. É o arranjo que
-     uma loja nova precisa — enquanto há pouca prova social, a pouca que há
-     aparece grande em vez de aparecer sozinha num canto. */
-  .avaliacao-grade[data-quantas="1"] { grid-template-columns: minmax(0, 1fr); }
-  .avaliacao-grade[data-quantas="1"] .avaliacao {
+  /* Com um por vez, o cartão é largo: a foto de quem comprou ao lado do texto.
+     É o arranjo que uma loja nova precisa — enquanto há pouca prova social, a
+     pouca que há aparece grande em vez de miúda numa coluna. */
+  .avaliacao-quadro .avaliacao {
     display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
     grid-template-areas: "foto texto" "foto autor";
     grid-template-rows: auto auto; align-content: center;
     gap: 16px 26px; padding: 26px;
   }
-  .avaliacao-grade[data-quantas="1"] .avaliacao-fotos { grid-area: foto; align-self: center; }
-  .avaliacao-grade[data-quantas="1"] .avaliacao-fotos img,
-  .avaliacao-grade[data-quantas="1"] .avaliacao-fotos[data-quantas="1"] img { aspect-ratio: 1 / 1; }
-  .avaliacao-grade[data-quantas="1"] .avaliacao-texto {
+  .avaliacao-quadro .avaliacao-fotos { grid-area: foto; align-self: center; }
+  .avaliacao-quadro .avaliacao-fotos img,
+  .avaliacao-quadro .avaliacao-fotos[data-quantas="1"] img { aspect-ratio: 1 / 1; }
+  .avaliacao-quadro .avaliacao-texto {
     grid-area: texto; align-self: start;
     font-size: 1.12rem; line-height: 1.6; -webkit-line-clamp: 8;
   }
-  .avaliacao-grade[data-quantas="1"] .avaliacao-autor {
+  .avaliacao-quadro .avaliacao-autor {
     grid-area: autor; align-self: start; margin-top: 0; padding-top: 16px;
   }
-  .avaliacao-grade[data-quantas="1"] .avaliacao-aspas { font-size: 5.4rem; right: 22px; }
+  .avaliacao-quadro .avaliacao-aspas { font-size: 5.4rem; right: 22px; }
 
-  /* Sem foto, o cartão largo sozinho viraria uma faixa de texto de ponta a
-     ponta: volta a ser uma coluna só, centrada. */
-  .avaliacao-grade[data-quantas="1"] .avaliacao:not(:has(.avaliacao-fotos)) {
+  /* Sem foto, o cartão largo viraria uma faixa de texto de ponta a ponta:
+     volta a ser uma coluna só, centrada. */
+  .avaliacao-quadro .avaliacao:not(:has(.avaliacao-fotos)) {
     display: flex; max-width: 680px; margin-inline: auto;
   }
 }
 
 @media (hover: hover) {
   .avaliacao-vermais:hover { color: var(--torra); }
+  .avaliacao-seta:hover { background: var(--papel-2); transform: scale(1.07); }
+  .avaliacao-ponto:hover::after { background: var(--terracota); }
 }
 
 /* ---------- Tela de deixar feedback (#/feedback) ---------------------------- */
@@ -757,8 +797,11 @@ input, button, select, textarea { font-size: 16px; }
   clip-path: inset(50%); overflow: hidden; white-space: nowrap;
 }
 
+/* Miniatura de 84px: com até dez fotos, três colunas fixas viravam quatro
+   fileiras de retrato grande e empurravam o botão de enviar pra fora da tela. */
 .feedback-previas {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 8px; margin-top: 10px;
 }
 .feedback-previas[hidden] { display: none; }
 .feedback-previa { position: relative; margin: 0; }

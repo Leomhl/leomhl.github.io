@@ -497,20 +497,40 @@
   function secaoAvaliacoesInicio() {
     const todas = todasAvaliacoes();
     const marcadas = todas.filter((a) => a.destaque);
-    const lista = (marcadas.length ? marcadas : [...todas].reverse()).slice(0, 3);
+    const lista = (marcadas.length ? marcadas : [...todas].reverse()).slice(0, 6);
     if (!lista.length) return '';
     const f = catalogo.loja.feedback || {};
-    // `data-quantas` existe porque a seção tem que ficar de pé com um
-    // depoimento só: com auto-fill, um cartão sozinho virava uma caixinha
-    // estreita encostada na esquerda e dois terços da faixa vazios. Com a
-    // contagem no markup, o CSS escolhe o arranjo (um = cartão largo com a
-    // foto ao lado do texto; dois ou três = colunas iguais).
+    // Um depoimento por vez, em carrossel que anda sozinho. Na grade de dois ou
+    // três, cada cartão ficava estreito e o segundo não era lido; sozinho, cada
+    // um ganha o arranjo largo (foto ao lado do texto) e a sua vez. Por isso
+    // também cabem mais na seção do que os três de antes.
+    const controles =
+      lista.length > 1
+        ? `<div class="avaliacao-controles">
+             <button type="button" class="avaliacao-seta avaliacao-seta-ant" aria-label="Depoimento anterior">
+               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+             <div class="avaliacao-pontos">
+               ${lista
+                 .map(
+                   (a, i) => `<button type="button" class="avaliacao-ponto" data-ir="${i}"
+                     aria-label="Ver o depoimento de ${esc(a.nome)}"${i === 0 ? ' aria-current="true"' : ''}></button>`
+                 )
+                 .join('')}
+             </div>
+             <button type="button" class="avaliacao-seta avaliacao-seta-prox" aria-label="Próximo depoimento">
+               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+           </div>`
+        : '';
     return `<section class="avaliacoes-faixa">
       <div class="secao avaliacoes">
         <div class="secao-topo"><h2>${esc(f.titulo || 'Quem já tem em casa')}</h2></div>
         <p class="secao-resumo">Fotos e palavras de quem comprou e montou o cantinho em casa.</p>
-        <div class="avaliacao-grade" data-quantas="${lista.length}">
-          ${lista.map((a) => cartaoAvaliacao(a)).join('')}
+        <div class="avaliacao-carrossel" data-avaliacoes
+             role="group" aria-roledescription="carrossel" aria-label="Depoimentos de quem comprou">
+          <div class="avaliacao-trilho" tabindex="0" aria-label="Depoimentos">
+            ${lista.map((a) => `<div class="avaliacao-quadro">${cartaoAvaliacao(a)}</div>`).join('')}
+          </div>
+          ${controles}
         </div>
       </div>
     </section>`;
@@ -1208,13 +1228,16 @@
 
   /* ---------- Fotos do cliente (compressão no navegador) ------------------ */
 
-  // Um documento do Firestore tem teto de 1 MiB, e base64 infla 33%. Com três
-  // fotos sobra pouco, então cada uma é reduzida aqui no navegador até caber no
-  // orçamento abaixo. Não é a compressão final: o TinyPNG, que aperta de
-  // verdade, roda depois em ferramentas/colher-depoimentos.mjs, onde a chave
-  // dele fica em máquina sua em vez de no JavaScript do site.
-  const MAX_FOTOS = 3;
-  const ORCAMENTO_FOTO = 230_000; // caracteres de base64, por foto
+  // Um documento do Firestore tem teto de 1 MiB, e base64 infla 33%: é esse teto
+  // que manda aqui, não o gosto. Cada foto é reduzida no navegador até caber no
+  // orçamento, e o orçamento é dividido entre as que já entraram — uma foto
+  // sozinha sai grande, dez saem menores, e o documento cabe nos dois casos.
+  // Não é a compressão final: o TinyPNG, que aperta de verdade, roda depois em
+  // ferramentas/colher-depoimentos.mjs, onde a chave dele fica em máquina sua
+  // em vez de no JavaScript do site.
+  const MAX_FOTOS = 10;
+  const ORCAMENTO_TOTAL = 950_000; // caracteres de base64 somados no documento
+  const ORCAMENTO_FOTO = 230_000; // teto de uma foto só, quando sobra espaço
   const LADO_INICIAL = 1280; // px no maior lado — folga pra o TinyPNG trabalhar
   const QUALIDADE_INICIAL = 0.72;
 
@@ -1256,20 +1279,22 @@
   // Sem corte: só reduz e recomprime, mantendo o enquadramento que a pessoa
   // escolheu. Vai apertando até caber no orçamento — primeiro pela qualidade,
   // que degrada menos que perder pixel, depois pelo tamanho.
-  async function comprimirFoto(arquivo) {
+  async function comprimirFoto(arquivo, orcamento = ORCAMENTO_FOTO) {
     const img = await carregarImagem(arquivo);
     let lado = LADO_INICIAL;
     let qualidade = QUALIDADE_INICIAL;
     let saida = desenhar1(img, lado, qualidade);
-    for (let i = 0; i < 6 && saida.length > ORCAMENTO_FOTO; i++) {
+    // Dez voltas e não seis: com dez fotos o orçamento de cada uma é bem menor
+    // que o de uma foto sozinha, e aí são precisos mais apertos pra chegar lá.
+    for (let i = 0; i < 10 && saida.length > orcamento; i++) {
       if (qualidade > 0.45) qualidade -= 0.1;
       else lado = Math.round(lado * 0.8);
       saida = desenhar1(img, lado, qualidade);
     }
-    // Se depois de seis tentativas ainda não couber, é imagem fora do normal
-    // (panorâmica gigante, por exemplo). Melhor recusar do que estourar o
-    // documento e o envio falhar com erro que não explica nada.
-    if (saida.length > ORCAMENTO_FOTO) throw new Error('foto-grande-demais');
+    // Se depois de tudo ainda não couber, é imagem fora do normal (panorâmica
+    // gigante, por exemplo). Melhor recusar do que estourar o documento e o
+    // envio falhar com erro que não explica nada.
+    if (saida.length > orcamento) throw new Error('foto-grande-demais');
     return saida;
   }
 
@@ -1416,19 +1441,24 @@
     const campoFotos = form.elements.fotos;
     const previas = form.querySelector('[data-previas]');
 
+    // Cada item guarda o `arquivo` original junto do base64: quando a soma das
+    // fotos estoura o orçamento do documento, todas são reapertadas a partir do
+    // original — reapertar o que já foi apertado degrada duas vezes.
     let fotos = [];
+
+    const somaFotos = () => fotos.reduce((t, f) => t + f.src.length, 0);
 
     const lerCampos = () => ({
       nome: form.elements.nome.value.trim(),
       cidade: form.elements.cidade.value.trim(),
       texto: campoTexto.value.trim(),
-      fotos,
+      fotos: fotos.map((f) => f.src),
     });
 
     function desenharPrevias() {
       previas.innerHTML = fotos
         .map(
-          (src, i) => `<figure class="feedback-previa">
+          ({ src }, i) => `<figure class="feedback-previa">
             <img src="${src}" alt="Foto ${i + 1} que você escolheu">
             <button type="button" class="feedback-tirar" data-tirar="${i}"
                     aria-label="Tirar a foto ${i + 1}">&times;</button>
@@ -1446,6 +1476,26 @@
       desenharPrevias();
     });
 
+    // Reaperta todas pela cota igual quando a soma estoura o orçamento do
+    // documento. Apertar só a última deixaria uma foto borrada no meio de nove
+    // boas — e o teto de 1 MiB é do documento, não de cada foto. Devolve os
+    // nomes do que não deu pra encaixar nem na cota (panorâmica gigante).
+    async function apertarAteCaber() {
+      if (somaFotos() <= ORCAMENTO_TOTAL) return [];
+      const cota = Math.floor(ORCAMENTO_TOTAL / fotos.length);
+      const recusadas = [];
+      for (const f of [...fotos]) {
+        if (f.src.length <= cota) continue;
+        try {
+          f.src = await comprimirFoto(f.arquivo, cota);
+        } catch {
+          recusadas.push(f.arquivo.name);
+          fotos.splice(fotos.indexOf(f), 1);
+        }
+      }
+      return recusadas;
+    }
+
     campoFotos?.addEventListener('change', async () => {
       const escolhidas = [...(campoFotos.files || [])];
       campoFotos.value = ''; // libera o mesmo arquivo pra ser escolhido de novo
@@ -1458,11 +1508,16 @@
       const recusadas = [];
       for (const arquivo of escolhidas.slice(0, vagas)) {
         try {
-          fotos.push(await comprimirFoto(arquivo));
+          fotos.push({ arquivo, src: await comprimirFoto(arquivo) });
         } catch {
           recusadas.push(arquivo.name);
         }
       }
+      // Cada foto entra solta com o teto de uma foto; é a soma que precisa
+      // caber no documento. Quem manda duas leva as duas grandes, quem manda
+      // dez leva dez menores — e quem manda uma não paga pelas nove que não
+      // mandou, que era o que uma cota fixa de 1/10 faria.
+      for (const f of await apertarAteCaber()) recusadas.push(f);
       desenharPrevias();
 
       if (recusadas.length)
@@ -2201,6 +2256,98 @@
     });
   }
 
+  /* ---------- Carrossel de depoimentos ------------------------------------ */
+
+  const PAUSA_AVALIACAO = 7000; // ms que um depoimento fica na tela sozinho
+
+  // Troca por rolagem com snap, igual ao carrossel de fotos: o dedo arrasta de
+  // graça no celular e o teclado continua tendo setas. A troca automática
+  // existe pra o segundo depoimento aparecer sem ninguém clicar — então ela
+  // para no primeiro sinal de que a pessoa está lendo (mouse em cima, foco
+  // dentro, texto aberto no "ver mais", foto em tela cheia) e com a aba em
+  // segundo plano, pra não voltar meia hora depois num depoimento qualquer.
+  function ligarAvaliacoes(raiz) {
+    const trilho = raiz.querySelector('.avaliacao-trilho');
+    const quadros = [...raiz.querySelectorAll('.avaliacao-quadro')];
+    const pontos = [...raiz.querySelectorAll('.avaliacao-ponto')];
+    const ant = raiz.querySelector('.avaliacao-seta-ant');
+    const prox = raiz.querySelector('.avaliacao-seta-prox');
+    if (quadros.length < 2) return;
+
+    const semAnimacao = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let atual = 0;
+    let lendoAgora = false;
+
+    const marcar = () => {
+      pontos.forEach((p, i) => {
+        if (i === atual) p.setAttribute('aria-current', 'true');
+        else p.removeAttribute('aria-current');
+      });
+    };
+
+    const irPara = (i) => {
+      atual = (i + quadros.length) % quadros.length;
+      trilho.scrollTo({
+        left: atual * trilho.clientWidth,
+        behavior: semAnimacao.matches ? 'auto' : 'smooth',
+      });
+      marcar();
+    };
+
+    // Rolagem na mão (dedo, trackpad) também move as bolinhas.
+    let agendado;
+    trilho.addEventListener('scroll', () => {
+      cancelAnimationFrame(agendado);
+      agendado = requestAnimationFrame(() => {
+        const i = Math.round(trilho.scrollLeft / trilho.clientWidth);
+        if (i === atual || !quadros[i]) return;
+        atual = i;
+        marcar();
+      });
+    }, { passive: true });
+
+    // Quem está lendo não quer o cartão trocando debaixo do olho.
+    const pausado = () =>
+      lendoAgora ||
+      document.hidden ||
+      document.body.classList.contains('sem-rolagem') || // foto em tela cheia
+      !!raiz.querySelector('.avaliacao-vermais[aria-expanded="true"]');
+
+    let relogio = 0;
+    const passo = () => {
+      // A home é redesenhada a cada rota: sem isto o intervalo seguiria batendo
+      // em nós já descartados, um por navegação.
+      if (!raiz.isConnected) { clearInterval(relogio); return; }
+      if (!pausado()) irPara(atual + 1);
+    };
+    // Depois de um clique, o relógio recomeça: trocar meio segundo depois de a
+    // pessoa escolher um depoimento é desfazer o que ela pediu.
+    const adiar = () => {
+      if (semAnimacao.matches) return;
+      clearInterval(relogio);
+      relogio = setInterval(passo, PAUSA_AVALIACAO);
+    };
+
+    ['pointerenter', 'focusin'].forEach((e) =>
+      raiz.addEventListener(e, () => { lendoAgora = true; })
+    );
+    ['pointerleave', 'focusout'].forEach((e) =>
+      raiz.addEventListener(e, () => { lendoAgora = false; })
+    );
+
+    ant?.addEventListener('click', () => { irPara(atual - 1); adiar(); });
+    prox?.addEventListener('click', () => { irPara(atual + 1); adiar(); });
+    pontos.forEach((p) =>
+      p.addEventListener('click', () => { irPara(Number(p.dataset.ir)); adiar(); })
+    );
+    trilho.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); irPara(atual + 1); adiar(); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); irPara(atual - 1); adiar(); }
+    });
+
+    adiar();
+  }
+
   /* ---------- Roteador ---------------------------------------------------- */
 
   // Segmento da URL do formulário de feedback. Vem do catálogo porque é pra ser
@@ -2279,6 +2426,8 @@
     if (r.tela === 'busca' && r.arg) medir('search', { search_term: r.arg });
     main.querySelectorAll('[data-carrossel]').forEach(ligarCarrossel);
     ligarVerMais(main);
+    // Depois do ligarVerMais: a altura do trilho depende do texto já recortado.
+    main.querySelectorAll('[data-avaliacoes]').forEach(ligarAvaliacoes);
     if (r.tela === 'produto') {
       const p = porSlug(catalogo.produtos, r.arg);
       if (p) { zerarEscolha(p); ligarSeletores(p); }

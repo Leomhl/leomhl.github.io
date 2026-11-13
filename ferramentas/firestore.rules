@@ -77,7 +77,7 @@ service cloud.firestore {
           // avaliação inteira da regra.
           && (!('fotos' in request.resource.data)
               || (request.resource.data.fotos is list
-                  && request.resource.data.fotos.size() <= 3));
+                  && request.resource.data.fotos.size() <= 10));
 
       // Aprovar, editar e apagar é só pelo console (que passa por cima das
       // regras por ser acesso de administrador).
