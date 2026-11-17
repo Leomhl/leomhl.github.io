@@ -150,7 +150,7 @@ writeFileSync(join(dados, 'catalogo.js'), saida);
    O site é uma SPA com rotas em #/, e o que vem depois do # nunca chega ao
    servidor: o WhatsApp e o Google pedem só "/" e recebem o index genérico.
    Resultado, antes disto: todo link de produto compartilhado virava o mesmo
-   cartão "cafezim — peças para o seu cantinho do café", sem nome, foto nem
+   cartão "cafezim — itens para o seu cantinho do café", sem nome, foto nem
    preço do produto.
 
    Então cada produto ganha uma página real em /p/<slug>/, com as meta tags

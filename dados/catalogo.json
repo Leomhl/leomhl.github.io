@@ -4,10 +4,10 @@
     "chamada": "Seu café já é bom. Falta o cantinho à altura.",
     "chamadaDestaque": "à altura",
     "avisoTopo": "",
-    "descricao": "Bandejas, suportes, luminárias e peças de parede para a bancada que você usa toda manhã.",
+    "descricao": "Bandejas, suportes, luminárias e itens de parede para a bancada que você usa toda manhã.",
     "whatsapp": "5522988447540",
     "mensagemPadrao": "Olá! Quero fazer um pedido no cafezim:\n\n{pedido}\n\n{link}",
-    "mensagemGeral": "Olá! Vim pelo site do cafezim e queria saber mais sobre as peças.",
+    "mensagemGeral": "Olá! Vim pelo site do cafezim e queria saber mais sobre os itens.",
     "instagram": "cafezim.store",
     "email": "",
     "cidade": "",
@@ -33,28 +33,28 @@
       "preto"
     ],
     "avisoPedido": "Escolha acima e o pedido já vai montado na mensagem. O valor é de uma unidade; o frete entra no carrinho, pelo seu CEP.",
-    "avisoCarrinho": "O pedido vai montado na mensagem, com as peças, as cores e o frete que você escolheu. A gente confirma tudo antes de qualquer pagamento.",
+    "avisoCarrinho": "O pedido vai montado na mensagem, com os itens, as cores e o frete que você escolheu. A gente confirma tudo antes de qualquer pagamento.",
     "provas": [
       {
         "titulo": "Cabe na sua bancada",
-        "texto": "Cada peça mostra o material, o que vem incluso e como lavar, e a maioria traz a medida em centímetros. Você confere antes de comprar, não depois."
+        "texto": "Cada item mostra o material, o que vem incluso e como lavar, e a maioria traz a medida em centímetros. Você confere antes de comprar, não depois."
       },
       {
         "titulo": "Sai na cor do seu cantinho",
-        "texto": "Branco e preto em todas as peças, caramelo em algumas. A cor é sua escolha no pedido e não muda o preço."
+        "texto": "Branco e preto em todos os itens, caramelo em alguns. A cor é sua escolha no pedido e não muda o preço."
       },
       {
         "titulo": "Quem responde é quem produz",
-        "texto": "Fabricação própria, do desenho ao envio. Dúvida de encaixe ou de medida vai no WhatsApp e volta de quem fez a peça."
+        "texto": "Fabricação própria, do desenho ao envio. Dúvida de encaixe ou de medida vai no WhatsApp e volta de quem fez o item."
       },
       {
         "titulo": "Preço fechado, sem surpresa",
-        "texto": "São {total} peças a partir de {minimo}. O preço que está na página é o que vai na mensagem do pedido — o frete você calcula pelo CEP antes de fechar."
+        "texto": "São {total} itens a partir de {minimo}. O preço que está na página é o que vai na mensagem do pedido — o frete você calcula pelo CEP antes de fechar."
       }
     ],
     "fechamento": {
       "titulo": "Dúvida de medida, cor ou encaixe?",
-      "texto": "Mande uma foto da sua bancada no WhatsApp. Dizemos qual peça serve, em qual cor, e o valor com frete.",
+      "texto": "Mande uma foto da sua bancada no WhatsApp. Dizemos qual item serve, em qual cor, e o valor com frete.",
       "textoBotao": "Falar no WhatsApp"
     },
     "feedback": {
@@ -72,27 +72,27 @@
   "categorias": [
     {
       "slug": "preparo",
-      "nome": "Preparo",
+      "nome": "Pra fazer o café",
       "resumo": "Da dose à extração: suporte de filtro, estojo, colher, tamper, adaptador de cápsula e a câmera LatteShot, que carimba desenho na espuma."
     },
     {
       "slug": "organizacao",
-      "nome": "Organização",
+      "nome": "Pra deixar em ordem",
       "resumo": "A bancada em ordem: bandejas, dispensers, knock box, porta-guardanapos e o armazenamento do grão e do chá."
     },
     {
       "slug": "decoracao",
-      "nome": "Decoração",
+      "nome": "Pra enfeitar",
       "resumo": "O que fica à vista: quadros e placas de parede, cachepôs, bonequinhos, marcadores e ornamentos."
     },
     {
       "slug": "luminarias",
-      "nome": "Luminárias",
+      "nome": "Pra acender",
       "resumo": "Lightbox e abajur com tema de café. Luz quente acesa no cantinho."
     },
     {
       "slug": "diversos",
-      "nome": "Diversos",
+      "nome": "De tudo um pouco",
       "resumo": "Fora do tema café: vinho, Apple Watch, iPad, cortadores de biscoito e outras peças da produção própria."
     }
   ],
@@ -124,6 +124,10 @@
         {
           "rotulo": "Itens inclusos",
           "valor": "Grade + reservatório inferior"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Coador e xícara de qualquer modelo que caibam na grade"
         },
         {
           "rotulo": "Limpeza",
@@ -185,7 +189,11 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "8,0 × 6,6 × 4,1 cm (L × P × A)"
+          "valor": "9,1 × 7,3 × 4,5 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 copo dosador"
         },
         {
           "rotulo": "Limpeza",
@@ -209,9 +217,9 @@
       "pastaOrigem": "Organização/Dosador para Café",
       "envio": {
         "pesoGramas": 25,
-        "alturaCm": 8,
-        "larguraCm": 6.6,
-        "comprimentoCm": 4.1
+        "alturaCm": 9.1,
+        "larguraCm": 7.3,
+        "comprimentoCm": 4.5
       },
       "combinaCom": [
         "colher-tamper",
@@ -244,6 +252,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "14,1 × 15,9 × 2,4 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 clipe com tampa rosqueada integrada"
         },
         {
           "rotulo": "Compatibilidade",
@@ -309,6 +321,10 @@
           "valor": "19 × 10,8 × 8,8 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "2 peças: torre de colunas + bandeja de base. Cápsulas não inclusas"
+        },
+        {
           "rotulo": "Compatibilidade",
           "valor": "Serve cápsulas Nespresso Original"
         },
@@ -371,6 +387,10 @@
           "valor": "10,2 × 10,4 × 8,4 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 estação de tamping. Portafiltro e tamper não inclusos"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -430,7 +450,7 @@
         },
         {
           "rotulo": "Itens inclusos",
-          "valor": "Bandeja + bate-borra + porta-nivelador"
+          "valor": "Bandeja + bate-borra + porta-nivelador. Nivelador e portafiltro não inclusos"
         },
         {
           "rotulo": "Limpeza",
@@ -518,7 +538,7 @@
         },
         {
           "rotulo": "Itens inclusos",
-          "valor": "Caixa + tampa"
+          "valor": "Caixa + tampa. Portafiltro não incluso"
         },
         {
           "rotulo": "Limpeza",
@@ -576,7 +596,7 @@
       "slug": "organizador-saches-cha",
       "nome": "Organizador de Sachês de Chá",
       "categoria": "organizacao",
-      "resumo": "Compartimento único que mostra a caixinha pela frente.",
+      "resumo": "Compartimento único que mostra o sachê pela frente.",
       "paraQueServe": "Em vez da caixinha de chá aberta pela metade na gaveta, o sachê entra em pé no nicho, com a embalagem virada para frente — igual prateleira de loja. Para separar vários sabores, é só combinar mais de uma peça lado a lado. Também funciona para saquinhos de açúcar e adoçante.",
       "descricao": "Peça de bancada com um nicho: o sachê entra em pé e a embalagem fica visível de frente, igual prateleira de loja. Acaba a caixa aberta pela metade na gaveta. O corpo é fechado nas laterais, então o pó não escapa, e a altura foi dimensionada para sachês com envelope individual.",
       "detalhes": [
@@ -596,6 +616,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "9,1 × 9,1 × 13 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça, com 1 compartimento frontal. Sachês não inclusos"
         },
         {
           "rotulo": "Compatibilidade",
@@ -624,9 +648,9 @@
       "pastaOrigem": "Organização/Organizador de Sachês de Chá",
       "envio": {
         "pesoGramas": 38,
-        "alturaCm": 8.3,
-        "larguraCm": 8.3,
-        "comprimentoCm": 13
+        "alturaCm": 13,
+        "larguraCm": 9.1,
+        "comprimentoCm": 9.1
       },
       "combinaCom": [
         "clipe-saco-cafe",
@@ -636,7 +660,7 @@
     },
     {
       "slug": "porta-copos-universal",
-      "nome": "Porta-Copos Universal",
+      "nome": "Torre Dispensadora de Copos",
       "categoria": "organizacao",
       "resumo": "Torre canelada que dispensa copo descartável pela base.",
       "paraQueServe": "Para quem usa copo descartável em casa, no escritório ou na loja. Em vez da pilha solta tombando na bancada, os copos ficam guardados dentro do tubo e saem um por vez por baixo. A fenda lateral mostra quantos ainda restam. É feito na medida do seu copo — informe o diâmetro no pedido.",
@@ -658,6 +682,14 @@
         {
           "rotulo": "Dimensões",
           "valor": "7,9 × 7,9 × 9 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 tubo dispensador, feito no diâmetro informado no pedido. Copos não inclusos"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Copo descartável no diâmetro que você informar no pedido"
         },
         {
           "rotulo": "Limpeza",
@@ -682,9 +714,9 @@
       "pastaOrigem": "Organização/Porta-Copos Universal",
       "envio": {
         "pesoGramas": 36,
-        "alturaCm": 14.4,
+        "alturaCm": 9,
         "larguraCm": 7.9,
-        "comprimentoCm": 9
+        "comprimentoCm": 7.9
       },
       "combinaCom": [
         "porta-guardanapos-slim",
@@ -720,6 +752,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "17 × 6 × 8 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça, sem montagem. Guardanapos não inclusos"
         },
         {
           "rotulo": "Compatibilidade",
@@ -779,7 +815,15 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "10,8 × 14,6 × 0,6 cm (L × P × A)"
+          "valor": "10,8 × 5 × 14,6 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "3 peças de encaixe: 2 painéis laterais + base. Guardanapos não inclusos"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Serve guardanapo quadrado padrão"
         },
         {
           "rotulo": "Limpeza",
@@ -837,7 +881,11 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "12,1 × 10,2 × 1 cm (L × P × A)"
+          "valor": "12,1 × 4,7 × 10,2 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "4 peças de encaixe: 2 painéis laterais + base em 2 partes (duas cores). Guardanapos não inclusos"
         },
         {
           "rotulo": "Compatibilidade",
@@ -966,8 +1014,12 @@
           "valor": "4 × 9 × 6 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 aro de apoio. Coador não incluso"
+        },
+        {
           "rotulo": "Compatibilidade",
-          "valor": "Serve também na posição de uso"
+          "valor": "Coador V60 tamanho 02"
         },
         {
           "rotulo": "Limpeza",
@@ -1025,6 +1077,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "7,7 × 9,8 × 5,5 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "2 peças: silhueta em fio + pedestal. Não acomoda a cafeteira: a Bialetti não é inclusa e não encaixa na peça"
         },
         {
           "rotulo": "Limpeza",
@@ -1151,8 +1207,12 @@
           "valor": "20 × 8,8 cm (L × A), espessura 0,3 cm"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 painel de parede. Fita dupla-face não inclusa"
+        },
+        {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Fita dupla-face ou dois furos na traseira. Fita não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -1175,9 +1235,9 @@
       "pastaOrigem": "Decoração/Batida de Coração com Café",
       "envio": {
         "pesoGramas": 7,
-        "alturaCm": 37,
-        "larguraCm": 16.3,
-        "comprimentoCm": 1
+        "alturaCm": 20,
+        "larguraCm": 8.8,
+        "comprimentoCm": 0.3
       },
       "combinaCom": [
         "placa-mais-espresso-menos-depresso",
@@ -1211,6 +1271,10 @@
           "valor": "12,1 × 15,1 × 10,5 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 cachepô. Planta e vaso plástico interno não inclusos"
+        },
+        {
           "rotulo": "Compatibilidade",
           "valor": "Serve suculenta, cacto e mudas pequenas"
         },
@@ -1236,9 +1300,9 @@
       "pastaOrigem": "Decoração/Cachepô Xicarinha",
       "envio": {
         "pesoGramas": 63,
-        "alturaCm": 8.1,
-        "larguraCm": 10,
-        "comprimentoCm": 7
+        "alturaCm": 15.1,
+        "larguraCm": 12.1,
+        "comprimentoCm": 10.5
       },
       "combinaCom": [
         "capivara",
@@ -1269,6 +1333,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "7,8 × 6,5 × 10 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça, sem montagem"
         },
         {
           "rotulo": "Limpeza",
@@ -1314,8 +1382,8 @@
       "nome": "Copinho Buddy",
       "categoria": "decoracao",
       "resumo": "Copo de viagem com perninhas, em várias cores.",
-      "paraQueServe": "Um copo de café para viagem transformado em personagem, com tampa, cinta e perninhas que dobram. Senta na borda do notebook, na prateleira ou no vão da estante. Fica melhor em dupla ou trio, cada um numa cor.",
-      "descricao": "Um copo de café para viagem transformado em personagem: tampa, cinta e perninhas articuladas, cada parte na sua própria cor, sem pintura nem adesivo. Senta na borda do notebook, na prateleira e no vão da estante. Vende em par e em trio.",
+      "paraQueServe": "Um copo de café para viagem transformado em personagem, com tampa, cinta e perninhas que dobram. Senta na borda do notebook, na prateleira ou no vão da estante. Fica melhor em dupla ou trio, cada um numa cor — cada copinho é pedido à parte.",
+      "descricao": "Um copo de café para viagem transformado em personagem: tampa, cinta e perninhas articuladas, cada parte na sua própria cor, sem pintura nem adesivo. Senta na borda do notebook, na prateleira e no vão da estante. Cada copinho é vendido à parte — em dupla ou trio o efeito é melhor.",
       "detalhes": [
         "Várias cores em uma peça só",
         "Perninhas articuladas",
@@ -1329,6 +1397,14 @@
         {
           "rotulo": "Material",
           "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "Cerca de 3,5 cm de largura × 3,3 cm de altura"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 copinho, em 3 partes de encaixe (tampa, cinta e perninhas, cada uma na sua cor). Par e trio são várias unidades, vendidas à parte"
         },
         {
           "rotulo": "Limpeza",
@@ -1411,7 +1487,11 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "4,2 × 5,4 × 8,9 cm (L × P × A)"
+          "valor": "Cerca de 4,4 cm de largura × 7,8 cm de altura, com o vapor"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "Corpo + copo + vapor, três partes de encaixe"
         },
         {
           "rotulo": "Limpeza",
@@ -1497,6 +1577,10 @@
           "valor": "4,7 × 3,8 × 5,7 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça, já montada e articulada"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -1521,9 +1605,9 @@
       "pastaOrigem": "Decoração/Grão de Café Articulado",
       "envio": {
         "pesoGramas": 19,
-        "alturaCm": 7.1,
-        "larguraCm": 8.2,
-        "comprimentoCm": 6.7
+        "alturaCm": 5.7,
+        "larguraCm": 4.7,
+        "comprimentoCm": 3.8
       },
       "combinaCom": [
         "copo-cafe-buddy",
@@ -1562,6 +1646,10 @@
           "valor": "4,3 × 2,8 × 4 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça, sem montagem"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -1585,9 +1673,9 @@
       "pastaOrigem": "Decoração/Grão de Lã",
       "envio": {
         "pesoGramas": 8,
-        "alturaCm": 5.2,
-        "larguraCm": 7.3,
-        "comprimentoCm": 8
+        "alturaCm": 4.3,
+        "larguraCm": 4,
+        "comprimentoCm": 2.8
       },
       "combinaCom": [
         "buddy-cafe",
@@ -1606,7 +1694,7 @@
       "detalhes": [
         "Três quadros independentes",
         "Moldura quadrada em cada peça",
-        "Cerca de 18 cm cada"
+        "Cerca de 19 cm cada"
       ],
       "ficha": [
         {
@@ -1619,7 +1707,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "19,1 × 19,1 cm (L × A), espessura 0,1 cm"
+          "valor": "Cada quadro: 19,1 × 19,1 cm (L × A), espessura 0,1 cm"
         },
         {
           "rotulo": "Itens inclusos",
@@ -1627,7 +1715,7 @@
         },
         {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Fita dupla-face ou dois furos na traseira. Fita não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -1650,9 +1738,9 @@
       "pastaOrigem": "Decoração/Jogo de 3 Quadros de Café",
       "envio": {
         "pesoGramas": 8,
-        "alturaCm": 8.8,
-        "larguraCm": 8.8,
-        "comprimentoCm": 0.2
+        "alturaCm": 19.1,
+        "larguraCm": 19.1,
+        "comprimentoCm": 0.1
       },
       "combinaCom": [
         "quadro-xicaras",
@@ -1671,7 +1759,7 @@
       "detalhes": [
         "Fica em pé sozinho",
         "Peça inteira, sem emenda",
-        "Cerca de 25 cm de largura"
+        "Cerca de 22 cm de largura"
       ],
       "ficha": [
         {
@@ -1684,7 +1772,11 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "21,9 × 20,2 × 1,8 cm (L × P × A)"
+          "valor": "23,5 × 13,9 cm (L × A), espessura 0,6 cm"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 letreiro, peça inteira sem emenda"
         },
         {
           "rotulo": "Limpeza",
@@ -1710,7 +1802,7 @@
         "pesoGramas": 43,
         "alturaCm": 23.5,
         "larguraCm": 13.9,
-        "comprimentoCm": 1.8
+        "comprimentoCm": 0.6
       },
       "combinaCom": [
         "placa-coffee-time",
@@ -1745,8 +1837,12 @@
           "valor": "16 × 8,6 cm (L × A), espessura 0,1 cm"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça de linha contínua. Fita dupla-face não inclusa"
+        },
+        {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Fita dupla-face ou dois furos na traseira. Fita não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -1770,9 +1866,9 @@
       "pastaOrigem": "Decoração/Letreiro COFFEE TIME",
       "envio": {
         "pesoGramas": 9,
-        "alturaCm": 10,
-        "larguraCm": 5.4,
-        "comprimentoCm": 0.2
+        "alturaCm": 16,
+        "larguraCm": 8.6,
+        "comprimentoCm": 0.1
       },
       "combinaCom": [
         "placa-coffee",
@@ -1785,7 +1881,7 @@
       "nome": "Marcador de Páginas",
       "categoria": "decoracao",
       "resumo": "Silhueta fina que fica de pé para fora do livro.",
-      "paraQueServe": "Um marcador de página fino o bastante para não forçar a lombada do livro, mas com a silhueta aparecendo acima das páginas — você encontra a marca com o livro fechado na estante, sem precisar abrir.",
+      "paraQueServe": "Um marcador de página fino o bastante para não forçar a lombada do livro, mas com a silhueta aparecendo acima das páginas: você encontra a marca com o livro fechado na estante, sem precisar abrir.",
       "descricao": "Lâmina fina o bastante para não forçar a lombada, com a silhueta aparecendo acima do corte das páginas — você acha a marca de longe, com o livro fechado na estante. Feito em duas cores, com o detalhe do topo destacado do corpo.",
       "detalhes": [
         "Lâmina fina, não marca a lombada",
@@ -1804,6 +1900,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "11,6 × 3,7 × 2,9 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 marcador, em 2 partes de encaixe (corpo + topo na segunda cor)"
         },
         {
           "rotulo": "Limpeza",
@@ -1926,8 +2026,12 @@
           "valor": "10,2 × 17,6 cm (L × A), espessura 0,1 cm"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 painel de peça única. Fita dupla-face não inclusa"
+        },
+        {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Fita dupla-face ou dois furos na traseira. Fita não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -1951,9 +2055,9 @@
       "pastaOrigem": "Decoração/Painel Latte · Coffee · Espresso",
       "envio": {
         "pesoGramas": 55,
-        "alturaCm": 17.1,
-        "larguraCm": 29.5,
-        "comprimentoCm": 1
+        "alturaCm": 17.5,
+        "larguraCm": 10.2,
+        "comprimentoCm": 0.1
       },
       "combinaCom": [
         "quadro-xicaras",
@@ -1987,8 +2091,12 @@
           "valor": "23,5 × 22,5 cm (L × A), espessura 0,3 cm"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 painel de linha vazada. Fita dupla-face não inclusa"
+        },
+        {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Fita dupla-face ou dois furos na traseira. Fita não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -2011,9 +2119,9 @@
       "pastaOrigem": "Decoração/Painel Pão",
       "envio": {
         "pesoGramas": 18,
-        "alturaCm": 14.5,
-        "larguraCm": 13.9,
-        "comprimentoCm": 1
+        "alturaCm": 23.5,
+        "larguraCm": 22.5,
+        "comprimentoCm": 0.3
       },
       "combinaCom": [
         "pote-amanteigados",
@@ -2048,8 +2156,12 @@
           "valor": "19,6 × 16,2 cm (L × A), espessura 0,2 cm"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 painel de peça única. Fita dupla-face não inclusa"
+        },
+        {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Fita dupla-face ou dois furos na traseira. Fita não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -2075,7 +2187,7 @@
         "pesoGramas": 25,
         "alturaCm": 19.6,
         "larguraCm": 16.2,
-        "comprimentoCm": 1
+        "comprimentoCm": 0.2
       },
       "combinaCom": [
         "placa-coffee-time",
@@ -2109,6 +2221,10 @@
           "valor": "13,2 × 14,8 × 0,4 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 placa com base integrada, sem montagem"
+        },
+        {
           "rotulo": "Fixação",
           "valor": "Base integrada, fica em pé sobre o móvel, sem fixação"
         },
@@ -2133,9 +2249,9 @@
       "pastaOrigem": "Decoração/Café é sempre uma boa ideia",
       "envio": {
         "pesoGramas": 7,
-        "alturaCm": 13.2,
-        "larguraCm": 14.8,
-        "comprimentoCm": 0.9
+        "alturaCm": 14.8,
+        "larguraCm": 13.2,
+        "comprimentoCm": 0.4
       },
       "combinaCom": [
         "placa-hora-do-cafe",
@@ -2170,7 +2286,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "12 × 15 cm (L × A), espessura 0,7 cm"
+          "valor": "12 × 15 cm (L × A), espessura 0,3 cm"
         },
         {
           "rotulo": "Itens inclusos",
@@ -2178,7 +2294,7 @@
         },
         {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Fita dupla-face ou dois furos na traseira. Fita não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -2221,7 +2337,7 @@
       "detalhes": [
         "Três painéis já unidos e alinhados",
         "Fita dupla-face ou furo de parede",
-        "Cerca de 9 cm"
+        "Cerca de 24 cm de largura, com os três painéis"
       ],
       "ficha": [
         {
@@ -2234,7 +2350,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "7,5 × 8,9 cm (L × A), espessura 0,3 cm"
+          "valor": "24 × 8,9 cm (L × A), espessura 0,3 cm"
         },
         {
           "rotulo": "Itens inclusos",
@@ -2242,7 +2358,7 @@
         },
         {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Fita dupla-face ou dois furos na traseira. Fita não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -2266,7 +2382,7 @@
       "envio": {
         "pesoGramas": 14,
         "alturaCm": 24,
-        "larguraCm": 12.4,
+        "larguraCm": 8.8,
         "comprimentoCm": 0.3
       },
       "combinaCom": [
@@ -2284,7 +2400,7 @@
       "descricao": "Três xícaras desenhadas em traço fino e contínuo, cada uma com o vapor subindo em uma volta diferente. Peças pequenas, de linha delicada, feitas para parede clara e ambiente de pouca coisa — sala, corredor, acima do sofá. Vêm no jogo com três.",
       "detalhes": [
         "Jogo com 3 peças",
-        "Traço fino, cerca de 12 cm cada",
+        "Três tamanhos: 24, 20 e 19 cm de altura",
         "Fixação com fita dupla-face"
       ],
       "ficha": [
@@ -2298,7 +2414,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "16,1 × 24 cm (L × A), espessura 0,5 cm"
+          "valor": "Três tamanhos: 16,1 × 24 cm · 12,6 × 20,4 cm · 9,9 × 18,9 cm (L × A), espessura 0,5 cm"
         },
         {
           "rotulo": "Itens inclusos",
@@ -2306,7 +2422,7 @@
         },
         {
           "rotulo": "Fixação",
-          "valor": "Fita dupla-face ou dois furos na traseira"
+          "valor": "Fita dupla-face ou dois furos na traseira. Fita não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -2349,7 +2465,7 @@
       "detalhes": [
         "Frente em duas cores, retroiluminada",
         "Iluminação led a bateria",
-        "Cerca de 20 cm de largura"
+        "Cerca de 16 cm de largura"
       ],
       "ficha": [
         {
@@ -2365,8 +2481,12 @@
           "valor": "15,7 × 10,8 × 2,9 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "Luminária com a luz LED e as 3 pilhas botão já instaladas — acende assim que chega"
+        },
+        {
           "rotulo": "Alimentação",
-          "valor": "Luz LED"
+          "valor": "Luz LED a bateria, já montada na peça, com 3 pilhas botão instaladas"
         },
         {
           "rotulo": "Limpeza",
@@ -2426,8 +2546,12 @@
           "valor": "9,4 × 12 × 11,2 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "Luminária com a luz LED e as 3 pilhas botão já instaladas — acende assim que chega"
+        },
+        {
           "rotulo": "Alimentação",
-          "valor": "Luz LED"
+          "valor": "Luz LED a bateria, já montada na peça, com 3 pilhas botão instaladas"
         },
         {
           "rotulo": "Limpeza",
@@ -2483,11 +2607,15 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "10,4 × 10,4 × 4 cm (L × P × A)"
+          "valor": "10,4 × 10,4 × 4,2 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "Luminária com a luz LED e as 3 pilhas botão já instaladas — acende assim que chega"
         },
         {
           "rotulo": "Alimentação",
-          "valor": "Luz LED"
+          "valor": "Luz LED a bateria, já montada na peça, com 3 pilhas botão instaladas"
         },
         {
           "rotulo": "Limpeza",
@@ -2546,8 +2674,12 @@
           "valor": "17,5 × 4,9 × 4 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "Luminária com a luz LED e as 3 pilhas botão já instaladas — acende assim que chega"
+        },
+        {
           "rotulo": "Alimentação",
-          "valor": "Luz LED"
+          "valor": "Luz LED a bateria, já montada na peça, com 3 pilhas botão instaladas"
         },
         {
           "rotulo": "Limpeza",
@@ -2585,13 +2717,13 @@
       "slug": "luminaria-moka",
       "nome": "Luminária Cafeteira Moka",
       "categoria": "luminarias",
-      "resumo": "Uma Bialetti em tamanho real que acende.",
-      "paraQueServe": "Uma cafeteira italiana em tamanho real, com a base escura e a metade de cima translúcida: acesa, a parte superior vira uma lanterna de luz quente. Na bancada, ao lado da cafeteira de verdade, demora para alguém perceber. Usa lâmpada LED de rosca comum (soquete E27).",
-      "descricao": "A cafeteira moka reproduzida no formato e na proporção da original, com a base escura opaca e o corpo superior em parede translúcida: acesa, a metade de cima vira lanterna de luz quente e as facetas do octógono marcam o brilho. Na bancada, ao lado da cafeteira de verdade, o truque demora a ser percebido.",
+      "resumo": "Uma Bialetti em miniatura que acende.",
+      "paraQueServe": "Uma cafeteira italiana em miniatura, com a base escura e a metade de cima translúcida: acesa, a parte superior vira uma lanterna de luz quente. Na bancada, ao lado da cafeteira de verdade, demora para alguém perceber. A luz LED já vem montada dentro e funciona a bateria, sem fio nenhum na bancada.",
+      "descricao": "A cafeteira moka reproduzida em miniatura, no formato e na proporção da original, com a base escura opaca e o corpo superior em parede translúcida: acesa, a metade de cima vira lanterna de luz quente e as facetas do octógono marcam o brilho. Na bancada, ao lado da cafeteira de verdade, o truque demora a ser percebido.",
       "detalhes": [
         "Base opaca + corpo translúcido",
         "Formato octogonal da moka original",
-        "Soquete E27, LED de até 9 W"
+        "Luz LED a bateria, já montada dentro"
       ],
       "ficha": [
         {
@@ -2611,8 +2743,12 @@
           "valor": "9,3 × 10,4 × 7 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "Luminária com a luz LED e as 3 pilhas botão já instaladas — acende assim que chega"
+        },
+        {
           "rotulo": "Alimentação",
-          "valor": "Luz LED"
+          "valor": "Luz LED a bateria, já montada na peça, com 3 pilhas botão instaladas"
         },
         {
           "rotulo": "Limpeza",
@@ -2650,12 +2786,12 @@
       "nome": "Luminária Copo de Café",
       "categoria": "luminarias",
       "resumo": "Copo de viagem translúcido com a luz saindo por dentro.",
-      "paraQueServe": "Um copo de café para viagem com a parede fina e translúcida. Apagado, é um copo de café na bancada; aceso, o corpo inteiro vira um abajur de luz quente. Usa lâmpada LED comum de rosca (soquete E27) e vem com cabo e interruptor.",
-      "descricao": "Copo de café para viagem em parede fina translúcida: aceso, o corpo inteiro vira abajur de luz quente, com um padrão vertical fino percorrendo a superfície. Apagado, continua sendo um copo de café na bancada. Leva lâmpada LED de baixa potência, soquete E27.",
+      "paraQueServe": "Um copo de café para viagem com a parede fina e translúcida. Apagado, é um copo de café na bancada; aceso, o corpo inteiro vira um abajur de luz quente. A luz LED já vem montada dentro e funciona a bateria — sem cabo e sem tomada.",
+      "descricao": "Copo de café para viagem em parede fina translúcida: aceso, o corpo inteiro vira abajur de luz quente, com um padrão vertical fino percorrendo a superfície. Apagado, continua sendo um copo de café na bancada. A luz LED fica montada dentro do corpo e funciona a bateria, sem cabo.",
       "detalhes": [
         "Parede translúcida, luz difusa",
-        "Soquete E27, LED de até 9 W",
-        "Cabo com interruptor de passagem"
+        "Luz LED a bateria, já montada dentro",
+        "Sem cabo e sem tomada"
       ],
       "ficha": [
         {
@@ -2675,8 +2811,12 @@
           "valor": "10,8 × 10,8 × 13,2 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "Luminária com a luz LED e as 3 pilhas botão já instaladas — acende assim que chega"
+        },
+        {
           "rotulo": "Alimentação",
-          "valor": "Luz LED"
+          "valor": "Luz LED a bateria, já montada na peça, com 3 pilhas botão instaladas"
         },
         {
           "rotulo": "Limpeza",
@@ -2742,6 +2882,10 @@
           "valor": "Corpo + núcleo com agulha"
         },
         {
+          "rotulo": "Compatibilidade",
+          "valor": "Acomoda a cápsula Três Corações no porta-cápsulas de máquinas Dolce Gusto"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -2779,9 +2923,9 @@
       "categoria": "preparo",
       "resumo": "Os filtros de papel guardados fechados, em leque.",
       "paraQueServe": "Filtro de papel absorve cheiro e umidade do ambiente — e isso passa para o café. Esta caixinha guarda a pilha de filtros fechada, longe do pó e do cheiro da cozinha. A tampa abre inteira e os filtros ficam à mão, abertos em leque. Escolha o modelo conforme o coador que você usa: V60 tamanho 02 (o mais comum, de uma a duas xícaras), V60 tamanho 03 (maior, para jarra) ou Chemex, cujo filtro é bem mais grosso e ocupa mais espaço.",
-      "descricao": "Caixa com tampa articulada — a dobradiça nasce na própria peça, não tem pino nem parafuso para soltar com o tempo. A parede é fina, para a caixa não ocupar mais lugar que o conteúdo.\n\nCada modelo é feito na medida do seu filtro: o da Chemex é visivelmente maior, porque aquele papel é mais grosso e a pilha fica mais alta. Diga qual coador você usa e a caixa sai no tamanho certo.",
+      "descricao": "Caixa com tampa articulada: a tampa prende no corpo por um pino que acompanha a peça, sem parafuso e sem ferragem para enferrujar. A parede é fina, para a caixa não ocupar mais lugar que o conteúdo.\n\nCada modelo é feito na medida do seu filtro: o da Chemex é visivelmente maior, porque aquele papel é mais grosso e a pilha fica mais alta. Diga qual coador você usa e a caixa sai no tamanho certo.",
       "detalhes": [
-        "Tampa articulada, dobradiça integrada",
+        "Tampa articulada, presa por pino que acompanha",
         "Três modelos: V60 02, V60 03 e Chemex",
         "Parede fina, pegada mínima"
       ],
@@ -2797,6 +2941,14 @@
         {
           "rotulo": "Dimensões",
           "valor": "V60 02: 12,8 × 6,8 × 12,6 cm · V60 03: 14,2 × 7,6 × 14,0 cm · Chemex: 17,6 × 9,4 × 17,4 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "Corpo + tampa + pino da dobradiça, no modelo escolhido no pedido. Filtros de papel não inclusos"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Filtro V60 02, V60 03 ou Chemex, conforme o modelo escolhido no pedido"
         },
         {
           "rotulo": "Limpeza",
@@ -2838,9 +2990,9 @@
       "pastaOrigem": "Preparo/Caixa de Filtro V60",
       "envio": {
         "pesoGramas": 79,
-        "alturaCm": 7.6,
-        "larguraCm": 14,
-        "comprimentoCm": 14.2
+        "alturaCm": 17.6,
+        "larguraCm": 17.4,
+        "comprimentoCm": 9.4
       },
       "combinaCom": [
         "modelador-filtro-v60",
@@ -2877,6 +3029,10 @@
         {
           "rotulo": "Itens inclusos",
           "valor": "1 peça (colher e tamper na mesma ferramenta)"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Portafiltro de máquina de espresso (não incluso)"
         },
         {
           "rotulo": "Limpeza",
@@ -2922,7 +3078,6 @@
         "Tampa de concha, fecho por encaixe",
         "Serve os discos de filtro Aeropress",
         "Formato de bolso, para viagem",
-        "Fecho magnético com 2 ímãs cilíndricos de 3×3 mm",
         "Dobradiças por encaixe, sem parafuso"
       ],
       "ficha": [
@@ -2937,6 +3092,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "7,5 × 6,9 × 2,5 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 estojo com tampa. Filtros não inclusos"
         },
         {
           "rotulo": "Compatibilidade",
@@ -3043,14 +3202,13 @@
       "nome": "LatteShot — Câmera de Estêncil",
       "categoria": "preparo",
       "resumo": "Uma câmera fotográfica que carimba desenho na espuma.",
-      "paraQueServe": "Sabe aquele desenho de chocolate em pó na espuma do cappuccino? Normalmente se faz com um estêncil (um cartão vazado) segurado na mão sobre a xícara, enquanto se peneira o pó — e quase sempre borra. O LatteShot tem o formato de uma câmera fotográfica: você encaixa o cartão atrás, aponta para a xícara e aperta o disparador. A peneira desce, solta o pó só pelo recorte e sobe de volta. Sai limpo, e nada espalha pela bancada. Funciona todo na mecânica, sem pilha e sem eletrônica.",
-      "descricao": "Você encaixa um cartão de estêncil na traseira, aponta a lente para a xícara e aperta o disparador: o mecanismo de fuso desce a peneira, libera o chocolate em pó pelo recorte e levanta de volta. Sai um desenho limpo na espuma, sem peneira solta, sem pó espalhado pela bancada. Toda a mecânica — fuso, porca, eixo, obturador e escova — é feita peça a peça; não há eletrônica nem pilha. Acompanha guia de montagem ilustrado.",
+      "paraQueServe": "Sabe aquele desenho de chocolate em pó na espuma do cappuccino? Normalmente se faz com um estêncil (um cartão vazado) segurado na mão sobre a xícara, enquanto se peneira o pó, e quase sempre borra. O LatteShot tem o formato de uma câmera fotográfica: você encaixa o cartão atrás, aponta para a xícara e aperta o disparador. A peneira desce, solta o pó só pelo recorte e sobe de volta. Sai limpo, e nada espalha pela bancada. Funciona todo na mecânica, sem pilha e sem eletrônica.",
+      "descricao": "Você encaixa um cartão de estêncil na traseira, aponta a lente para a xícara e aperta o disparador: o mecanismo de fuso desce a peneira, libera o chocolate em pó pelo recorte e levanta de volta. Sai um desenho limpo na espuma, sem peneira solta, sem pó espalhado pela bancada. Toda a mecânica — fuso, porca, eixo, obturador e escova — é feita peça a peça; não há eletrônica nem pilha. Chega montada e testada, com guia de uso ilustrado.",
       "detalhes": [
         "Mecanismo de fuso puramente mecânico, sem eletrônica nem pilha",
         "Compatível com os Stencil Cards do mesmo kit",
-        "Acompanha guia de montagem em PDF",
-        "Mais de 20 peças, montagem assistida",
-        "Não acompanha os estêncils — vendidos à parte em https://leomhl.github.io/#/p/stencil-cards-latteshot"
+        "Acompanha guia de uso em PDF",
+        "Não acompanha os estêncils (vendidos à parte em https://leomhl.github.io/#/p/stencil-cards-latteshot)"
       ],
       "ficha": [
         {
@@ -3067,7 +3225,7 @@
         },
         {
           "rotulo": "Itens inclusos",
-          "valor": "Câmera montada + guia de montagem em PDF (não acompanha estêncils)"
+          "valor": "Câmera montada e testada + guia de uso em PDF. Não acompanha os estêncils"
         },
         {
           "rotulo": "Compatibilidade",
@@ -3108,14 +3266,14 @@
     },
     {
       "slug": "molde-cafe-latteshot",
-      "nome": "Moldes de Estêncil Avulsos",
+      "nome": "Discos de Estêncil para Xícara — Jogo com 16",
       "categoria": "preparo",
       "resumo": "Os discos de estêncil para usar no seu café.",
       "paraQueServe": " São discos vazados do tamanho da boca da xícara: você apoia o molde sobre a espuma, peneira o chocolate em pó por cima e levanta. O desenho fica. Funciona em qualquer xícara e em qualquer bebida com espuma firme ou crema.",
-      "descricao": "Discos vazados com 14 desenhos diferentes — folha, coração, xícara, carinha feliz, grãos, estrela, trevo, CAFE, lua e estrelas, bule, pata de cachorro, entre outros — do tamanho da boca da xícara. Você apoia o molde sobre a espuma, peneira o chocolate por cima e levanta — o desenho fica. É a versão direta, sem mecanismo: funciona em qualquer xícara e em qualquer bebida com crema ou espuma firme.",
+      "descricao": "Discos vazados com 16 desenhos diferentes — folha, coração, xícara, carinha feliz, grãos, estrela, trevo, CAFE, lua e estrelas, bule, pata de cachorro, entre outros — do tamanho da boca da xícara. Você apoia o molde sobre a espuma, peneira o chocolate por cima e levanta — o desenho fica. É a versão direta, sem mecanismo: funciona em qualquer xícara e em qualquer bebida com crema ou espuma firme.",
       "detalhes": [
         "Discos na medida da boca da xícara",
-        "Jogo com 14 desenhos diferentes"
+        "Jogo com 16 desenhos diferentes"
       ],
       "ficha": [
         {
@@ -3132,7 +3290,11 @@
         },
         {
           "rotulo": "Itens inclusos",
-          "valor": "14 discos de estêncil"
+          "valor": "16 discos de estêncil"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Uso à mão, apoiado na boca da xícara. Não encaixa na câmera LatteShot"
         },
         {
           "rotulo": "Limpeza",
@@ -3174,13 +3336,13 @@
     },
     {
       "slug": "porta-filtro-simples-60",
-      "nome": "Porta-Filtro Simples 60",
+      "nome": "Suporte de Filtro em Leque — Par",
       "categoria": "preparo",
-      "resumo": "Jogo de berços que seguram o filtro de papel aberto.",
-      "paraQueServe": "Antes de passar o café, o filtro de papel precisa ficar aberto. Solto na bancada ele murcha e gruda em si mesmo. Estes berços em formato de leque seguram o filtro aberto e em pé, prontos para receber o pó. Vêm quatro no jogo, porque ficam bem enfileirados — e porque é comum preparar mais de um café.",
-      "descricao": "Berços em formato de leque, com a face externa em pirâmides em relevo, que mantêm o filtro de papel do V60 aberto e em pé sobre a bancada. O filtro não murcha nem gruda nas paredes antes da extração. Vendidos em jogo, alternando as cores, porque ficam bem enfileirados.",
+      "resumo": "Par de berços que segura o filtro de papel aberto.",
+      "paraQueServe": "Antes de passar o café, o filtro de papel precisa ficar aberto. Solto na bancada ele murcha e gruda em si mesmo. Estes berços em formato de leque seguram o filtro aberto e em pé, prontos para receber o pó. Vêm dois no par, porque é comum preparar mais de um café.",
+      "descricao": "Berços em formato de leque, com a face externa em pirâmides em relevo, que mantêm o filtro de papel do V60 aberto e em pé sobre a bancada. O filtro não murcha nem gruda nas paredes antes da extração. Vendidos em par, alternando as cores, porque ficam bem enfileirados.",
       "detalhes": [
-        "Jogo com 4 berços",
+        "Par com 2 berços",
         "Face externa texturizada",
         "Serve filtro cônico tamanho 60"
       ],
@@ -3203,11 +3365,11 @@
         },
         {
           "rotulo": "Itens inclusos",
-          "valor": "4 berços"
+          "valor": "2 berços"
         },
         {
           "rotulo": "Compatibilidade",
-          "valor": "Serve filtro cônico tamanho 60"
+          "valor": "Filtro de papel cônico do V60"
         },
         {
           "rotulo": "Limpeza",
@@ -3244,11 +3406,11 @@
       "slug": "stencil-cards-latteshot",
       "nome": "Stencil Cards para LatteShot",
       "categoria": "preparo",
-      "resumo": "Mais de 30 cartões de desenho para a câmera.",
-      "paraQueServe": "São os cartões de desenho que entram na traseira do LatteShot — cada um com um recorte diferente: folha, coração, patinha de cachorro, croissant, rosto, frase. Todos têm a mesma borda de encaixe, então trocar leva um segundo. Já passam de 30 modelos, e entram desenhos novos a cada rodada. Você escolhe quais quer no pedido.",
+      "resumo": "24 cartões de desenho para a câmera.",
+      "paraQueServe": "São os cartões de desenho que entram na traseira do LatteShot — cada um com um recorte diferente: folha, coração, patinha de cachorro, croissant, rosto, frase. Todos têm a mesma borda de encaixe, então trocar leva um segundo. São 24 modelos, e entram desenhos novos a cada rodada. Você escolhe quais quer no pedido.",
       "descricao": "Cartões de estêncil que entram na traseira do LatteShot: folha, coração, pata de cachorro, croissant, cupcake, rosto, letreiro e por aí. Cada cartão tem a mesma borda de encaixe, então a troca é de um segundo. A coleção cresce — a cada rodada entram desenhos novos. Vendidos em jogo ou avulsos, à sua escolha.",
       "detalhes": [
-        "Mais de 30 desenhos disponíveis",
+        "24 desenhos disponíveis",
         "Encaixe padrão do LatteShot",
         "Jogo ou avulso — escolha os desenhos no pedido"
       ],
@@ -3267,7 +3429,7 @@
         },
         {
           "rotulo": "Itens inclusos",
-          "valor": "Cartões à sua escolha, avulsos ou em jogo"
+          "valor": "Cartões à sua escolha, avulsos ou em jogo, dos 24 desenhos disponíveis"
         },
         {
           "rotulo": "Limpeza",
@@ -3305,7 +3467,7 @@
       "categoria": "preparo",
       "resumo": "Dois braços em V que abrem o filtro e desmontam.",
       "paraQueServe": "Mesma função dos berços: manter o filtro de papel cônico aberto e em pé. A diferença é que este desmonta em duas peças planas, que cabem no bolso da bolsa. É a opção para quem leva o preparo do café para fora de casa.",
-      "descricao": "Dois braços em V, de madeira clara e preto, que se cruzam e seguram o filtro de papel cônico aberto, pronto para receber o pó. Desmonta em duas peças planas que cabem no bolso da bolsa de viagem — é o suporte de filtro que não ocupa volume quando você não está usando.",
+      "descricao": "Dois braços em V, em cor de madeira clara e preto, que se cruzam e seguram o filtro de papel cônico aberto, pronto para receber o pó. Desmonta em duas peças planas que cabem no bolso da bolsa de viagem — é o suporte de filtro que não ocupa volume quando você não está usando.",
       "detalhes": [
         "Desmonta em duas peças planas",
         "Duas cores: claro e preto",
@@ -3397,6 +3559,14 @@
           "valor": "45 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 modelador. Coador e filtro de papel não inclusos"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Coador V60 tamanho 02"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -3458,6 +3628,14 @@
           "valor": "138 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte em três partes de encaixe, sem parafuso. Cápsulas não inclusas"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Cápsulas Dolce Gusto"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -3482,8 +3660,8 @@
       "envio": {
         "pesoGramas": 138,
         "alturaCm": 26.9,
-        "larguraCm": 12.9,
-        "comprimentoCm": 16.2
+        "larguraCm": 5.8,
+        "comprimentoCm": 2.9
       },
       "combinaCom": [
         "torre-capsulas-dupla",
@@ -3494,9 +3672,9 @@
     },
     {
       "slug": "porta-capsulas-universal",
-      "nome": "Cesta Esfera para Cápsulas",
+      "nome": "Cesta Vazada para Cápsulas",
       "categoria": "organizacao",
-      "resumo": "Cesta vazada em formato de xícara que guarda cápsulas de qualquer marca.",
+      "resumo": "Cesta vazada em formato de xícara grande que guarda cápsulas de qualquer marca.",
       "paraQueServe": "A caixa original das cápsulas não cabe na bancada e esconde quantas ainda restam. Esta cesta vazada guarda as cápsulas soltas, à vista, até encher — serve pra Nespresso, Dolce Gusto, Lavazza A Modo Mio e outras marcas redondas. É só ir pegando pelo vão de cima.",
       "descricao": "Formato de xícara grande, com alça, e parede inteira vazada num padrão de células orgânicas. As cápsulas ficam em pé, encostadas umas nas outras, sustentadas pela trama — cabem cerca de 30 unidades dependendo da marca.\n\nPeça única, sem parte solta: é só encher e girar pra pegar a de trás.",
       "detalhes": [
@@ -3522,6 +3700,14 @@
           "valor": "26 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 cesta, peça única sem parte solta. Cápsulas não inclusas"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Cápsulas redondas: Nespresso, Dolce Gusto, Lavazza A Modo Mio e outras do mesmo formato"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -3545,7 +3731,7 @@
         "fotos/porta-capsulas-universal/08.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta Cápsulas Universal",
+      "pastaOrigem": "Organização/Cesta Esfera para Cápsulas",
       "envio": {
         "pesoGramas": 26,
         "alturaCm": 16.6,
@@ -3589,6 +3775,14 @@
           "valor": "62 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "Corpo + rampa + tampa, três peças de encaixe sem parafuso. Cápsulas não inclusas"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Cápsulas Nespresso Original, Nespresso Vertuo, Dolce Gusto e Lavazza A Modo Mio"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -3610,7 +3804,7 @@
         "fotos/porta-capsulas-deluxe/06.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta Cápsulas Deluxe",
+      "pastaOrigem": "Organização/Porta capsulas deluxe",
       "envio": {
         "pesoGramas": 62,
         "alturaCm": 10.3,
@@ -3654,6 +3848,14 @@
           "valor": "130 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 módulo de 2 colunas (6 cápsulas). A segunda torre do bloco de 4 colunas é vendida separada. Cápsulas não inclusas"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Cápsulas Dolce Gusto"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -3674,7 +3876,7 @@
         "fotos/torre-capsulas-dupla/05.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Torre Dupla para Cápsulas",
+      "pastaOrigem": "Organização/Torre Dupla para Cápsulas Dolce Gusto",
       "envio": {
         "pesoGramas": 130,
         "alturaCm": 8,
@@ -3718,6 +3920,14 @@
           "valor": "27 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça com 2 colunas. Cápsulas e fita dupla face não inclusas"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Cápsulas Nespresso"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -3739,7 +3949,7 @@
         "fotos/porta-capsulas-nespresso/06.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Porta Cápsulas Nespresso",
+      "pastaOrigem": "Organização/Porta capsulas Nespresso",
       "envio": {
         "pesoGramas": 27,
         "alturaCm": 7.9,
@@ -3777,6 +3987,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "15,5 cm de diâmetro × 8 cm de altura (com tampa)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "Corpo + bandeja interna removível + tampa articulada"
         },
         {
           "rotulo": "Limpeza",
@@ -3817,7 +4031,7 @@
         "fotos/lixeira-capsulas-dolce-gusto/05.jpg"
       ],
       "video": null,
-      "pastaOrigem": "Organização/Lixeira Capsulona Dolce Gusto",
+      "pastaOrigem": "Organização/Coletor de Cápsulas Usadas",
       "envio": {
         "pesoGramas": 110,
         "alturaCm": 17.1,
@@ -3837,7 +4051,7 @@
       "categoria": "organizacao",
       "resumo": "Parece biscoito Oreo, mas é pra guardar cabo.",
       "paraQueServe": "Enrola o cabo do fone ou do carregador entre dois discos texturizados — igual a um biscoito Oreo, recheio e tudo. Gira pra enrolar, encaixa as duas tampas e o cabo fica preso, sem nó e sem balançar solto na bolsa ou na gaveta.",
-      "descricao": "Os dois biscoitos se encaixam no miolo central, que funciona como o carretel onde o cabo é enrolado. A textura emborrachada imita o biscoito de verdade, inclusive o relevo gravado nas tampas. Serve bem pra cabo de fone de ouvido, USB-C ou Lightning; não é pensado pra cabos grossos de carregador de notebook.",
+      "descricao": "Os dois biscoitos se encaixam no miolo central, que funciona como o carretel onde o cabo é enrolado. A textura imita o biscoito de verdade, inclusive o relevo gravado nas tampas. Serve bem pra cabo de fone de ouvido, USB-C ou Lightning; não é pensado pra cabos grossos de carregador de notebook.",
       "detalhes": [
         "Carretel central + duas tampas texturizadas tipo Oreo",
         "Enrola e trava o cabo sem precisar de nó",
@@ -3855,6 +4069,14 @@
         {
           "rotulo": "Dimensões",
           "valor": "5,3 × 5,3 × 2,0 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "Carretel central + 2 tampas texturizadas"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Cabo de fone, USB-C ou Lightning. Não serve cabo grosso de carregador de notebook"
         },
         {
           "rotulo": "Limpeza",
@@ -3912,7 +4134,15 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "P: 4,2 × 4,2 × 2,0 cm · M: 5,0 × 4,2 × 2,0 cm · G: 5,6 × 4,2 × 2,0 cm · GG: 6,3 × 4,9 × 2,0 cm (L × P × A)"
+          "valor": "P: 4,2 × 4,2 × 1,9 cm · M: 5 × 4,2 × 1,9 cm · G: 5,6 × 4,2 × 1,9 cm · GG: 6,3 × 4,9 × 1,9 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 organizador (2 tampas com encaixe por torção), no tamanho escolhido no pedido"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Cabo de celular de cerca de 2,8 mm de diâmetro"
         },
         {
           "rotulo": "Limpeza",
@@ -3960,9 +4190,9 @@
       "pastaOrigem": "Organização/Organizador de cabo biscoito",
       "envio": {
         "pesoGramas": 27,
-        "alturaCm": 9.7,
+        "alturaCm": 6.3,
         "larguraCm": 4.9,
-        "comprimentoCm": 6.3
+        "comprimentoCm": 1.9
       },
       "combinaCom": [
         "organizador-cabo-oreo",
@@ -3994,6 +4224,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "12,7 × 11,0 × 7,6 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça. Lata não inclusa"
         },
         {
           "rotulo": "Compatibilidade",
@@ -4062,6 +4296,10 @@
           "valor": "7,8 × 11,4 × 11,0 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte com alça. Lata não inclusa"
+        },
+        {
           "rotulo": "Compatibilidade",
           "valor": "Lata padrão ~350 ml"
         },
@@ -4088,9 +4326,9 @@
       "pastaOrigem": "Organização/Suporte para latas",
       "envio": {
         "pesoGramas": 120,
-        "alturaCm": 7.8,
-        "larguraCm": 11.4,
-        "comprimentoCm": 11.5
+        "alturaCm": 11.4,
+        "larguraCm": 11,
+        "comprimentoCm": 7.8
       },
       "combinaCom": [
         "porta-copos-universal",
@@ -4121,6 +4359,10 @@
         {
           "rotulo": "Dimensões",
           "valor": "5,7 × 2,2 × 1,3 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 abridor. Argola de chaveiro não inclusa"
         },
         {
           "rotulo": "Limpeza",
@@ -4182,6 +4424,14 @@
           "valor": "50 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte de três níveis. Cafeteira moka não inclusa"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Cafeteira moka Bialetti de 4 xícaras, modelo clássico de rosca"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -4236,8 +4486,20 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "15,5 × 11 × 7 cm (L × P × A)"
+        },
+        {
           "rotulo": "Peso",
           "valor": "37 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 funil. Filtro de papel não incluso"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Filtro de papel cônico padrão (tipo 102 / V60)"
         },
         {
           "rotulo": "Limpeza",
@@ -4262,9 +4524,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 37,
-        "alturaCm": 15.5,
-        "larguraCm": 12,
-        "comprimentoCm": 18
+        "alturaCm": 18,
+        "larguraCm": 12.9,
+        "comprimentoCm": 12
       },
       "combinaCom": [
         "caixa-filtro-v60",
@@ -4293,6 +4555,14 @@
         {
           "rotulo": "Material",
           "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "Xícara 4,7 cm de diâmetro × 3,4 cm de altura; perninhas de 7,6 cm"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "2 peças: xícara + perninhas articuladas"
         },
         {
           "rotulo": "Limpeza",
@@ -4333,7 +4603,7 @@
       "nome": "Cortador de Biscoito Capivara",
       "categoria": "diversos",
       "resumo": "Kit com 5 cortadores de capivara em poses diferentes, pra fazer biscoito com fôrma própria.",
-      "paraQueServe": "Cinco cortadores no tema capivara — sentada, dormindo, com laranja na cabeça, enroscada — pra abrir a massa de biscoito e já sair com o contorno do bichinho pronto, sem precisar desenhar nem recortar à mão.",
+      "paraQueServe": "Cinco cortadores no tema capivara (sentada, dormindo, com laranja na cabeça, enroscada) pra abrir a massa de biscoito e já sair com o contorno do bichinho pronto, sem precisar desenhar nem recortar à mão.",
       "descricao": "Cada cortador tem a borda afiada o bastante pra passar na massa crua (biscoito amanteigado, fondant) e as marcações internas ficam em relevo, criando os detalhes do desenho depois de assado.",
       "detalhes": [
         "Kit com 5 formatos diferentes de capivara",
@@ -4350,12 +4620,20 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "5 cortadores de 7,3 a 8,6 cm, espessura 1 cm"
+        },
+        {
           "rotulo": "Peso",
           "valor": "8 g"
         },
         {
           "rotulo": "Itens inclusos",
           "valor": "5 cortadores"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Massa de biscoito amanteigado e fondant"
         },
         {
           "rotulo": "Limpeza",
@@ -4381,8 +4659,8 @@
       "envio": {
         "pesoGramas": 8,
         "alturaCm": 8.6,
-        "larguraCm": 7,
-        "comprimentoCm": 1.1
+        "larguraCm": 7.6,
+        "comprimentoCm": 0.9
       },
       "combinaCom": [
         "capivara",
@@ -4412,8 +4690,16 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "Base de 12,1 cm de largura; mão com 10,4 cm de altura"
+        },
+        {
           "rotulo": "Peso",
           "valor": "12 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "2 peças de encaixe: mão + base curva"
         },
         {
           "rotulo": "Limpeza",
@@ -4456,9 +4742,9 @@
       "paraQueServe": "Um painel redondo com um ponteiro que gira entre as palavras 'water' e 'beer' — enfeite de brincadeira pra pendurar na cozinha, adega ou bar de casa, tipo um medidor de humor pra decidir o que vai beber.",
       "descricao": "O ponteiro fica preso num eixo central e gira livremente entre as duas pontas do mostrador; a peça é plana, com furo pra pendurar na parede.",
       "detalhes": [
-        "Ponteiro giratório funcional",
+        "Ponteiro que gira de verdade",
         "Furo pronto pra pendurar na parede",
-        "Peça de brincadeira, sem uso funcional real"
+        "Enfeite de brincadeira: não mede nada"
       ],
       "ficha": [
         {
@@ -4476,6 +4762,10 @@
         {
           "rotulo": "Peso",
           "valor": "33 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 painel + ponteiro giratório"
         },
         {
           "rotulo": "Limpeza",
@@ -4501,7 +4791,7 @@
         "pesoGramas": 33,
         "alturaCm": 16,
         "larguraCm": 16,
-        "comprimentoCm": 1.5
+        "comprimentoCm": 1.1
       },
       "combinaCom": [
         "roleta-de-shots",
@@ -4531,8 +4821,20 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "5,2 × 8 × 1,3 cm (L × A × Espessura)"
+        },
+        {
           "rotulo": "Peso",
           "valor": "10 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 cortador"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Massa de biscoito"
         },
         {
           "rotulo": "Limpeza",
@@ -4569,8 +4871,8 @@
       "slug": "kit-cortadores-biscoito-natal",
       "nome": "Kit Cortadores de Biscoito de Natal",
       "categoria": "diversos",
-      "resumo": "Kit com 10 cortadores de símbolos natalinos — estrela, árvore, sino, laço e mais.",
-      "paraQueServe": "Dez cortadores com os símbolos clássicos do Natal — estrela, estrela cadente, árvore, casinha, floco de neve, bengala doce, embrulho de presente, sino, nuvem e bonequinho de gengibre — pra fazer um prato variado de biscoitos natalinos de um só kit.",
+      "resumo": "Kit com 10 cortadores de símbolos natalinos: estrela, árvore, sino, laço e mais.",
+      "paraQueServe": "Dez cortadores com os símbolos clássicos do Natal (estrela, estrela cadente, árvore, casinha, floco de neve, bengala doce, embrulho de presente, sino, nuvem e bonequinho de gengibre) pra fazer um prato variado de biscoitos natalinos de um só kit.",
       "descricao": "Cada cortador tem borda única, sem relevo interno; passa na massa crua e sai recortado, pronto pra decorar com glacê ou chocolate depois de assado.",
       "detalhes": [
         "Kit com 10 formatos natalinos diferentes",
@@ -4587,8 +4889,16 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "10 cortadores de 3,9 a 7,3 cm de largura × 6,8 cm de altura, espessura 0,4 cm"
+        },
+        {
           "rotulo": "Itens inclusos",
           "valor": "10 cortadores"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Massa de biscoito e fondant"
         },
         {
           "rotulo": "Limpeza",
@@ -4628,7 +4938,7 @@
       "nome": "Kit Carimbo e Cortador Grinch",
       "categoria": "diversos",
       "resumo": "Carimbos que estampam o Grinch na massa, com os cortadores dos contornos pra combinar.",
-      "paraQueServe": "Carimbos que imprimem o desenho do Grinch e companhia direto na massa crua, junto com os cortadores do contorno de cada cena — pra fazer biscoito temático sem precisar desenhar nem usar glacê pra detalhar.",
+      "paraQueServe": "Carimbos que imprimem o desenho do Grinch e companhia direto na massa crua, junto com os cortadores do contorno de cada cena, pra fazer biscoito temático sem precisar desenhar nem usar glacê pra detalhar.",
       "descricao": "Os carimbos têm o desenho em relevo negativo: pressiona na massa crua e o detalhe fica marcado. Os cortadores correspondentes recortam o contorno de cada cena pra já sair no formato certo.",
       "detalhes": [
         "Carimbos com o desenho em relevo",
@@ -4643,6 +4953,10 @@
         {
           "rotulo": "Material",
           "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "Peças de 3,9 a 9,5 cm, espessura 1,3 cm"
         },
         {
           "rotulo": "Peso",
@@ -4690,10 +5004,10 @@
       "nome": "Porta-Copos Grinch",
       "categoria": "diversos",
       "resumo": "Jogo de porta-copos com desenhos do Grinch, guardado num suporte redondo.",
-      "paraQueServe": "Porta-copos temáticos de Natal pra proteger a mesa do suor do copo ou xícara, com desenhos do Grinch estampados — e um suporte redondo pra guardar o jogo empilhado.",
+      "paraQueServe": "Porta-copos temáticos de Natal pra proteger a mesa do suor do copo ou xícara, com desenhos do Grinch estampados, e um suporte redondo pra guardar o jogo empilhado.",
       "descricao": "Cada porta-copos tem um desenho diferente do Grinch, com borda levemente elevada pra segurar a base do copo no lugar. O suporte redondo mantém o jogo organizado e à mão.",
       "detalhes": [
-        "Jogo de porta-copos temático Grinch",
+        "Jogo com 4 porta-copos temáticos do Grinch",
         "Suporte redondo pra guardar empilhado",
         "Borda que ajuda a centralizar o copo"
       ],
@@ -4707,8 +5021,12 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "Porta-copos 10 × 10 cm, espessura 0,5 cm; suporte 11 × 11 × 3,3 cm"
+        },
+        {
           "rotulo": "Itens inclusos",
-          "valor": "Porta-copos + suporte"
+          "valor": "4 porta-copos + suporte redondo"
         },
         {
           "rotulo": "Limpeza",
@@ -4748,12 +5066,12 @@
       "nome": "Porta-Garrafa Pato",
       "categoria": "diversos",
       "resumo": "Pato deitado que segura a garrafa de vinho inclinada no bico, pronta pra servir.",
-      "paraQueServe": "Um pato de corpo deitado que segura a garrafa de vinho (ou outra bebida) inclinada, apoiada no bico — decoração de mesa de bar ou adega que também funciona como suporte de verdade pra servir.",
+      "paraQueServe": "Um pato de corpo deitado que segura a garrafa de vinho (ou outra bebida) inclinada, apoiada no bico: decoração de mesa de bar ou adega que também funciona como suporte de verdade pra servir.",
       "descricao": "O bico e o pescoço do pato sustentam o gargalo da garrafa na inclinação certa pra ela ficar parada sem cair, enquanto o corpo largo dá estabilidade na base.",
       "detalhes": [
         "Segura garrafa de vinho inclinada no bico",
         "Base larga, estável em cima da mesa",
-        "Garrafa não inclusa — peça só o suporte"
+        "Garrafa não inclusa: peça só o suporte"
       ],
       "ficha": [
         {
@@ -4771,6 +5089,14 @@
         {
           "rotulo": "Peso",
           "valor": "330 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. Garrafa não inclusa"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Garrafa de vinho padrão de 750 ml"
         },
         {
           "rotulo": "Limpeza",
@@ -4827,8 +5153,16 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "20,1 × 15 cm (L × A), espessura 0,1 cm"
+        },
+        {
           "rotulo": "Peso",
           "valor": "7 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 placa, fica de pé sem suporte extra"
         },
         {
           "rotulo": "Limpeza",
@@ -4851,9 +5185,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 7,
-        "alturaCm": 10,
-        "larguraCm": 13.4,
-        "comprimentoCm": 0.2
+        "alturaCm": 20.1,
+        "larguraCm": 15,
+        "comprimentoCm": 0.1
       },
       "combinaCom": [
         "placa-gato-mais-espresso-menos-depresso",
@@ -4883,8 +5217,16 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "5 × 8,7 cm (L × A), espessura 0,4 cm"
+        },
+        {
           "rotulo": "Peso",
           "valor": "6 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "2 peças de encaixe: placa + pé de apoio, autoportante"
         },
         {
           "rotulo": "Limpeza",
@@ -4941,8 +5283,20 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "Base 14,9 cm de diâmetro; 25,2 cm de altura total"
+        },
+        {
           "rotulo": "Peso",
           "valor": "57 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "2 peças de encaixe: ganso + base oca"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Cacho de até 6 a 7 bananas"
         },
         {
           "rotulo": "Limpeza",
@@ -5003,6 +5357,14 @@
           "valor": "22,8 × 22,8 × 1,5 cm (L × P × A)"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte em X. Garrafa e taças não inclusas"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Garrafa de vinho padrão de 750 ml"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -5040,7 +5402,7 @@
       "nome": "Porta-Copos Amantes de Café",
       "categoria": "organizacao",
       "resumo": "Jogo de porta-copos com frases e desenhos de quem não dispensa um café.",
-      "paraQueServe": "Porta-copos pra proteger a mesa do suor da xícara ou copo, com frases e desenhos sobre café — coração de grãos, 'but first coffee', 'coffee makes everything better' — pra quem tem a bebida como ritual.",
+      "paraQueServe": "Porta-copos pra proteger a mesa do suor da xícara ou copo, com frases e desenhos sobre café (coração de grãos, 'but first coffee', 'coffee makes everything better') pra quem tem a bebida como ritual.",
       "descricao": "Cada peça do jogo tem um desenho ou frase diferente sobre café, em relevo na superfície, com borda levemente elevada pra ajudar a centralizar o copo ou a xícara.",
       "detalhes": [
         "Jogo com 3 desenhos diferentes sobre café",
@@ -5055,6 +5417,10 @@
         {
           "rotulo": "Material",
           "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "10,5 × 10,5 cm (L × P), espessura 0,4 cm"
         },
         {
           "rotulo": "Peso",
@@ -5106,7 +5472,7 @@
       "detalhes": [
         "Mosaico de grãos de café em relevo",
         "Borda levemente elevada, ajuda a centralizar",
-        "Vendido em jogo"
+        "Jogo com 4 porta-copos"
       ],
       "ficha": [
         {
@@ -5124,6 +5490,10 @@
         {
           "rotulo": "Peso",
           "valor": "25 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "4 porta-copos"
         },
         {
           "rotulo": "Limpeza",
@@ -5180,8 +5550,20 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "4,5 × 15,8 × 17,6 cm (L × P × A)"
+        },
+        {
           "rotulo": "Peso",
           "valor": "83 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. Garrafa não inclusa"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Garrafa de vinho padrão de 750 ml"
         },
         {
           "rotulo": "Limpeza",
@@ -5305,6 +5687,18 @@
           "valor": "Plástico"
         },
         {
+          "rotulo": "Dimensões",
+          "valor": "Base 6,8 cm de diâmetro × 2,1 cm; ponteiro de 9,8 cm"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "4 peças de encaixe: base giratória, disco, eixo e ponteiro. Copo de shot não incluso"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Copo de shot padrão"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -5365,6 +5759,14 @@
         {
           "rotulo": "Peso",
           "valor": "64 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. Garrafa não inclusa"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Garrafa de vinho padrão de 750 ml"
         },
         {
           "rotulo": "Limpeza",
@@ -5428,6 +5830,14 @@
           "valor": "114 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. Garrafa não inclusa"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Garrafa de vinho padrão de 750 ml"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -5487,6 +5897,14 @@
         {
           "rotulo": "Peso",
           "valor": "148 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. Garrafa não inclusa"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Garrafa de vinho padrão de 750 ml"
         },
         {
           "rotulo": "Limpeza",
@@ -5551,6 +5969,14 @@
           "valor": "172 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. Garrafa não inclusa"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Garrafa de vinho padrão de 750 ml"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -5573,9 +5999,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 172,
-        "alturaCm": 20.4,
-        "larguraCm": 20.8,
-        "comprimentoCm": 10
+        "alturaCm": 20.8,
+        "larguraCm": 20.4,
+        "comprimentoCm": 11.8
       },
       "combinaCom": [
         "suporte-vinho-chama",
@@ -5588,11 +6014,11 @@
       "nome": "Suporte Enrolado para Apple Watch",
       "categoria": "diversos",
       "resumo": "Base de carregamento que esconde o cabo enrolado por dentro, pro Apple Watch.",
-      "paraQueServe": "Suporte de mesa pra carregar o Apple Watch, com um canal em espiral que esconde o cabo do carregador MagSafe enrolado por dentro — fica com o fio organizado, sem ele solto em cima da mesa.",
+      "paraQueServe": "Suporte de mesa pra carregar o Apple Watch, com um canal em espiral que esconde o cabo do carregador magnético do Apple Watch enrolado por dentro: fica com o fio organizado, sem ele solto em cima da mesa.",
       "descricao": "O canal espiral passa o cabo do carregador por dentro da peça, do encaixe do carregador até a saída na base; o relógio fica apoiado de lado, deitado na posição de carregamento noturno.",
       "detalhes": [
         "Canal espiral esconde o cabo do carregador",
-        "Carregador não incluso — use o seu MagSafe",
+        "Carregador não incluso: use o carregador magnético do seu Apple Watch",
         "Deixa o relógio de lado, pro modo noturno"
       ],
       "ficha": [
@@ -5611,6 +6037,14 @@
         {
           "rotulo": "Peso",
           "valor": "5 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. Carregador magnético do Apple Watch não incluso"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Apple Watch de caixa 40 a 45 mm. Não serve a Ultra de 49 mm"
         },
         {
           "rotulo": "Limpeza",
@@ -5650,7 +6084,7 @@
       "nome": "Suporte Ondulado para Vinho",
       "categoria": "diversos",
       "resumo": "Suporte com curvas onduladas que carrega duas garrafas de vinho deitadas, uma sobre a outra.",
-      "paraQueServe": "Suporte comprido com curvas em onda que seguram duas garrafas de vinho deitadas, uma encaixada na curva de cima e outra na de baixo — organiza e exibe o par de garrafas junto.",
+      "paraQueServe": "Suporte comprido com curvas em onda que seguram duas garrafas de vinho deitadas, uma encaixada na curva de cima e outra na de baixo: organiza e exibe o par de garrafas junto.",
       "descricao": "As ondulações da peça formam dois berços curvos que recebem o corpo das garrafas deitadas; a base plana mantém tudo firme mesmo com as duas garrafas cheias.",
       "detalhes": [
         "Carrega 2 garrafas de vinho deitadas",
@@ -5668,11 +6102,19 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "25,1 × 23,1 × 12 cm (L × P × A)"
+          "valor": "25,5 × 16 × 13,7 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
           "valor": "110 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte para 2 garrafas. Garrafas não inclusas"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Garrafa de vinho padrão de 750 ml"
         },
         {
           "rotulo": "Limpeza",
@@ -5697,9 +6139,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 110,
-        "alturaCm": 25.1,
-        "larguraCm": 23.1,
-        "comprimentoCm": 12
+        "alturaCm": 25.5,
+        "larguraCm": 16,
+        "comprimentoCm": 13.7
       },
       "combinaCom": [
         "suporte-garrafa-tacas-vinho",
@@ -5713,11 +6155,11 @@
       "categoria": "diversos",
       "resumo": "Base de carregamento com canal pro cabo, pro Apple Watch ficar de pé na mesa.",
       "paraQueServe": "Suporte de mesa pra apoiar o Apple Watch enquanto carrega, com um canal que organiza o cabo do carregador e uma base que mantém tudo estável, sem o relógio escorregar.",
-      "descricao": "O encaixe superior recebe o disco do carregador MagSafe, com um canal na lateral por onde o cabo desce até a base, mantendo o fio arrumado em vez de solto na mesa.",
+      "descricao": "O encaixe superior recebe o disco do carregador magnético do Apple Watch, com um canal na lateral por onde o cabo desce até a base, mantendo o fio arrumado em vez de solto na mesa.",
       "detalhes": [
         "Canal lateral organiza o cabo do carregador",
         "Base estável, relógio não escorrega",
-        "Carregador não incluso — use o seu MagSafe"
+        "Carregador não incluso — use o carregador magnético do seu Apple Watch"
       ],
       "ficha": [
         {
@@ -5735,6 +6177,14 @@
         {
           "rotulo": "Peso",
           "valor": "30 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. Carregador magnético do Apple Watch não incluso"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Apple Watch de caixa 40 a 45 mm. Não serve a Ultra de 49 mm"
         },
         {
           "rotulo": "Limpeza",
@@ -5799,6 +6249,14 @@
           "valor": "70 g"
         },
         {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. Garrafa não inclusa"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Garrafa de Jack Daniel's, pelo formato quadrado característico"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -5859,6 +6317,14 @@
         {
           "rotulo": "Peso",
           "valor": "99 g"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 suporte. iPad ou tablet não incluso"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Tablets de tamanho semelhante ao iPad"
         },
         {
           "rotulo": "Limpeza",

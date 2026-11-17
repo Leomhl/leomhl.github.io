@@ -256,7 +256,7 @@
     return [
       linhas,
       '',
-      `• Subtotal das peças: ${moeda.format(totalCarrinho())}`,
+      `• Subtotal dos itens: ${moeda.format(totalCarrinho())}`,
       frete,
       `• Total com frete: ${moeda.format(totalComFrete())}`,
     ].join('\n');
@@ -322,8 +322,8 @@
     const c = categoriaDe(p);
     return `<section class="secao">
       <div class="secao-topo">
-        <h2>Você também pode gostar</h2>
-        ${c ? `<a class="ver-tudo" href="#/c/${esc(c.slug)}">Ver ${esc(c.nome)} →</a>` : ''}
+        <h2>Fica bem junto</h2>
+        ${c ? `<a class="ver-tudo" href="#/c/${esc(c.slug)}">Ver tudo ${esc(c.nome.toLowerCase())} →</a>` : ''}
       </div>
       ${grade(lista)}
     </section>`;
@@ -621,7 +621,7 @@
     const linhas = (p.ficha || []).filter((l) => l.valor);
     if (!linhas.length) return '';
     return `<section class="ficha">
-      <h2 class="ficha-titulo">Ficha técnica</h2>
+      <h2 class="ficha-titulo">Os detalhes</h2>
       <div class="ficha-rolagem">
         <table class="ficha-tabela">
           <tbody>
@@ -842,7 +842,7 @@
       <div class="cartao-corpo">
         <h3>${esc(p.nome)}</h3>
         ${bolinhasCartao(p)}
-        <div class="cartao-rodape">${precoHtml(p)}<span class="cartao-seta">Ver peça</span></div>
+        <div class="cartao-rodape">${precoHtml(p)}<span class="cartao-seta">Ver item</span></div>
       </div>
     </a>`;
   }
@@ -920,7 +920,7 @@
     const cats = catalogo.categorias || [];
     if (cats.length < 2) return '';
     return `<section class="secao categorias-secao">
-      <div class="secao-topo"><h2>Escolha por tipo de peça</h2></div>
+      <div class="secao-topo"><h2>De onde você quer começar</h2></div>
       <div class="categorias" data-quantas="${cats.length}">
         ${cats
           .map((c) => {
@@ -935,7 +935,7 @@
                 }
               </div>
               <span class="categoria-nome">${esc(c.nome)}</span>
-              <span class="categoria-conta">${quantas} ${quantas === 1 ? 'peça' : 'peças'}</span>
+              <span class="categoria-conta">${quantas} ${quantas === 1 ? 'item' : 'itens'}</span>
             </a>`;
           })
           .join('')}
@@ -998,7 +998,7 @@
             <h1>${chamadaHtml(loja)}</h1>
             <p class="capa-texto">${esc(loja.descricao || '')}</p>
             <div class="capa-acoes">
-              <a class="botao" href="#/c/${esc(primeira.slug)}">Ver as peças</a>
+              <a class="botao" href="#/c/${esc(primeira.slug)}">Ver o que tem</a>
               <a class="botao botao-zap" href="${linkZap(null)}" target="_blank" rel="noopener">
                 ${SVG_ZAP} Falar no WhatsApp
               </a>
@@ -1016,7 +1016,7 @@
         destaques.length
           ? `<section class="secao">
               <div class="secao-topo">
-                <h2>O que mais sai</h2>
+                <h2>As queridinhas da casa</h2>
                 <a class="ver-tudo" href="#/c/${esc(primeira.slug)}">Ver o catálogo</a>
               </div>
               ${grade(destaques)}
@@ -1041,7 +1041,7 @@
       <section class="secao">
         <div class="secao-topo">
           <h2>${esc(c.nome)}</h2>
-          <span class="ver-tudo">${lista.length} ${lista.length === 1 ? 'peça' : 'peças'}</span>
+          <span class="ver-tudo">${lista.length} ${lista.length === 1 ? 'item' : 'itens'}</span>
         </div>
         <p class="secao-resumo">${esc(c.resumo || '')}</p>
         ${lista.length ? grade(lista) : '<p>Nada por aqui ainda.</p>'}
@@ -1087,7 +1087,7 @@
 
   function telaProduto(slug) {
     const p = porSlug(catalogo.produtos, slug);
-    if (!p) return telaNaoEncontrado('Essa peça saiu do catálogo.');
+    if (!p) return telaNaoEncontrado('Esse item saiu do catálogo.');
     const c = categoriaDe(p);
     const fotos = p.fotos || [];
     const idVideo = idDoYoutube(p.video);
@@ -1195,7 +1195,7 @@
           ${
             p.paraQueServe
               ? `<section class="serve">
-                   <h2 class="serve-titulo">Para o que serve?</h2>
+                   <h2 class="serve-titulo">Pra que serve</h2>
                    <p class="serve-texto">${esc(p.paraQueServe)}</p>
                  </section>`
               : ''
@@ -1648,7 +1648,7 @@
         <div class="vazio">
           <img src="marca/mascote-compacto.svg" alt="" aria-hidden="true">
           <h2>Seu carrinho está vazio</h2>
-          <p>Adicione peças do catálogo pra montar seu pedido.</p>
+          <p>Adicione itens do catálogo pra montar seu pedido.</p>
           <a class="botao botao-vazado" href="#/">Ver o catálogo</a>
         </div>
       `;
@@ -1717,7 +1717,7 @@
             <h3 class="carrinho-resumo-titulo">Resumo do pedido</h3>
             <dl class="carrinho-contas">
               <div>
-                <dt>Subtotal (${pecas} ${pecas === 1 ? 'peça' : 'peças'})</dt>
+                <dt>Subtotal (${pecas} ${pecas === 1 ? 'item' : 'itens'})</dt>
                 <dd data-resumo-subtotal>${moeda.format(totalCarrinho())}</dd>
               </div>
               <div>
@@ -2385,7 +2385,7 @@
     if (tela === 'busca') return `“${arg}” — ${nome}`;
     if (tela === 'carrinho') return `Carrinho — ${nome}`;
     if (tela === 'feedback') return `Deixar feedback — ${nome}`;
-    return `${nome} — peças para o seu cantinho do café`;
+    return `${nome} — itens para o seu cantinho do café`;
   }
 
   let ultimaChave = '';
