@@ -1400,7 +1400,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "Cerca de 3,5 cm de largura × 3,3 cm de altura"
+          "valor": "Copinho cerca de 3,5 cm de largura × 3,3 cm de altura; com as perninhas abertas, 8,4 cm"
         },
         {
           "rotulo": "Itens inclusos",
@@ -1455,8 +1455,8 @@
       "envio": {
         "pesoGramas": 16,
         "alturaCm": 3.3,
-        "larguraCm": 3.7,
-        "comprimentoCm": 4.6
+        "larguraCm": 5.3,
+        "comprimentoCm": 8.4
       },
       "combinaCom": [
         "buddy-cafe",
@@ -1574,7 +1574,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "4,7 × 3,8 × 5,7 cm (L × P × A)"
+          "valor": "7 × 6,1 × 5,7 cm (L × P × A)"
         },
         {
           "rotulo": "Itens inclusos",
@@ -1606,8 +1606,8 @@
       "envio": {
         "pesoGramas": 19,
         "alturaCm": 5.7,
-        "larguraCm": 4.7,
-        "comprimentoCm": 3.8
+        "larguraCm": 6.1,
+        "comprimentoCm": 7
       },
       "combinaCom": [
         "copo-cafe-buddy",
@@ -2381,9 +2381,9 @@
       "pastaOrigem": "Decoração/Trio Cantinho do Café",
       "envio": {
         "pesoGramas": 14,
-        "alturaCm": 24,
-        "larguraCm": 8.8,
-        "comprimentoCm": 0.3
+        "alturaCm": 0.3,
+        "larguraCm": 12.4,
+        "comprimentoCm": 24
       },
       "combinaCom": [
         "quadros-decoracao-cafe",
@@ -2607,7 +2607,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "10,4 × 10,4 × 4,2 cm (L × P × A)"
+          "valor": "10,7 × 10,4 × 4,2 cm (L × P × A)"
         },
         {
           "rotulo": "Itens inclusos",
@@ -2640,7 +2640,7 @@
         "pesoGramas": 41,
         "alturaCm": 4.2,
         "larguraCm": 10.4,
-        "comprimentoCm": 10.4
+        "comprimentoCm": 10.7
       },
       "combinaCom": [
         "luminaria-moka",
@@ -4558,7 +4558,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "Xícara 4,7 cm de diâmetro × 3,4 cm de altura; perninhas de 7,6 cm"
+          "valor": "Xícara 4,7 cm de diâmetro × 3,4 cm de altura; perninhas abertas 9,5 × 7,6 cm"
         },
         {
           "rotulo": "Itens inclusos",
@@ -4588,8 +4588,8 @@
       "envio": {
         "pesoGramas": 24,
         "alturaCm": 5.5,
-        "larguraCm": 6,
-        "comprimentoCm": 7.6
+        "larguraCm": 7.6,
+        "comprimentoCm": 9.5
       },
       "combinaCom": [
         "marcador-paginas-xicara",
@@ -6102,7 +6102,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "25,5 × 16 × 13,7 cm (L × P × A)"
+          "valor": "25,6 × 23,8 × 16 cm (L × P × A)"
         },
         {
           "rotulo": "Peso",
@@ -6139,9 +6139,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 110,
-        "alturaCm": 25.5,
-        "larguraCm": 16,
-        "comprimentoCm": 13.7
+        "alturaCm": 16,
+        "larguraCm": 23.8,
+        "comprimentoCm": 25.6
       },
       "combinaCom": [
         "suporte-garrafa-tacas-vinho",
