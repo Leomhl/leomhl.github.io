@@ -350,7 +350,7 @@
       "pastaOrigem": "Organização/Dispenser de Cápsulas Nespresso",
       "envio": {
         "pesoGramas": 119,
-        "alturaCm": 10.7,
+        "alturaCm": 8.8,
         "larguraCm": 10.8,
         "comprimentoCm": 19
       },
@@ -848,8 +848,8 @@
       "pastaOrigem": "Organização/Porta-Guardanapos Xícara de Café",
       "envio": {
         "pesoGramas": 9,
-        "alturaCm": 10.8,
-        "larguraCm": 4,
+        "alturaCm": 1,
+        "larguraCm": 10.8,
         "comprimentoCm": 14.6
       },
       "combinaCom": [
@@ -1454,9 +1454,9 @@
       ],
       "envio": {
         "pesoGramas": 16,
-        "alturaCm": 8.3,
-        "larguraCm": 5.2,
-        "comprimentoCm": 2.4
+        "alturaCm": 3.3,
+        "larguraCm": 3.7,
+        "comprimentoCm": 4.6
       },
       "combinaCom": [
         "buddy-cafe",
@@ -1541,9 +1541,9 @@
       ],
       "envio": {
         "pesoGramas": 14,
-        "alturaCm": 4.2,
-        "larguraCm": 5.4,
-        "comprimentoCm": 8.9
+        "alturaCm": 5,
+        "larguraCm": 4.4,
+        "comprimentoCm": 5
       },
       "combinaCom": [
         "buddy-cafe",
@@ -1990,9 +1990,9 @@
       "pastaOrigem": "Decoração/Ornamentos de Café — Jogo com 4",
       "envio": {
         "pesoGramas": 6,
-        "alturaCm": 6,
-        "larguraCm": 7,
-        "comprimentoCm": 0.3
+        "alturaCm": 1.2,
+        "larguraCm": 5.6,
+        "comprimentoCm": 7
       },
       "combinaCom": [
         "suporte-expositor-bialetti",
@@ -2317,7 +2317,7 @@
       "pastaOrigem": "Decoração/Plaquinhas de Banheiro — Par",
       "envio": {
         "pesoGramas": 50,
-        "alturaCm": 1.4,
+        "alturaCm": 0.7,
         "larguraCm": 12,
         "comprimentoCm": 15
       },
@@ -2445,9 +2445,9 @@
       "pastaOrigem": "Decoração/Trio de Xícaras Minimalista",
       "envio": {
         "pesoGramas": 46,
-        "alturaCm": 16.1,
-        "larguraCm": 24,
-        "comprimentoCm": 0.5
+        "alturaCm": 1.5,
+        "larguraCm": 16.1,
+        "comprimentoCm": 24
       },
       "combinaCom": [
         "quadros-decoracao-cafe",
@@ -2509,9 +2509,9 @@
       "pastaOrigem": "Luminárias/Lightbox COFFEE HERE",
       "envio": {
         "pesoGramas": 61,
-        "alturaCm": 22.4,
-        "larguraCm": 4.2,
-        "comprimentoCm": 15.4
+        "alturaCm": 2.9,
+        "larguraCm": 10.8,
+        "comprimentoCm": 15.7
       },
       "combinaCom": [
         "luminaria-premium-coffee",
@@ -2574,9 +2574,9 @@
       "pastaOrigem": "Luminárias/Lightbox COFFEE TRIPS",
       "envio": {
         "pesoGramas": 131,
-        "alturaCm": 5,
-        "larguraCm": 12,
-        "comprimentoCm": 11.2
+        "alturaCm": 9.4,
+        "larguraCm": 11.2,
+        "comprimentoCm": 12
       },
       "combinaCom": [
         "luminaria-coffee-here",
@@ -2638,7 +2638,7 @@
       "pastaOrigem": "Luminárias/Lightbox Moka",
       "envio": {
         "pesoGramas": 41,
-        "alturaCm": 7.6,
+        "alturaCm": 4.2,
         "larguraCm": 10.4,
         "comprimentoCm": 10.4
       },
@@ -2702,7 +2702,7 @@
       "pastaOrigem": "Luminárias/Lightbox PREMIUM COFFEE",
       "envio": {
         "pesoGramas": 25,
-        "alturaCm": 4.8,
+        "alturaCm": 4,
         "larguraCm": 4.9,
         "comprimentoCm": 17.5
       },
@@ -3255,9 +3255,9 @@
       "pastaOrigem": "Preparo/LatteShot — Câmera de Estêncil",
       "envio": {
         "pesoGramas": 83,
-        "alturaCm": 20.3,
-        "larguraCm": 8,
-        "comprimentoCm": 9.6
+        "alturaCm": 9.4,
+        "larguraCm": 9.6,
+        "comprimentoCm": 20.3
       },
       "combinaCom": [
         "molde-cafe-latteshot",
@@ -3286,7 +3286,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "12,6 × 12,6 × 2,9 cm (L × P × A)"
+          "valor": "Cada disco 12,6 × 9 cm (L × P), espessura 0,1 cm"
         },
         {
           "rotulo": "Itens inclusos",
@@ -3325,8 +3325,8 @@
       "pastaOrigem": "Preparo/Moldes de Estêncil Avulsos",
       "envio": {
         "pesoGramas": 40,
-        "alturaCm": 9,
-        "larguraCm": 2.9,
+        "alturaCm": 1.6,
+        "larguraCm": 9,
         "comprimentoCm": 12.6
       },
       "combinaCom": [
@@ -3519,7 +3519,7 @@
       "pastaOrigem": "Preparo/Suporte de Filtro Destacável",
       "envio": {
         "pesoGramas": 13,
-        "alturaCm": 4,
+        "alturaCm": 5.4,
         "larguraCm": 10.5,
         "comprimentoCm": 15.1
       },
@@ -3621,7 +3621,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "≈ 13 cm de diâmetro × 20 cm de altura"
+          "valor": "≈ 13 cm de largura × 26,9 cm de altura"
         },
         {
           "rotulo": "Peso",
@@ -3659,9 +3659,9 @@
       "pastaOrigem": "Organização/Porta Cápsulas Dolce Gusto",
       "envio": {
         "pesoGramas": 138,
-        "alturaCm": 26.9,
-        "larguraCm": 5.8,
-        "comprimentoCm": 2.9
+        "alturaCm": 11.6,
+        "larguraCm": 12.9,
+        "comprimentoCm": 26.9
       },
       "combinaCom": [
         "torre-capsulas-dupla",
@@ -4034,7 +4034,7 @@
       "pastaOrigem": "Organização/Coletor de Cápsulas Usadas",
       "envio": {
         "pesoGramas": 110,
-        "alturaCm": 17.1,
+        "alturaCm": 8,
         "larguraCm": 16.5,
         "comprimentoCm": 16.5
       },
@@ -4587,7 +4587,7 @@
       "video": null,
       "envio": {
         "pesoGramas": 24,
-        "alturaCm": 12.1,
+        "alturaCm": 5.5,
         "larguraCm": 6,
         "comprimentoCm": 7.6
       },
@@ -4658,9 +4658,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 8,
-        "alturaCm": 8.6,
+        "alturaCm": 4.9,
         "larguraCm": 7.6,
-        "comprimentoCm": 0.9
+        "comprimentoCm": 8.6
       },
       "combinaCom": [
         "capivara",
@@ -4724,9 +4724,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 12,
-        "alturaCm": 15.1,
-        "larguraCm": 4.4,
-        "comprimentoCm": 9.1
+        "alturaCm": 6.7,
+        "larguraCm": 4,
+        "comprimentoCm": 12.1
       },
       "combinaCom": [
         "suporte-expositor-bialetti",
@@ -4923,9 +4923,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 32,
-        "alturaCm": 13,
-        "larguraCm": 7.9,
-        "comprimentoCm": 8.4
+        "alturaCm": 4,
+        "larguraCm": 6.8,
+        "comprimentoCm": 7.3
       },
       "combinaCom": [
         "cortador-biscoito-gengibre",
@@ -4956,7 +4956,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "Peças de 3,9 a 9,5 cm, espessura 1,3 cm"
+          "valor": "Cortadores de 7 a 9,5 cm, espessura 1,3 cm; carimbo de 3,5 cm"
         },
         {
           "rotulo": "Peso",
@@ -4964,7 +4964,7 @@
         },
         {
           "rotulo": "Itens inclusos",
-          "valor": "Carimbos + cortadores combinando"
+          "valor": "8 cortadores + 1 carimbo"
         },
         {
           "rotulo": "Limpeza",
@@ -4989,9 +4989,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 30,
-        "alturaCm": 8.5,
-        "larguraCm": 9.5,
-        "comprimentoCm": 1.3
+        "alturaCm": 11.4,
+        "larguraCm": 7.7,
+        "comprimentoCm": 9.5
       },
       "combinaCom": [
         "porta-copos-grinch",
@@ -5051,7 +5051,7 @@
       "video": null,
       "envio": {
         "pesoGramas": 50,
-        "alturaCm": 4.9,
+        "alturaCm": 5.3,
         "larguraCm": 11,
         "comprimentoCm": 11
       },
@@ -5452,9 +5452,9 @@
       "video": null,
       "envio": {
         "pesoGramas": 157,
-        "alturaCm": 29.1,
-        "larguraCm": 29.8,
-        "comprimentoCm": 0.4
+        "alturaCm": 1.6,
+        "larguraCm": 10.5,
+        "comprimentoCm": 10.5
       },
       "combinaCom": [
         "porta-copos-grao-cafe",
