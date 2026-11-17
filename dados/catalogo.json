@@ -349,7 +349,7 @@
       "video": null,
       "pastaOrigem": "Organização/Dispenser de Cápsulas Nespresso",
       "envio": {
-        "pesoGramas": 119,
+        "pesoGramas": 260,
         "alturaCm": 8.8,
         "larguraCm": 10.8,
         "comprimentoCm": 19
@@ -359,7 +359,8 @@
         "porta-capsulas-deluxe",
         "lixeira-capsulas-dolce-gusto",
         "knock-box"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "estacao-tamping",
@@ -412,7 +413,7 @@
       "video": null,
       "pastaOrigem": "Organização/Estação de Tamping",
       "envio": {
-        "pesoGramas": 61,
+        "pesoGramas": 115,
         "alturaCm": 10.5,
         "larguraCm": 10.2,
         "comprimentoCm": 8.4
@@ -421,7 +422,8 @@
         "knock-box",
         "colher-tamper",
         "kit-bandeja-porta-capsulas-3em1"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "kit-bandeja-porta-capsulas-3em1",
@@ -500,7 +502,7 @@
         }
       ],
       "envio": {
-        "pesoGramas": 70,
+        "pesoGramas": 200,
         "alturaCm": 22,
         "larguraCm": 12,
         "comprimentoCm": 10
@@ -509,7 +511,8 @@
         "knock-box",
         "estacao-tamping",
         "porta-capsulas-universal"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "knock-box",
@@ -580,7 +583,7 @@
         }
       ],
       "envio": {
-        "pesoGramas": 78,
+        "pesoGramas": 164,
         "alturaCm": 14.8,
         "larguraCm": 11.5,
         "comprimentoCm": 14.8
@@ -590,7 +593,8 @@
         "colher-tamper",
         "bandeja-hexagonal-coador",
         "suporte-coador-apoio-removivel"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "organizador-saches-cha",
@@ -647,7 +651,7 @@
       "video": null,
       "pastaOrigem": "Organização/Organizador de Sachês de Chá",
       "envio": {
-        "pesoGramas": 38,
+        "pesoGramas": 155,
         "alturaCm": 13,
         "larguraCm": 9.1,
         "comprimentoCm": 9.1
@@ -656,7 +660,8 @@
         "clipe-saco-cafe",
         "porta-guardanapos-slim",
         "bandeja-hexagonal-coador"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-copos-universal",
@@ -713,7 +718,7 @@
       "video": null,
       "pastaOrigem": "Organização/Porta-Copos Universal",
       "envio": {
-        "pesoGramas": 36,
+        "pesoGramas": 95,
         "alturaCm": 9,
         "larguraCm": 7.9,
         "comprimentoCm": 7.9
@@ -722,7 +727,8 @@
         "porta-guardanapos-slim",
         "suporte-para-latas",
         "bandeja-hexagonal-coador"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-guardanapos-slim",
@@ -781,7 +787,7 @@
       "video": null,
       "pastaOrigem": "Organização/Porta-Guardanapos Slim",
       "envio": {
-        "pesoGramas": 102,
+        "pesoGramas": 140,
         "alturaCm": 17,
         "larguraCm": 6,
         "comprimentoCm": 8
@@ -790,7 +796,8 @@
         "porta-copos-universal",
         "arvore-porta-guardanapos",
         "porta-guardanapos-xicara"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-guardanapos-xicara",
@@ -847,7 +854,7 @@
       "video": null,
       "pastaOrigem": "Organização/Porta-Guardanapos Xícara de Café",
       "envio": {
-        "pesoGramas": 9,
+        "pesoGramas": 21,
         "alturaCm": 1,
         "larguraCm": 10.8,
         "comprimentoCm": 14.6
@@ -856,7 +863,8 @@
         "porta-guardanapos-slim",
         "arvore-porta-guardanapos",
         "porta-copos-amantes-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "arvore-porta-guardanapos",
@@ -977,7 +985,7 @@
       "video": null,
       "pastaOrigem": "Organização/Porta-Recados Grão de Café",
       "envio": {
-        "pesoGramas": 2,
+        "pesoGramas": 3,
         "alturaCm": 3,
         "larguraCm": 2.1,
         "comprimentoCm": 1.5
@@ -986,7 +994,8 @@
         "porta-copos-grao-cafe",
         "buddy-cafe",
         "grao-de-la"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "secador-coador-v60",
@@ -1041,7 +1050,7 @@
       "video": null,
       "pastaOrigem": "Organização/Secador para Coador V60",
       "envio": {
-        "pesoGramas": 17,
+        "pesoGramas": 35,
         "alturaCm": 6,
         "larguraCm": 9,
         "comprimentoCm": 4
@@ -1051,7 +1060,8 @@
         "caixa-filtro-v60",
         "bandeja-hexagonal-coador",
         "suporte-filtro-destacavel"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-expositor-bialetti",
@@ -1104,7 +1114,7 @@
       "video": null,
       "pastaOrigem": "Organização/Suporte Expositor para Bialetti",
       "envio": {
-        "pesoGramas": 14,
+        "pesoGramas": 22,
         "alturaCm": 7.7,
         "larguraCm": 9.8,
         "comprimentoCm": 5.5
@@ -1113,7 +1123,8 @@
         "base-cafeteira-moka-4-xicaras",
         "luminaria-moka",
         "ornamentos-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-coador-apoio-removivel",
@@ -1299,7 +1310,7 @@
       "video": null,
       "pastaOrigem": "Decoração/Cachepô Xicarinha",
       "envio": {
-        "pesoGramas": 63,
+        "pesoGramas": 259,
         "alturaCm": 15.1,
         "larguraCm": 12.1,
         "comprimentoCm": 10.5
@@ -1308,7 +1319,8 @@
         "capivara",
         "grao-de-la",
         "xicara-cafe-espresso"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "capivara",
@@ -1365,7 +1377,7 @@
       "revisarFoto": true,
       "pastaOrigem": "Decoração/Capivara",
       "envio": {
-        "pesoGramas": 34,
+        "pesoGramas": 56,
         "alturaCm": 6.5,
         "larguraCm": 7.8,
         "comprimentoCm": 10
@@ -1375,7 +1387,8 @@
         "buddy-cafe",
         "grao-de-la",
         "cachepo-xicara"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "copo-cafe-buddy",
@@ -1737,7 +1750,7 @@
       "video": null,
       "pastaOrigem": "Decoração/Jogo de 3 Quadros de Café",
       "envio": {
-        "pesoGramas": 8,
+        "pesoGramas": 150,
         "alturaCm": 19.1,
         "larguraCm": 19.1,
         "comprimentoCm": 0.1
@@ -1747,7 +1760,8 @@
         "cantinho-do-cafe",
         "placa-coffee",
         "plaquinha-banheiro"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "placa-coffee",
@@ -1989,7 +2003,7 @@
       "revisarFoto": true,
       "pastaOrigem": "Decoração/Ornamentos de Café — Jogo com 4",
       "envio": {
-        "pesoGramas": 6,
+        "pesoGramas": 17,
         "alturaCm": 1.2,
         "larguraCm": 5.6,
         "comprimentoCm": 7
@@ -1998,7 +2012,8 @@
         "suporte-expositor-bialetti",
         "cantinho-do-cafe",
         "kit-cortadores-biscoito-natal"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "placa-latte-cafe-espresso",
@@ -2054,7 +2069,7 @@
       "video": null,
       "pastaOrigem": "Decoração/Painel Latte · Coffee · Espresso",
       "envio": {
-        "pesoGramas": 55,
+        "pesoGramas": 11,
         "alturaCm": 17.5,
         "larguraCm": 10.2,
         "comprimentoCm": 0.1
@@ -2063,7 +2078,8 @@
         "quadro-xicaras",
         "placa-coffee",
         "cantinho-do-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "quadro-pao",
@@ -2118,7 +2134,7 @@
       "video": null,
       "pastaOrigem": "Decoração/Painel Pão",
       "envio": {
-        "pesoGramas": 18,
+        "pesoGramas": 52,
         "alturaCm": 23.5,
         "larguraCm": 22.5,
         "comprimentoCm": 0.3
@@ -2128,7 +2144,8 @@
         "quadro-xicaras",
         "placa-hora-do-cafe",
         "porta-banana-gansinho"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "placa-hora-do-cafe",
@@ -2248,7 +2265,7 @@
       "video": null,
       "pastaOrigem": "Decoração/Café é sempre uma boa ideia",
       "envio": {
-        "pesoGramas": 7,
+        "pesoGramas": 32,
         "alturaCm": 14.8,
         "larguraCm": 13.2,
         "comprimentoCm": 0.4
@@ -2257,7 +2274,8 @@
         "placa-hora-do-cafe",
         "base-cafeteira-moka-4-xicaras",
         "luminaria-moka-placa"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "plaquinha-banheiro",
@@ -2316,7 +2334,7 @@
       "video": null,
       "pastaOrigem": "Decoração/Plaquinhas de Banheiro — Par",
       "envio": {
-        "pesoGramas": 50,
+        "pesoGramas": 87,
         "alturaCm": 0.7,
         "larguraCm": 12,
         "comprimentoCm": 15
@@ -2325,7 +2343,8 @@
         "placa-hora-do-cafe",
         "quadro-xicaras",
         "placa-coffee"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "cantinho-do-cafe",
@@ -2380,7 +2399,7 @@
       "video": null,
       "pastaOrigem": "Decoração/Trio Cantinho do Café",
       "envio": {
-        "pesoGramas": 14,
+        "pesoGramas": 54,
         "alturaCm": 0.3,
         "larguraCm": 12.4,
         "comprimentoCm": 24
@@ -2389,7 +2408,8 @@
         "quadros-decoracao-cafe",
         "quadro-xicaras",
         "placa-coffee"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "quadro-xicaras",
@@ -2508,7 +2528,7 @@
       "video": null,
       "pastaOrigem": "Luminárias/Lightbox COFFEE HERE",
       "envio": {
-        "pesoGramas": 61,
+        "pesoGramas": 95,
         "alturaCm": 2.9,
         "larguraCm": 10.8,
         "comprimentoCm": 15.7
@@ -2518,7 +2538,8 @@
         "luminaria-coffee-trips",
         "placa-coffee",
         "luminaria-copo-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "luminaria-coffee-trips",
@@ -2573,7 +2594,7 @@
       "video": null,
       "pastaOrigem": "Luminárias/Lightbox COFFEE TRIPS",
       "envio": {
-        "pesoGramas": 131,
+        "pesoGramas": 104,
         "alturaCm": 9.4,
         "larguraCm": 11.2,
         "comprimentoCm": 12
@@ -2582,7 +2603,8 @@
         "luminaria-coffee-here",
         "luminaria-premium-coffee",
         "placa-coffee-time"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "luminaria-moka-placa",
@@ -2637,7 +2659,7 @@
       "video": null,
       "pastaOrigem": "Luminárias/Lightbox Moka",
       "envio": {
-        "pesoGramas": 41,
+        "pesoGramas": 112,
         "alturaCm": 4.2,
         "larguraCm": 10.4,
         "comprimentoCm": 10.7
@@ -2646,7 +2668,8 @@
         "luminaria-moka",
         "base-cafeteira-moka-4-xicaras",
         "suporte-expositor-bialetti"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "luminaria-premium-coffee",
@@ -2701,7 +2724,7 @@
       "video": null,
       "pastaOrigem": "Luminárias/Lightbox PREMIUM COFFEE",
       "envio": {
-        "pesoGramas": 25,
+        "pesoGramas": 68,
         "alturaCm": 4,
         "larguraCm": 4.9,
         "comprimentoCm": 17.5
@@ -2711,7 +2734,8 @@
         "luminaria-coffee-trips",
         "placa-hora-do-cafe",
         "luminaria-copo-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "luminaria-moka",
@@ -2770,7 +2794,7 @@
       "video": null,
       "pastaOrigem": "Luminárias/Luminária Cafeteira Moka",
       "envio": {
-        "pesoGramas": 84,
+        "pesoGramas": 137,
         "alturaCm": 10.6,
         "larguraCm": 9.3,
         "comprimentoCm": 7
@@ -2779,7 +2803,8 @@
         "luminaria-moka-placa",
         "suporte-expositor-bialetti",
         "base-cafeteira-moka-4-xicaras"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "luminaria-copo-cafe",
@@ -2905,7 +2930,7 @@
       "video": "fotos/adaptador-dolce-gusto-tres-coracoes/video.mp4",
       "pastaOrigem": "Preparo/Adaptador Dolce Gusto para Três Corações",
       "envio": {
-        "pesoGramas": 2,
+        "pesoGramas": 11,
         "alturaCm": 5.2,
         "larguraCm": 5.2,
         "comprimentoCm": 4.1
@@ -2915,7 +2940,8 @@
         "torre-capsulas-dupla",
         "lixeira-capsulas-dolce-gusto",
         "porta-capsulas-universal"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "caixa-filtro-v60",
@@ -2989,7 +3015,7 @@
       "video": null,
       "pastaOrigem": "Preparo/Caixa de Filtro V60",
       "envio": {
-        "pesoGramas": 79,
+        "pesoGramas": 240,
         "alturaCm": 17.6,
         "larguraCm": 17.4,
         "comprimentoCm": 9.4
@@ -2999,7 +3025,8 @@
         "suporte-coador-cafe",
         "secador-coador-v60",
         "porta-filtro-simples-60"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "colher-tamper",
@@ -3121,7 +3148,7 @@
       "video": null,
       "pastaOrigem": "Preparo/Estojo para Filtros de Aeropress",
       "envio": {
-        "pesoGramas": 10,
+        "pesoGramas": 30,
         "alturaCm": 7.5,
         "larguraCm": 6.9,
         "comprimentoCm": 2.5
@@ -3130,7 +3157,8 @@
         "dosador-cafe",
         "clipe-saco-cafe",
         "colher-tamper"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-recarga-nespresso-vertuo",
@@ -3185,7 +3213,7 @@
       "video": null,
       "pastaOrigem": "Preparo/Kit de Recarga para Cápsula Nespresso Vertuo",
       "envio": {
-        "pesoGramas": 15,
+        "pesoGramas": 39,
         "alturaCm": 11.5,
         "larguraCm": 6,
         "comprimentoCm": 3.9
@@ -3195,7 +3223,8 @@
         "lixeira-capsulas-dolce-gusto",
         "dosador-cafe",
         "knock-box"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "latteshot",
@@ -3254,7 +3283,7 @@
       "videoObservacao": "O vídeo de montagem (161 MB) não cabe no GitHub Pages. Suba no YouTube e cole o link no campo video.",
       "pastaOrigem": "Preparo/LatteShot — Câmera de Estêncil",
       "envio": {
-        "pesoGramas": 83,
+        "pesoGramas": 210,
         "alturaCm": 9.4,
         "larguraCm": 9.6,
         "comprimentoCm": 20.3
@@ -3262,7 +3291,8 @@
       "combinaCom": [
         "molde-cafe-latteshot",
         "stencil-cards-latteshot"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "molde-cafe-latteshot",
@@ -3324,7 +3354,7 @@
       "video": null,
       "pastaOrigem": "Preparo/Moldes de Estêncil Avulsos",
       "envio": {
-        "pesoGramas": 40,
+        "pesoGramas": 23,
         "alturaCm": 1.6,
         "larguraCm": 9,
         "comprimentoCm": 12.6
@@ -3332,7 +3362,8 @@
       "combinaCom": [
         "latteshot",
         "stencil-cards-latteshot"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-filtro-simples-60",
@@ -3391,7 +3422,7 @@
       "video": null,
       "pastaOrigem": "Preparo/Porta-Filtro Simples 60",
       "envio": {
-        "pesoGramas": 216,
+        "pesoGramas": 152,
         "alturaCm": 13.1,
         "larguraCm": 12.2,
         "comprimentoCm": 4.8
@@ -3400,7 +3431,8 @@
         "caixa-filtro-v60",
         "secador-coador-v60",
         "modelador-filtro-v60"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "stencil-cards-latteshot",
@@ -3425,7 +3457,7 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "18,6 × 10,3 × 0,1 cm (L × P × A)"
+          "valor": "Cada cartão 10,4 × 8 cm, espessura 0,1 cm"
         },
         {
           "rotulo": "Itens inclusos",
@@ -3518,7 +3550,7 @@
       "video": null,
       "pastaOrigem": "Preparo/Suporte de Filtro Destacável",
       "envio": {
-        "pesoGramas": 13,
+        "pesoGramas": 28,
         "alturaCm": 5.4,
         "larguraCm": 10.5,
         "comprimentoCm": 15.1
@@ -3527,7 +3559,8 @@
         "caixa-filtro-v60",
         "modelador-filtro-v60",
         "bandeja-hexagonal-coador"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "modelador-filtro-v60",
@@ -3733,7 +3766,7 @@
       "video": null,
       "pastaOrigem": "Organização/Cesta Esfera para Cápsulas",
       "envio": {
-        "pesoGramas": 26,
+        "pesoGramas": 81,
         "alturaCm": 16.6,
         "larguraCm": 14.4,
         "comprimentoCm": 10.9
@@ -3743,7 +3776,8 @@
         "lixeira-capsulas-dolce-gusto",
         "mug-buddy",
         "suporte-recarga-nespresso-vertuo"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-capsulas-deluxe",
@@ -3806,7 +3840,7 @@
       "video": null,
       "pastaOrigem": "Organização/Porta capsulas deluxe",
       "envio": {
-        "pesoGramas": 62,
+        "pesoGramas": 193,
         "alturaCm": 10.3,
         "larguraCm": 12.6,
         "comprimentoCm": 14
@@ -3816,7 +3850,8 @@
         "lixeira-capsulas-dolce-gusto",
         "knock-box",
         "bandeja-hexagonal-coador"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "torre-capsulas-dupla",
@@ -4100,7 +4135,7 @@
       "video": null,
       "pastaOrigem": "Organização/Organizador de cabo Oreo",
       "envio": {
-        "pesoGramas": 7,
+        "pesoGramas": 12,
         "alturaCm": 5.3,
         "larguraCm": 5.3,
         "comprimentoCm": 1.6
@@ -4109,7 +4144,8 @@
         "organizador-cabo-biscoito",
         "pote-amanteigados",
         "suporte-apple-watch"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "organizador-cabo-biscoito",
@@ -4189,7 +4225,7 @@
       "video": null,
       "pastaOrigem": "Organização/Organizador de cabo biscoito",
       "envio": {
-        "pesoGramas": 27,
+        "pesoGramas": 67,
         "alturaCm": 6.3,
         "larguraCm": 4.9,
         "comprimentoCm": 1.9
@@ -4198,7 +4234,8 @@
         "organizador-cabo-oreo",
         "pote-amanteigados",
         "suporte-apple-watch"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "mug-buddy",
@@ -4259,7 +4296,7 @@
       "video": null,
       "pastaOrigem": "Organização/Mug buddy",
       "envio": {
-        "pesoGramas": 73,
+        "pesoGramas": 57,
         "alturaCm": 12.7,
         "larguraCm": 11,
         "comprimentoCm": 7.6
@@ -4268,7 +4305,8 @@
         "copo-cafe-buddy",
         "buddy-cafe",
         "porta-copos-grao-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-para-latas",
@@ -4325,7 +4363,7 @@
       "video": null,
       "pastaOrigem": "Organização/Suporte para latas",
       "envio": {
-        "pesoGramas": 120,
+        "pesoGramas": 90,
         "alturaCm": 11.4,
         "larguraCm": 11,
         "comprimentoCm": 7.8
@@ -4334,7 +4372,8 @@
         "porta-copos-universal",
         "abridor-latas-garrafas",
         "mug-buddy"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "abridor-latas-garrafas",
@@ -4383,7 +4422,7 @@
       "video": null,
       "pastaOrigem": "Preparo/Abridor de latas e garrafas",
       "envio": {
-        "pesoGramas": 5,
+        "pesoGramas": 11,
         "alturaCm": 5.7,
         "larguraCm": 2.2,
         "comprimentoCm": 1.3
@@ -4392,7 +4431,8 @@
         "suporte-para-latas",
         "roleta-de-shots",
         "medidor-agua-ou-cerveja"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "base-cafeteira-moka-4-xicaras",
@@ -4453,7 +4493,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 50,
+        "pesoGramas": 104,
         "alturaCm": 11.2,
         "larguraCm": 9.9,
         "comprimentoCm": 18.3
@@ -4462,7 +4502,8 @@
         "suporte-expositor-bialetti",
         "luminaria-moka",
         "cantinho-do-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-coador-cafe",
@@ -4523,7 +4564,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 37,
+        "pesoGramas": 78,
         "alturaCm": 18,
         "larguraCm": 12.9,
         "comprimentoCm": 12
@@ -4533,7 +4574,8 @@
         "secador-coador-v60",
         "bandeja-hexagonal-coador",
         "suporte-filtro-destacavel"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "xicara-cafe-espresso",
@@ -4586,7 +4628,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 24,
+        "pesoGramas": 49,
         "alturaCm": 5.5,
         "larguraCm": 7.6,
         "comprimentoCm": 9.5
@@ -4596,7 +4638,8 @@
         "buddy-cafe",
         "grao-de-la",
         "cachepo-xicara"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "cortador-biscoito-capivara",
@@ -4657,7 +4700,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 8,
+        "pesoGramas": 37,
         "alturaCm": 4.9,
         "larguraCm": 7.6,
         "comprimentoCm": 8.6
@@ -4666,7 +4709,8 @@
         "capivara",
         "pote-amanteigados",
         "kit-cortadores-biscoito-natal"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "mao-italiana",
@@ -4723,7 +4767,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 12,
+        "pesoGramas": 27,
         "alturaCm": 6.7,
         "larguraCm": 4,
         "comprimentoCm": 12.1
@@ -4732,7 +4776,8 @@
         "suporte-expositor-bialetti",
         "base-cafeteira-moka-4-xicaras",
         "pato"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "medidor-agua-ou-cerveja",
@@ -4788,7 +4833,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 33,
+        "pesoGramas": 70,
         "alturaCm": 16,
         "larguraCm": 16,
         "comprimentoCm": 1.1
@@ -4797,7 +4842,8 @@
         "roleta-de-shots",
         "abridor-latas-garrafas",
         "mao-italiana"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "cortador-biscoito-gengibre",
@@ -4890,11 +4936,11 @@
         },
         {
           "rotulo": "Dimensões",
-          "valor": "10 cortadores de 3,9 a 7,3 cm de largura × 6,8 cm de altura, espessura 0,4 cm"
+          "valor": "Cortadores de 7,9 a 8,4 cm de largura, altura 1,3 cm; carimbos de 3,9 a 7,3 cm, espessura 0,4 cm"
         },
         {
           "rotulo": "Itens inclusos",
-          "valor": "10 cortadores"
+          "valor": "10 cortadores + 10 carimbos"
         },
         {
           "rotulo": "Compatibilidade",
@@ -4922,16 +4968,17 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 32,
-        "alturaCm": 4,
-        "larguraCm": 6.8,
-        "comprimentoCm": 7.3
+        "pesoGramas": 95,
+        "alturaCm": 17,
+        "larguraCm": 7.9,
+        "comprimentoCm": 8.4
       },
       "combinaCom": [
         "cortador-biscoito-gengibre",
         "kit-carimbo-biscoito-grinch",
         "pote-amanteigados"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "kit-carimbo-biscoito-grinch",
@@ -4988,7 +5035,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 30,
+        "pesoGramas": 118,
         "alturaCm": 11.4,
         "larguraCm": 7.7,
         "comprimentoCm": 9.5
@@ -4997,7 +5044,8 @@
         "porta-copos-grinch",
         "kit-cortadores-biscoito-natal",
         "cortador-biscoito-gengibre"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-copos-grinch",
@@ -5050,7 +5098,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 50,
+        "pesoGramas": 71,
         "alturaCm": 5.3,
         "larguraCm": 11,
         "comprimentoCm": 11
@@ -5059,7 +5107,8 @@
         "kit-carimbo-biscoito-grinch",
         "kit-cortadores-biscoito-natal",
         "porta-copos-amantes-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "pato",
@@ -5184,7 +5233,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 7,
+        "pesoGramas": 75,
         "alturaCm": 20.1,
         "larguraCm": 15,
         "comprimentoCm": 0.1
@@ -5193,7 +5242,8 @@
         "placa-gato-mais-espresso-menos-depresso",
         "placa-coffee-time",
         "coracao-batida-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "placa-gato-mais-espresso-menos-depresso",
@@ -5250,7 +5300,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 6,
+        "pesoGramas": 9,
         "alturaCm": 5,
         "larguraCm": 8.7,
         "comprimentoCm": 0.4
@@ -5259,7 +5309,8 @@
         "placa-mais-espresso-menos-depresso",
         "suporte-vinho-gato",
         "placa-coffee-time"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-banana-gansinho",
@@ -5320,7 +5371,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 57,
+        "pesoGramas": 102,
         "alturaCm": 14.9,
         "larguraCm": 14.9,
         "comprimentoCm": 25.2
@@ -5329,7 +5380,8 @@
         "pote-amanteigados",
         "porta-copos-universal",
         "quadro-pao"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-garrafa-tacas-vinho",
@@ -5386,7 +5438,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 70,
+        "pesoGramas": 140,
         "alturaCm": 1.5,
         "larguraCm": 22.8,
         "comprimentoCm": 22.8
@@ -5395,7 +5447,8 @@
         "suporte-ondulado-vinho",
         "pato",
         "porta-garrafa-vinho-equilibrio"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-copos-amantes-cafe",
@@ -5451,7 +5504,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 157,
+        "pesoGramas": 93,
         "alturaCm": 1.6,
         "larguraCm": 10.5,
         "comprimentoCm": 10.5
@@ -5460,7 +5513,8 @@
         "porta-copos-grao-cafe",
         "porta-guardanapos-xicara",
         "placa-mais-espresso-menos-depresso"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-copos-grao-cafe",
@@ -5517,7 +5571,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 25,
+        "pesoGramas": 97,
         "alturaCm": 8.5,
         "larguraCm": 8.5,
         "comprimentoCm": 0.3
@@ -5526,7 +5580,8 @@
         "porta-copos-amantes-cafe",
         "porta-recados-grao-cafe",
         "buddy-cafe"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "porta-garrafa-vinho-equilibrio",
@@ -5653,7 +5708,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 71,
+        "pesoGramas": 254,
         "alturaCm": 15.4,
         "larguraCm": 15,
         "comprimentoCm": 15.4
@@ -5663,7 +5718,8 @@
         "cortador-biscoito-gengibre",
         "quadro-pao",
         "porta-banana-gansinho"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "roleta-de-shots",
@@ -5720,7 +5776,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 22,
+        "pesoGramas": 49,
         "alturaCm": 5,
         "larguraCm": 7.4,
         "comprimentoCm": 9.8
@@ -5729,7 +5785,8 @@
         "medidor-agua-ou-cerveja",
         "abridor-latas-garrafas",
         "suporte-garrafa-jack-daniels"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-cinetico-vinho",
@@ -5858,7 +5915,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 114,
+        "pesoGramas": 198,
         "alturaCm": 20.8,
         "larguraCm": 15,
         "comprimentoCm": 23.8
@@ -5867,7 +5924,8 @@
         "suporte-vinho-laco-infinito",
         "suporte-ondulado-vinho",
         "suporte-cinetico-vinho"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-vinho-gato",
@@ -5998,7 +6056,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 172,
+        "pesoGramas": 361,
         "alturaCm": 20.8,
         "larguraCm": 20.4,
         "comprimentoCm": 11.8
@@ -6007,7 +6065,8 @@
         "suporte-vinho-chama",
         "suporte-cinetico-vinho",
         "porta-garrafa-vinho-equilibrio"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-enrolado-apple-watch",
@@ -6068,7 +6127,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 5,
+        "pesoGramas": 15,
         "alturaCm": 4.2,
         "larguraCm": 4.7,
         "comprimentoCm": 5.4
@@ -6077,7 +6136,8 @@
         "suporte-apple-watch",
         "organizador-cabo-oreo",
         "suporte-ipad"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-ondulado-vinho",
@@ -6138,7 +6198,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 110,
+        "pesoGramas": 569,
         "alturaCm": 16,
         "larguraCm": 23.8,
         "comprimentoCm": 25.6
@@ -6147,7 +6207,8 @@
         "suporte-garrafa-tacas-vinho",
         "suporte-vinho-chama",
         "pato"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
       "slug": "suporte-apple-watch",
@@ -6348,7 +6409,7 @@
       "opcoes": [],
       "video": null,
       "envio": {
-        "pesoGramas": 99,
+        "pesoGramas": 300,
         "alturaCm": 17.4,
         "larguraCm": 17.4,
         "comprimentoCm": 12.7
@@ -6357,7 +6418,8 @@
         "suporte-apple-watch",
         "suporte-enrolado-apple-watch",
         "organizador-cabo-oreo"
-      ]
+      ],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     }
   ],
   "avaliacoes": [
