@@ -392,6 +392,10 @@
           "valor": "1 estação de tamping. Portafiltro e tamper não inclusos"
         },
         {
+          "rotulo": "Compatibilidade",
+          "valor": "Portafiltro de qualquer diâmetro"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -421,12 +425,12 @@
       "combinaCom": [
         "knock-box",
         "colher-tamper",
-        "kit-bandeja-porta-capsulas-3em1"
+        "kit-tamping-bate-borra"
       ],
       "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
     },
     {
-      "slug": "kit-bandeja-porta-capsulas-3em1",
+      "slug": "kit-tamping-bate-borra",
       "nome": "Kit Estação de tamping e Bate-Borra",
       "categoria": "preparo",
       "resumo": "Bandeja, bate-borra e porta-nivelador na mesma peça.",
@@ -468,10 +472,10 @@
       "cores": null,
       "opcoes": [],
       "fotos": [
-        "fotos/kit-bandeja-porta-capsulas-3em1/01.jpg",
-        "fotos/kit-bandeja-porta-capsulas-3em1/02.jpg",
-        "fotos/kit-bandeja-porta-capsulas-3em1/03.jpg",
-        "fotos/kit-bandeja-porta-capsulas-3em1/04.jpg"
+        "fotos/kit-tamping-bate-borra/01.jpg",
+        "fotos/kit-tamping-bate-borra/02.jpg",
+        "fotos/kit-tamping-bate-borra/03.jpg",
+        "fotos/kit-tamping-bate-borra/04.jpg"
       ],
       "video": null,
       "pastaOrigem": "Organização/Kit Bandeja com Porta-Cápsulas 3 em 1",
@@ -542,6 +546,10 @@
         {
           "rotulo": "Itens inclusos",
           "valor": "Caixa + tampa. Portafiltro não incluso"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Portafiltro de qualquer diâmetro"
         },
         {
           "rotulo": "Limpeza",
@@ -2994,15 +3002,33 @@
           "valores": [
             {
               "valor": "V60 tamanho 02",
-              "preco": 67.99
+              "preco": 67.99,
+              "envio": {
+                "pesoGramas": 167,
+                "comprimentoCm": 12.8,
+                "larguraCm": 12.6,
+                "alturaCm": 6.8
+              }
             },
             {
               "valor": "V60 tamanho 03",
-              "preco": 67.99
+              "preco": 67.99,
+              "envio": {
+                "pesoGramas": 211,
+                "comprimentoCm": 14.2,
+                "larguraCm": 14,
+                "alturaCm": 7.6
+              }
             },
             {
               "valor": "Chemex",
-              "preco": 75.99
+              "preco": 75.99,
+              "envio": {
+                "pesoGramas": 342,
+                "comprimentoCm": 17.6,
+                "larguraCm": 17.4,
+                "alturaCm": 9.4
+              }
             }
           ]
         }
@@ -3015,10 +3041,10 @@
       "video": null,
       "pastaOrigem": "Preparo/Caixa de Filtro V60",
       "envio": {
-        "pesoGramas": 240,
-        "alturaCm": 17.6,
+        "pesoGramas": 342,
+        "alturaCm": 9.4,
         "larguraCm": 17.4,
-        "comprimentoCm": 9.4
+        "comprimentoCm": 17.6
       },
       "combinaCom": [
         "modelador-filtro-v60",
@@ -4028,6 +4054,10 @@
           "valor": "Corpo + bandeja interna removível + tampa articulada"
         },
         {
+          "rotulo": "Compatibilidade",
+          "valor": "Cápsulas usadas de qualquer marca"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Água corrente e sabão neutro. Não vai à máquina de lavar louça"
         },
@@ -4404,6 +4434,10 @@
           "valor": "1 abridor. Argola de chaveiro não inclusa"
         },
         {
+          "rotulo": "Compatibilidade",
+          "valor": "Latas de alumínio e garrafas de tampa metálica; entra em anel de chaveiro comum"
+        },
+        {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
         },
@@ -4605,6 +4639,10 @@
         {
           "rotulo": "Itens inclusos",
           "valor": "2 peças: xícara + perninhas articuladas"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Beirada de bancada ou prateleira de até 4 cm de espessura"
         },
         {
           "rotulo": "Limpeza",
@@ -5548,6 +5586,10 @@
         {
           "rotulo": "Itens inclusos",
           "valor": "4 porta-copos"
+        },
+        {
+          "rotulo": "Compatibilidade",
+          "valor": "Copos e xícaras com base de até 8,5 cm"
         },
         {
           "rotulo": "Limpeza",

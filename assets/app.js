@@ -1076,7 +1076,7 @@
             ? grade(achados)
             : `<div class="vazio">
                  <img src="marca/mascote-compacto.svg" alt="" aria-hidden="true">
-                 <h2>Nada com esse nome</h2>
+                 <h2>Não achei nada com esse nome</h2>
                  <p>Tente outra palavra, ou dê uma olhada em tudo que tem na loja.</p>
                  <a class="botao botao-vazado" href="#/">Voltar ao início</a>
                </div>`
@@ -1647,8 +1647,8 @@
         <nav class="trilha" aria-label="Você está em"><a href="#/">Início</a><span>/</span>Carrinho</nav>
         <div class="vazio">
           <img src="marca/mascote-compacto.svg" alt="" aria-hidden="true">
-          <h2>Seu carrinho está vazio</h2>
-          <p>Adicione itens do catálogo pra montar seu pedido.</p>
+          <h2>Ainda não tem nada aqui</h2>
+          <p>Escolha o que te agradou e eu monto o pedido com você.</p>
           <a class="botao botao-vazado" href="#/">Ver o catálogo</a>
         </div>
       `;
@@ -1907,12 +1907,26 @@
     `;
   }
 
-  // `lista` é [{produto, quantidade}]. Volta null se algum produto não tem
-  // peso/dimensão cadastrados — melhor avisar do que cotar frete errado.
+  // O envio da opção escolhida, quando ela muda o tamanho da peça. A caixa de
+  // filtro é a mesma peça em três tamanhos (V60 02, V60 03, Chemex): 167 g
+  // contra 342 g, e 6,8 cm de altura contra 9,4. Sem isso as três cotariam pela
+  // medida do produto, que é a maior, e quem pede a menor pagava frete da maior.
+  // Opção sem envio próprio cai na do produto — é o caso de todas as outras,
+  // onde a escolha muda cor ou preço mas não o volume.
+  function envioDe(produto, opcoes) {
+    for (const grupo of produto?.opcoes || []) {
+      const v = (grupo.valores || []).find((x) => x.valor === opcoes?.[grupo.titulo]);
+      if (v?.envio) return v.envio;
+    }
+    return produto?.envio;
+  }
+
+  // `lista` é [{produto, quantidade, opcoes}]. Volta null se algum produto não
+  // tem peso/dimensão cadastrados — melhor avisar do que cotar frete errado.
   function itensParaFrete(lista) {
     const itens = [];
-    for (const { produto, quantidade } of lista) {
-      const envio = produto?.envio;
+    for (const { produto, quantidade, opcoes } of lista) {
+      const envio = envioDe(produto, opcoes);
       if (!envio?.pesoGramas || !envio?.alturaCm || !envio?.larguraCm || !envio?.comprimentoCm) return null;
       itens.push({
         pesoGramas: envio.pesoGramas,
@@ -2110,7 +2124,12 @@
     const linkZap = () => main.querySelector('[data-zap-carrinho]');
     ligarFrete(
       main,
-      () => carrinho.map((it) => ({ produto: porSlug(catalogo.produtos, it.slug), quantidade: it.quantidade })),
+      () =>
+        carrinho.map((it) => ({
+          produto: porSlug(catalogo.produtos, it.slug),
+          quantidade: it.quantidade,
+          opcoes: it.opcoes,
+        })),
       () => {
         const a = linkZap();
         if (a) a.href = linkZapCarrinho();

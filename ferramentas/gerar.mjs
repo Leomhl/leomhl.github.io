@@ -28,6 +28,8 @@ for (const c of catalogo.categorias) {
   if (!c.slug || !c.nome) erros.push(`Categoria sem slug ou nome: ${JSON.stringify(c)}`);
 }
 
+const CAMPOS_ENVIO = ['pesoGramas', 'alturaCm', 'larguraCm', 'comprimentoCm'];
+
 for (const p of catalogo.produtos) {
   if (!p.slug) erros.push(`Produto sem slug: ${p.nome || '(sem nome)'}`);
   if (slugs.has(p.slug)) erros.push(`Slug repetido: ${p.slug}`);
@@ -46,7 +48,24 @@ for (const p of catalogo.produtos) {
       if (!v.valor) erros.push(`${p.slug}: valor de opção sem o campo "valor"`);
       if (v.preco != null && typeof v.preco !== 'number')
         erros.push(`${p.slug}: preço da opção "${v.valor}" precisa ser número`);
+      // Uma opção pode mudar o tamanho da caixa, não só o preço (a V60 02 e a
+      // Chemex são a mesma peça em três tamanhos). Quando muda, o valor traz o
+      // envio dele e o frete sai por essa medida; sem isso todas cotariam pela
+      // do produto, que é a maior — quem pede a menor pagaria frete da maior.
+      if (v.envio != null) {
+        if (typeof v.envio !== 'object')
+          erros.push(`${p.slug}: envio da opção "${v.valor}" precisa ser objeto`);
+        else
+          for (const campo of CAMPOS_ENVIO)
+            if (typeof v.envio[campo] !== 'number' || !(v.envio[campo] > 0))
+              erros.push(`${p.slug}: envio da opção "${v.valor}" precisa de ${campo} numérico e positivo`);
+      }
     }
+    // Envio por opção só vale se TODOS os valores do grupo tiverem o seu: com
+    // um faltando, aquela escolha cairia calada na medida do produto.
+    const comEnvio = grupo.valores.filter((v) => v.envio != null).length;
+    if (comEnvio && comEnvio !== grupo.valores.length)
+      erros.push(`${p.slug}: grupo "${grupo.titulo}" tem envio em ${comEnvio} de ${grupo.valores.length} valores — ou em todos, ou em nenhum`);
     if (grupo.valores.some((v) => v.preco != null)) gruposComPreco++;
   }
   if (gruposComPreco > 1) erros.push(`${p.slug}: só um grupo de opções pode definir preço`);
