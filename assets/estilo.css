@@ -29,7 +29,10 @@
   --sombra:   0 1px 2px rgba(43,24,16,.05), 0 6px 18px -8px rgba(43,24,16,.18);
   --sombra-g: 0 2px 4px rgba(43,24,16,.06), 0 20px 46px -18px rgba(43,24,16,.30);
 
-  --largura: 1180px;
+  /* O contêiner do site. Em 1180px uma tela de 1920 sobrava 370px de margem
+     de cada lado, e a grade travava em 4 cartões; em 1380 ela abre 5. A folga
+     cresce junto nos breakpoints largos pra não encostar na borda de um 1440. */
+  --largura: 1380px;
   --folga: 16px;                      /* respiro lateral no celular */
   --toque: 44px;                      /* alvo mínimo de toque */
   --seguro-baixo: env(safe-area-inset-bottom, 0px);
@@ -1233,7 +1236,7 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
 }
 
 @media (min-width: 560px) {
-  :root { --folga: 20px; --raio-g: 22px; }
+  :root { --folga: 24px; --raio-g: 22px; }
 
   .grade { gap: 16px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
   .cartao-foto { aspect-ratio: 4 / 3; }
@@ -1245,6 +1248,10 @@ body[data-tela="produto"] .zap-flutuante { opacity: 0; pointer-events: none; }
 }
 
 @media (min-width: 800px) {
+  /* Folga lateral maior junto com o contêiner mais largo: em 1380px um monitor
+     de 1440 deixaria o conteúdo a 30px da borda, e aí a página parece colada. */
+  :root { --folga: 32px; }
+
   .capa-interno {
     padding: 52px var(--folga) 48px; gap: 36px;
     grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
