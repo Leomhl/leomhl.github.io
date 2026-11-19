@@ -210,7 +210,6 @@
       "opcoes": [],
       "fotos": [
         "fotos/dosador-cafe/01.jpg",
-        "fotos/dosador-cafe/02.jpg",
         "fotos/dosador-cafe/03.jpg"
       ],
       "video": null,
@@ -1073,7 +1072,7 @@
     },
     {
       "slug": "suporte-expositor-bialetti",
-      "nome": "Suporte Expositor para Bialetti",
+      "nome": "Suporte para Cafeteira Moka",
       "categoria": "decoracao",
       "resumo": "A silhueta da moka em linha de arame, sobre pedestal.",
       "paraQueServe": "Só decoração, sem função prática: é o contorno de uma cafeteira italiana desenhado em fio fino, sobre um pedestal. Fica ao lado da cafeteira de verdade, na prateleira ou na vitrine, e repete a forma dela como se fosse um desenho que saiu do papel.",
@@ -4518,8 +4517,7 @@
       "fotos": [
         "fotos/base-cafeteira-moka-4-xicaras/01.jpg",
         "fotos/base-cafeteira-moka-4-xicaras/02.jpg",
-        "fotos/base-cafeteira-moka-4-xicaras/03.jpg",
-        "fotos/base-cafeteira-moka-4-xicaras/04.jpg"
+        "fotos/base-cafeteira-moka-4-xicaras/03.jpg"
       ],
       "pastaOrigem": "Decoração/Base para Cafeteira Moka 4 Xícaras",
       "destaque": false,
