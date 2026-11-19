@@ -6460,6 +6460,62 @@
         "organizador-cabo-oreo"
       ],
       "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
+    },
+    {
+      "slug": "mao-grinch",
+      "nome": "Mão Decorativa do Grinch",
+      "categoria": "decoracao",
+      "resumo": "A mão do Grinch pendurada na porta, segurando a bolinha de enfeite.",
+      "paraQueServe": "Enfeite de Natal pra pendurar na borda de porta, batente ou móvel: a mão verde emerge segurando o gorro vermelho e branco, com uma bolinha de enfeite vermelha pendurada por um fio. Encaixa sozinha, sem fita nem prego.",
+      "descricao": "Peça em volume, mão verde com gorro vermelho e branco encaixando na borda de porta ou móvel, segurando uma bolinha de enfeite vermelha pendurada por um fio. Sem montagem.",
+      "detalhes": [
+        "Encaixa na borda de porta, batente ou móvel",
+        "Acompanha bolinha de enfeite pendurada por fio",
+        "Cores fixas: verde, branco e vermelho"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "8 × 18 × 29,5 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 mão decorativa + 1 bolinha de enfeite"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "Peso aproximado — conferir na balança"
+        }
+      ],
+      "preco": 159.9,
+      "destaque": false,
+      "cores": null,
+      "opcoes": [],
+      "fotos": [
+        "fotos/mao-grinch/01.jpg"
+      ],
+      "video": null,
+      "revisarFoto": true,
+      "pastaOrigem": "Decoração/Mão do Grinch",
+      "envio": {
+        "pesoGramas": 350,
+        "alturaCm": 29.5,
+        "larguraCm": 8,
+        "comprimentoCm": 18
+      },
+      "combinaCom": []
     }
   ],
   "avaliacoes": [
