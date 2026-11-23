@@ -386,6 +386,14 @@ input, button, select, textarea { font-size: 16px; }
   .natal-faixa-seta { padding: 7px 11px; font-size: .8rem; }
 }
 
+/* Vitrine de Natal mais pro fim da home: segundo chamado, agora com a peça
+   em si. Cartão próprio (fundo + borda), não faixa full-bleed — é conteúdo
+   de catálogo, não aviso. */
+.vitrine-natal {
+  background: var(--papel-2); border: 1px solid var(--linha);
+  border-radius: var(--raio-g);
+}
+
 /* Faixa de garantias logo abaixo da capa, no lugar onde toda loja põe a dela.
    Era uma grade de três colunas com quatro argumentos — sobrava um sozinho na
    linha de baixo e cada coluna era um parágrafo inteiro. Agora é uma faixa só,

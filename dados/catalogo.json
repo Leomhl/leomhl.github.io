@@ -26,6 +26,10 @@
       "caramelo": {
         "nome": "Marrom Caramelo",
         "hex": "#C8824E"
+      },
+      "marrom": {
+        "nome": "Marrom",
+        "hex": "#6B4423"
       }
     },
     "coresPadrao": [
@@ -489,7 +493,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         },
         {
@@ -497,7 +502,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         },
         {
@@ -505,7 +511,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         }
       ],
@@ -582,7 +589,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         },
         {
@@ -590,7 +598,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         }
       ],
@@ -985,7 +994,8 @@
       "cores": [
         "branco",
         "preto",
-        "caramelo"
+        "caramelo",
+        "marrom"
       ],
       "opcoes": [],
       "fotos": [
@@ -1376,7 +1386,8 @@
       "cores": [
         "branco",
         "preto",
-        "caramelo"
+        "caramelo",
+        "marrom"
       ],
       "opcoes": [],
       "fotos": [
@@ -1457,7 +1468,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         },
         {
@@ -1465,7 +1477,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         },
         {
@@ -1473,7 +1486,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         }
       ],
@@ -1544,7 +1558,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         },
         {
@@ -1552,7 +1567,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         },
         {
@@ -1560,7 +1576,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         }
       ],
@@ -1619,7 +1636,8 @@
       "cores": [
         "branco",
         "preto",
-        "caramelo"
+        "caramelo",
+        "marrom"
       ],
       "opcoes": [],
       "fotos": [
@@ -1688,7 +1706,8 @@
       "cores": [
         "branco",
         "preto",
-        "caramelo"
+        "caramelo",
+        "marrom"
       ],
       "opcoes": [],
       "fotos": [
@@ -3570,7 +3589,8 @@
       "cores": [
         "branco",
         "preto",
-        "caramelo"
+        "caramelo",
+        "marrom"
       ],
       "opcoes": [],
       "fotos": [
@@ -4079,7 +4099,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         },
         {
@@ -4087,7 +4108,8 @@
           "cores": [
             "branco",
             "preto",
-            "caramelo"
+            "caramelo",
+            "marrom"
           ]
         }
       ],
@@ -4228,7 +4250,8 @@
       "cores": [
         "branco",
         "preto",
-        "caramelo"
+        "caramelo",
+        "marrom"
       ],
       "opcoes": [
         {
@@ -4318,7 +4341,8 @@
       "cores": [
         "branco",
         "preto",
-        "caramelo"
+        "caramelo",
+        "marrom"
       ],
       "opcoes": [],
       "fotos": [
@@ -4727,7 +4751,7 @@
       ],
       "preco": 159.9,
       "destaque": true,
-      "cores": null,
+      "cores": [],
       "opcoes": [],
       "fotos": [
         "fotos/mao-grinch/01.jpg"
@@ -5001,7 +5025,7 @@
       ],
       "pastaOrigem": "Diversos/Natal/Cortador de Biscoito Gengibre",
       "destaque": false,
-      "cores": null,
+      "cores": [],
       "opcoes": [],
       "video": null,
       "envio": {
@@ -5068,7 +5092,7 @@
       ],
       "pastaOrigem": "Diversos/Natal/Cortador de cookie natal",
       "destaque": false,
-      "cores": null,
+      "cores": [],
       "opcoes": [],
       "video": null,
       "envio": {
@@ -5136,7 +5160,7 @@
       ],
       "pastaOrigem": "Diversos/Natal/Cortador de massas grinch",
       "destaque": false,
-      "cores": null,
+      "cores": [],
       "opcoes": [],
       "video": null,
       "envio": {
@@ -5200,7 +5224,7 @@
       ],
       "pastaOrigem": "Diversos/Natal/Porta-Copos Grinch",
       "destaque": false,
-      "cores": null,
+      "cores": [],
       "opcoes": [],
       "video": null,
       "envio": {

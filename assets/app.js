@@ -576,10 +576,12 @@
 
   /* ---------- Cores -------------------------------------------------------- */
 
-  // Sem a chave "cores", o produto herda as cores padrão da loja.
+  // Sem a chave "cores" (null/ausente), o produto herda as cores padrão da
+  // loja. Array substitui — inclusive array vazio, que trava a peça na cor
+  // fixa da foto, sem seletor nenhum (ver blocoCores).
   function coresDe(p) {
     const paleta = catalogo.loja.paletaCores || {};
-    const chaves = p.cores && p.cores.length ? p.cores : catalogo.loja.coresPadrao || [];
+    const chaves = p.cores != null ? p.cores : catalogo.loja.coresPadrao || [];
     return chaves.map((k) => paleta[k] || { nome: k, hex: '#CCC' });
   }
 
@@ -982,11 +984,30 @@
     </a>`;
   }
 
+  // Segunda chamada pro Natal, agora como vitrine de produto — a faixa do
+  // topo avisa que a edição existe, esta mostra a peça em si mais pro fim da
+  // home, onde quem rolou a página inteira ainda não decidiu. Mesmo padrão de
+  // "As queridinhas da casa": grade com "Ver tudo". Some junto com a faixa se
+  // a categoria sair do catálogo.
+  function vitrineNatal() {
+    const c = porSlug(catalogo.categorias, 'natal');
+    const itens = c ? produtosDa('natal') : [];
+    if (!c || !itens.length) return '';
+    return `<section class="secao vitrine-natal">
+      <div class="secao-topo">
+        <h2>🎄 Peças de Natal</h2>
+        <a class="ver-tudo" href="#/c/${esc(c.slug)}">Ver tudo de Natal →</a>
+      </div>
+      <p class="secao-resumo">Edição limitada — depois do Natal, saem de linha.</p>
+      ${grade(itens.slice(0, 8))}
+    </section>`;
+  }
+
   function blocoCategorias(evitar = new Set()) {
     const cats = catalogo.categorias || [];
     if (cats.length < 2) return '';
     return `<section class="secao categorias-secao">
-      <div class="secao-topo"><h2>De onde você quer começar</h2></div>
+      <div class="secao-topo"><h2>Comece por aqui</h2></div>
       <div class="categorias" data-quantas="${cats.length}">
         ${cats
           .map((c) => {
@@ -1091,6 +1112,8 @@
             </section>`
           : ''
       }
+
+      ${vitrineNatal()}
 
       ${secaoAvaliacoesInicio()}
 
