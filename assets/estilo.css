@@ -470,6 +470,7 @@ input, button, select, textarea { font-size: 16px; }
   box-shadow: 0 2px 8px rgba(43,24,16,.25);
 }
 .selo-destaque { background: var(--ambar); color: var(--torra); }
+.selo-natal { background: #a8322d; color: #fff; }
 
 
 /* ---------- Página de produto -------------------------------------------- */

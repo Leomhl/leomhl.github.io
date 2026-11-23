@@ -94,6 +94,11 @@
       "slug": "diversos",
       "nome": "Diversos",
       "resumo": "Fora do tema café: Apple Watch, iPad, cortadores de biscoito e outras peças da produção própria."
+    },
+    {
+      "slug": "natal",
+      "nome": "Natal",
+      "resumo": "Cortadores e carimbos de biscoito, porta-copos e enfeites temáticos do Grinch e do Natal — edição limitada."
     }
   ],
   "produtos": [
@@ -4680,7 +4685,8 @@
     {
       "slug": "mao-grinch",
       "nome": "Mão Decorativa do Grinch",
-      "categoria": "diversos",
+      "categoria": "natal",
+      "edicaoLimitada": true,
       "resumo": "A mão do Grinch pendurada na porta, segurando a bolinha de enfeite.",
       "paraQueServe": "Enfeite de Natal pra pendurar na parede ou na porta, igual um quadro: fura, parafusa e encaixa pelo furo próprio pra cabeça de parafuso. A mão verde segura o gorro vermelho e branco, com uma bolinha de enfeite vermelha pendurada por um fio.",
       "descricao": "Peça em volume, mão verde com gorro vermelho e branco, com furo pra pendurar igual quadro — parafuso na parede ou porta — segurando uma bolinha de enfeite vermelha pendurada por um fio. Sem montagem.",
@@ -4944,7 +4950,8 @@
     {
       "slug": "cortador-biscoito-gengibre",
       "nome": "Cortador de Biscoito",
-      "categoria": "diversos",
+      "categoria": "natal",
+      "edicaoLimitada": true,
       "resumo": "Cortador no formato clássico de biscoito de gengibre (gingerbread man).",
       "paraQueServe": "O cortador clássico do bonequinho de gengibre, pra fazer biscoito de Natal com o contorno certo sem precisar desenhar.",
       "descricao": "Borda única no contorno do bonequinho; passa na massa crua e já sai recortado, pronto pra decorar depois de assado.",
@@ -5012,7 +5019,8 @@
     {
       "slug": "kit-cortadores-biscoito-natal",
       "nome": "Kit Cortadores de Biscoito de Natal",
-      "categoria": "diversos",
+      "categoria": "natal",
+      "edicaoLimitada": true,
       "resumo": "Kit com 10 cortadores de símbolos natalinos: estrela, árvore, sino, laço e mais.",
       "paraQueServe": "Dez cortadores com os símbolos clássicos do Natal (estrela, estrela cadente, árvore, casinha, floco de neve, bengala doce, embrulho de presente, sino, nuvem e bonequinho de gengibre) pra fazer um prato variado de biscoitos natalinos de um só kit.",
       "descricao": "Cada cortador tem borda única, sem relevo interno; passa na massa crua e sai recortado, pronto pra decorar com glacê ou chocolate depois de assado.",
@@ -5079,7 +5087,8 @@
     {
       "slug": "kit-carimbo-biscoito-grinch",
       "nome": "Kit Carimbo e Cortador Grinch",
-      "categoria": "diversos",
+      "categoria": "natal",
+      "edicaoLimitada": true,
       "resumo": "Carimbos que estampam o Grinch na massa, com os cortadores dos contornos pra combinar.",
       "paraQueServe": "Carimbos que imprimem o desenho do Grinch e companhia direto na massa crua, junto com os cortadores do contorno de cada cena, pra fazer biscoito temático sem precisar desenhar nem usar glacê pra detalhar.",
       "descricao": "Os carimbos têm o desenho em relevo negativo: pressiona na massa crua e o detalhe fica marcado. Os cortadores correspondentes recortam o contorno de cada cena pra já sair no formato certo.",
@@ -5146,7 +5155,8 @@
     {
       "slug": "porta-copos-grinch",
       "nome": "Porta-Copos Grinch",
-      "categoria": "diversos",
+      "categoria": "natal",
+      "edicaoLimitada": true,
       "resumo": "Jogo de porta-copos com desenhos do Grinch, guardado num suporte redondo.",
       "paraQueServe": "Porta-copos temáticos de Natal pra proteger a mesa do suor do copo ou xícara, com desenhos do Grinch estampados, e um suporte redondo pra guardar o jogo empilhado.",
       "descricao": "Cada porta-copos tem um desenho diferente do Grinch, com borda levemente elevada pra segurar a base do copo no lugar. O suporte redondo mantém o jogo organizado e à mão.",

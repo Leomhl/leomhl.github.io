@@ -766,6 +766,7 @@
   function selos(p) {
     const itens = [];
     if (p.destaque) itens.push('<span class="selo selo-destaque">Destaque</span>');
+    if (p.edicaoLimitada) itens.push('<span class="selo selo-natal">Edição Limitada</span>');
     return itens.length ? `<div class="selos">${itens.join('')}</div>` : '';
   }
 
@@ -1168,6 +1169,7 @@
       <article class="produto">
         <div class="carrossel" data-carrossel>
           <div class="palco">
+            ${selos(p)}
             ${setas}
             <div class="trilho" tabindex="0" aria-label="Fotos de ${esc(p.nome)}">${quadros.join('')}</div>
           </div>
