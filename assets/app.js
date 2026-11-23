@@ -985,10 +985,9 @@
   }
 
   // Segunda chamada pro Natal, agora como vitrine de produto — a faixa do
-  // topo avisa que a edição existe, esta mostra a peça em si mais pro fim da
-  // home, onde quem rolou a página inteira ainda não decidiu. Mesmo padrão de
-  // "As queridinhas da casa": grade com "Ver tudo". Some junto com a faixa se
-  // a categoria sair do catálogo.
+  // topo avisa que a edição existe, esta mostra a peça em si logo depois,
+  // ainda no topo da home. Mesmo padrão de "As queridinhas da casa": grade
+  // com "Ver tudo". Some junto com a faixa se a categoria sair do catálogo.
   function vitrineNatal() {
     const c = porSlug(catalogo.categorias, 'natal');
     const itens = c ? produtosDa('natal') : [];
@@ -998,7 +997,6 @@
         <h2>🎄 Peças de Natal</h2>
         <a class="ver-tudo" href="#/c/${esc(c.slug)}">Ver tudo de Natal →</a>
       </div>
-      <p class="secao-resumo">Edição limitada — depois do Natal, saem de linha.</p>
       ${grade(itens.slice(0, 8))}
     </section>`;
   }
@@ -1097,6 +1095,8 @@
 
       ${blocoNatal()}
 
+      ${vitrineNatal()}
+
       ${blocoProvas()}
 
       ${blocoCategorias(new Set(destaques.map((p) => p.slug)))}
@@ -1112,8 +1112,6 @@
             </section>`
           : ''
       }
-
-      ${vitrineNatal()}
 
       ${secaoAvaliacoesInicio()}
 
