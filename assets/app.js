@@ -955,6 +955,26 @@
     return escolhida ? escolhida.fotos[0] : null;
   }
 
+  // Chamada sazonal pra categoria de Natal, logo abaixo da capa — o ponto de
+  // maior atenção da página. Só nasce se a categoria "natal" existir e tiver
+  // peça: sem isso, tirar a categoria no fim da temporada já apaga a faixa,
+  // sem precisar lembrar de tirar isto também.
+  function blocoNatal() {
+    const c = porSlug(catalogo.categorias, 'natal');
+    const itens = c ? produtosDa('natal') : [];
+    if (!c || !itens.length) return '';
+    return `<a class="natal-faixa" href="#/c/${esc(c.slug)}">
+      <div class="natal-faixa-interno">
+        <span class="natal-faixa-icone" aria-hidden="true">🎁</span>
+        <span class="natal-faixa-texto">
+          <strong>Edição de Natal chegou</strong>
+          <span>Peças do Grinch e do Natal em edição limitada, enquanto durar o estoque.</span>
+        </span>
+        <span class="natal-faixa-seta" aria-hidden="true">Ver peças →</span>
+      </div>
+    </a>`;
+  }
+
   function blocoCategorias(evitar = new Set()) {
     const cats = catalogo.categorias || [];
     if (cats.length < 2) return '';
@@ -1046,6 +1066,8 @@
           <div class="capa-arte">${arteDaCapa(destaques)}</div>
         </div>
       </section>
+
+      ${blocoNatal()}
 
       ${blocoProvas()}
 

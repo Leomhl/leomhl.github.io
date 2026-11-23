@@ -306,6 +306,51 @@ input, button, select, textarea { font-size: 16px; }
   padding-inline: var(--folga);
 }
 
+/* Faixa sazonal de Natal, entre a capa e as garantias — o lugar de maior
+   atenção da página. Link único (não botão dentro de section) pra dar um alvo
+   de toque grande sem duplicar texto em aria-label. O laço balança sozinho
+   pra chamar o olho; para no hover (quem já está em cima não precisa do
+   convite) e some com prefers-reduced-motion. */
+.natal-faixa {
+  display: block; text-decoration: none; color: var(--creme);
+  background: linear-gradient(135deg, #1F4D3A, #152420);
+  border-block: 1px solid rgba(0, 0, 0, .15);
+}
+.natal-faixa-interno {
+  max-width: var(--largura); margin-inline: auto;
+  padding: 14px var(--folga);
+  display: flex; align-items: center; gap: 14px;
+}
+.natal-faixa-icone {
+  flex: none; font-size: 1.7rem; line-height: 1;
+  transform-origin: 50% 85%;
+  animation: natal-balanca 2.2s ease-in-out infinite;
+}
+@keyframes natal-balanca {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+}
+.natal-faixa-texto { display: flex; flex-direction: column; gap: 1px; flex: 1; min-width: 0; }
+.natal-faixa-texto strong { font-family: var(--titulo); font-weight: 700; font-size: 1rem; }
+.natal-faixa-texto span { font-size: .8rem; opacity: .82; }
+.natal-faixa-seta {
+  flex: none; font-family: var(--titulo); font-weight: 700; font-size: .86rem;
+  white-space: nowrap; padding: 8px 14px; border-radius: 999px;
+  background: var(--creme); color: #1F4D3A;
+  transition: transform .14s ease;
+}
+@media (hover: hover) {
+  .natal-faixa:hover .natal-faixa-icone { animation-play-state: paused; }
+  .natal-faixa:hover .natal-faixa-seta { transform: translateX(3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .natal-faixa-icone { animation: none; }
+}
+@media (max-width: 560px) {
+  .natal-faixa-texto span { display: none; }
+  .natal-faixa-seta { padding: 7px 11px; font-size: .8rem; }
+}
+
 /* Faixa de garantias logo abaixo da capa, no lugar onde toda loja põe a dela.
    Era uma grade de três colunas com quatro argumentos — sobrava um sozinho na
    linha de baixo e cada coluna era um parágrafo inteiro. Agora é uma faixa só,
