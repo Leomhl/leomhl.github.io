@@ -986,7 +986,7 @@
 
   // Segunda chamada pro Natal, agora como vitrine de produto — a faixa do
   // topo avisa que a edição existe, esta mostra a peça em si logo depois,
-  // ainda no topo da home. Mesmo padrão de "As queridinhas da casa": grade
+  // ainda no topo da home. Mesmo padrão de "Os queridinhos da casa": grade
   // com "Ver tudo". Some junto com a faixa se a categoria sair do catálogo.
   function vitrineNatal() {
     const c = porSlug(catalogo.categorias, 'natal');
@@ -1105,7 +1105,7 @@
         destaques.length
           ? `<section class="secao">
               <div class="secao-topo">
-                <h2>As queridinhas da casa</h2>
+                <h2>Os queridinhos da casa</h2>
                 <a class="ver-tudo" href="#/c/${esc(primeira.slug)}">Ver o catálogo</a>
               </div>
               ${grade(destaques)}
