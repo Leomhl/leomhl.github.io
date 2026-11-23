@@ -963,11 +963,18 @@
     const c = porSlug(catalogo.categorias, 'natal');
     const itens = c ? produtosDa('natal') : [];
     if (!c || !itens.length) return '';
+    const neve = [8, 22, 38, 55, 72, 88]
+      .map(
+        (x, i) =>
+          `<span style="--x:${x}%; --atraso:${(-i * 1.3).toFixed(1)}s; --duracao:${7 + (i % 3)}s; --tam:${(0.7 + (i % 3) * 0.12).toFixed(2)}rem">❄</span>`
+      )
+      .join('');
     return `<a class="natal-faixa" href="#/c/${esc(c.slug)}">
+      <div class="natal-faixa-neve" aria-hidden="true">${neve}</div>
       <div class="natal-faixa-interno">
         <span class="natal-faixa-icone" aria-hidden="true">🎁</span>
         <span class="natal-faixa-texto">
-          <strong>Edição de Natal chegou</strong>
+          <strong>Edição de Natal chegou <span class="natal-faixa-brilho" aria-hidden="true">✨</span></strong>
           <span>Peças do Grinch e do Natal em edição limitada, enquanto durar o estoque.</span>
         </span>
         <span class="natal-faixa-seta" aria-hidden="true">Ver peças →</span>
