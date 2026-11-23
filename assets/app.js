@@ -403,6 +403,44 @@
     return fbPedido(c, '/' + encodeURIComponent(c.colecao || 'avaliacoes'), { fields: campos });
   }
 
+  // Grava o carrinho no momento em que a pessoa aperta "Finalizar no
+  // WhatsApp" — é o proxy mais próximo de pedido que existe sem backend: o
+  // WhatsApp não devolve confirmação pro site, então "clicou pra fechar" é o
+  // que dá pra registrar. Mensagem já tem tudo; isto é só pra você ver o
+  // histórico sem depender do WhatsApp. Falha aqui não pode travar nada —
+  // o link já abre o WhatsApp sozinho, independente desta escrita.
+  function enviarPedido() {
+    const c = fbConfig();
+    if (!c) return;
+    const itens = carrinho.map((it) => ({
+      mapValue: {
+        fields: {
+          slug: { stringValue: it.slug },
+          nome: { stringValue: it.nome },
+          quantidade: { integerValue: String(it.quantidade) },
+          ...(it.preco != null && { preco: { doubleValue: it.preco } }),
+        },
+      },
+    }));
+    const campos = {
+      itens: { arrayValue: { values: itens } },
+      subtotal: { doubleValue: totalCarrinho() },
+      total: { doubleValue: totalComFrete() },
+      criadoEm: { timestampValue: new Date().toISOString() },
+    };
+    if (freteEscolhido) {
+      campos.frete = {
+        mapValue: {
+          fields: {
+            nome: { stringValue: freteEscolhido.nome },
+            preco: { doubleValue: freteEscolhido.preco },
+          },
+        },
+      };
+    }
+    fbPedido(c, '/pedidos', { fields: campos }).catch(() => {});
+  }
+
   /* ---------- Avaliações -------------------------------------------------- */
 
   // Fonte única: `avaliacoes` no catálogo. O que está no Firestore ainda não é
@@ -2583,6 +2621,7 @@
           shipping: freteEscolhido.preco,
         }),
       });
+      enviarPedido();
       return;
     }
 

@@ -11,9 +11,10 @@ rules_version = '2';
 //
 // O que isto permite a um anônimo:
 //   criar  um depoimento novo, no formato exato abaixo, sempre reprovado
+//   criar  um pedido novo (coleção `pedidos`), no formato exato abaixo
 // O que isto NÃO permite a ninguém de fora:
 //   LER qualquer coisa, alterar qualquer documento, apagar qualquer documento,
-//   criar documento fora da coleção `avaliacoes`.
+//   criar documento fora das coleções `avaliacoes` e `pedidos`.
 //
 // Publicar um depoimento NÃO é clique no console: é rodar
 //   node ferramentas/colher-depoimentos.mjs
@@ -81,6 +82,41 @@ service cloud.firestore {
 
       // Aprovar, editar e apagar é só pelo console (que passa por cima das
       // regras por ser acesso de administrador).
+      allow update, delete: if false;
+    }
+
+    match /pedidos/{id} {
+
+      // Mesma trava de avaliacoes: ninguém de fora lê. Pedido nasce da
+      // escrita do botão "Finalizar no WhatsApp" — ver app.js, enviarPedido().
+      // Você vê o histórico pelo console do Firebase (Firestore Database >
+      // pedidos), com sua conta de dono do projeto.
+      allow read: if false;
+
+      allow create: if
+             request.resource.data.keys().hasOnly(
+               ['itens', 'subtotal', 'frete', 'total', 'criadoEm'])
+          && request.resource.data.keys().hasAll(
+               ['itens', 'subtotal', 'total', 'criadoEm'])
+
+          && request.resource.data.itens is list
+          && request.resource.data.itens.size() >= 1
+          && request.resource.data.itens.size() <= 50
+
+          && request.resource.data.subtotal is number
+          && request.resource.data.subtotal >= 0
+
+          && request.resource.data.total is number
+          && request.resource.data.total >= 0
+
+          && request.resource.data.criadoEm is timestamp
+
+          // `frete` é opcional (nem todo pedido tem CEP calculado antes de
+          // fechar); quando existe, só se confere que é mapa — campos de
+          // dentro não têm chave fixa suficiente pra travar mais que isso.
+          && (!('frete' in request.resource.data)
+              || request.resource.data.frete is map);
+
       allow update, delete: if false;
     }
 
