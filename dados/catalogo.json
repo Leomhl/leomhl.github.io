@@ -8093,6 +8093,168 @@
       },
       "combinaCom": [],
       "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³) somando as peças coloridas do arquivo; dimensoes estimadas por proporção da foto (peça com partes em cores separadas, bbox do arquivo é leiaute de impressão, não o tamanho montado) -- medir fisicamente e conferir na balança antes de divulgar; preço é proposta inicial, não decisão fechada"
+    },
+    {
+      "slug": "quebra-nozes-moderno",
+      "nome": "Quebra-Nozes Moderno",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Soldadinho quebra-nozes em linhas facetadas modernas, peça decorativa de Natal.",
+      "paraQueServe": "Enfeite de mesa de Natal no formato clássico do soldadinho quebra-nozes, com acabamento em facetas geométricas (estilo low poly) em vez do entalhe tradicional — pra apoiar na mesa, lareira ou embaixo da árvore.",
+      "descricao": "Peça em volume do soldadinho quebra-nozes, com gorro, braços e perneiras em linhas facetadas geométricas. Sem partes móveis, só decorativa.",
+      "detalhes": [
+        "Peça decorativa em volume, acabamento facetado geométrico",
+        "Formato clássico de soldadinho quebra-nozes"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 38.99,
+      "fotos": [
+        "fotos/quebra-nozes-moderno/01.jpg",
+        "fotos/quebra-nozes-moderno/02.jpg"
+      ],
+      "pastaOrigem": "_pesquisa/quebra-nozes/modern-nutcracker_1999529",
+      "destaque": false,
+      "revisarFoto": true,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 58,
+        "alturaCm": 17.8,
+        "larguraCm": 5.8,
+        "comprimentoCm": 5.4
+      },
+      "combinaCom": [],
+      "observacoes": "peça escolhida pelo dono em 24/11/2026 entre candidatos pesquisados no MakerWorld (modelo 'Modern Nutcracker Decoration', designer Deltaprints, licença Creative Commons BY-NC-ND -- proíbe revenda sem autorização, FICHA em _pesquisa/quebra-nozes/). Peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³), método validado contra peso real conhecido de outro produto do catálogo. Fotos são do designer (revisarFoto=true) -- trocar por foto própria e obter autorização de revenda antes de divulgar. Preço é proposta inicial pela fórmula 0,28×g+22, não decisão fechada."
+    },
+    {
+      "slug": "plaquinha-porta-santa-stop-here",
+      "nome": "Plaquinha de Porta Papai Noel Pare Aqui",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Plaquinha pra pendurar na maçaneta, pedindo pro Papai Noel parar ali.",
+      "paraQueServe": "Enfeite de porta de Natal: uma plaquinha com gancho curvo, pra pendurar na maçaneta por dentro ou por fora de casa, com os dizeres em português \"Papai Noel, por favor PARE AQUI!\".",
+      "descricao": "Placa retangular de cantos arredondados, com gancho curvo no topo pra pendurar na maçaneta. Fundo vermelho com os dizeres em português \"Papai Noel, por favor PARE AQUI!\" e detalhe de bengala doce no gancho.",
+      "detalhes": [
+        "Gancho curvo pra pendurar direto na maçaneta",
+        "Dizeres em português: \"Papai Noel, por favor PARE AQUI!\""
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 36.99,
+      "fotos": [
+        "fotos/plaquinha-porta-santa-stop-here/01.jpg"
+      ],
+      "pastaOrigem": "_pesquisa/porta-enfeite-natal/santa-stop-here_854288",
+      "destaque": false,
+      "revisarFoto": true,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 51,
+        "alturaCm": 22.8,
+        "larguraCm": 9,
+        "comprimentoCm": 0.3
+      },
+      "combinaCom": [],
+      "observacoes": "peça escolhida pelo dono em 24/11/2026 entre candidatos pesquisados no MakerWorld (modelo 'Santa Stop Here Door Hanger', designers Valeria Momo & Mattia -- crédito na própria foto --, licença Standard Digital File License, proíbe revenda sem autorização; designer vende licença comercial separada via Patreon, link na página do modelo; FICHA em _pesquisa/porta-enfeite-natal/). ARQUIVO TRADUZIDO: o .3mf original tinha o texto esculpido em inglês (\"Santa please STOP HERE!\"), sem campo de texto editável no fatiador -- editei a malha no Blender (instalado na máquina), identificando e removendo as 20 peças que formavam as palavras em inglês e esculpindo \"Papai Noel, / por favor / PARE / AQUI!\" nas mesmas posições/tamanhos, mantendo intactos floco de neve, linhas divisórias e listras do cajado doce. Validado por renderização antes de salvar -- bateu peso e posição esperados. Arquivo final: _pesquisa/porta-enfeite-natal/santa-stop-here_854288/santa-stop-here-PT.3mf (o original em inglês continua arquivado na mesma pasta como door+sign_noname_BAMBULAB.3mf). O export acusou aviso de malha não-manifold em door_sign.stl_1 (a peça base, não tocada por mim) -- conferir no fatiador antes de imprimir, mas não deve impedir a impressão. Peso calculado da geometria do .3mf somando as peças do arquivo; dimensoes por proporção da foto (bbox do arquivo é leiaute de impressão achatado, não confiável) -- medir fisicamente antes de divulgar. FOTO DESATUALIZADA: a foto 01.jpg é do designer e mostra o texto em INGLÊS (versão antiga) -- não corresponde mais à peça real: trocar por foto própria do objeto já impresso com o texto em português assim que imprimir, e também obter autorização de revenda antes de divulgar. Preço é proposta inicial, não decisão fechada."
+    },
+    {
+      "slug": "arvore-fidget-natal",
+      "nome": "Arvorezinha Fidget Giratória",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Arvorezinha de Natal em espiral que gira — enfeite de mesa e fidget toy anti-estresse ao mesmo tempo.",
+      "paraQueServe": "Peça de mesa no formato de árvore de Natal cônica com ranhura em espiral: a ponta dourada gira sobre a base, funcionando como fidget toy (giro contínuo, estilo peão) além de enfeite — não é porta-vela, é só decoração giratória.",
+      "descricao": "Cone em espiral com acabamento em duas cores (ex: vermelho e dourado), a ponta gira livremente sobre a base. Serve como enfeite de mesa de Natal e como fidget toy de girar.",
+      "detalhes": [
+        "Ponta gira sobre a base — fidget toy",
+        "Sem encaixe de vela: só decoração giratória",
+        "Acabamento em duas cores"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 30.99,
+      "fotos": [
+        "fotos/arvore-fidget-natal/01.jpg",
+        "fotos/arvore-fidget-natal/02.jpg"
+      ],
+      "pastaOrigem": "_pesquisa/arvore-fidget/spiral-christmas-tree-fidget_3519782",
+      "destaque": false,
+      "revisarFoto": true,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 30,
+        "alturaCm": 6.7,
+        "larguraCm": 5.2,
+        "comprimentoCm": 5.2
+      },
+      "combinaCom": [],
+      "observacoes": "peça escolhida pelo dono em 24/11/2026 entre candidatos pesquisados no MakerWorld (modelo 'Spiral Christmas Tree Fidget Toy and Ornament', designer Jasa Designs, licença Standard Digital File License, proíbe revenda sem autorização; FICHA em _pesquisa/arvore-fidget/). Peso calculado da geometria do .3mf somando as peças do arquivo; dimensoes por proporção da foto (bbox do arquivo espalha várias cópias no prato de impressão, não é o tamanho de uma peça só) -- medir fisicamente antes de divulgar. ATENÇÃO: catálogo já tem 'arvore-espiral-porta-vela' -- conceito diferente (esta é fidget giratório sem vela, aquela é porta-vela fixo) mas nome parecido o suficiente pra confundir na vitrine; considerar deixar bem claro na foto/descrição ou reconsiderar o nome antes de publicar lado a lado. Fotos são do designer (revisarFoto=true) -- trocar por foto própria e obter autorização de revenda antes de divulgar. Preço é proposta inicial, não decisão fechada."
     }
   ],
   "avaliacoes": [
