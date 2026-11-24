@@ -392,6 +392,7 @@ input, button, select, textarea { font-size: 16px; }
 .vitrine-natal {
   background: var(--papel-2); border: 1px solid var(--linha);
   border-radius: var(--raio-g);
+  margin-block: 24px;
 }
 
 /* Faixa de garantias logo abaixo da capa, no lugar onde toda loja põe a dela.

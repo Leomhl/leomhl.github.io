@@ -4743,14 +4743,10 @@
         {
           "rotulo": "Limpeza",
           "valor": "Pano úmido, sem produto abrasivo"
-        },
-        {
-          "rotulo": "Observação",
-          "valor": "Peso aproximado — conferir na balança"
         }
       ],
       "preco": 159.9,
-      "destaque": true,
+      "destaque": false,
       "cores": [],
       "opcoes": [],
       "fotos": [
@@ -6554,6 +6550,1549 @@
         "organizador-cabo-oreo"
       ],
       "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir"
+    },
+    {
+      "slug": "anjo-natal",
+      "nome": "Anjo de Natal",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Anjo decorativo de Natal, peça única pra mesa ou prateleira.",
+      "paraQueServe": "Enfeite de Natal pra apoiar na mesa, prateleira ou embaixo da árvore — um anjo em volume, pronto pra compor a decoração natalina.",
+      "descricao": "Peça em volume no formato de um anjo, acabamento liso, feita pra ficar em pé sozinha sobre uma superfície plana.",
+      "detalhes": [
+        "Peça decorativa em volume",
+        "Fica em pé sozinha, sem suporte extra"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "3,9 × 2,7 × 7,3 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 26.99,
+      "fotos": [
+        "fotos/anjo-natal/01.png",
+        "fotos/anjo-natal/02.jpg",
+        "fotos/anjo-natal/03.png",
+        "fotos/anjo-natal/04.png",
+        "fotos/anjo-natal/05.webp",
+        "fotos/anjo-natal/06.webp"
+      ],
+      "pastaOrigem": "Natal/Anjo de Natal",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 14.83,
+        "alturaCm": 7.3,
+        "larguraCm": 3.9,
+        "comprimentoCm": 2.7
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "arvore-canto-porta-natal",
+      "nome": "Árvore Canto de Porta",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Silhueta de árvore de Natal pra encaixar no canto da porta.",
+      "paraQueServe": "Decoração de Natal pra pendurar no canto da porta, imitando uma árvore encostada ali — enfeite plano, sem ocupar espaço de chão.",
+      "descricao": "Peça plana no contorno de uma árvore de Natal, feita pra pendurar no canto da porta como se fosse uma arvorezinha encostada.",
+      "detalhes": [
+        "Peça plana (silhueta), pendurada no canto da porta",
+        "Não ocupa espaço de chão"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "20,5 × 25,0 × 0,25 cm (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 22.99,
+      "fotos": [
+        "fotos/arvore-canto-porta-natal/01.png",
+        "fotos/arvore-canto-porta-natal/02.png",
+        "fotos/arvore-canto-porta-natal/03.webp",
+        "fotos/arvore-canto-porta-natal/04.webp"
+      ],
+      "pastaOrigem": "Natal/Arvore Canto de Porta",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 11.29,
+        "alturaCm": 25,
+        "larguraCm": 20.5,
+        "comprimentoCm": 0.25
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "arvore-espiral-porta-vela",
+      "nome": "Árvore Espiral Porta-Vela",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Árvore de Natal em espiral que também serve de porta-vela — só pra vela de LED, vela não inclusa.",
+      "paraQueServe": "Enfeite de mesa no formato de árvore de Natal em espiral, com um encaixe no topo pra apoiar uma vela de LED — decoração e porta-vela em uma peça só. Serve só pra vela de LED: o encaixe é de plástico, não use vela real (com chama).",
+      "descricao": "Peça em volume com o corpo em espiral imitando os ramos de uma árvore de Natal, e um encaixe no topo pra apoiar uma vela de LED pequena. Vela não inclusa, e não serve pra vela real.",
+      "detalhes": [
+        "Corpo em espiral, formato de árvore de Natal",
+        "Encaixe no topo pra vela de LED pequena",
+        "Vela não inclusa — só pra vela de LED, nunca vela real (com chama)"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "8,1 × 8,5 × 16,5 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa (vela não inclusa)"
+        },
+        {
+          "rotulo": "Uso com vela",
+          "valor": "Só pra vela de LED — o encaixe é de plástico, nunca use vela real (com chama)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 53.99,
+      "fotos": [
+        "fotos/arvore-espiral-porta-vela/01.png",
+        "fotos/arvore-espiral-porta-vela/02.jpg",
+        "fotos/arvore-espiral-porta-vela/03.jpg",
+        "fotos/arvore-espiral-porta-vela/04.webp",
+        "fotos/arvore-espiral-porta-vela/05.webp"
+      ],
+      "pastaOrigem": "Natal/Arvore Espiral Porta-Vela",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 65.41,
+        "alturaCm": 16.5,
+        "larguraCm": 8.1,
+        "comprimentoCm": 8.5
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "casal-grinch-enfeite",
+      "nome": "Casal Grinch Enfeite",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Enfeite plano do Grinch e sua versão ao lado, pra pendurar na árvore.",
+      "paraQueServe": "Enfeite de Natal pra pendurar na árvore ou em qualquer gancho, com o Grinch e um par ao lado dele.",
+      "descricao": "Peça plana com o desenho do Grinch e seu par, acabamento colorido, com furo pra pendurar.",
+      "detalhes": [
+        "Peça plana, pendurada por furo",
+        "Tema Grinch, dupla de personagens"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "8,8 × 5,7 × 0,3 cm (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 20.99,
+      "fotos": [
+        "fotos/casal-grinch-enfeite/01.png",
+        "fotos/casal-grinch-enfeite/02.png",
+        "fotos/casal-grinch-enfeite/03.png",
+        "fotos/casal-grinch-enfeite/04.png"
+      ],
+      "pastaOrigem": "Natal/Casal Grinch Enfeite",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 6.73,
+        "alturaCm": 5.7,
+        "larguraCm": 8.8,
+        "comprimentoCm": 0.3
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "copo-grinch-120mm",
+      "nome": "Copo Grinch 120mm",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Copo temático do Grinch, 120 mm de diâmetro.",
+      "paraQueServe": "Copo de Natal com o Grinch pra usar na ceia ou presentear, em formato clássico de copo com alça.",
+      "descricao": "Copo em volume, corpo liso com o desenho do Grinch, 120 mm de diâmetro.",
+      "detalhes": [
+        "Copo utilitário, tema Grinch",
+        "120 mm de diâmetro"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "13,6 × 13,4 × 10,0 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 copo"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 94.99,
+      "fotos": [
+        "fotos/copo-grinch-120mm/01.webp",
+        "fotos/copo-grinch-120mm/02.webp",
+        "fotos/copo-grinch-120mm/03.webp",
+        "fotos/copo-grinch-120mm/04.webp",
+        "fotos/copo-grinch-120mm/05.webp"
+      ],
+      "pastaOrigem": "Natal/Copo Grinch 120mm",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 162.26,
+        "alturaCm": 10,
+        "larguraCm": 13.6,
+        "comprimentoCm": 13.4
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "grinch-canto-porta-4-cores",
+      "nome": "Grinch Canto de Porta 4 Cores",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Silhueta do Grinch em 4 cores pra encaixar no canto da porta.",
+      "paraQueServe": "Decoração de Natal pra pendurar no canto da porta, com a silhueta do Grinch impressa em 4 cores.",
+      "descricao": "Peça plana no contorno do Grinch, colorida em 4 cores, feita pra pendurar no canto da porta.",
+      "detalhes": [
+        "Peça plana (silhueta), pendurada no canto da porta",
+        "Impressão em 4 cores (AMS)"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "22,7 × 24,1 × 0,4 cm (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 42.99,
+      "fotos": [
+        "fotos/grinch-canto-porta-4-cores/01.png"
+      ],
+      "pastaOrigem": "Natal/Grinch Canto de Porta 4 Cores",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 40.57,
+        "alturaCm": 24.1,
+        "larguraCm": 22.7,
+        "comprimentoCm": 0.4
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "grinch-hohoho",
+      "nome": "Grinch HO HO HO",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Placa plana do Grinch com o dizer \"HO HO HO\".",
+      "paraQueServe": "Placa de parede pra decoração de Natal, com o Grinch e o dizer \"HO HO HO\".",
+      "descricao": "Peça plana com o desenho do Grinch e o texto \"HO HO HO\", pra pendurar na parede.",
+      "detalhes": [
+        "Placa plana de parede",
+        "Tema Grinch com o dizer \"HO HO HO\""
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "22,9 × 25,1 × 0,55 cm (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 placa decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 37.99,
+      "fotos": [
+        "fotos/grinch-hohoho/01.png"
+      ],
+      "pastaOrigem": "Natal/Grinch HO HO HO",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 42.71,
+        "alturaCm": 25.1,
+        "larguraCm": 22.9,
+        "comprimentoCm": 0.55
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "grinch-inteiro-batente",
+      "nome": "Grinch Inteiro no Batente",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Silhueta do Grinch de corpo inteiro pra encaixar no batente da porta.",
+      "paraQueServe": "Decoração de Natal pra pendurar no batente/canto da porta, com o Grinch de corpo inteiro.",
+      "descricao": "Peça plana no contorno do Grinch de corpo inteiro, feita pra pendurar no batente da porta.",
+      "detalhes": [
+        "Peça plana (silhueta), corpo inteiro",
+        "Pendurada no batente da porta"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "17,8 × 22,3 × 0,4 cm (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 31.99,
+      "fotos": [
+        "fotos/grinch-inteiro-batente/01.png",
+        "fotos/grinch-inteiro-batente/02.jpg",
+        "fotos/grinch-inteiro-batente/03.jpg",
+        "fotos/grinch-inteiro-batente/04.webp"
+      ],
+      "pastaOrigem": "Natal/Grinch Inteiro no Batente",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 31.01,
+        "alturaCm": 22.3,
+        "larguraCm": 17.8,
+        "comprimentoCm": 0.4
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "mao-grinch-neve",
+      "nome": "Mão do Grinch na Neve",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Braço do Grinch saindo de uma base de neve, pra pendurar um enfeite na mão.",
+      "paraQueServe": "Enfeite de mesa pra Natal: o braço peludo do Grinch emerge de uma base de neve, com a mão aberta pronta pra segurar um enfeite de árvore pendurado por uma fita.",
+      "descricao": "Peça em volume, o braço e a mão do Grinch saindo de uma base texturizada de neve. A mão fica com os dedos abertos, pronta pra segurar uma bolinha de enfeite pendurada numa fita.",
+      "detalhes": [
+        "Base de neve + braço do Grinch em volume",
+        "Mão aberta pra pendurar um enfeite (bolinha não incluída)"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 base com braço decorativo"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "Não acompanha a bolinha de enfeite da foto — é só a peça impressa"
+        }
+      ],
+      "preco": 122.99,
+      "fotos": [
+        "fotos/mao-grinch-neve/01.webp",
+        "fotos/mao-grinch-neve/02.webp",
+        "fotos/mao-grinch-neve/03.webp",
+        "fotos/mao-grinch-neve/04.webp",
+        "fotos/mao-grinch-neve/05.webp"
+      ],
+      "pastaOrigem": "Natal/Mão do Grinch na Neve",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 190,
+        "alturaCm": 18,
+        "larguraCm": 8,
+        "comprimentoCm": 8
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; dimensoes (altura/largura/comprimento) sao estimativa grosseira para nao travar o calculo de frete -- medir fisicamente com regua apos imprimir e corrigir aqui e na ficha antes de divulgar"
+    },
+    {
+      "slug": "grinch-boneco-pe",
+      "nome": "Grinch Boneco de Pé",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Mini boneco do Grinch, de pé, pra mesa ou prateleira.",
+      "paraQueServe": "Mini estatueta de Natal pra apoiar na mesa, prateleira ou mesa de trabalho, com o Grinch de pé.",
+      "descricao": "Peça pequena em volume, com o Grinch de pé, acabamento colorido.",
+      "detalhes": [
+        "Mini estatueta, tema Grinch",
+        "Fica em pé sozinha"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "1,3 × 2,1 × 4,0 cm (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 35.99,
+      "fotos": [
+        "fotos/grinch-boneco-pe/01.png",
+        "fotos/grinch-boneco-pe/02.png",
+        "fotos/grinch-boneco-pe/03.png",
+        "fotos/grinch-boneco-pe/04.png",
+        "fotos/grinch-boneco-pe/05.webp"
+      ],
+      "pastaOrigem": "Natal/Grinch Boneco de Pe",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 3.53,
+        "alturaCm": 4,
+        "larguraCm": 1.3,
+        "comprimentoCm": 2.1
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "pingente-grinch",
+      "nome": "Pingente Grinch",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Kit com 9 pingentes temáticos do Grinch pra árvore de Natal.",
+      "paraQueServe": "Kit de pingentes pra pendurar na árvore de Natal, com 9 desenhos diferentes do Grinch.",
+      "descricao": "Cada pingente é uma peça plana colorida com um desenho do Grinch, com furo pra pendurar na árvore.",
+      "detalhes": [
+        "Kit com 9 pingentes diferentes",
+        "Tema Grinch, peça plana com furo pra pendurar"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "6,8 × 7,8 × 0,3 cm cada pingente (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "9 pingentes"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 53.99,
+      "fotos": [
+        "fotos/pingente-grinch/01.png",
+        "fotos/pingente-grinch/02.jpg",
+        "fotos/pingente-grinch/03.jpg",
+        "fotos/pingente-grinch/04.webp"
+      ],
+      "pastaOrigem": "Natal/Pingente Grinch",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 63.28,
+        "alturaCm": 7.8,
+        "larguraCm": 6.8,
+        "comprimentoCm": 2.7
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "porta-guardanapo-natal",
+      "nome": "Porta-Guardanapo de Natal",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Kit com 6 porta-guardanapos temáticos de Natal.",
+      "paraQueServe": "Kit de porta-guardanapos pra ceia de Natal, com 6 peças pra organizar os guardanapos de cada lugar à mesa.",
+      "descricao": "Cada porta-guardanapo é um anel decorado com tema natalino, pra enfiar o guardanapo dobrado.",
+      "detalhes": [
+        "Kit com 6 porta-guardanapos",
+        "Tema natalino"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "5,0 × 9,4 × 0,5 cm cada peça (L × P × A)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "6 porta-guardanapos"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 35.99,
+      "fotos": [
+        "fotos/porta-guardanapo-natal/01.png",
+        "fotos/porta-guardanapo-natal/02.png",
+        "fotos/porta-guardanapo-natal/03.webp"
+      ],
+      "pastaOrigem": "Natal/Porta-Guardanapo de Natal",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 36.89,
+        "alturaCm": 9.4,
+        "larguraCm": 5,
+        "comprimentoCm": 3
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "sombra-grinch-bola",
+      "nome": "Sombra Grinch com Bola",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Silhueta do Grinch segurando uma bola de Natal, pra canto de porta.",
+      "paraQueServe": "Decoração de Natal pra pendurar no canto da porta, com a silhueta do Grinch segurando uma bola de enfeite.",
+      "descricao": "Peça plana no contorno do Grinch com uma bola de Natal, feita pra pendurar no canto da porta.",
+      "detalhes": [
+        "Peça plana (silhueta), pendurada no canto da porta",
+        "Grinch com bola de enfeite"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "17,3 × 16,6 × 0,4 cm (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 32.99,
+      "fotos": [
+        "fotos/sombra-grinch-bola/01.png",
+        "fotos/sombra-grinch-bola/02.png",
+        "fotos/sombra-grinch-bola/03.webp"
+      ],
+      "pastaOrigem": "Natal/Sombra Grinch com Bola",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 33.12,
+        "alturaCm": 16.6,
+        "larguraCm": 17.3,
+        "comprimentoCm": 0.4
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "sombra-grinch-escada",
+      "nome": "Sombra Grinch na Escada",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Silhueta do Grinch subindo numa escada, pra canto de porta.",
+      "paraQueServe": "Decoração de Natal pra pendurar no canto da porta, com a silhueta do Grinch subindo numa escada.",
+      "descricao": "Peça plana no contorno do Grinch em cima de uma escada, feita pra pendurar no canto da porta.",
+      "detalhes": [
+        "Peça plana (silhueta), pendurada no canto da porta",
+        "Grinch em cima de uma escada"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "21,8 × 24,9 × 0,4 cm (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 33.99,
+      "fotos": [
+        "fotos/sombra-grinch-escada/01.png",
+        "fotos/sombra-grinch-escada/02.png"
+      ],
+      "pastaOrigem": "Natal/Sombra Grinch na Escada",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 37.48,
+        "alturaCm": 24.9,
+        "larguraCm": 21.8,
+        "comprimentoCm": 0.4
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado pelo fatiamento com perfil PETG; conferir na balança ao imprimir"
+    },
+    {
+      "slug": "bola-natal-grinch",
+      "nome": "Kit Bolas de Natal Grinch",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Kit com 3 bolas de Natal do Grinch, mesmo tamanho, 3 modelos diferentes.",
+      "paraQueServe": "Kit de bolas de enfeite pra árvore de Natal, com o rosto do Grinch, pra pendurar junto dos outros enfeites.",
+      "descricao": "Kit com 3 modelos diferentes do rosto do Grinch, todas no mesmo tamanho -- 3 bolas de enfeite no total.",
+      "detalhes": [
+        "Kit com 3 bolas de Natal, todas do mesmo tamanho",
+        "Tema Grinch, com furo pra pendurar"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "2,8 × 2,6 × 3,4 cm (as 3 bolas são do mesmo tamanho)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "3 modelos diferentes, mesmo tamanho -- 3 bolas de Natal no total"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 54.99,
+      "fotos": [
+        "fotos/bola-natal-grinch/01.png",
+        "fotos/bola-natal-grinch/02.png"
+      ],
+      "pastaOrigem": "Natal/Bola de Natal Grinch",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 60,
+        "alturaCm": 3.4,
+        "larguraCm": 2.8,
+        "comprimentoCm": 2.6
+      },
+      "combinaCom": [],
+      "observacoes": "peso e tempo de impressão medidos pelo dono na fatia manual (perfil PETG High Quality)"
+    },
+    {
+      "slug": "bota-papai-noel",
+      "nome": "Bota do Papai Noel",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Bota do Papai Noel em volume, peça decorativa de Natal.",
+      "paraQueServe": "Enfeite de Natal no formato de bota do Papai Noel, pra apoiar na mesa, lareira ou prateleira.",
+      "descricao": "Peça em volume no formato de uma bota de Papai Noel, acabamento colorido.",
+      "detalhes": [
+        "Peça decorativa em volume",
+        "Formato de bota do Papai Noel"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 76.99,
+      "fotos": [
+        "fotos/bota-papai-noel/01.jpg",
+        "fotos/bota-papai-noel/02.jpg"
+      ],
+      "pastaOrigem": "Natal/Bota do Papai Noel",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 119,
+        "alturaCm": 17,
+        "larguraCm": 17,
+        "comprimentoCm": 7
+      },
+      "combinaCom": [],
+      "observacoes": "peso e tempo de impressão medidos pelo dono na fatia manual (perfil PETG High Quality); dimensoes nao medidas automaticamente (peca em varias partes, bbox do arquivo nao confiavel) -- medir fisicamente antes de divulgar"
+    },
+    {
+      "slug": "casinha-gengibre",
+      "nome": "Casinha de Gengibre",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Casinha de biscoito de gengibre em volume, com telhado de doce e bengalas.",
+      "paraQueServe": "Decoração de Natal no formato clássico de casinha de gengibre, com telhado de doce, bengalas e guirlanda, pra centro de mesa ou embaixo da árvore.",
+      "descricao": "Peça em volume com várias partes: paredes, telhado, janelas, porta, bengalas e guirlanda, formando a casinha clássica de biscoito de gengibre.",
+      "detalhes": [
+        "Peça decorativa em várias partes montadas",
+        "Detalhes de janela, porta, bengalas e guirlanda"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 casinha decorativa (várias peças)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 114.99,
+      "fotos": [
+        "fotos/casinha-gengibre/01.jpg",
+        "fotos/casinha-gengibre/02.jpg",
+        "fotos/casinha-gengibre/03.jpg",
+        "fotos/casinha-gengibre/04.jpg"
+      ],
+      "pastaOrigem": "Natal/Casinha de Gengibre",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 180,
+        "alturaCm": 13,
+        "larguraCm": 13,
+        "comprimentoCm": 13
+      },
+      "combinaCom": [],
+      "observacoes": "peso e tempo de impressão medidos pelo dono na fatia manual (perfil PETG High Quality); dimensoes nao medidas automaticamente (peca em varias partes, bbox do arquivo nao confiavel) -- medir fisicamente antes de divulgar"
+    },
+    {
+      "slug": "grinch-ataque-arvore",
+      "nome": "Grinch Ataque a Árvore",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Silhueta do Grinch atacando a árvore de Natal, pra canto de porta.",
+      "paraQueServe": "Decoração de Natal pra pendurar no canto da porta, com a cena do Grinch atacando a árvore de Natal.",
+      "descricao": "Peça plana no contorno do Grinch e da árvore, feita pra pendurar no canto da porta.",
+      "detalhes": [
+        "Peça plana (silhueta), pendurada no canto da porta",
+        "Cena do Grinch atacando a árvore"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "16,8 × 23,4 × 0,2 cm (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 37.99,
+      "fotos": [
+        "fotos/grinch-ataque-arvore/01.png",
+        "fotos/grinch-ataque-arvore/02.jpg"
+      ],
+      "pastaOrigem": "Natal/Grinch Ataque a Arvore",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 40,
+        "alturaCm": 23.4,
+        "larguraCm": 16.8,
+        "comprimentoCm": 0.2
+      },
+      "combinaCom": [],
+      "observacoes": "peso e tempo de impressão medidos pelo dono na fatia manual (perfil PETG High Quality)"
+    },
+    {
+      "slug": "grinch-canto-porta-bola",
+      "nome": "Grinch Canto de Porta com Bola",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Silhueta do Grinch e sua mão segurando uma bola, pra canto de porta.",
+      "paraQueServe": "Decoração de Natal pra pendurar no canto da porta: o rosto do Grinch de um lado e a mão segurando uma bola de enfeite do outro.",
+      "descricao": "Duas peças planas — o rosto do Grinch e a mão com a bola de enfeite — feitas pra pendurar no canto da porta, uma de cada lado.",
+      "detalhes": [
+        "Duas peças planas (silhuetas)",
+        "Rosto do Grinch + mão com bola de enfeite"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "24,4 × 24,7 × 0,45 cm cada peça (L × A × Espessura)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "2 peças decorativas"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 47.99,
+      "fotos": [
+        "fotos/grinch-canto-porta-bola/01.jpg"
+      ],
+      "pastaOrigem": "Natal/Grinch Canto de Porta com Bola",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 60,
+        "alturaCm": 24.7,
+        "larguraCm": 24.4,
+        "comprimentoCm": 0.45
+      },
+      "combinaCom": [],
+      "observacoes": "peso e tempo de impressão medidos pelo dono na fatia manual (perfil PETG High Quality)"
+    },
+    {
+      "slug": "grinch-poltrona-vermelha",
+      "nome": "Grinch na Poltrona Vermelha",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Estatueta do Grinch sentado numa poltrona vermelha.",
+      "paraQueServe": "Estatueta decorativa de Natal pra apoiar na mesa ou prateleira, com o Grinch sentado numa poltrona vermelha, estilo edição especial.",
+      "descricao": "Peça em volume, o Grinch sentado numa poltrona vermelha, acabamento colorido e detalhado.",
+      "detalhes": [
+        "Estatueta em volume, várias partes montadas",
+        "Grinch sentado na poltrona vermelha"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa (várias peças)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 49.99,
+      "fotos": [
+        "fotos/grinch-poltrona-vermelha/01.jpeg",
+        "fotos/grinch-poltrona-vermelha/02.jpeg",
+        "fotos/grinch-poltrona-vermelha/03.jpeg"
+      ],
+      "pastaOrigem": "Natal/Grinch na Poltrona Vermelha",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 55,
+        "alturaCm": 11.5,
+        "larguraCm": 5.5,
+        "comprimentoCm": 5.5
+      },
+      "combinaCom": [],
+      "observacoes": "peso e tempo de impressão medidos pelo dono na fatia manual (perfil PETG High Quality); dimensoes nao medidas automaticamente (peca em varias partes, bbox do arquivo nao confiavel) -- medir fisicamente antes de divulgar"
+    },
+    {
+      "slug": "rena-rudolf-monitor",
+      "nome": "Rena Rudolf para Monitor",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Rena Rudolf decorativa pra pendurar na borda do monitor.",
+      "paraQueServe": "Enfeite de mesa de Natal: a rena Rudolf fica pendurada na borda do monitor ou da tela, como se estivesse espiando por cima.",
+      "descricao": "Peça em volume da rena Rudolf, com encaixe pra pendurar na borda do monitor.",
+      "detalhes": [
+        "Pendura na borda do monitor ou tela",
+        "Peça em várias partes montadas"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa (várias peças)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 40.99,
+      "fotos": [
+        "fotos/rena-rudolf-monitor/01.jpg",
+        "fotos/rena-rudolf-monitor/02.jpg"
+      ],
+      "pastaOrigem": "Natal/Rena Rudolf para Monitor",
+      "destaque": false,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 38,
+        "alturaCm": 9.2,
+        "larguraCm": 4.4,
+        "comprimentoCm": 4.8
+      },
+      "combinaCom": [],
+      "observacoes": "peso e tempo de impressão medidos pelo dono na fatia manual (perfil PETG High Quality); dimensoes nao medidas automaticamente (peca em varias partes, bbox do arquivo nao confiavel) -- medir fisicamente antes de divulgar"
+    },
+    {
+      "slug": "arvore-caixa-presente",
+      "nome": "Árvore Caixa de Presente",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Árvore de Natal em volume que se abre ao meio — a copa é a tampa de uma caixinha.",
+      "paraQueServe": "Enfeite de mesa no formato de árvore de Natal, em duas partes com encaixe de rosca: a copa destaca e vira tampa de uma caixinha na base, pra guardar bombom, bijuteria ou um mimo pequeno.",
+      "descricao": "Árvore de Natal em camadas, com a copa destacável — gira e abre, revelando um compartimento na base. Serve como enfeite de mesa e como caixinha pra guardar um mimo pequeno.",
+      "detalhes": [
+        "Copa destacável com rosca, vira tampa",
+        "Compartimento pequeno na base",
+        "Também funciona só como enfeite, fechada"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça em 2 partes (base + tampa com rosca)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 33.99,
+      "fotos": [
+        "fotos/arvore-caixa-presente/01.png",
+        "fotos/arvore-caixa-presente/02.png"
+      ],
+      "pastaOrigem": "Natal/Arvore Caixa de Presente",
+      "destaque": false,
+      "revisarFoto": true,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 43,
+        "alturaCm": 9,
+        "larguraCm": 7,
+        "comprimentoCm": 7
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); dimensoes estimadas por proporção da foto (peça em 2 partes, bbox do arquivo é o leiaute de impressão, não o tamanho montado) -- medir fisicamente e conferir na balança antes de divulgar; preço é proposta inicial, não decisão fechada"
+    },
+    {
+      "slug": "calendario-advento-grinch",
+      "nome": "Calendário do Advento Grinch",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Calendário do Advento do Grinch com mostrador giratório — reutilizável, sem porta nenhuma pra abrir.",
+      "paraQueServe": "Calendário de contagem regressiva pro Natal: gira o mostrador com o rosto do Grinch até o número do dia aparecer na janelinha \"Days ... until Christmas\". Peça de mesa, sem chocolate nem compartimento — é só o mecanismo giratório, reutilizável ano após ano.",
+      "descricao": "Base com o texto \"Days ... until Christmas\" e um mostrador circular giratório com o rosto do Grinch de gorro, numerado de 1 a 24 ao redor. Gira o disco até o número do dia certo aparecer na janelinha central.",
+      "detalhes": [
+        "Mostrador giratório numerado de 1 a 24",
+        "Reutilizável — não é descartável como calendário de papel",
+        "Sem compartimento ou chocolate, só o mecanismo de contagem"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa em várias partes montadas (base + disco giratório)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 116.99,
+      "fotos": [
+        "fotos/calendario-advento-grinch/01.jpg",
+        "fotos/calendario-advento-grinch/02.jpg"
+      ],
+      "pastaOrigem": "Natal/Calendario do Advento Grinch",
+      "destaque": false,
+      "revisarFoto": true,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 338,
+        "alturaCm": 25,
+        "larguraCm": 20,
+        "comprimentoCm": 8
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³) somando todas as peças do arquivo; dimensoes estimadas por proporção da foto (peça com dezenas de partes pequenas, bbox do arquivo é leiaute de impressão espalhado, não o tamanho montado) -- medir fisicamente e conferir na balança antes de divulgar; preço é proposta inicial, não decisão fechada"
+    },
+    {
+      "slug": "gato-preto-canto-porta",
+      "nome": "Gato Preto Canto de Porta",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Gato preto de gorro e cachecol puxando uma arvorezinha de Natal, pro canto da porta.",
+      "paraQueServe": "Enfeite de canto de porta ou batente, igual aos de tema Grinch da loja: duas peças planas que encaixam no canto — de um lado o gato preto de gorro e cachecol, do outro a árvore de Natal enfeitada que ele segura pela pata.",
+      "descricao": "Duas peças planas em volume baixo, pra encaixar no canto da porta ou batente: o gato preto com gorro e cachecol de um lado, puxando pela pata uma árvore de Natal enfeitada do outro lado.",
+      "detalhes": [
+        "Encaixa no canto da porta ou batente, igual aos modelos do Grinch",
+        "Duas peças: gato preto + árvore de Natal"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Dimensões",
+          "valor": "24,4 × 22,6 × 0,45 cm (L × A × P)"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "2 peças (gato preto + árvore de Natal)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 48.99,
+      "fotos": [
+        "fotos/gato-preto-canto-porta/01.jpg",
+        "fotos/gato-preto-canto-porta/02.jpg"
+      ],
+      "pastaOrigem": "Natal/Gato Preto e Arvore",
+      "destaque": false,
+      "revisarFoto": true,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 97,
+        "alturaCm": 22.6,
+        "larguraCm": 24.4,
+        "comprimentoCm": 0.45
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³); conferir na balança ao imprimir; preço é proposta inicial, não decisão fechada"
+    },
+    {
+      "slug": "pinguim-natal",
+      "nome": "Pinguim de Natal",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Pinguim fofo de gorro e cachecol, peça decorativa de mesa.",
+      "paraQueServe": "Enfeite de mesa de Natal: um pinguim fofo, de gorro de Papai Noel e cachecol, pra apoiar na mesa, prateleira ou embaixo da árvore.",
+      "descricao": "Peça em volume de um pinguim fofo, com gorro de Papai Noel e cachecol — corpo branco e preto, bico e pés laranja.",
+      "detalhes": [
+        "Peça decorativa em volume, em várias partes montadas",
+        "Gorro de Papai Noel e cachecol"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa (várias peças montadas)"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 47.99,
+      "fotos": [
+        "fotos/pinguim-natal/01.jpeg",
+        "fotos/pinguim-natal/02.jpeg"
+      ],
+      "pastaOrigem": "Natal/Pinguim de Natal",
+      "destaque": false,
+      "revisarFoto": true,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 94,
+        "alturaCm": 10,
+        "larguraCm": 7,
+        "comprimentoCm": 6.5
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³) somando todas as peças; dimensoes estimadas por proporção da foto (peça multipart, bbox do arquivo é leiaute de impressão, não o tamanho montado) -- medir fisicamente e conferir na balança antes de divulgar; preço é proposta inicial, não decisão fechada"
+    },
+    {
+      "slug": "poste-natal-modular",
+      "nome": "Poste de Natal Modular",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Poste de luminária de Natal, com placa \"Merry Christmas\" pendurada — só pra luz de LED, sem fiação elétrica.",
+      "paraQueServe": "Peça de mesa no formato de poste de luminária de rua, decorado de Natal, com uma placa pendurada escrito \"Merry Christmas\". A cabeça do poste é vazada feito lanterna, pra encaixar uma luz de LED pequena (vela de LED ou pisca-pisca) — sem fiação elétrica embutida e sem luz inclusa.",
+      "descricao": "Poste modular em várias partes: base, tronco listrado e cabeça de luminária vazada, com uma placa \"Merry Christmas\" pendurada por ganchinhos. A cabeça do poste é só a carcaça — não tem luz nem fiação dentro, é pra encaixar uma luz de LED pequena por fora ou por dentro.",
+      "detalhes": [
+        "Peça modular: base + poste + cabeça de luminária + placa pendurada",
+        "Cabeça vazada pra luz de LED — sem luz inclusa, sem fiação elétrica",
+        "Peça grande entre os itens de Natal da loja"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa em 4 partes (base, poste, cabeça, placa) — luz não inclusa"
+        },
+        {
+          "rotulo": "Uso com luz",
+          "valor": "Só pra luz de LED (vela de LED ou pisca-pisca pequeno) — sem fiação elétrica embutida, nunca use chama real"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 230.99,
+      "fotos": [
+        "fotos/poste-natal-modular/01.jpg",
+        "fotos/poste-natal-modular/02.jpg"
+      ],
+      "pastaOrigem": "Natal/Poste de Natal Modular",
+      "destaque": false,
+      "revisarFoto": true,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 747,
+        "alturaCm": 32,
+        "larguraCm": 9,
+        "comprimentoCm": 9
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³) somando todas as peças do arquivo -- deu 747 g, o que tornaria essa a peça mais cara do catálogo (R$ 230,99 pela fórmula); CONFERIR com fatiamento real antes de publicar, pode estar superestimado. Dimensoes estimadas por proporção da foto (peça modular grande em várias partes, bbox do arquivo é leiaute de impressão espalhado, não o tamanho montado) -- medir fisicamente antes de divulgar; preço é proposta inicial, não decisão fechada"
+    },
+    {
+      "slug": "treno-papai-noel",
+      "nome": "Trenó do Papai Noel",
+      "categoria": "natal",
+      "edicaoLimitada": true,
+      "resumo": "Trenó do Papai Noel em volume, peça decorativa de Natal.",
+      "paraQueServe": "Enfeite de mesa no formato do trenó do Papai Noel, pra apoiar na mesa, lareira ou prateleira — com patins enrolados e detalhe de flocos de neve e arvorezinha pintados.",
+      "descricao": "Peça em volume no formato do trenó do Papai Noel, vermelho com detalhes verdes e dourados, patins enrolados nas pontas.",
+      "detalhes": [
+        "Peça decorativa em volume",
+        "Formato de trenó, com patins enrolados"
+      ],
+      "ficha": [
+        {
+          "rotulo": "Marca",
+          "valor": "Fabricação própria"
+        },
+        {
+          "rotulo": "Material",
+          "valor": "Plástico"
+        },
+        {
+          "rotulo": "Itens inclusos",
+          "valor": "1 peça decorativa"
+        },
+        {
+          "rotulo": "Limpeza",
+          "valor": "Pano úmido, sem produto abrasivo"
+        },
+        {
+          "rotulo": "Observação",
+          "valor": "As cores podem variar levemente de tom em comparação com as fotos"
+        }
+      ],
+      "preco": 38.99,
+      "fotos": [
+        "fotos/treno-papai-noel/01.jpg",
+        "fotos/treno-papai-noel/02.jpg"
+      ],
+      "pastaOrigem": "Natal/Treno do Papai Noel",
+      "destaque": false,
+      "revisarFoto": true,
+      "cores": [],
+      "opcoes": [],
+      "video": null,
+      "envio": {
+        "pesoGramas": 59,
+        "alturaCm": 8,
+        "larguraCm": 8,
+        "comprimentoCm": 13
+      },
+      "combinaCom": [],
+      "observacoes": "peso calculado da geometria do .3mf (casca 0,84mm + 15% de preenchimento, PLA 1,24 g/cm³) somando as peças coloridas do arquivo; dimensoes estimadas por proporção da foto (peça com partes em cores separadas, bbox do arquivo é leiaute de impressão, não o tamanho montado) -- medir fisicamente e conferir na balança antes de divulgar; preço é proposta inicial, não decisão fechada"
     }
   ],
   "avaliacoes": [
@@ -6584,6 +8123,15 @@
       "data": "2026-11-18",
       "fotos": [
         "fotos/avaliacoes/adriano-01.jpg"
+      ]
+    },
+    {
+      "nome": "Marília Galvão",
+      "texto": "Amei-o o produto! Ótima qualidade, recomendo demais!",
+      "cidade": "Rio De Janeiro",
+      "data": "2026-11-24",
+      "fotos": [
+        "fotos/avaliacoes/marilia-galvao-01.jpg"
       ]
     }
   ]

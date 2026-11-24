@@ -322,7 +322,7 @@
     const c = categoriaDe(p);
     return `<section class="secao">
       <div class="secao-topo">
-        <h2>Fica bem junto</h2>
+        <h2>Combina com essa peça</h2>
         ${c ? `<a class="ver-tudo" href="#/c/${esc(c.slug)}">Ver tudo ${esc(c.nome.toLowerCase())} →</a>` : ''}
       </div>
       ${grade(lista)}
